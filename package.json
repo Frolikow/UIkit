@@ -1,0 +1,23 @@
+{
+  "name": "uikit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frolikow/UIkit.git"
+  },
+  "author": "frolikow egor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frolikow/UIkit/issues"
+  },
+  "homepage": "https://github.com/Frolikow/UIkit#readme"
+}
