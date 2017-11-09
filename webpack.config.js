@@ -1,20 +1,23 @@
 'use strict';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+let pathToClean = 'dist';
 
 
 module.exports = {
-  entry: "./public/home",
+  entry: "./src/home",
   output: {
-    path: __dirname + "/public",
+    path: __dirname + "/dist",
     filename: "build.js"
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "public/index.pug"
-    })
+      template: "src/index.pug",
+      inject: 'head'
+    }),
+    new CleanWebpackPlugin(pathToClean)
   ],
 
   module: {
