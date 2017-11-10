@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let pathToClean = 'dist';
 
 
-module.exports = {
+const common = {
   entry: "./src/home",
   output: {
     path: __dirname + "/dist",
@@ -15,10 +15,9 @@ module.exports = {
   },
 
   module: {
-
     loaders: [{
       test: /\.styl$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'stylus-loader')
+      loader: ['style-loader', 'css-loader', 'stylus-loader']
     }, {
       test: /\.pug$/,
       loader: 'pug-loader',
@@ -29,15 +28,31 @@ module.exports = {
   },
 
   plugins: [
-
     new HtmlWebpackPlugin({
       template: "src/index.pug",
       inject: 'head'
     }),
-
     new CleanWebpackPlugin(pathToClean),
-
     new ExtractTextPlugin('styles.css')
   ]
 };
 
+const developmentConfig = {
+  devServer: {
+    stats: 'minimal',
+    port: 9000
+  }
+};
+
+module.exports = function (env) {
+  if (env === 'production') {
+    return common;
+  }
+  if (env === 'development') {
+    return Object.assign(
+      {},
+      common,
+      developmentConfig
+    )
+  }
+};
