@@ -65,27 +65,33 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_style__ = __webpack_require__(1);
 
 
-let welcome = __webpack_require__(1);
-
-welcome("home");
 
 
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_styl__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_styl__);
 
 
-module.exports = function(message) {
-  alert(`Welcome ${message}`);
-}
+
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleParseError: Module parse failed: Unexpected token (3:9)\nYou may need an appropriate loader to handle this file type.\n| \n| body\n|   margin 100 px\n    at doBuild (/home/frol/projects/UIkit/UIkit/node_modules/webpack/lib/NormalModule.js:303:19)\n    at runLoaders (/home/frol/projects/UIkit/UIkit/node_modules/webpack/lib/NormalModule.js:209:11)\n    at /home/frol/projects/UIkit/UIkit/node_modules/loader-runner/lib/LoaderRunner.js:370:3\n    at iterateNormalLoaders (/home/frol/projects/UIkit/UIkit/node_modules/loader-runner/lib/LoaderRunner.js:211:10)\n    at /home/frol/projects/UIkit/UIkit/node_modules/loader-runner/lib/LoaderRunner.js:202:4\n    at /home/frol/projects/UIkit/UIkit/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickCallback (internal/process/next_tick.js:104:9)");
 
 /***/ })
 /******/ ]);

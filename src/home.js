@@ -1,6 +1,3 @@
-"use strict";
+'use strict';
 
-let welcome = require('./welcome');
-
-welcome("home");
-
+import Styles from './style/style';
