@@ -15,10 +15,14 @@ const common = {
   },
 
   module: {
-    loaders: [{
+    rules: [{
       test: /\.styl$/,
-      loader: ['style-loader', 'css-loader', 'stylus-loader']
-    }, {
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'stylus-loader']
+      })
+    }, 
+    {
       test: /\.pug$/,
       loader: 'pug-loader',
       options: {
@@ -33,7 +37,7 @@ const common = {
       inject: 'head'
     }),
     new CleanWebpackPlugin(pathToClean),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('index.css')
   ]
 };
 

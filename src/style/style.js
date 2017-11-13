@@ -1,3 +1,3 @@
 'use strict';
 
-import './style.styl';
+import css from './style.styl';
