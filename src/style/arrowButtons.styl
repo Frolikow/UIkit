@@ -1,0 +1,78 @@
+
+.arrowButtons
+  width 100%
+  border solid 2px red
+  text-align center
+
+  button:nth-child(odd) 
+    margin-right 40px
+    border-radius 50%
+    width 50px
+    height 50px
+    position relative
+    &:after
+      content ""
+      width  10px
+      height 10px
+      position absolute 
+      transform rotate(45deg)
+      top 14px
+      left 17px
+      border-top-color transparent
+      border-right-color transparent
+
+  button:nth-child(even) 
+    margin-right 40px
+    border-radius 50%
+    width 50px
+    height 50px
+    position relative
+    &:after
+      content ""
+      width  10px
+      height 10px
+      position absolute 
+      transform rotate(45deg)
+      top 14px
+      left 10px
+      border-bottom-color transparent
+      border-left-color transparent
+
+  .btnArrowPack1
+    border solid 2px #4eb7a8
+    background-color #ffffff
+    &::after
+      border solid 4px #4eb7a8
+
+  .btnArrowPack2
+    border solid 2px #e5e5e5
+    background-color #e5e5e5
+    &::after
+      border solid 4px #fff
+
+  .btnArrowPack3
+    border solid 2px #4eb7a8
+    background-color #4eb7a8
+    &::after
+      border solid 4px #fff
+
+.arrowH1
+  height 18px
+  color #4f4f4f
+  font-family  Lato
+  font-size 18px
+  font-weight 400
+  text-transform uppercase
+  letter-spacing 0.9px
+  border solid 2px green
+  text-align center
+   
+.arrowPack1
+.arrowPack2
+.arrowPack3
+.arrowPack1
+  border solid 2px blue
+  text-align center
+  display inline-block
+  word-wrap normal 
+  height 30px

@@ -18,7 +18,7 @@ const common = {
     rules: [{
       test: /\.styl$/,
       use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
+        // fallback: 'style-loader',
         use: ['css-loader', 'stylus-loader']
       })
     }, 
@@ -37,7 +37,7 @@ const common = {
       inject: 'head'
     }),
     new CleanWebpackPlugin(pathToClean),
-    new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin('style.css')
   ]
 };
 
