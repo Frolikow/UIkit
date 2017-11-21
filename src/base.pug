@@ -1,0 +1,51 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title 
+  body
+    div.standartButtons
+      div.standartH1 standart buttons
+      div
+        include modules/standartButtons/standartButtons
+
+
+    div.arrowButtons
+      div.arrowH1 arrow buttons
+      div.arrowPack
+        button.btnArrowPack1.btn1 
+        button.btnArrowPack1.btn2 
+
+    div.percentagesPieChart
+      div.percentH1 percentages / pie chart
+      div.pieChart 0
+        svg
+          circle.chart1
+      div.pieChart 38
+        svg
+          circle.chart2
+      div.pieChart 62
+        svg
+          circle.chart3
+      div.pieChart 89 
+        svg
+          circle.chart4
+      div.pieChart 89
+        svg
+          circle.chart5
+
+//- почитать документацию pug
+//- сделать миксины для pug
+//- сделать структуру документа (
+//- базовая html , в ней "инклуды.
+//- каждый блок с кнопками в отдельном файле,папке.
+//- стили в соотвествующих папках
+
+//- )
+
+//- для диаграмм (
+//- через миксины pug задается число 
+//- и отрисовывается
+//- на последней при выборе данных должно 
+//- отображаться соответствующее число внутри
+//- )

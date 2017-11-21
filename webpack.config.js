@@ -33,7 +33,7 @@ const common = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.pug",
+      template: "src/base.pug",
       inject: 'head'
     }),
     new CleanWebpackPlugin(pathToClean),
