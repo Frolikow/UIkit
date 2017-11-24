@@ -1,23 +1,28 @@
+include ./mixins/standart-Buttons-Mixins.pug
+
+
 doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title 
+    title "UIKit"
   body
-    div.standartButtons
-      div.standartH1 standart buttons
+    div.block.standartButtons
+      div.H1.stButH1 standart buttons
       div
-        include modules/standartButtons/standartButtons
+        +stButton('small', 'blue')
+        +stButton('big', 'blue')
+        +stButton('big', 'red')
+        +stButton('small', 'red')
 
-
-    div.arrowButtons
-      div.arrowH1 arrow buttons
+    div.block.arrowButtons
+      div.H1.arrowH1 arrow buttons
       div.arrowPack
         button.btnArrowPack1.btn1 
         button.btnArrowPack1.btn2 
 
-    div.percentagesPieChart
-      div.percentH1 percentages / pie chart
+    div.block.percentagesPieChart
+      div.H1.percentH1 percentages / pie chart
       div.pieChart 0
         svg
           circle.chart1
@@ -34,14 +39,7 @@ html(lang="ru")
         svg
           circle.chart5
 
-//- почитать документацию pug
-//- сделать миксины для pug
-//- сделать структуру документа (
-//- базовая html , в ней "инклуды.
-//- каждый блок с кнопками в отдельном файле,папке.
-//- стили в соотвествующих папках
 
-//- )
 
 //- для диаграмм (
 //- через миксины pug задается число 
