@@ -1,4 +1,3 @@
 'use strict';
 
-
-import Styles from './style/style';
+import './style/base.styl';
