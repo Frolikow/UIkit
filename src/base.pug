@@ -1,4 +1,6 @@
 include ./modules/standartButtons/standart-Buttons-Mixins.pug
+include ./modules/arrowButtons/arrow-Buttons-Mixins.pug
+
 
 
 doctype html
@@ -18,8 +20,8 @@ html(lang="ru")
     div.block.arrowButtons
       div.H1.arrowH1 arrow buttons
       div.arrowPack
-        button.btnArrowPack1.btn1 
-        button.btnArrowPack1.btn2 
+        +arButton('left')
+        +arButton('right')
 
     div.block.percentagesPieChart
       div.H1.percentH1 percentages / pie chart
@@ -42,8 +44,8 @@ html(lang="ru")
 
 
 //- для диаграмм (
-//- через миксины pug задается число 
-//- и отрисовывается
-//- на последней при выборе данных должно 
+//- через миксины pug задается число  и отрисовывается
+//- 
+//- на последней при выборе данных на диаграмме должно 
 //- отображаться соответствующее число внутри
 //- )

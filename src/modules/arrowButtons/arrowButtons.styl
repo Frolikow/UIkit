@@ -1,17 +1,19 @@
 
 .arrowButtons
-  border solid 2px red
+  border solid 2px red 
   padding 20px
   text-align center
 
-  button.btn1
-    margin-right 40px
-    border-radius 50%
-    width 50px
-    height 50px
-    position relative
-    border solid 2px #4eb7a8
-    background-color #ffffff
+.arButton
+  border solid 5px red
+  margin-right 40px
+  border-radius 50%
+  width 50px
+  height 50px
+  position relative
+  border solid 2px #4eb7a8
+  background-color #ffffff
+  &_trend_left
     &:after
       content ""
       width  10px
@@ -19,19 +21,26 @@
       position absolute 
       transform rotate(45deg)
       top 14px
-      left 17px
       border solid 4px #4eb7a8
+      left 17px
       border-top-color transparent
       border-right-color transparent
+    &:hover
+      border solid 2px #e5e5e5
+      background-color #e5e5e5
+      &:after
+        border-color #fff
+        border-top-color transparent
+        border-right-color transparent
+    &:active
+      border solid 2px #4eb7a8
+      background-color #4eb7a8
+      &:after
+        border-color #fff
+        border-top-color transparent
+        border-right-color transparent
 
-  button.btn2
-    margin-right 40px
-    border-radius 50%
-    width 50px
-    height 50px
-    position relative
-    border solid 2px #4eb7a8
-    background-color #ffffff
+  &_trend_right
     &:after
       content ""
       width  10px
@@ -39,39 +48,22 @@
       position absolute 
       transform rotate(45deg)
       top 14px
+      border solid 4px #4eb7a8
       left 10px
       border solid 4px #4eb7a8
       border-bottom-color transparent
       border-left-color transparent
-
-  button.btn1:hover
-    border solid 2px #e5e5e5
-    background-color #e5e5e5
-    &:after
-      border solid 4px #fff
-      border-top-color transparent
-      border-right-color transparent
-      
-  button.btn1:active
-    border solid 2px #4eb7a8
-    background-color #4eb7a8
-    &:after
-      border solid 4px #fff
-      border-top-color transparent
-      border-right-color transparent
-
-  button.btn2:hover
-    border solid 2px #e5e5e5
-    background-color #e5e5e5
-    &:after
-      border solid 4px #fff
-      border-bottom-color transparent
-      border-left-color transparent
-      
-  button.btn2:active
-    border solid 2px #4eb7a8
-    background-color #4eb7a8
-    &:after
-      border solid 4px #fff
-      border-bottom-color transparent
-      border-left-color transparent
+    &:hover
+      border solid 2px #e5e5e5
+      background-color #e5e5e5
+      &:after
+        border-color #fff
+        border-bottom-color transparent
+        border-left-color transparent
+    &:active
+      border solid 2px #4eb7a8
+      background-color #4eb7a8
+      &:after
+        border-color #fff
+        border-bottom-color transparent
+        border-left-color transparent
