@@ -1,0 +1,25 @@
+mixin percentages(value)
+  div.percentages
+    if value<0
+      div.percentages_Value=(0)
+      div.percentages_image
+        svg.percentages_image_svg
+          circle.percentages_image_svg_circle(transform="rotate(-90)",
+            style="stroke-dasharray:" +value*0+"px 408px",
+            r="47.5", cx="-50", cy="50")
+
+    else if value>100
+      div.percentages_Value=(100)
+      div.percentages_image
+        svg.percentages_image_svg
+          circle.percentages_image_svg_circle(transform="rotate(-90)",
+            style="stroke-dasharray:" +283+"px 408px",
+            r="47.5", cx="-50", cy="50")
+
+    else
+      div.percentages_Value=(value)
+      div.percentages_image
+        svg.percentages_image_svg
+          circle.percentages_image_svg_circle(transform="rotate(-90)",
+            style="stroke-dasharray:" +value*2.83+"px 408px",
+            r="45", cx="-50", cy="50")

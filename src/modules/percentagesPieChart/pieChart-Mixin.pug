@@ -1,0 +1,11 @@
+mixin pieChart(value)
+  div.pieChart
+
+      div.pieChart_Value=(value)
+      div.pieChart_image
+        svg.pieChart_image_svg
+          circle.pieChart_image_svg_circle(transform="rotate(-90)",
+            style="stroke-dasharray:" +value*2.47+"px 408px",
+            r="39.5", cx="-50", cy="50")
+
+
