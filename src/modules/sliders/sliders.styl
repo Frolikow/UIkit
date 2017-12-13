@@ -1,0 +1,41 @@
+#slider
+  width 260px
+  height 5px
+  margin 30px auto 0 auto
+  background-color #e5e5e5
+  border none
+#custom-handle 
+  display inline-block
+  border-radius 50%
+  margin-top -3px
+  margin-left -10px
+  text-align center
+  background-color #e75735
+  color black
+  border none
+  
+  &::after
+    content ""
+    display block
+    width 10px
+    height 10px
+    background-color #e75735
+    color white
+    border-radius 1px
+    position relative
+    bottom 65px
+    left 6px
+    transform rotate(45deg)
+
+  &::before
+    content ""
+    display block
+    width 35px
+    height 28px
+    background-color #e75735
+    color white
+    border-radius 3px
+    position relative
+    bottom 40px
+    right 7px
+

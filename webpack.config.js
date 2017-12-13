@@ -15,20 +15,20 @@ const common = {
   },
 
   module: {
-    rules: [{
-      test: /\.styl$/,
-      use: ExtractTextPlugin.extract({
-        // fallback: 'style-loader',
-        use: ['css-loader', 'stylus-loader']
-      })
-    }, 
-    {
-      test: /\.pug$/,
-      loader: 'pug-loader',
-      options: {
-        pretty: true
-      }
-    }]
+    rules:
+    [
+      {
+        test: /\.styl$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'stylus-loader']
+        })
+      }, {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+      }, ]
   },
 
   plugins: [
@@ -37,7 +37,11 @@ const common = {
       inject: 'head'
     }),
     new CleanWebpackPlugin(pathToClean),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+    })
   ]
 };
 

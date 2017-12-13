@@ -8,29 +8,34 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title "UIKit"
+    title "UIKit"  
+    link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    link(rel="stylesheet", href="/resources/demos/style.css")
   body
-    div.block
-      div.H1 standart buttons
-      div
-        +stButton('small', 'blue')
-        +stButton('big', 'blue')
-        +stButton('big', 'red')
-        +stButton('small', 'red')
+    .block
+      .H1 standart buttons
+      
+      +stButton('small', 'blue')
+      +stButton('big', 'blue') 
+      +stButton('big', 'red')
+      +stButton('small', 'red')
 
-    div.block
-      div.H1 arrow buttons
-      div
-        +arButton('left')
-        +arButton('right')
+    .block
+      .H1 arrow buttons
+    
+      +arButton('left')
+      +arButton('right')
 
-    div.block
-      div.H1 percentages
+    .block
+      .H1 percentages
       +percentages('75')
 
-    div.block
-      div.H1 pie chart
+    .block
+      .H1 pie chart
       +pieChart(50, 25, 10)
           //- (value1, value2, value3)
 
-
+    .block
+      .H1 sliders
+      #slider
+        #custom-handle(class="ui-slider-handle")
