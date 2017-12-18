@@ -2,19 +2,18 @@ include ./modules/standartButtons/standart-Buttons-Mixin
 include ./modules/arrowButtons/arrow-Buttons-Mixin
 include ./modules/percentagesPieChart/percentages-Mixin
 include ./modules/percentagesPieChart/pieChart-Mixin
-
+include ./modules/sliders/sliders-Mixin.pug
 
 doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
     title "UIKit"  
-    link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
-    link(rel="stylesheet", href="/resources/demos/style.css")
   body
+
     .block
       .H1 standart buttons
-      
+      //- small/big and blue/red
       +stButton('small', 'blue')
       +stButton('big', 'blue') 
       +stButton('big', 'red')
@@ -22,20 +21,46 @@ html(lang="ru")
 
     .block
       .H1 arrow buttons
-    
+      //- left/right
       +arButton('left')
       +arButton('right')
 
-    .block
-      .H1 percentages
-      +percentages('75')
+    .block  
+      .H1 percentages / pie chart
+      .block
+        .H1 percentages
+        //- 0..100
+        +percentages('75')
 
+      .block
+        .H1 pie chart
+        //- (value1, value2, value3)
+        +pieChart(50, 25, 10)
+  
     .block
-      .H1 pie chart
-      +pieChart(50, 25, 10)
-          //- (value1, value2, value3)
-
-    .block
+      //- +standartSlider
+      //- +stepSlider
       .H1 sliders
-      #slider
-        #custom-handle(class="ui-slider-handle")
+      .block
+        .H1 standart slider
+        .standartSlider
+           .standartSlider_custom-handle.ui-slider-handle
+
+
+
+
+      //- .block
+      //-   .H1 step slider
+      //-   .stepSlider
+      //-     .stepSlider_Slider  
+      //-       .custom-handle.ui-slider-handle
+
+
+      //-     .stepSlider_values   0 25 50 75 100
+        
+
+          
+
+    .block
+    .block
+    .block
