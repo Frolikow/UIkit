@@ -1,11 +1,11 @@
-$(function () {
-  let handle = $(".custom-handle");
-  $(".stepSlider_Slider").slider({
-    step: 25,
-    value: 0,
+$( function() {
+  $( ".step_Slider" ).slider({
+    value:75,
     min: 0,
     max: 100,
+    step: 25,
     range: "min",
   });
-});
 
+} );
+ 
