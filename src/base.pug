@@ -2,7 +2,8 @@ include ./modules/standartButtons/standart-Buttons-Mixin
 include ./modules/arrowButtons/arrow-Buttons-Mixin
 include ./modules/percentagesPieChart/percentages-Mixin
 include ./modules/percentagesPieChart/pieChart-Mixin
-include ./modules/sliders/sliders-Mixin.pug
+include ./modules/sliders/sliders-Mixin
+include ./modules/stages/stages-Mixin
 
 doctype html
 html(lang="ru")
@@ -42,16 +43,15 @@ html(lang="ru")
       .block
         .H1 standart slider
         +standartSlider
-        +standartSlider
-        +standartSlider
       .block
         .H1 step slider
         +stepSlider
-        +stepSlider
-        +stepSlider
-
-          
 
     .block
+      .H1 stages
+        +stages(13, 9)
+
+
+
     .block
     .block

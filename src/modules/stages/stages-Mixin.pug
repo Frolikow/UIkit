@@ -1,0 +1,10 @@
+mixin stages(length, value)
+  .stages
+    - var x = 590/(length-1)*(value-1)+'px'
+      .stages-select(style={ width: x})
+    - var n = 1;
+    ul
+      while n<=value
+        li(class=`li-edit`)= n++
+      while n <= length
+        li= n++
