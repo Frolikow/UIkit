@@ -2,7 +2,7 @@ include ./modules/standartButtons/standart-Buttons-Mixin
 include ./modules/arrowButtons/arrow-Buttons-Mixin
 include ./modules/percentagesPieChart/percentages-Mixin
 include ./modules/percentagesPieChart/pieChart-Mixin
-//- include ./modules/sliders/sliders-Mixin.pug
+include ./modules/sliders/sliders-Mixin.pug
 
 doctype html
 html(lang="ru")
@@ -38,27 +38,18 @@ html(lang="ru")
         +pieChart(50, 25, 10)
   
     .block
-      //- +standartSlider
-      //- +stepSlider
       .H1 sliders
       .block
         .H1 standart slider
-        .standartSlider
-           .standartSlider_custom-handle.ui-slider-handle
-
-
-
-
+        +standartSlider
+        +standartSlider
+        +standartSlider
       .block
         .H1 step slider
-        .step-slider
-          .step_Slider.ui-slider.ui-slider-handle.ui-slider-range
-          .scale
-            .scale_value 0
-            .scale_value 25
-            .scale_value 50
-            .scale_value 75
-            .scale_value 100
+        +stepSlider
+        +stepSlider
+        +stepSlider
+
           
 
     .block
