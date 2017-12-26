@@ -4,7 +4,8 @@ include ./modules/percentagesPieChart/percentages-Mixin
 include ./modules/percentagesPieChart/pieChart-Mixin
 include ./modules/sliders/sliders-Mixin
 include ./modules/stages/stages-Mixin
-
+include ./modules/form-elements/form-elements-Mixins
+        
 doctype html
 html(lang="ru")
   head
@@ -40,7 +41,7 @@ html(lang="ru")
   
     .block
       .H1 sliders
-      .block
+      .block 
         .H1 standart slider
         +standartSlider
       .block
@@ -49,9 +50,14 @@ html(lang="ru")
 
     .block
       .H1 stages
-        +stages(13, 9)
+        //- length, value
+        +stages(11, 1) 
+
+    .block
+      .H1 form elements
+      +form
 
 
-
+    .block
     .block
     .block
