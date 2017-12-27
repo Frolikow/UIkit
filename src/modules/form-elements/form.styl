@@ -3,26 +3,52 @@
   height 215px
   text-align left
 
-  
-  &_name:valid
-    background-color rgba(0,255,0,0.5)
-  &_name:invalid
-    background-color rgba(255,0,0,0.5)
-    &::after
+  .input_info
+    width 0
+    height: 0
+    &:before
       content ""
-      width 100px
-      height 100px
-      border 1px solid black
-      display block
+      width 6px
+      height 6px
+      transform rotate(45deg)
+      background-color #e75735
       position relative
-      top 50px
-      
-  &_email:valid
-    background-color rgba(0,255,0,0.5)
-  &_email:invalid
-    background-color rgba(255,0,0,0.5)
+      left 214px
+      bottom 36px
+      display inline-block
+      border-radius 1px
 
+    &:after
+      content "error"
+      width 72px
+      height 28px
+      display inline-block
+      position relative
+      bottom 56.5px
+      left 216px
+      border-radius 2px
+      color #ffffff
+      font-family Lato
+      font-size 10px
+      font-weight 400
+      line-height 28px
+      text-transform uppercase
+      letter-spacing 0.5px
+      text-align center
+      background-color #e75735
+  &_name:valid + .input_info:after
+      content "thanks"
+      background-color #4eb7a8
+  &_email:valid + .input_info:after
+      content "thanks"
+      background-color #4eb7a8
 
+  &_name:valid + .input_info:before
+    // content "thanks"
+    background-color #4eb7a8
+  &_email:valid + .input_info:before
+    // content "thanks"
+    background-color #4eb7a8
 
   &_egual-style
     color #888888
