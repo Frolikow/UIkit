@@ -7,7 +7,10 @@ include ./modules/stages/stages-Mixin
 include ./modules/form-elements/form/form-Mixin
 include ./modules/form-elements/toggles/toggles-Mixin
 include ./modules/form-elements/tick-boxes/tick-boxes-Mixin
-        
+include ./modules/search.dropDown/dropDown/dropDown-Mixin
+include ./modules/search.dropDown/search/search-Mixin
+
+
 doctype html
 html(lang="ru")
   head
@@ -32,7 +35,7 @@ html(lang="ru")
     .block  
       .H1 percentages / pie chart
       .block
-        .H1 percetickBoxntages
+        .H1 percentages
         //- 0..100
         +percentages('75')
 
@@ -75,4 +78,17 @@ html(lang="ru")
           +tickBox
 
     .block
+      .H1 search / drop down
+      .block
+        .H1 search
+
+
+      .block
+        .H1 drop down
+        +dropDown
+
+
+
+
+
     .block

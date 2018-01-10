@@ -1,0 +1,49 @@
+.dropDown
+  font-family "Source Sans Pro", sans-serif
+  width 287px
+  height 28px
+  background-color #e5e5e5
+  border none
+  border-radius 3px
+  color #888888
+  font-size 14px
+  font-weight 400
+  line-height 42px
+  letter-spacing 0.14px
+  position relative
+  padding-left 10px
+  option
+    background-color #e5e5e5
+
+
+.pointerDropDown
+  margin auto
+  position relative
+  width 287px
+  height 28px
+  background-color transparent
+  &:before
+    content ""
+    display block
+    position absolute
+    right 0
+    z-index 1
+    width 37px
+    height: 28px 
+    background-color #4eb7a8
+    border-radius 0 3px 3px 0
+    pointer-events none
+  &:after
+    content ""
+    display block
+    position absolute
+    right 13px
+    top 5px
+    width 10px
+    height 10px
+    z-index 1
+    border solid 0 #fff
+    border-width 0 2px 2px 0
+    transform rotate(45deg)
+
+
