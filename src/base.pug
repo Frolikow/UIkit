@@ -4,7 +4,9 @@ include ./modules/percentagesPieChart/percentages-Mixin
 include ./modules/percentagesPieChart/pieChart-Mixin
 include ./modules/sliders/sliders-Mixin
 include ./modules/stages/stages-Mixin
-include ./modules/form-elements/form-elements-Mixins
+include ./modules/form-elements/form/form-Mixin
+include ./modules/form-elements/toggles/toggles-Mixin
+include ./modules/form-elements/tick-boxes/tick-boxes-Mixin
         
 doctype html
 html(lang="ru")
@@ -30,7 +32,7 @@ html(lang="ru")
     .block  
       .H1 percentages / pie chart
       .block
-        .H1 percentages
+        .H1 percetickBoxntages
         //- 0..100
         +percentages('75')
 
@@ -55,9 +57,22 @@ html(lang="ru")
 
     .block
       .H1 form elements
-      +form
+      form.form
+        +form
 
+      .block
+        .H1 toggles
+        form
+          +toggles
+          +toggles
+          +toggles
 
-    .block
+      .block
+        .H1 tick boxes
+        form
+          +tickBox
+          +tickBox
+          +tickBox
+
     .block
     .block

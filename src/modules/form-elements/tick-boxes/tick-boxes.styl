@@ -1,0 +1,35 @@
+.tickBox
+  display none
+
+.tickBox + span
+  -webkit-appearance: none;
+  width 24px
+  height 24px
+  border-radius 50%
+  background-color #e5e5e5
+  display inline-block
+
+.tickBox + span:before
+  content ""
+  display block
+  width 5px
+  height 10px
+  border 0 solid #c0c0c0
+  border-width 0 2px 2px 0
+  transform rotate(45deg)
+  margin 4px 0 0 8px
+  pointer-events none
+
+.tickBox:checked + span
+  background-color #4eb7a8 
+
+.tickBox:checked + span:before
+  content ""
+  display block
+  width 5px
+  height 10px
+  border 0 solid #fff
+  border-width 0 2px 2px 0
+  transform rotate(45deg)
+  margin 4px 0 0 8px
+  pointer-events none
