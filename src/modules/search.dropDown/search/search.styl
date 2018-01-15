@@ -1,0 +1,49 @@
+.search 
+  margin auto
+  width 287px
+  height 28px
+  position relative
+  input 
+    border none
+  &_input 
+    width 100%
+    height 100%
+    padding 8px 8px 9px 15px
+    box-sizing border-box
+    border-radius 3px
+    background: #e5e5e5
+    font 14px "Source Sans Pro", sans-serif
+    font-weight 400
+    line-height 42px
+    letter-spacing 0.14px
+    color #555
+    outline none
+    &_notFound
+      //  "I’ve not found what I’m looking for..."
+      background-color #e75735
+      color white
+    &:focus 
+      background #eee
+      color #333
+  &_submit 
+    position absolute
+    top 0
+    right 0
+    width 33px
+    height 28px
+    border-radius: 0 3px 3px 0
+    cursor pointer
+    background-color #e75735
+  svg 
+    position absolute
+    top 7%
+    left 90.4%
+    pointer-events none
+
+
+
+
+.highlight {
+  background-color #111111
+  color #fff
+}
