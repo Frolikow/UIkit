@@ -1,14 +1,14 @@
-include ./modules/standartButtons/standart-Buttons-Mixin
-include ./modules/arrowButtons/arrow-Buttons-Mixin
-include ./modules/percentagesPieChart/percentages-Mixin
-include ./modules/percentagesPieChart/pieChart-Mixin
-include ./modules/sliders/sliders-Mixin
-include ./modules/stages/stages-Mixin
-include ./modules/form-elements/form/form-Mixin
-include ./modules/form-elements/toggles/toggles-Mixin
-include ./modules/form-elements/tick-boxes/tick-boxes-Mixin
-include ./modules/search.dropDown/dropDown/dropDown-Mixin
-include ./modules/search.dropDown/search/search-Mixin
+include ./modules/standartButtons/standartButtonsMixin
+include ./modules/arrowButtons/arrowButtonsMixin
+include ./modules/percentagesPieChart/percentagesMixin
+include ./modules/percentagesPieChart/pieChartMixin
+include ./modules/sliders/slidersMixin
+include ./modules/stages/stagesMixin
+include ./modules/formElements/form/formMixin
+include ./modules/formElements/toggles/togglesMixin
+include ./modules/formElements/tickBoxes/tickBoxesMixin
+include ./modules/search.dropDown/dropDown/dropDownMixin
+include ./modules/search.dropDown/search/searchMixin
 
 
 doctype html
@@ -24,7 +24,7 @@ html(lang="ru")
       +stButton('small', 'blue')
       +stButton('big', 'blue') 
       +stButton('big', 'red')
-      +stButton('small', 'red')
+      +stButton('small', 'red') 
 
     .block
       .H1 arrow buttons
@@ -83,13 +83,17 @@ html(lang="ru")
         .H1 search
         +search
 
-
       .block
         .H1 drop down
         +dropDown
 
+    .block
+      .H1 user profile
+        //- +userProfile
 
 
 
 
+    .block
+    .block
     .block
