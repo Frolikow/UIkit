@@ -9,6 +9,10 @@ include ./modules/formElements/toggles/togglesMixin
 include ./modules/formElements/tickBoxes/tickBoxesMixin
 include ./modules/search.dropDown/dropDown/dropDownMixin
 include ./modules/search.dropDown/search/searchMixin
+include ./modules/userProfile/userProfileMixin
+include ./modules/news&events/news/newsMixin.pug
+include ./modules/news&events/events/eventsMixin.pug
+
 
 
 doctype html
@@ -88,12 +92,19 @@ html(lang="ru")
         +dropDown
 
     .block
-      .H1 user profile
-        //- +userProfile
-
-
-
+      .H1 user profile 
+      //- 1)название картинки из папки image модуля 
+      //- 2) имя и фамилия 
+      //- 3) ux designer или developer
+      +userProfile('griffin', 'John Smith', 'ux designer')
+      +userProfile('wolf', 'Sarah Brown', 'developer')
 
     .block
+      .H1 news & events
+      +news
+      +events
+
+
+
     .block
     .block
