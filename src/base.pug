@@ -25,10 +25,10 @@ html(lang="ru")
     .block
       .H1 standart buttons
       //- small/big and blue/red
-      +stButton('small', 'blue')
-      +stButton('big', 'blue') 
-      +stButton('big', 'red')
-      +stButton('small', 'red') 
+      +stButton('small', 'blue','button')
+      +stButton('big', 'blue','button') 
+      +stButton('big', 'red','button')
+      +stButton('small', 'red','button') 
 
     .block
       .H1 arrow buttons
@@ -101,9 +101,11 @@ html(lang="ru")
 
     .block
       .H1 news & events
-      +news
-      +events
+      //-название картики без разрешения/ дата в формате '24 августа 2013'/ текс новости
+      +news('bike', "It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
 
+      //-название картики без разрешения/ дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
+      +events('city', '24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
 
 
     .block

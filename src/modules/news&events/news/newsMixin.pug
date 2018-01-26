@@ -1,2 +1,9 @@
-mixin news()
+mixin news(image,header,date,text)
   .news
+    .news_image(style={background: 'url(/src/modules/news&events/'+`${image}`+'.jpeg) no-repeat 67% 60% / 500%'})
+    .news_content
+      .news_content_header=header
+      .news_content_date=date
+      .news_content_text=text
+
+

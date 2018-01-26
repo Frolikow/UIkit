@@ -1,6 +1,71 @@
 .events
-  width 200px 
-  height 200px
-  border 1px solid black
-  display inline-block
-  margin auto
+  width 288px 
+  height 212px
+  border-radius 4px
+  display flex
+  background-color #4eb7a8
+  &_image
+    width 95px
+    height 212px
+    border-radius 4px 0 0 4px
+  &_content
+    width 193px
+    height 212px
+    color #ffffff
+    display flex
+    flex-direction column
+    justify-content: space-between 
+    margin 0 0 0 22px
+    text-align left
+    font-family 'Lato', sans-serif
+    &_date
+      display inline-block
+      &_day
+        display inline-block
+        font-size 73px
+        font-weight 300
+        letter-spacing -2.92px
+      &_month
+        display inline-block
+        margin-left 13px
+        font-size 30px
+        font-weight 300
+        text-transform lowercase
+        &:first-letter
+          text-transform uppercase
+    &_title
+      font-size 13px
+      font-weight 400
+      text-transform uppercase
+      letter-spacing 0.63px
+    &_text
+      font-size 11px
+      font-weight 400
+      letter-spacing 0.55px
+
+    .stButton
+      margin-bottom 24px
+      margin-left 10px
+      font-family Lato, sans-serif
+      text-transform uppercase
+      border none 
+      border-radius 5px
+      color #43ac9d
+      font-size 10px
+      font-weight bold
+      letter-spacing 0.5px
+      outline none
+      &_size_big
+        width 128px
+        height 22px 
+      &_color_blue
+        background-color #fff 
+        &:hover
+          background-color #fff
+          box-shadow 0 3px 0 0 #379285 
+          border solid 1px #379285
+        &:active
+          background-color #43ac9d
+          color #fff
+          box-shadow 0 3px 0 0 #379285
+        
