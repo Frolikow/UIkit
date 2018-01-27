@@ -12,7 +12,7 @@ include ./modules/search.dropDown/search/searchMixin
 include ./modules/userProfile/userProfileMixin
 include ./modules/news&events/news/newsMixin.pug
 include ./modules/news&events/events/eventsMixin.pug
-
+include ./modules/location/locationMixin.pug
 
 
 doctype html
@@ -108,5 +108,15 @@ html(lang="ru")
       +events('city', '24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
 
 
+    .block
+      .H1 location
+      +location()
+
+
+
+
+
+
+    .block
     .block
     .block
