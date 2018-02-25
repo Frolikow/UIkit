@@ -10,10 +10,10 @@ include ./modules/formElements/tickBoxes/tickBoxesMixin
 include ./modules/search.dropDown/dropDown/dropDownMixin
 include ./modules/search.dropDown/search/searchMixin
 include ./modules/userProfile/userProfileMixin
-include ./modules/news&events/news/newsMixin.pug
-include ./modules/news&events/events/eventsMixin.pug
-include ./modules/location/locationMixin.pug
-
+include ./modules/news&events/news/newsMixin
+include ./modules/news&events/events/eventsMixin
+include ./modules/location/locationMixin
+include ./modules/calendar/calendarMixin
 
 doctype html
 html(lang="ru")
@@ -113,10 +113,13 @@ html(lang="ru")
       +location(56.4531, 84.975643)
     //-  (56.4531, 84.975643) офис
     //-  (55.751244, 37.618423) Москва
-    //-  (59.934280, 30.335099) Санкт-Питербург
+    //-  (59.934280, 30.335099) Санкт-Петербург
     //-  (56.453651, 84.948738) Лагерный сад
 
-
     .block
+      .H1 calendar
+      +calendar
+
+
     .block
     .block

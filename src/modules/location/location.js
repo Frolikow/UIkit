@@ -1,3 +1,4 @@
+'use strict';
 
 function initMap() {
   var element = document.getElementById('map'); //получение дива под карту
@@ -12,8 +13,6 @@ function initMap() {
   };
   var myMap = new google.maps.Map(element, options); //создание карты в диве element и настройками options
 
-
-
   var markers = [ // массив с координатами всех точек на карте
     {
       coordinates: { lat: +posLat, lng: +posLng },
@@ -24,9 +23,8 @@ function initMap() {
     addMarker(markers[i]);
   }
 
-
-
   geocodeLatLng(geocoder, myMap);
+  
   function geocodeLatLng(geocoder, myMap) {
     var latlng = { lat: +posLat, lng: +posLng };
     geocoder.geocode({ 'location': latlng }, function (results, status) {
@@ -37,8 +35,6 @@ function initMap() {
       }
     });
   }
-
-
 
   function addMarker(properties) { // функция установки маркера на карту
     var marker = new google.maps.Marker({

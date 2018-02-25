@@ -9,4 +9,7 @@ import './modules/search.dropDown/search/jquery.highlight';
 
 import './modules/location/location';
 
+import './modules/calendar/calendar';
+import 'jquery-ui/ui/widgets/datepicker.js';
+
 import './style/base.styl';

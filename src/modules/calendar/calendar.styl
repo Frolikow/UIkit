@@ -1,0 +1,142 @@
+.calendar
+  width 279px
+  display block
+  border-radius 4px
+  overflow hidden
+
+  .ui-corner-all  //текст внутри головы календаря
+    font-style normal
+
+  .calendar__day
+    height 62px
+    position relative
+    display block
+    z-index 1
+    border none
+    background-color #e75735
+    color #fff
+    font-size 80px
+    font-weight: 300
+    letter-spacing -3.2px
+    font-family Lato, sans-serif
+    width 100%
+    text-align center
+    padding-top 20px
+
+  .ui-datepicker-header //голова календаря
+    width 279px
+    height 71px
+    background-color #e75735
+    color #fff
+    position relative
+
+      
+    .ui-icon   //стили для иконок
+      border 2px solid #fff
+      border-width 2px 2px 0 0
+      width 11px
+      height 11px
+      display block
+    
+    .ui-datepicker-prev //кнопка "назад"
+      font-size 0
+      position absolute 
+      bottom 15px
+      left 16px
+      z-index 1
+      transform rotate(225deg)
+
+    .ui-datepicker-next //кнопка "вперед"
+      font-size 0
+      position absolute 
+      bottom 15px
+      right 16px
+      z-index 1
+      transform rotate(45deg)
+
+    .ui-datepicker-title 
+      width 279px
+      height 43px
+      background-color #d54c2c
+      position absolute
+      bottom 0
+      
+      .ui-datepicker-month   //месяц
+        display block
+        font-family Lato
+        font-size 24px
+        font-weight 300
+        line-height 40px
+        letter-spacing -0.72px
+
+      .ui-datepicker-year    //год
+        display none
+
+  .ui-datepicker-calendar  //таблица календаря
+    width 279px
+    height 199px
+    background-color #fff
+    border-collapse collapse
+
+    thead  //дни недели
+      color #fff
+      background-color #e75735
+      height 26px
+      font-family Lato
+      font-size 9px
+      font-weight 400
+      line-height: 26px
+      text-transform uppercase
+    tbody
+      td //ячейки чисел
+        width 39px
+        height 39px
+        background-color #f2f2f2
+        border 2px solid #fff
+
+        .ui-state-default //число
+          width 19px
+          height 13px
+          color #868686
+          font-family "Source Sans Pro", sans-serif
+          font-size 20px
+          font-weight 400
+          text-decoration none
+
+      .ui-datepicker-current-day
+        a
+          color #000000
+          text-decoration: underline
+      .ui-datepicker-today
+          background-color #e75735
+          a
+            color #fff
+            text-decoration: none
+
+      .ui-state-disabled
+        .ui-state-default
+          color #ffffff 
+
+  .ui-datepicker-current  //кнопка "сегодня"
+    display block
+    width 279px
+    height 49px
+    background-color #e5e5e5
+    color #868686
+    font-family Lato
+    font-size 13px
+    font-weight bold
+    text-transform uppercase
+    letter-spacing 0.65px
+    text-align left
+    padding-left 18px
+    outline none
+    border none
+    border-radius 0 0 4px 4px
+    &:hover 
+      cursor pointer
+      background-color #d5d5d5
+    &:active
+      background-color #fff
+
+
