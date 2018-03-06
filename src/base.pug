@@ -14,6 +14,7 @@ include ./modules/news&events/news/newsMixin
 include ./modules/news&events/events/eventsMixin
 include ./modules/location/locationMixin
 include ./modules/calendar/calendarMixin
+include ./modules/messager/messagerMixin
 
 doctype html
 html(lang="ru")
@@ -24,11 +25,11 @@ html(lang="ru")
 
     .block
       .H1 standart buttons
-      //- small/big and blue/red
-      +stButton('small', 'blue','button')
-      +stButton('big', 'blue','button') 
-      +stButton('big', 'red','button')
-      +stButton('small', 'red','button') 
+      //- small/big and blue/red value button/submit
+      +stButton('small', 'blue','button', 'button')
+      +stButton('big', 'blue','button', 'button') 
+      +stButton('big', 'red','button', 'button')
+      +stButton('small', 'red','button', 'button') 
 
     .block
       .H1 arrow buttons
@@ -120,6 +121,10 @@ html(lang="ru")
       .H1 calendar
       +calendar
 
+
+    .block
+      .H1 messaging
+      +messager
 
     .block
     .block

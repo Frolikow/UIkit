@@ -1,3 +1,3 @@
 
-mixin stButton(size, color, value)
-  button(class=`stButton stButton_size_${size} stButton_color_${color}`)=value
+mixin stButton(size, color, value, types)
+  input(class=`stButton stButton_size_${size} stButton_color_${color}` type=types value=value)

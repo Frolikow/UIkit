@@ -1,0 +1,15 @@
+mixin messager() 
+  form.messagerForm
+    .messager 
+      .messager__header
+        .messager__header__name sarah brown
+      .messager__photo
+        +userProfile('wolf', 'Sarah Brown', 'developer')
+      .messager__icons
+        .messager__icons__message
+        .messager__icons__sendPhoto
+      .messager__chat
+
+      input(class='messager__input__test' id='messager__input__test' placeholder='Your message' type='text')
+      .messager__input__btn#messager__input__btn
+        +stButton('big', 'blue', 'reply', 'submit') 

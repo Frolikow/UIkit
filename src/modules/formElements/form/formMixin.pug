@@ -10,7 +10,4 @@ mixin form
     textarea(class='form_textarea form_equal-style' 
     placeholder='Your Message')
 
-    
-    input(type='submit' value='submit' 
-    class='form_submit form_equal-style'
-    onclick='validate(this.form)') 
+    +stButton('small', 'blue','submit', 'submit')
