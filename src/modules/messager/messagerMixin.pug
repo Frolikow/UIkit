@@ -10,6 +10,6 @@ mixin messager()
         .messager__icons__sendPhoto
       .messager__chat
 
-      input(class='messager__input__test' id='messager__input__test' placeholder='Your message' type='text')
+      input.messager__input__newMessage#messager__input__newMessage(placeholder='Your message' type='text')
       .messager__input__btn#messager__input__btn
         +stButton('big', 'blue', 'reply', 'submit') 
