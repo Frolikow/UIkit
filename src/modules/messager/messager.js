@@ -1,5 +1,5 @@
-
 'use strict'
+
 $(function () {
   var date = new Date;
   var options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
@@ -10,46 +10,46 @@ $(function () {
   }, {
     type: 'in', text: 'Quisquam quis,  pariatur, quam consequatur quos!', time: date.toLocaleString("ru", options)
   }];
+  var messageText;
 
-  function createMessage(typeMessage, messageOut) {
-
-    if (typeMessage == "insertBaseMessage") {
-      messageBase.forEach(function (item, i, messageBase) {
-        var messager = document.getElementsByClassName('messager__chat')[0];
-        var newMessage = document.createElement('div');
-        if (messageBase[i].type == 'out') {
-          newMessage.className = 'messager__chat__message__out messager__chat__message';
-        }
-        else {
-          newMessage.className = 'messager__chat__message__in messager__chat__message';
-        }
-        newMessage.innerHTML = messageBase[i].text;
-        messager.appendChild(newMessage);
-      })
+  function addMessage(type, text, time, newMessageClassName) {
+    var messager = document.getElementsByClassName('messager__chat')[0];
+    var newMessage = document.createElement('div');
+    if (type == "insertBaseMessage") {
+      newMessage.className = newMessageClassName;
     }
-    if (typeMessage == "insertNewMessage") {
-      var messager = document.getElementsByClassName('messager__chat')[0];
-      var newMessage = document.createElement('div');
+    else {
       newMessage.className = 'messager__chat__message__out messager__chat__message';
-      newMessage.innerHTML = messageOut;
-      messager.appendChild(newMessage);
-      document.getElementById('messager__input__newMessage').value = '';
     }
+    newMessage.innerHTML = text;
+    messager.appendChild(newMessage);
   }
 
   function loadMessageFromBase() {
-    createMessage('insertBaseMessage');
-  };
-  loadMessageFromBase();
+    messageBase.forEach(function (item, i, messageBase) {
+      var newMessageClassName;
+      if (messageBase[i].type == 'out') {
+        newMessageClassName = 'messager__chat__message__out messager__chat__message';
+      }
+      else {
+        newMessageClassName = 'messager__chat__message__in messager__chat__message';
+      }
+      messageText = messageBase[i].text;
+      addMessage('insertBaseMessage', messageText, date.toLocaleString("ru", options), newMessageClassName);
+    })
+  }
 
   function createOutMessage() {
-    var messageOut = document.getElementById('messager__input__newMessage').value;
-    if (messageOut == "") {
+    messageText = document.getElementById('messager__input__newMessage').value;
+    if (messageText == "") {
       return;
     }
     else {
-      createMessage('insertNewMessage', messageOut);
+      addMessage('insertNewMessage', messageText, date.toLocaleString("ru", options));
+      document.getElementById('messager__input__newMessage').value = '';
     }
   }
   document.getElementById("messager__input__btn").addEventListener('click', createOutMessage);
+
+  loadMessageFromBase(messageBase);
 })
