@@ -15,6 +15,7 @@ include ./modules/news&events/events/eventsMixin
 include ./modules/location/locationMixin
 include ./modules/calendar/calendarMixin
 include ./modules/messager/messagerMixin
+include ./modules/videoPlayer/videoPlayerMixin
 
 doctype html
 html(lang="ru")
@@ -127,4 +128,6 @@ html(lang="ru")
       +messager
 
     .block
+      .H1 video
+      +videoPlayer()
     .block

@@ -12,6 +12,7 @@
   background-size 105%
   position relative
   margin 5px
+  z-index 10
   &:hover .userProfile_info
     transform scaleX(1) 
     transition: all 0.5s;
@@ -28,6 +29,7 @@
     position relative
     bottom 3px
     border-radius 4px
+
     &::after 
       content ""
       display block
@@ -39,6 +41,8 @@
       top 40px
       right 157px
       border-radius 3px 0 0 0 
+          z-index 1
+
     &_name
       color #e75735
       font-size 18px

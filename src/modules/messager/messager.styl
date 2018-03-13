@@ -11,6 +11,7 @@
     border-radius 4px 4px 0 0
     box-shadow 0 34px   #46ab9d
     &__name
+      content '\f075' #8e8d8d
       height 81px
       text-transform capitalize
       color #ffffff
@@ -33,7 +34,27 @@
       right 5px
       bottom 5px
       border none
-
+  &__icons
+    display block
+    width 30px
+    height 0
+    position relative
+    &__message
+      position relative
+      bottom 45px
+      left 20px
+      svg
+        fill #999
+        &:hover
+          fill black
+    &__sendPhoto
+      position relative
+      bottom 80px
+      left 240px
+      svg
+        fill  #999
+        &:hover
+          fill black
   &__chat
     margin-left auto
     margin-right auto
