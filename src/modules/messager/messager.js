@@ -8,7 +8,6 @@ $(function () {
   }, {
     type: 'in', text: 'Quisquam quis,  pariatur, quam consequatur quos!'
   }];
-  var message={};
 
   function addMessage(message) {
     var date = new Date;
@@ -16,27 +15,19 @@ $(function () {
     var messager = document.getElementsByClassName('messager__chat')[0];
     var newMessage = document.createElement('div');
     message.time = date.toLocaleString("ru", options);
-    if (message.type == 'out') {
-      newMessage.className = 'messager__chat__message__out messager__chat__message';
-    }
-    else {
-      newMessage.className = 'messager__chat__message__in messager__chat__message';
-    }
+    newMessage.className = 'messager__chat__message__' + message.type + ' messager__chat__message';
     newMessage.innerHTML = message.text;
     messager.appendChild(newMessage);
   };
 
   function loadMessageFromBase() {
-    messageBase.forEach(function (item, i, messageBase) {
-      message.type = messageBase[i].type;
-      message.text = messageBase[i].text;
-      addMessage(message);
-    })
+    messageBase.forEach(addMessage)
   };
 
   function createOutMessage() {
+    var message = {};
     message.type = 'out';
-    message.text= document.getElementById('messager__input__newMessage').value;
+    message.text = document.getElementById('messager__input__newMessage').value;
     if (message.text == "") {
       return;
     }
@@ -48,4 +39,4 @@ $(function () {
   document.getElementById("messager__input__btn").addEventListener('click', createOutMessage);
 
   loadMessageFromBase(messageBase);
-});
+}); 
