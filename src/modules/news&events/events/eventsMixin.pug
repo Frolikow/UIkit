@@ -1,10 +1,10 @@
-mixin events(image,day,month,title,text)
+mixin events(day,month,title,text)
   .events
-    .events_image(style={background: 'url(/src/modules/news&events/'+`${image}`+'.jpeg) no-repeat 67% 60% / 180%'})
+    .events_image
     .events_content
       .events_content_date
         .events_content_date_day=day
         .events_content_date_month=month
       .events_content_title=title
       .events_content_text=text
-      +stButton('big','blue','add to calendar', 'button') 
+      +stButton('big','blue','add to calendar', 'button')

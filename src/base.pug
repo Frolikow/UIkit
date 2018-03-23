@@ -103,12 +103,11 @@ html(lang="ru")
 
     .block
       .H1 news & events
-      //-название картики без разрешения/ дата в формате '24 августа 2013'/ текс новости
-      +news('bike', "It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+      //- дата в формате '24 августа 2013'/ текс новости
+      +news("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
 
-      //-название картики без разрешения/ дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
-      +events('city', '24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
-
+      //- дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
+      +events('24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
 
     .block
       .H1 location
@@ -121,7 +120,6 @@ html(lang="ru")
     .block
       .H1 calendar
       +calendar
-
 
     .block
       .H1 messaging
