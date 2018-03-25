@@ -1,0 +1,293 @@
+ <!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>"UIKit"</title>
+  <link href="/style.css" rel="stylesheet"><script type="text/javascript" src="/bundle/main.js"></script></head>
+  <body>
+    <div class="block">
+      <div class="H1">standart buttons</div>
+      <input class="stButton stButton_size_small stButton_color_blue" type="button" value="button">
+      <input class="stButton stButton_size_big stButton_color_blue" type="button" value="button">
+      <input class="stButton stButton_size_big stButton_color_red" type="button" value="button">
+      <input class="stButton stButton_size_small stButton_color_red" type="button" value="button">
+    </div>
+    <div class="block">
+      <div class="H1">arrow buttons</div>
+      <button class="arButton arButton_trend_left"></button>
+      <button class="arButton arButton_trend_right"></button>
+    </div>
+    <div class="block"> 
+      <div class="H1">percentages / pie chart</div>
+      <div class="block">
+        <div class="H1">percentages</div>
+        <div class="percentages">
+          <div class="percentages_Value">75</div>
+          <div class="percentages_image">
+            <svg class="percentages_image_svg">
+              <circle class="percentages_image_svg_circle" transform="rotate(-90)" style="stroke-dasharray:212.25px 408px;" r="45" cx="-50" cy="50"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="H1">pie chart</div>
+        <div class="pieChart">
+          <div class="pieChart_value">%</div>
+          <div class="pieChart_image">
+            <svg class="pieChart_image_svg">
+              <circle class="pieChart_image_svg_circle4" transform="rotate(-90)" style="stroke-dasharray: 248px 408px;" r="39.5" cx="-50" cy="50"></circle>
+              <circle class="pieChart_image_svg_circle1" transform="rotate(-90)" style="stroke-dasharray:210.8px 408px;" r="39.5" cx="-50" cy="50"></circle>
+              <circle class="pieChart_image_svg_circle2" transform="rotate(-90)" style="stroke-dasharray:186px 408px;" r="39.5" cx="-50" cy="50"></circle>
+              <circle class="pieChart_image_svg_circle3" transform="rotate(-90)" style="stroke-dasharray:124px 408px;" r="39.5" cx="-50" cy="50"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">sliders</div>
+      <div class="block"> 
+        <div class="H1">standart slider</div>
+        <div class="standartSlider">
+          <div class="standartSlider_custom-handle ui-slider-handle"></div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="H1">step slider</div>
+        <div class="step-slider">
+          <div class="step_Slider ui-slider ui-slider-handle ui-slider-range"></div>
+          <div class="scale">
+            <div class="scale_value">0</div>
+            <div class="scale_value">25</div>
+            <div class="scale_value">50</div>
+            <div class="scale_value">75</div>
+            <div class="scale_value">100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">stages
+        <div class="stages">
+          <div class="stages-select" style="width:40%;"></div>
+          <ul>
+            <li class="li-edit">1</li>
+            <li class="li-edit">2</li>
+            <li class="li-edit">3</li>
+            <li class="li-edit">4</li>
+            <li class="li-edit">5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">form elements</div>
+      <form class="form">
+        <input class="form_name form_equal-style" type="text" placeholder="Your Name" required>
+        <div class="input_info"></div>
+        <input class="form_email form_equal-style" type="email" placeholder="Your Email" required>
+        <div class="input_info"></div>
+        <textarea class="form_textarea form_equal-style" placeholder="Your Message"></textarea>
+        <input class="stButton stButton_size_small stButton_color_blue" type="submit" value="submit">
+      </form>
+      <div class="block">
+        <div class="H1">toggles</div>
+        <form>
+          <label>
+            <input class="checkbox" type="checkbox"><span></span>
+          </label>
+          <label>
+            <input class="checkbox" type="checkbox"><span></span>
+          </label>
+          <label>
+            <input class="checkbox" type="checkbox"><span></span>
+          </label>
+        </form>
+      </div>
+      <div class="block">
+        <div class="H1">tick boxes</div>
+        <form>
+          <label>
+            <input class="tickBox" type="checkbox" hidden><span></span>
+          </label>
+          <label>
+            <input class="tickBox" type="checkbox" hidden><span></span>
+          </label>
+          <label>
+            <input class="tickBox" type="checkbox" hidden><span></span>
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">search / drop down</div>
+      <div class="block">
+        <div class="H1">search</div>
+        <form class="search" action="" method="post">
+          <input class="search_input" type="search" name="" placeholder="Search" id="search_input">
+          <input class="search_submit" type="submit" name="" value="" id="search_submit">
+          <svg>
+            <circle r="4" cx="10" cy="10" stroke="white" fill="transparent" stroke-width="2"></circle>
+            <line x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2"></line>
+          </svg>
+        </form>
+      </div>
+      <div class="block">
+        <div class="H1">drop down</div>
+        <div class="pointerDropDown">
+          <select class="dropDown">
+            <option value="0">Choose An Option</option>
+            <option value="1">some text 1</option>
+            <option value="2">some text 2</option>
+            <option value="3">some text 3</option>
+            <option value="4">some text 4</option>
+            <option value="5">some text 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">user profile </div>
+      <div class="userProfile userProfile_griffin">
+        <div class="userProfile_hidden">
+          <div class="userProfile_info userProfile_info_ux designer">
+            <div class="userProfile_info_name">John Smith</div>
+            <div class="userProfile_info_position">ux designer</div>
+            <div class="userProfile_info_socialNetworks">
+              <div class="userProfile_info_socialNetworks_facebook"> <a href="#"><svg  viewBox="0 0 100 100" >
+                  <path class="socialNetworks_icons" d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path></a></div>
+              <div class="userProfile_info_socialNetworks_twitter"> <a href="#"><svg  viewBox="0 0 612 612" >
+                  <path class="socialNetworks_icons" d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path></a></div>
+              <div class="userProfile_info_socialNetworks_dribbble"> <a href="#"><svg  viewBox="0 0 530 530" >
+                  <path class="socialNetworks_icons" d="M254.26,0C114.067,0,0,114.067,0,254.26s114.067,254.26,254.26,254.26     s254.26-114.067,254.26-254.26S394.452,0,254.26,0z M422.357,117.246c30.257,36.963,48.532,84.033,49.009,135.298     c-7.183-1.526-78.916-16.082-151.221-6.992l-4.672-11.219c-4.513-10.584-9.344-21.104-14.397-31.465     C381.39,170.1,417.781,123.443,422.357,117.246z M254.26,37.408c55.174,0,105.613,20.69,143.943,54.729     c-3.877,5.562-36.55,49.485-113.781,78.439c-35.596-65.377-75.038-119.089-81.045-127.13     C219.712,39.506,236.748,37.408,254.26,37.408z M161.932,58.035c5.721,7.85,44.527,61.626,80.505,125.604     c-101.577,26.983-191.044,26.602-200.77,26.475C55.746,142.703,101.164,86.703,161.932,58.035z M37.058,254.578l0.095-6.643     c9.503,0.222,114.767,1.557,223.177-30.893c6.261,12.173,12.173,24.536,17.639,36.868l-8.581,2.574     c-111.97,36.2-171.562,134.917-176.52,143.307C58.226,361.303,37.09,310.388,37.058,254.578z M254.228,471.747     c-50.185,0-96.46-17.099-133.296-45.83c3.909-7.946,47.896-92.932,170.386-135.616l1.43-0.477     c30.511,79.202,43.065,145.627,46.339,164.697C313.057,465.613,284.358,471.779,254.228,471.747z M375.605,434.625     c-2.225-13.222-13.825-76.786-42.175-154.844c68.046-10.901,127.829,6.96,135.266,9.312     C458.971,349.48,424.36,401.699,375.605,434.625z"></path></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="userProfile userProfile_wolf">
+        <div class="userProfile_hidden">
+          <div class="userProfile_info userProfile_info_developer">
+            <div class="userProfile_info_name">Sarah Brown</div>
+            <div class="userProfile_info_position">developer</div>
+            <div class="userProfile_info_socialNetworks">
+              <div class="userProfile_info_socialNetworks_facebook"> <a href="#"><svg  viewBox="0 0 100 100" >
+                  <path class="socialNetworks_icons" d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path></a></div>
+              <div class="userProfile_info_socialNetworks_twitter"> <a href="#"><svg  viewBox="0 0 612 612" >
+                  <path class="socialNetworks_icons" d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path></a></div>
+              <div class="userProfile_info_socialNetworks_dribbble"> <a href="#"><svg  viewBox="0 0 530 530" >
+                  <path class="socialNetworks_icons" d="M254.26,0C114.067,0,0,114.067,0,254.26s114.067,254.26,254.26,254.26     s254.26-114.067,254.26-254.26S394.452,0,254.26,0z M422.357,117.246c30.257,36.963,48.532,84.033,49.009,135.298     c-7.183-1.526-78.916-16.082-151.221-6.992l-4.672-11.219c-4.513-10.584-9.344-21.104-14.397-31.465     C381.39,170.1,417.781,123.443,422.357,117.246z M254.26,37.408c55.174,0,105.613,20.69,143.943,54.729     c-3.877,5.562-36.55,49.485-113.781,78.439c-35.596-65.377-75.038-119.089-81.045-127.13     C219.712,39.506,236.748,37.408,254.26,37.408z M161.932,58.035c5.721,7.85,44.527,61.626,80.505,125.604     c-101.577,26.983-191.044,26.602-200.77,26.475C55.746,142.703,101.164,86.703,161.932,58.035z M37.058,254.578l0.095-6.643     c9.503,0.222,114.767,1.557,223.177-30.893c6.261,12.173,12.173,24.536,17.639,36.868l-8.581,2.574     c-111.97,36.2-171.562,134.917-176.52,143.307C58.226,361.303,37.09,310.388,37.058,254.578z M254.228,471.747     c-50.185,0-96.46-17.099-133.296-45.83c3.909-7.946,47.896-92.932,170.386-135.616l1.43-0.477     c30.511,79.202,43.065,145.627,46.339,164.697C313.057,465.613,284.358,471.779,254.228,471.747z M375.605,434.625     c-2.225-13.222-13.825-76.786-42.175-154.844c68.046-10.901,127.829,6.96,135.266,9.312     C458.971,349.48,424.36,401.699,375.605,434.625z"></path></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">news & events</div>
+      <div class="news">
+        <div class="news_image"></div>
+        <div class="news_content">
+          <div class="news_content_header">It's all going downhill</div>
+          <div class="news_content_date">24 august 2013</div>
+          <div class="news_content_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.</div>
+        </div>
+      </div>
+      <div class="events">
+        <div class="events_image"></div>
+        <div class="events_content">
+          <div class="events_content_date">
+            <div class="events_content_date_day">24</div>
+            <div class="events_content_date_month">aug</div>
+          </div>
+          <div class="events_content_title">This is the title</div>
+          <div class="events_content_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+          <input class="stButton stButton_size_big stButton_color_blue" type="button" value="add to calendar">
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">location</div>
+      <div class="location">
+        <div class="location_map" id="map" lat="56.4531" lng="84.975643"></div>
+        <div class="location_menu">
+          <div class="location_menu_message">Meet us!</div>
+          <div class="location_menu_address" id="map_address"> </div>
+          <div class="location_menu_buttons">
+            <div class="location_menu_buttons_1"><a href="#">
+                <svg viewBox="0 0 295.82 295.82">
+                  <path d="m287.12,139.21h-26.537c-4.211-55.649-48.306-99.761-103.972-103.972v-26.537c0-5.22-3.48-8.701-8.701-8.701-5.22,0-8.701,3.48-8.701,8.701v26.537c-55.648,4.211-99.76,48.305-103.972,103.972h-26.536c-5.221,0-8.701,3.48-8.701,8.7 0,5.22 3.48,8.701 8.701,8.701h26.537c4.211,55.649 48.306,99.761 103.972,103.972v26.537c0,5.22 3.48,8.701 8.701,8.701 5.22,0 8.701-3.48 8.701-8.701v-26.537c55.649-4.211 99.761-48.306 103.972-103.972h26.537c5.22,0 8.701-3.48 8.701-8.701-0.002-5.22-3.482-8.7-8.702-8.7zm-130.509,103.954v-25.649c0-5.22-3.48-8.701-8.701-8.701-5.22,0-8.701,3.48-8.701,8.701v25.649c-45.365-4.246-82.308-41.189-86.554-86.554h25.649c5.22,0 8.701-3.48 8.701-8.701 0-5.22-3.48-8.701-8.701-8.701h-25.648c4.246-45.365 41.189-82.308 86.554-86.554v25.649c0,5.22 3.48,8.701 8.701,8.701 5.22,0 8.701-3.48 8.701-8.701v-25.647c45.365,4.246 82.308,41.189 86.554,86.554h-25.649c-5.22,0-8.701,3.48-8.701,8.701 0,5.22 3.48,8.701 8.701,8.701h25.649c-4.247,45.364-41.19,82.307-86.555,86.552z"></path>
+                </svg></a></div>
+            <div class="location_menu_buttons_2"><a href="#">
+                <svg viewBox="70 70 380 360"> 
+                  <path class="target" d="M255,0C155.55,0,76.5,79.05,76.5,178.5C76.5,311.1,255,510,255,510s178.5-198.9,178.5-331.5C433.5,79.05,354.45,0,255,0z     M255,242.25c-35.7,0-63.75-28.05-63.75-63.75s28.05-63.75,63.75-63.75s63.75,28.05,63.75,63.75S290.7,242.25,255,242.25z"></path>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">calendar</div>
+      <div class="calendar js-calendar" id="datepicker">
+        <input class="calendar__day js-calendar__day" readonly>
+        <div class="calendar__widget js-calendar__widget"></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="H1">messaging</div>
+      <form class="messagerForm">
+        <div class="messager"> 
+          <div class="messager__header">
+            <div class="messager__header__name">sarah brown</div>
+          </div>
+          <div class="messager__photo">
+            <div class="userProfile userProfile_wolf">
+              <div class="userProfile_hidden">
+                <div class="userProfile_info userProfile_info_developer">
+                  <div class="userProfile_info_name">Sarah Brown</div>
+                  <div class="userProfile_info_position">developer</div>
+                  <div class="userProfile_info_socialNetworks">
+                    <div class="userProfile_info_socialNetworks_facebook"> <a href="#"><svg  viewBox="0 0 100 100" >
+                        <path class="socialNetworks_icons" d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path></a></div>
+                    <div class="userProfile_info_socialNetworks_twitter"> <a href="#"><svg  viewBox="0 0 612 612" >
+                        <path class="socialNetworks_icons" d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path></a></div>
+                    <div class="userProfile_info_socialNetworks_dribbble"> <a href="#"><svg  viewBox="0 0 530 530" >
+                        <path class="socialNetworks_icons" d="M254.26,0C114.067,0,0,114.067,0,254.26s114.067,254.26,254.26,254.26     s254.26-114.067,254.26-254.26S394.452,0,254.26,0z M422.357,117.246c30.257,36.963,48.532,84.033,49.009,135.298     c-7.183-1.526-78.916-16.082-151.221-6.992l-4.672-11.219c-4.513-10.584-9.344-21.104-14.397-31.465     C381.39,170.1,417.781,123.443,422.357,117.246z M254.26,37.408c55.174,0,105.613,20.69,143.943,54.729     c-3.877,5.562-36.55,49.485-113.781,78.439c-35.596-65.377-75.038-119.089-81.045-127.13     C219.712,39.506,236.748,37.408,254.26,37.408z M161.932,58.035c5.721,7.85,44.527,61.626,80.505,125.604     c-101.577,26.983-191.044,26.602-200.77,26.475C55.746,142.703,101.164,86.703,161.932,58.035z M37.058,254.578l0.095-6.643     c9.503,0.222,114.767,1.557,223.177-30.893c6.261,12.173,12.173,24.536,17.639,36.868l-8.581,2.574     c-111.97,36.2-171.562,134.917-176.52,143.307C58.226,361.303,37.09,310.388,37.058,254.578z M254.228,471.747     c-50.185,0-96.46-17.099-133.296-45.83c3.909-7.946,47.896-92.932,170.386-135.616l1.43-0.477     c30.511,79.202,43.065,145.627,46.339,164.697C313.057,465.613,284.358,471.779,254.228,471.747z M375.605,434.625     c-2.225-13.222-13.825-76.786-42.175-154.844c68.046-10.901,127.829,6.96,135.266,9.312     C458.971,349.48,424.36,401.699,375.605,434.625z"></path></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="messager__icons">
+            <div class="messager__icons__message"><a href="#">
+                <svg viewBox="0 0 600 600">
+                  <path d="M477.371,127.44c-22.843-28.074-53.871-50.249-93.076-66.523c-39.204-16.272-82.035-24.41-128.478-24.41   c-34.643,0-67.762,4.805-99.357,14.417c-31.595,9.611-58.812,22.602-81.653,38.97c-22.845,16.37-41.018,35.832-54.534,58.385   C6.757,170.833,0,194.484,0,219.228c0,28.549,8.61,55.3,25.837,80.234c17.227,24.931,40.778,45.871,70.664,62.811   c-2.096,7.611-4.57,14.846-7.426,21.693c-2.855,6.852-5.424,12.474-7.708,16.851c-2.286,4.377-5.376,9.233-9.281,14.562   c-3.899,5.328-6.849,9.089-8.848,11.275c-1.997,2.19-5.28,5.812-9.851,10.849c-4.565,5.048-7.517,8.329-8.848,9.855   c-0.193,0.089-0.953,0.952-2.285,2.567c-1.331,1.615-1.999,2.423-1.999,2.423l-1.713,2.566c-0.953,1.431-1.381,2.334-1.287,2.707   c0.096,0.373-0.094,1.331-0.57,2.851c-0.477,1.526-0.428,2.669,0.142,3.433v0.284c0.765,3.429,2.43,6.187,4.998,8.277   c2.568,2.092,5.474,2.95,8.708,2.563c12.375-1.522,23.223-3.606,32.548-6.276c49.87-12.758,93.649-35.782,131.334-69.097   c14.272,1.522,28.072,2.286,41.396,2.286c46.442,0,89.271-8.138,128.479-24.417c39.208-16.272,70.233-38.448,93.072-66.517   c22.843-28.062,34.263-58.663,34.263-91.781C511.626,186.108,500.207,155.509,477.371,127.44z"></path>
+                </svg></a></div>
+            <div class="messager__icons__sendPhoto"><a href="#">
+                <svg viewBox="0 0 600 600">
+                  <path d="M526.76,131.045c-14.277-14.274-31.498-21.413-51.675-21.413h-63.953l-14.558-38.826    c-3.618-9.325-10.229-17.368-19.846-24.128c-9.613-6.757-19.462-10.138-29.551-10.138H200.996    c-10.088,0-19.939,3.381-29.552,10.138c-9.613,6.76-16.225,14.803-19.842,24.128l-14.56,38.826H73.089    c-20.179,0-37.401,7.139-51.678,21.413C7.137,145.32,0,162.544,0,182.721v255.813c0,20.178,7.137,37.404,21.411,51.675    c14.277,14.277,31.5,21.416,51.678,21.416h401.989c20.177,0,37.397-7.139,51.675-21.416    c14.273-14.271,21.412-31.497,21.412-51.675V182.721C548.169,162.544,541.03,145.32,526.76,131.045z M364.446,400.993    c-25.029,25.03-55.147,37.548-90.362,37.548s-65.331-12.518-90.362-37.548c-25.031-25.026-37.544-55.151-37.544-90.358    c0-35.218,12.517-65.333,37.544-90.364c25.028-25.031,55.148-37.544,90.362-37.544s65.333,12.516,90.362,37.544    c25.03,25.028,37.545,55.146,37.545,90.364C401.991,345.842,389.477,375.964,364.446,400.993z"></path>
+                  <path d="M274.084,228.403c-22.651,0-42.018,8.042-58.102,24.128c-16.084,16.084-24.126,35.448-24.126,58.104    c0,22.647,8.042,42.014,24.126,58.098c16.084,16.081,35.45,24.123,58.102,24.123c22.648,0,42.017-8.042,58.101-24.123    c16.084-16.084,24.127-35.45,24.127-58.098c0-22.655-8.043-42.019-24.127-58.104C316.102,236.446,296.732,228.403,274.084,228.403    z"></path>
+                </svg></a></div>
+          </div>
+          <div class="messager__chat"></div>
+          <input class="messager__input__newMessage" id="messager__input__newMessage" placeholder="Your message" type="text">
+          <div class="messager__input__btn" id="messager__input__btn">
+            <input class="stButton stButton_size_big stButton_color_blue" type="submit" value="reply">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="block">
+      <div class="H1">video</div>
+      <div class="videoPlayer"> 
+        <iframe src="https://player.vimeo.com/video/62980495" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&amp;callback=initMap"> </script>
+  </body>
+</html>
