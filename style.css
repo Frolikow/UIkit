@@ -629,7 +629,7 @@
   background-color: #4eb7a8;
 }
 .events_image {
-  background: url(/style/images/city.jpeg) no-repeat 67% 60%/180%;
+  background: url(/UIkit/style/images/city.jpeg) no-repeat 67% 60%/180%;
   width: 95px;
   height: 212px;
   border-radius: 4px 0 0 4px;
@@ -715,7 +715,7 @@
   margin-right: 10px;
 }
 .news_image {
-  background-image: url(/style/images/bike.jpeg);
+  background-image: url(/UIkit/style/images/bike.jpeg);
   background-repeat: no-repeat;
   background-position: 67% 60%;
   background-size: 500%;
@@ -1117,10 +1117,10 @@
   transition: all 0.5s;
 }
 .userProfile_griffin {
-  background: #aaa url(/style/images/griffin.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/UIkit/style/images/griffin.jpeg) no-repeat 50% 50%/105%;
 }
 .userProfile_wolf {
-  background: #aaa url(/style/images/wolf.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/UIkit/style/images/wolf.jpeg) no-repeat 50% 50%/105%;
 }
 .userProfile_hidden {
   width: 110px;
@@ -1271,16 +1271,16 @@
 }
 @font-face {
   font-family: Lato-Regular;
-  src: url(/style/fonts/Lato/Lato-Regular.ttf);
+  src: url(/UIkit/style/fonts/Lato/Lato-Regular.ttf);
   font-family: Lato-Black;
-  src: url(/style/fonts/Lato/Lato-Black.ttf);
+  src: url(/UIkit/style/fonts/Lato/Lato-Black.ttf);
   font-family: Lato-Light;
-  src: url(/style/fonts/Lato/Lato-Light.ttf);
+  src: url(/UIkit/style/fonts/Lato/Lato-Light.ttf);
 }
 @font-face {
   font-family: SourceSansPro-Black;
   font-style: normal;
-  src: url(/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
+  src: url(/UIkit/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
 }
 body {
   width: 700px;
