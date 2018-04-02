@@ -1,0 +1,15 @@
+include ./../../../modules/standartButtons/standartButtonsMixin
+
+mixin header()
+  .header 
+    .image 
+      .logo logotip
+      .menu
+        .buttonBlock
+          a(href='./firstPage.html') 
+            +stButton('big', 'blue','Главная', 'button')
+          a(href='./catalog.html')
+            +stButton('big', 'blue','Каталог', 'button')
+          a(href='./contacts.html')
+            +stButton('big', 'blue','Контакты', 'button')
+

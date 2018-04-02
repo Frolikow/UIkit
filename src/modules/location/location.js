@@ -16,7 +16,7 @@ function initMap() {
   var markers = [ // массив с координатами всех точек на карте
     {
       coordinates: { lat: +posLat, lng: +posLng },
-      image: '/src/style/images/map-placeholder.svg',
+      image: require('style/images/map-placeholder.svg'),
     }
   ];
   for (var i = 0; i < markers.length; i++) { //перебор массива с координатами и вызов функции на каждую метку
@@ -46,4 +46,4 @@ function initMap() {
     }
   }
 }
-
+window.initMap = initMap;

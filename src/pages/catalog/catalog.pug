@@ -1,0 +1,23 @@
+include ./../pageModules/header/headerMixin
+include ./../pageModules/footer/footerMixin
+include ./catalogProduct/productMixin.pug
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title  Каталог(UIkit)
+  body 
+    .layout
+      +header
+      .testContent Каталог
+      .main
+        .productsBlock
+          +product('bmw1', 'BMW 7 S', '2000000')
+          +product('cadilac1', 'Cadilac Escalade', '5000000')
+          +product('camaro1', 'Shevrole Camaro', '3500000')
+          +product('ford1', 'Ford Mustang', '10000000')
+          +product('hummer1', 'Hummer 3', '5000000')
+          +product('porshe1', 'Porshe 911', '3000000')
+          +product('RR1', 'Rolls-Royse', '30000000')
+      +footer 

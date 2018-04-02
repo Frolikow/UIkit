@@ -21,112 +21,116 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title "UIKit"  
+    title "UIKit"
   body
-
-    .block
-      .H1 standart buttons
-      //- small/big and blue/red value button/submit
-      +stButton('small', 'blue','button', 'button')
-      +stButton('big', 'blue','button', 'button') 
-      +stButton('big', 'red','button', 'button')
-      +stButton('small', 'red','button', 'button') 
-
-    .block
-      .H1 arrow buttons
-      //- left/right
-      +arButton('left')
-      +arButton('right')
-
-    .block  
-      .H1 percentages / pie chart
+    .demoLayout
+      a(href='./pages/firstPage.html')
+        +stButton('big', 'red', 'back', 'button')
       .block
-        .H1 percentages
-        //- 0..100
-        +percentages('75')
+        .H1 standart buttons
+        //- small/big and blue/red value button/submit
+        +stButton('small', 'blue','button', 'button')
+        +stButton('big', 'blue','button', 'button') 
+        +stButton('big', 'red','button', 'button')
+        +stButton('small', 'red','button', 'button') 
 
       .block
-        .H1 pie chart
-        //- (value1, value2, value3)
-        +pieChart(50, 25, 10)
-  
-    .block
-      .H1 sliders
-      .block 
-        .H1 standart slider
-        +standartSlider
+        .H1 arrow buttons
+        //- left/right
+        +arButton('left')
+        +arButton('right')
+
+      .block  
+        .H1 percentages / pie chart
+        .block
+          .H1 percentages
+          //- 0..100
+          +percentages('75')
+
+        .block
+          .H1 pie chart
+          //- (value1, value2, value3)
+          +pieChart(50, 25, 10)
+    
       .block
-        .H1 step slider
-        +stepSlider
+        .H1 sliders
+        .block 
+          .H1 standart slider
+          +standartSlider
+        .block
+          .H1 step slider
+          +stepSlider
 
-    .block
-      .H1 stages
-        //- length, value
-        +stages(11, 5) 
+      .block
+        .H1 stages
+          //- length, value
+          +stages(11, 5) 
 
-    .block
-      .H1 form elements
-      form.form
+      .block
+        .H1 form elements
         +form
 
-      .block
-        .H1 toggles
-        form
-          +toggles
-          +toggles
-          +toggles
+        .block
+          .H1 toggles
+          form
+            +toggles
+            +toggles
+            +toggles
+
+        .block
+          .H1 tick boxes
+          form
+            +tickBox
+            +tickBox
+            +tickBox
 
       .block
-        .H1 tick boxes
-        form
-          +tickBox
-          +tickBox
-          +tickBox
+        .H1 search / drop down
+        .block
+          .H1 search
+          +search
 
-    .block
-      .H1 search / drop down
-      .block
-        .H1 search
-        +search
+        .block
+          .H1 drop down
+          +dropDown
 
       .block
-        .H1 drop down
-        +dropDown
+        .H1 user profile 
+        //- 1)название картинки из папки image модуля 
+        //- 2) имя и фамилия 
+        //- 3) ux designer или developer
+        +userProfile('griffin', 'John Smith', 'ux designer')
+        +userProfile('wolf', 'Sarah Brown', 'developer')
 
-    .block
-      .H1 user profile 
-      //- 1)название картинки из папки image модуля 
-      //- 2) имя и фамилия 
-      //- 3) ux designer или developer
-      +userProfile('griffin', 'John Smith', 'ux designer')
-      +userProfile('wolf', 'Sarah Brown', 'developer')
+      .block
+        .H1 news & events
+        //- дата в формате '24 августа 2013'/ текс новости
+        +news("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
 
-    .block
-      .H1 news & events
-      //- дата в формате '24 августа 2013'/ текс новости
-      +news("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+        //- дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
+        +events('24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
 
-      //- дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
-      +events('24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+      .block
+        .H1 location
+        +location(56.4531, 84.975643)
+      //-  (56.4531, 84.975643) офис
+      //-  (55.751244, 37.618423) Москва
+      //-  (59.934280, 30.335099) Санкт-Петербург
+      //-  (56.453651, 84.948738) Лагерный сад
 
-    .block
-      .H1 location
-      +location(56.4531, 84.975643)
-    //-  (56.4531, 84.975643) офис
-    //-  (55.751244, 37.618423) Москва
-    //-  (59.934280, 30.335099) Санкт-Петербург
-    //-  (56.453651, 84.948738) Лагерный сад
+      .block
+        .H1 calendar
+        +calendar
 
-    .block
-      .H1 calendar
-      +calendar
+      .block
+        .H1 messaging
+        +messager
 
-    .block
-      .H1 messaging
-      +messager
-
-    .block
-      .H1 video
-      +videoPlayer("https://player.vimeo.com/video/62980495")
-      //- https://www.youtube.com/embed/rPmGtZAUxNs
-      //- https://player.vimeo.com/video/62980495
+      .block
+        .H1 video
+        +videoPlayer("https://player.vimeo.com/video/62980495")
+        //- https://www.youtube.com/embed/rPmGtZAUxNs
+        //- https://player.vimeo.com/video/62980495
+      a(href='./pages/firstPage.html') 
+        +stButton('big', 'red', 'back', 'button')
+      script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  

@@ -9,10 +9,15 @@ let pathToClean = 'public';
 const path = require('path');
 
 const common = {
-  entry: "./src/home",
+  context: __dirname + '/src',
+  entry: "./home",
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: "bundle/[name].js"
+    path: path.resolve(__dirname, 'public/UIkit'),
+    filename: "bundle/[name].js",
+    publicPath: '/UIkit/'
+  },
+  resolve: {
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
 
   module: {
@@ -21,7 +26,7 @@ const common = {
         {
           test: /\.styl$/,
           use: ExtractTextPlugin.extract({
-            use: ['css-loader', 'stylus-loader']
+          use: ['css-loader', 'stylus-loader?resolve url']
           })
         }, {
           test: /\.pug$/,
@@ -31,43 +36,57 @@ const common = {
           }
         }, {
           test: /\.(ttf|eot|woff|woff2|png|jpg|jpeg|svg|gif)$/,
-          loader: 'file-loader',
-          include: '/images/',
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[path][name].[ext]'
+              }
+            }
+          ]
         }
-
-        // {
-        //   test: /\.(ttf|eot|woff|woff2|png|jpg|jpeg|svg|gif)$/,
-        //   loader: 'url-loader'
-        // }
-        // ,
-        // {
-        //   test: /\.(woff|woff2|eot|ttf)$/,
-        //   exclude: /node_modules/,
-        //   loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
-        // }
       ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/base.pug",
+      template: "./base.pug",
       inject: 'head',
-      filename: 'html/index.html'
+      filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       title: "firstPage(UIkit)",
       filename: "pages/firstPage.html",
-      template: "src/pages/firstPage/firstPage.pug",
+      template: "pages/firstPage/firstPage.pug",
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
-      filename: "pages/blog.html",
-      template: "src/pages/blog/blog.pug",
+      filename: "pages/catalog.html",
+      template: "pages/catalog/catalog.pug",
       inject: 'head'
     }),
+    new HtmlWebpackPlugin({
+      title: "blog(UIkit)",
+      filename: "pages/productInfo.html",
+      template: "pages/catalog/productInfo/productInfo.pug",
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
+      title: "blog(UIkit)",
+      filename: "pages/contacts.html",
+      template: "pages/contacts/contacts.pug",
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
+      title: "blog(UIkit)",
+      filename: "pages/buyItem.html",
+      template: "pages/catalog/buyItem/buyItem.pug",
+      inject: 'head'
+    }),
+
     new CleanWebpackPlugin(pathToClean),
-    new ExtractTextPlugin('style/style.css'),
+    new ExtractTextPlugin('style.css'),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',

@@ -1,0 +1,10 @@
+mixin product(image, name, price)
+  .product
+    .product_image
+      a(href='#')
+        img(src='/src/pages/catalog/productImages/'+image+'.jpeg')
+    .product_name=name
+    .product_price= price+' руб.'
+    .product_info
+      a(href='./productInfo.html')
+        +stButton('big', 'red','Подробнее', 'button')

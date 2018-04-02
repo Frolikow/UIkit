@@ -16,3 +16,5 @@ import 'jquery-ui/ui/widgets/datepicker.js';
 import './modules/messager/messager';
 
 import './style/base.styl';
+
+import './modules/location/location';

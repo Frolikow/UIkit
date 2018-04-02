@@ -1,4 +1,5 @@
 @require  './../modules/**/*.styl'
+@require './../pages/**/*.styl'
 @font-face
   font-family Lato-Regular
   src url(/fonts/Lato/Lato-Regular.ttf)
@@ -15,9 +16,36 @@
   src url(/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf)
 
 body
-  width 700px
-.block
-  margin 5% 
-  border solid 2px #222
-  padding 20px
-  text-align center
+  margin 0
+  padding 0
+  .demoLayout
+    width 700px
+    .block
+      margin 5% 
+      border solid 2px #222
+      padding 20px
+      text-align center
+      .block
+        width 83%
+  .layout
+    width 100%
+    height: 100vh
+    display flex
+    flex-direction column
+    .main
+      flex: 1 0 auto;
+    .footer
+      flex: 0 0 auto;
+
+
+        // - удалить страницы "о нас" и "новости" .
+        // - новости перенести на главную. на ней будет краткое описание сайта, блок events/news. 
+        // - в контакты будет форма обретной связи из uikit'a. карта 
+        // - в Каталоге будет набор миксинов с продуктами. 
+        // -   в каждом продукте отображение нескольких фоток с кнопками пролистывания. и кнопкой заказа
+        // -     в кнопке заказа будет сложная форма с календарем, инпутами, слайдеромдля выбора периода аренды
+        // -     все данные должны сабмититься в console.log  в человеческом(читабельном) формате
+
+        // у каждого продукта должна быть одна и таже страница, принимающая данные о конкретном продукте и отрисовываемая учитываю полученые данные
+        // делать через url? 
+        // чат запилить в маленькую кнопку в углу сайта

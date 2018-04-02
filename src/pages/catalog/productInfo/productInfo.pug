@@ -1,0 +1,15 @@
+include ./../../pageModules/header/headerMixin
+include ./../../pageModules/footer/footerMixin
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Информация(UIkit)
+  body
+    .layout
+      +header
+      .main
+        .testContent Информация о продукте
+        a(href='./buyItem.html') Заказать
+      +footer

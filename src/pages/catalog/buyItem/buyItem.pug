@@ -1,0 +1,14 @@
+include ./../../pageModules/header/headerMixin
+include ./../../pageModules/footer/footerMixin
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Заказ(UIkit)
+  body
+    .layout
+      +header
+      .main
+        .testContent Форма заказа товара
+      +footer

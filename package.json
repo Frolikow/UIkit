@@ -16,6 +16,7 @@
     "expose-loader": "^0.7.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
@@ -34,7 +35,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --env development",
-    "build": "webpack --env production"
+    "build": "./node_modules/.bin/webpack --env production",
+    "deploy": "gh-pages -d public/UIkit"
   },
   "repository": {
     "type": "git",
