@@ -1,14 +1,13 @@
+include ./formElements/formTextMixin.pug
+include ./formElements/formEmailMixin.pug
+include ./formElements/formTextareaMixin.pug
+
 mixin form
-  form.form
-    input(type='text' placeholder='Your Name' 
-    class='form_name form_equal-style' required)
-    .input_info
+  form.form#MyForm
+    +inputText
 
-    input(type='email' placeholder='Your Email' 
-    class='form_email form_equal-style' required)
-    .input_info
+    +inputEmail
 
-    textarea(class='form_textarea form_equal-style' 
-    placeholder='Your Message')
+    +inputTextArea
 
     +stButton('small', 'blue','Отправить', 'submit')

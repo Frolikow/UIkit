@@ -18,3 +18,5 @@ import './modules/messager/messager';
 import './style/base.styl';
 
 import './modules/location/location';
+
+import './pages/contacts/contacts';
