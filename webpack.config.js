@@ -26,7 +26,7 @@ const common = {
         {
           test: /\.styl$/,
           use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'stylus-loader?resolve url']
+            use: ['css-loader', 'stylus-loader?resolve url']
           })
         }, {
           test: /\.pug$/,
@@ -52,11 +52,11 @@ const common = {
     new HtmlWebpackPlugin({
       template: "./base.pug",
       inject: 'head',
-      filename: 'index.html'
+      filename: 'pages/demo.html'
     }),
     new HtmlWebpackPlugin({
       title: "firstPage(UIkit)",
-      filename: "pages/firstPage.html",
+      filename: "firstPage.html",
       template: "pages/firstPage/firstPage.pug",
       inject: 'head'
     }),

@@ -22,9 +22,10 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     title "UIKit"
+
   body
     .demoLayout
-      a(href='./pages/firstPage.html')
+      a(href='./../firstPage.html')
         +stButton('big', 'red', 'back', 'button')
       .block
         .H1 standart buttons
@@ -56,10 +57,12 @@ html(lang="ru")
         .H1 sliders
         .block 
           .H1 standart slider
-          +standartSlider
+          //- (minimum, default, maximum)
+          +standartSlider('1', '40', '100')
         .block
           .H1 step slider
-          +stepSlider
+          //- (minimum, default, maximum, step)
+          +stepSlider('0', '75', '100', '25')
 
       .block
         .H1 stages
@@ -80,9 +83,9 @@ html(lang="ru")
         .block
           .H1 tick boxes
           form
-            +tickBox
-            +tickBox
-            +tickBox
+            +tickBox(name)
+            +tickBox(name)
+            +tickBox(name)
 
       .block
         .H1 search / drop down
@@ -92,7 +95,8 @@ html(lang="ru")
 
         .block
           .H1 drop down
-          +dropDown
+          //- (name, options1...options_n)
+          +dropDown('defaultSelect', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5')
 
       .block
         .H1 user profile 
@@ -105,10 +109,10 @@ html(lang="ru")
       .block
         .H1 news & events
         //- дата в формате '24 августа 2013'/ текс новости
-        +news("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+        +news('bike',"It's all going downhill", '24 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
 
         //- дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
-        +events('24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+        +events('city', '24', 'aug','This is the title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
 
       .block
         .H1 location
@@ -131,6 +135,8 @@ html(lang="ru")
         +videoPlayer("https://player.vimeo.com/video/62980495")
         //- https://www.youtube.com/embed/rPmGtZAUxNs
         //- https://player.vimeo.com/video/62980495
-      a(href='./pages/firstPage.html') 
+      a(href='./../firstPage.html') 
         +stButton('big', 'red', 'back', 'button')
-      script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  
+
+
+script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  

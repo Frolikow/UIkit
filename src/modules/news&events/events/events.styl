@@ -4,15 +4,28 @@
   border-radius 4px
   display flex
   background-color #4eb7a8
-  &_image
+  &_image[data-eventsImage=city]
     background url("./images/city.jpeg") no-repeat 67% 60% / 180%
+  &_image[data-eventsImage=sale]
+    background url("./images/sale.jpg") no-repeat 67% 50% / 300%
+  &_image[data-eventsImage=square2]
+    background url("./images/square2.jpg") no-repeat 75% 60% / 400%
+  &_image[data-eventsImage=summer]
+    background url("./images/summer.jpg") no-repeat 50% 60% / 400%
+  &_image[data-eventsImage=square]
+    background url("./images/square.jpg") no-repeat 67% 50% / 400%
+
+  &_image
     width 95px
     height 212px
     border-radius 4px 0 0 4px
+    transition: all 0.5s ease;
+    &:hover
+      width 120px
   &_content
     width 193px
     height 212px
-    color #ffffff
+    color #ffffff 
     display flex
     flex-direction column
     justify-content: space-between 
@@ -23,7 +36,7 @@
       display inline-block
       &_day
         display inline-block 
-        font-size 73px
+        font-size 73px 
         font-weight 300
         letter-spacing -2.92px
       &_month
@@ -44,29 +57,30 @@
       font-weight 400
       letter-spacing 0.55px
 
-    .stButton
-      margin-bottom 24px
-      margin-left 10px
-      font-family Lato, sans-serif
-      text-transform uppercase
-      border none 
-      border-radius 5px
-      color #43ac9d
-      font-size 10px
-      font-weight bold
-      letter-spacing 0.5px
-      outline none
-      &_size_big
-        width 128px
-        height 22px 
-      &_color_blue
-        background-color #fff 
-        &:hover
-          background-color #fff
-          box-shadow 0 3px 0 0 #379285 
-          border solid 1px #379285
-        &:active
-          background-color #43ac9d
-          color #fff
-          box-shadow 0 3px 0 0 #379285
+    &_button
+      .stButton
+        margin-bottom 24px
+        margin-left 10px
+        font-family Lato, sans-serif
+        text-transform uppercase
+        border none 
+        border-radius 5px
+        color #43ac9d
+        font-size 10px
+        font-weight bold
+        letter-spacing 0.5px
+        outline none
+        &_size_big
+          width 128px
+          height 22px 
+        &_color_blue
+          background-color #fff 
+          &:hover
+            background-color #fff
+            box-shadow 0 3px 0 0 #379285 
+            border solid 1px #379285
+          &:active
+            background-color #43ac9d
+            color #fff
+            box-shadow 0 3px 0 0 #379285
         

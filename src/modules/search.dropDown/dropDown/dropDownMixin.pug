@@ -1,9 +1,6 @@
-mixin dropDown
+mixin dropDown(name, ...items)
     div.pointerDropDown
-      select.dropDown
+      select.dropDown(name=name)
         option(value="0") Choose An Option
-        option(value="1") some text 1
-        option(value="2") some text 2
-        option(value="3") some text 3
-        option(value="4") some text 4
-        option(value="5") some text 5
+        each item in items
+            option(value=i++)= item

@@ -6,10 +6,21 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     title Информация(UIkit)
+
+
   body
     .layout
       +header
       .main
-        .testContent Информация о продукте
-        a(href='./buyItem.html') Заказать
-      +footer
+        .fullProduct 
+          .fullProduct_media
+          .fullProduct_info 
+            .fullProduct_info_title
+            .fullProduct_info_description Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam inventore nihil animi magni neque eligendi. Fugiat suscipit modi eveniet quos, aut minima minus! In repudiandae soluta sequi natus quia labore?
+            .fullProduct_info_buy
+              .fullProduct_info_buy_price
+
+              .fullProduct_info_buy_button
+                a(class='productBuyItem' href='#') 
+                  +stButton('big', 'red', 'Заказать', 'button')
+      +footer 

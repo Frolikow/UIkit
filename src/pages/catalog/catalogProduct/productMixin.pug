@@ -1,10 +1,10 @@
 mixin product(image, name, price)
   .product
     .product_image
-      a(href='#')
-        img(src='/src/pages/catalog/productImages/'+image+'.jpeg')
+      a(href='./productInfo.html?carImage='+image+'&carName='+name+'&carPrice='+price)
+        img(src=require("./productImages/"+image+"1.jpeg"))
     .product_name=name
-    .product_price= price+' руб.'
+    .product_price= price+' руб./час'
     .product_info
-      a(href='./productInfo.html')
-        +stButton('big', 'red','Подробнее', 'button')
+      a(href='./productInfo.html?carImage='+image+'&carName='+name+'&carPrice='+price)
+        +stButton('big', 'red','Подробнее', 'button') 

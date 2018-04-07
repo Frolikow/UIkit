@@ -1,11 +1,11 @@
-$( function() {
-  $( ".step_Slider" ).slider({
-    value:75,
-    min: 0,
-    max: 100,
-    step: 25,
+$(function () {
+  var stepSlider = document.getElementsByClassName('step-slider')[0];
+  $(".step_Slider").slider({
+    value: +stepSlider.getAttribute('data-default'),
+    min: +stepSlider.getAttribute('data-minimum'),
+    max: +stepSlider.getAttribute('data-maximum'),
+    step: +stepSlider.getAttribute('data-step'),
     range: "min",
   });
 
-} );
- 
+});

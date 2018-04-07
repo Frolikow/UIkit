@@ -1,5 +1,11 @@
 include ./../../pageModules/header/headerMixin
 include ./../../pageModules/footer/footerMixin
+include ./../../../modules/standartButtons/standartButtonsMixin
+include ./../../../modules/calendar/calendarMixin
+include ./../../../modules/sliders/slidersMixin
+include ./../../../modules/search.dropDown/dropDown/dropDownMixin
+include ./../../../modules/formElements/tickBoxes/tickBoxesMixin
+include ./../../../modules/formElements/form/formMixin.pug
 
 doctype html
 html(lang="ru")
@@ -10,5 +16,51 @@ html(lang="ru")
     .layout
       +header
       .main
-        .testContent Форма заказа товара
-      +footer
+        .buyItem
+          .buyItem_form
+            .buyItem_form_currentCar
+            .buyItem_form_settings
+              label Коробка передач
+              +dropDown('finalFormAutoBox', "Ручная", "Автоматическая")
+              label Территория использования:
+              +dropDown('finalFormUseLocation', "г.Томск", "Томская обл.")
+              label Место офромления аренды:
+              +dropDown('finalFormBuyLocation', "В офисе", "Ваш адрес (уточняется по телефону)")
+              label Время аренды (количество полных часов):
+              +standartSlider('1','3','12')
+              form
+                label Добавить в машину:
+                  .block_tickboxes
+                    +tickBox('finalFormChildrenArmchair')
+                    label Детское кресло
+                    br
+                    +tickBox('finalFormNavigate')
+                    label Навигатор
+                    br
+                    +tickBox('finalFormAutoRefrigerator')
+                    label Авто-холодильник
+              form.form#MyForm
+                label Ваши контактные данные:
+                  br
+                  label Фамилия
+                  br
+                  +input('name', 'Ваша фамилия', 'formSurname')
+                  label Имя
+                  br
+                  +input('name', 'Ваше имя', 'formName')
+                  label Отчество
+                  br
+                  +input('name', 'Ваше отчество', 'formPatronymic')
+                  label Контактный телефон
+                  br
+                  +input('name', 'Контактный телефон', 'formNumber')
+                  label E-mail адрес
+                  br
+                  +input('email', 'E-mail адрес', 'formEmail')
+
+          .buyItem_calendarAndEnd
+            +calendar
+            .buyItem_calendarAndEnd_button#buyItem_calendarAndEnd_button
+              +stButton('big','red','Отправить заявку','submit')
+      +footer  
+

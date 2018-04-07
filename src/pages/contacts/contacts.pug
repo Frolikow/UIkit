@@ -1,6 +1,7 @@
 include ./../pageModules/header/headerMixin
 include ./../pageModules/footer/footerMixin
 include ./../../modules/formElements/form/formMixin.pug
+include ./../../modules/location/locationMixin.pug
 
 doctype html
 html(lang="ru")
@@ -11,9 +12,15 @@ html(lang="ru")
     .layout
       +header
       .main
-        p По любому вопросу вы можете обратиться через форму ниже
         .contact
-
-        .contact_feedback
-          +form
+          .contact_feedback
+            p По любому вопросу вы можете обратиться через форму ниже
+            +form
+          .contact_address
+            p Мы находимся здесь:
+            +location(56.4531, 84.975643)
       +footer
+
+
+
+script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  

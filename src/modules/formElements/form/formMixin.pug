@@ -1,12 +1,11 @@
-include ./formElements/formTextMixin.pug
-include ./formElements/formEmailMixin.pug
+include ./formElements/inputFormMixin.pug
 include ./formElements/formTextareaMixin.pug
 
 mixin form
   form.form#MyForm
-    +inputText
+    +input('name', 'Your name', 'formName')
 
-    +inputEmail
+    +input('email', 'Your email', 'formEmail')
 
     +inputTextArea
 

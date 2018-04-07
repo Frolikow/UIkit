@@ -20,3 +20,7 @@ import './style/base.styl';
 import './modules/location/location';
 
 import './pages/contacts/contacts';
+
+import './pages/catalog/productInfo/productInfo';
+
+import './pages/catalog/buyItem/buyItem';

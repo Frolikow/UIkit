@@ -1,6 +1,6 @@
-mixin news(header,date,text)
+mixin news(image,header,date,text)
   .news
-    .news_image
+    .news_image(data-newsImage=image)
     .news_content
       .news_content_header=header
       .news_content_date=date

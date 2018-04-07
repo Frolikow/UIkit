@@ -6,16 +6,30 @@
   background-color #e75735
   float left
   margin-right 10px
+  &_image[data-newsImage=bike]
+    background url("./images/bike.jpeg") no-repeat 70% 50% / 400%
+
+
+  &_image[data-newsImage=comaro]
+    background url('./../pages/catalog/productImages/camaro1.jpeg') no-repeat 87% 50% / 330%
+  &_image[data-newsImage=porshe]
+    background url('./../pages/catalog/productImages/porshe1.jpeg') no-repeat 95% 50% / 330%
+  &_image[data-newsImage=mustang]
+    background url('./../pages/catalog/productImages/ford1.jpeg') no-repeat 87% 50% / 330%
+  &_image[data-newsImage=cadilac]
+    background url('./../pages/catalog/productImages/cadilac4.jpeg') no-repeat 86% 50% / 330%
+    
   &_image
-    background-image url(./images/bike.jpeg)
-    background-repeat no-repeat
-    background-position 67% 60% 
-    background-size 500%
     width 95px
     height 212px
     border-radius 4px 0 0 4px
+    transition: all 0.5s ease;
+    &:hover
+      width 200px
+      background-size 150%
+      background-position 85% 50%
   &_content
-    width 193px
+    width 193px 
     height 212px
     color #ffffff
     display flex

@@ -1,10 +1,11 @@
-mixin events(day,month,title,text)
+mixin events(image,day,month,title,text)
   .events
-    .events_image
+    .events_image(data-eventsImage=image)
     .events_content
       .events_content_date
         .events_content_date_day=day
         .events_content_date_month=month
       .events_content_title=title
       .events_content_text=text
-      +stButton('big','blue','add to calendar', 'button') 
+      .events_content_button
+        +stButton('big','blue','add to calendar', 'button')  

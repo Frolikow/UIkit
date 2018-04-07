@@ -1,5 +1,7 @@
 include ./../pageModules/header/headerMixin
 include ./../pageModules/footer/footerMixin
+include ./../../modules/news&events/events/eventsMixin
+include ./../../modules/news&events/news/newsMixin
 
 doctype html
 html(lang="ru")
@@ -10,5 +12,24 @@ html(lang="ru")
     .layout
       +header
       .main
-        .testContent Главная
+        .firstPageBlock
+          .firstPageBlock_aboutUs 
+            p Мы - компания занимающаяся сдачей в аренду элитных машин по-часово.
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur exercitationem suscipit blanditiis ullam impedit ea obcaecati architecto veniam sit ratione, est amet error ipsam molestiae aut. Delectus, architecto numquam!
+          .firstPageBlock_newsAndEvents
+            .firstPageBlock_newsAndEvents_blockNews Новости
+              +news('comaro', "Новая машина", '12 august 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+              +news('porshe', "Новая машина", '25 may 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+              +news('mustang', "Новая машина", '31 september 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+              +news('cadilac', "Новая машина", '2 december 2013', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.')
+
+            .firstPageBlock_newsAndEvents_blockEvents Мероприятия
+              +events('city', '24', 'sept','Выставка', 'Выставка новых авто в нашем салоне')
+              +events('sale', '01', 'aug','скидки', 'Весь август скидки на аренду авто 10%, при бронировании до 1-го августа')
+              +events('square2', '15', 'jule','Выставка-показ', 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.')
+              +events('summer', '31', 'june','Выставка', 'Выставка и консультация в нашем салоне.')
+              +events('square', '12', 'may','Выставка-показ', 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.')
+
       +footer
+
+

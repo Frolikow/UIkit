@@ -1,7 +1,6 @@
   
-
-mixin standartSlider 
-  .standartSlider
+mixin standartSlider(min, def, max)
+  .standartSlider(data-minimum=min, data-default=def, data-maximum=max)
     .standartSlider_custom-handle.ui-slider-handle
 
 
@@ -10,8 +9,8 @@ mixin standartSlider
 
 
 
-mixin stepSlider
-  .step-slider
+mixin stepSlider(min, def, max, step)
+  .step-slider(data-minimum=min, data-default=def, data-maximum=max, data-step=step)
     .step_Slider.ui-slider.ui-slider-handle.ui-slider-range
     .scale
       .scale_value 0
