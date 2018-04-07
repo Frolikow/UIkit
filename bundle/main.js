@@ -11201,6 +11201,7 @@ function initMap() {
 window.initMap = initMap;
 
 
+
 /***/ }),
 /* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11227,6 +11228,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_messager_messager___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__modules_messager_messager__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__style_base_styl__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__style_base_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__style_base_styl__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contacts_contacts__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_contacts_contacts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_contacts_contacts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_catalog_productInfo_productInfo__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_catalog_productInfo_productInfo___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_catalog_productInfo_productInfo__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_catalog_buyItem_buyItem__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_catalog_buyItem_buyItem___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__pages_catalog_buyItem_buyItem__);
+
+
+
+
+
+
 
 
 
@@ -12273,23 +12286,26 @@ return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {
-$( function() {
-  $( ".standartSlider" ).each(function(){ //перебор всех элементов с данным классом
-    let handle = $(this).find( ".standartSlider_custom-handle" ); //запись в handle значения внутри каждого .standartSlider
+
+
+$(function () {
+  $(".standartSlider").each(function () { //перебор всех элементов с данным классом
+    let handle = $(this).find(".standartSlider_custom-handle"); //запись в handle значения внутри каждого .standartSlider
+    let slider = document.getElementsByClassName('standartSlider')[0];
     $(this).slider({ //инициализация каждого слайдера взависимости от this
       animate: true,
-      value: 40,
-      create: function() {
-        handle.text( $( this ).slider( "value" ) );
+      min: +slider.getAttribute("data-minimum"),
+      value: +slider.getAttribute("data-default"),
+      max: +slider.getAttribute("data-maximum"),
+      create: function () {
+        handle.text($(this).slider("value"));
       },
-      slide: function( event, ui ) {
-        handle.text( ui.value );
+      slide: function (event, ui) {
+        handle.text(ui.value);
       }
     });
   })
-} ); 
-
-
+});
 
 
 
@@ -12299,17 +12315,18 @@ $( function() {
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$( function() {
-  $( ".step_Slider" ).slider({
-    value:75,
-    min: 0,
-    max: 100,
-    step: 25,
+/* WEBPACK VAR INJECTION */(function($) {$(function () {
+  var stepSlider = document.getElementsByClassName('step-slider')[0];
+  $(".step_Slider").slider({
+    value: +stepSlider.getAttribute('data-default'),
+    min: +stepSlider.getAttribute('data-minimum'),
+    max: +stepSlider.getAttribute('data-maximum'),
+    step: +stepSlider.getAttribute('data-step'),
     range: "min",
   });
 
-} );
- 
+});
+
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -14608,6 +14625,365 @@ $(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/camaro1.jpeg";
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/porshe1.jpeg";
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/ford1.jpeg";
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/cadilac4.jpeg";
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+$(function () {
+
+  document.getElementById('MyForm').addEventListener('submit', function (e) {
+    e.preventDefault()
+
+    var name = document.getElementsByName('formName')[0];
+    var email = document.getElementsByName('formEmail')[0];
+    var message = document.getElementsByName('formMessage')[0];
+    console.log("Name: '"+name.value + "', e-mail: '"+email.value+"', message: '"+message.value+"'");
+  })
+})
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+
+$(function () {
+  var params = window.location.search.replace('?', '').split('&').reduce(
+    function (p, e) {
+      var a = e.split('=');
+      p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+      return p;
+    },
+    {}
+  );
+  var count=0;
+  for(var i=0;i<4;i++){
+    count++;
+    var fullProductMedia = document.getElementsByClassName('fullProduct_media')[0],
+    img = document.createElement("IMG");
+    img.src = __webpack_require__(24)("./"+params['carImage']+count+".jpeg");
+    fullProductMedia.appendChild(img);
+  }
+  var productTitle = document.getElementsByClassName('fullProduct_info_title')[0];
+  productTitle.innerHTML = params['carName'];
+
+  var productPrice = document.getElementsByClassName('fullProduct_info_buy_price')[0];
+  productPrice.innerHTML = params['carPrice']+' руб./час';
+  
+  var buyItem =document.getElementsByClassName('productBuyItem')[0];
+  buyItem.href='./buyItem.html?carImage='+params['carImage']+'&carName='+params['carName']+'&carPrice='+params['carPrice'];
+
+})
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./RR1.jpeg": 25,
+	"./RR2.jpeg": 26,
+	"./RR3.jpeg": 27,
+	"./RR4.jpeg": 28,
+	"./bmw1.jpeg": 29,
+	"./bmw2.jpeg": 30,
+	"./bmw3.jpeg": 31,
+	"./bmw4.jpeg": 32,
+	"./cadilac1.jpeg": 33,
+	"./cadilac2.jpeg": 34,
+	"./cadilac3.jpeg": 35,
+	"./cadilac4.jpeg": 21,
+	"./camaro1.jpeg": 18,
+	"./camaro2.jpeg": 36,
+	"./camaro3.jpeg": 37,
+	"./camaro4.jpeg": 38,
+	"./ford1.jpeg": 20,
+	"./ford2.jpeg": 39,
+	"./ford3.jpeg": 40,
+	"./ford4.jpeg": 41,
+	"./hummer1.jpeg": 42,
+	"./hummer2.jpeg": 43,
+	"./hummer3.jpeg": 44,
+	"./hummer4.jpeg": 45,
+	"./porshe1.jpeg": 19,
+	"./porshe2.jpeg": 46,
+	"./porshe3.jpeg": 47,
+	"./porshe4.jpeg": 48
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 24;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/RR1.jpeg";
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/RR2.jpeg";
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/RR3.jpeg";
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/RR4.jpeg";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/bmw1.jpeg";
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/bmw2.jpeg";
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/bmw3.jpeg";
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/bmw4.jpeg";
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/cadilac1.jpeg";
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/cadilac2.jpeg";
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/cadilac3.jpeg";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/camaro2.jpeg";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/camaro3.jpeg";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/camaro4.jpeg";
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/ford2.jpeg";
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/ford3.jpeg";
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/ford4.jpeg";
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/hummer1.jpeg";
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/hummer2.jpeg";
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/hummer3.jpeg";
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/hummer4.jpeg";
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/porshe2.jpeg";
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/porshe3.jpeg";
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "pages/catalog/productImages/porshe4.jpeg";
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+
+$(function () {
+  var params = window.location.search.replace('?', '').split('&').reduce(
+    function (p, e) {
+      var a = e.split('=');
+      p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+      return p;
+    },
+    {}
+  );
+  var buyItem_currentCar = document.getElementsByClassName('buyItem_form_currentCar')[0];
+  buyItem_currentCar.innerHTML = "Выбранный авто: <b>" + params['carName'] + "</b>; Цена аренды: <b>" + params['carPrice'] + "</b> руб./час.";
+  var selectedAuto="Выбранный авто: " + params['carName'] + ";\nЦена аренды: " + params['carPrice'] + " руб./час.";
+  
+  document.getElementById("buyItem_calendarAndEnd_button").addEventListener('click', alertFinalDoc);
+  
+  function alertFinalDoc() {
+    console.log(selectedAuto)
+
+    function testDropDown(type, text) {
+      if (type.options[type.selectedIndex].value == 0) {
+        console.log(text + ': Не выбрано');
+      } else {
+        console.log(text + ': ' + type.options[type.selectedIndex].text);
+      }
+    }
+    var autoBox = document.getElementsByName('finalFormAutoBox')[0];
+    testDropDown(autoBox, 'Коробка передач');
+    var useLocation = document.getElementsByName('finalFormUseLocation')[0];
+    testDropDown(useLocation, 'Территория использования');
+    var buyLocation = document.getElementsByName('finalFormBuyLocation')[0];
+    testDropDown(buyLocation, 'Место офромления аренды');
+
+    var rentAutoHours = document.getElementsByClassName('standartSlider_custom-handle')[0];
+    console.log('Количество часов аренды: ' + rentAutoHours.textContent);
+
+    function testCheckBox(type, text) {
+      if (type.checked) {
+        checkBoxArray[checkBoxArray.length] = text;
+      }
+    }
+    var checkBoxArray = [];
+    var childrenArmchair = document.getElementsByName('finalFormChildrenArmchair')[0];
+    testCheckBox(childrenArmchair, 'Детское кресло')
+    var navigate = document.getElementsByName('finalFormNavigate')[0];
+    testCheckBox(navigate, 'Навигатор')
+    var autoRefrigerator = document.getElementsByName('finalFormAutoRefrigerator')[0];
+    testCheckBox(autoRefrigerator, 'Авто-холодильник')
+    if (checkBoxArray == '') {
+      console.log('Добавить в машину: Не выбрано');
+    } else {
+      console.log('Добавить в машину: ' + checkBoxArray);
+    }
+
+    var formSurname = document.getElementsByName('formSurname')[0];
+    var formName = document.getElementsByName('formName')[0];
+    var formPatronymic = document.getElementsByName('formPatronymic')[0];
+    var formNumber = document.getElementsByName('formNumber')[0];
+    var formEmail = document.getElementsByName('formEmail')[0];
+    console.log('ФИО: ' + formSurname.value + ' ' + formName.value + ' ' + formPatronymic.value + '\nКонтактный телефон: ' + formNumber.value + '\nE-mail: ' + formEmail.value)
+
+    var selectedMonth = document.getElementsByClassName('ui-datepicker-month')[0];
+    var selectedDay = document.getElementsByClassName('ui-state-active')[0];
+    console.log('Выбранная дата: '+selectedMonth.textContent + ' ' + selectedDay.textContent)
+
+    var finalPrice = params['carPrice'] * rentAutoHours.textContent+ ' руб.';
+    console.log('Сумма: '+finalPrice);
+    console.log("- - - - - - - - - - - - - - ");
+  }
+})
+
+
+
+
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 /******/ ]);

@@ -1,0 +1,118 @@
+ <!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Заказ(UIkit)</title>
+  <link href="/UIkit/style.css" rel="stylesheet"><script type="text/javascript" src="/UIkit/bundle/main.js"></script></head>
+  <body>
+    <div class="layout">
+      <div class="header"> 
+        <div class="image"> 
+          <div class="logo">logotip</div>
+          <div class="menu">
+            <div class="buttonBlock"><a href="/UIkit/firstPage.html"> 
+                <input class="stButton stButton_size_big stButton_color_blue" type="button" value="Главная"></a><a href="/UIkit/pages/catalog.html">
+                <input class="stButton stButton_size_big stButton_color_blue" type="button" value="Каталог"></a><a href="/UIkit/pages/contacts.html">
+                <input class="stButton stButton_size_big stButton_color_blue" type="button" value="Контакты"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="buyItem">
+          <div class="buyItem_form">
+            <div class="buyItem_form_currentCar"></div>
+            <div class="buyItem_form_settings">
+              <label>Коробка передач</label>
+              <div class="pointerDropDown">
+                <select class="dropDown" name="finalFormAutoBox">
+                  <option value="0">Choose An Option</option>
+                  <option value="null">Ручная</option>
+                  <option value="null">Автоматическая</option>
+                </select>
+              </div>
+              <label>Территория использования:</label>
+              <div class="pointerDropDown">
+                <select class="dropDown" name="finalFormUseLocation">
+                  <option value="0">Choose An Option</option>
+                  <option value="null">г.Томск</option>
+                  <option value="null">Томская обл.</option>
+                </select>
+              </div>
+              <label>Место офромления аренды:</label>
+              <div class="pointerDropDown">
+                <select class="dropDown" name="finalFormBuyLocation">
+                  <option value="0">Choose An Option</option>
+                  <option value="null">В офисе</option>
+                  <option value="null">Ваш адрес (уточняется по телефону)</option>
+                </select>
+              </div>
+              <label>Время аренды (количество полных часов):</label>
+              <div class="standartSlider" data-minimum="1" data-default="3" data-maximum="12">
+                <div class="standartSlider_custom-handle ui-slider-handle"></div>
+              </div>
+              <form>
+                <label>Добавить в машину:
+                  <div class="block_tickboxes">
+                    <label>
+                      <input class="tickBox" type="checkbox" hidden name="finalFormChildrenArmchair"><span></span>
+                    </label>
+                    <label>Детское кресло</label><br>
+                    <label>
+                      <input class="tickBox" type="checkbox" hidden name="finalFormNavigate"><span></span>
+                    </label>
+                    <label>Навигатор</label><br>
+                    <label>
+                      <input class="tickBox" type="checkbox" hidden name="finalFormAutoRefrigerator"><span></span>
+                    </label>
+                    <label>Авто-холодильник</label>
+                  </div>
+                </label>
+              </form>
+              <form class="form" id="MyForm">
+                <label>Ваши контактные данные:<br>
+                  <label>Фамилия</label><br>
+                  <input class="form_name form_equal-style" type="name" placeholder="Ваша фамилия" required name="formSurname">
+                  <div class="input_info"></div>
+                  <label>Имя</label><br>
+                  <input class="form_name form_equal-style" type="name" placeholder="Ваше имя" required name="formName">
+                  <div class="input_info"></div>
+                  <label>Отчество</label><br>
+                  <input class="form_name form_equal-style" type="name" placeholder="Ваше отчество" required name="formPatronymic">
+                  <div class="input_info"></div>
+                  <label>Контактный телефон</label><br>
+                  <input class="form_name form_equal-style" type="name" placeholder="Контактный телефон" required name="formNumber">
+                  <div class="input_info"></div>
+                  <label>E-mail адрес</label><br>
+                  <input class="form_email form_equal-style" type="email" placeholder="E-mail адрес" required name="formEmail">
+                  <div class="input_info"></div>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="buyItem_calendarAndEnd">
+            <div class="calendar js-calendar" id="datepicker">
+              <input class="calendar__day js-calendar__day" readonly>
+              <div class="calendar__widget js-calendar__widget"></div>
+            </div>
+            <div class="buyItem_calendarAndEnd_button" id="buyItem_calendarAndEnd_button">
+              <input class="stButton stButton_size_big stButton_color_red" type="submit" value="Отправить заявку">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"> 
+        <div class="image"> 
+          <div class="logo">logotip</div>
+          <div class="menu">
+            <ul>
+              <li> <a href="/UIkit/firstPage.html">главная</a></li>
+              <li> <a href="/UIkit/pages/catalog.html">каталог</a></li>
+              <li> <a href="/UIkit/pages/contacts.html">контакты</a></li>
+              <li> <a href="/UIkit/pages/demo.html">demo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
