@@ -67,7 +67,7 @@ $(function () {
 
     var finalPrice = params['carPrice'] * rentAutoHours.textContent+ ' руб.';
     console.log('Сумма: '+finalPrice);
-    console.log("- - - - - - - - - - - - - - ");
+    console.log("/ / / / / / / / / / / / / / / / / / / / / ");
   }
 })
 

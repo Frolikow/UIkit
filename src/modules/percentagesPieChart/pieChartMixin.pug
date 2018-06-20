@@ -10,17 +10,12 @@
 mixin pieChart(value1, value2, value3)
 
   - valueSum = sum(value1, value2, value3);
-
-
-
   if valueSum>100
     .pieChart
       .pieChart_value=('ERR. >100')
-
   else if (valueSum<0)
     .pieChart
       .pieChart_value=('ERR. <0')
-
   else
     .pieChart
       .pieChart_value=('%')
@@ -29,7 +24,6 @@ mixin pieChart(value1, value2, value3)
           circle.pieChart_image_svg_circle4(transform="rotate(-90)",
             style="stroke-dasharray: 248px 408px",
             r="39.5", cx="-50", cy="50")
-
           circle.pieChart_image_svg_circle1(transform="rotate(-90)",
             style="stroke-dasharray:" +(value1*2.48+value2*2.48+value3*2.48)+"px 408px",
             r="39.5", cx="-50", cy="50")

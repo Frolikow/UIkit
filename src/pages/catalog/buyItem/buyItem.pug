@@ -33,31 +33,22 @@ html(lang="ru")
                   .block_tickboxes
                     +tickBox('finalFormChildrenArmchair')
                     label Детское кресло
-                    br
                     +tickBox('finalFormNavigate')
-                    label Навигатор
-                    br
+                    label Навигатор 
                     +tickBox('finalFormAutoRefrigerator')
                     label Авто-холодильник
               form.form#MyForm
-                label Ваши контактные данные:
-                  br
+                label.userContactData Ваши контактные данные:
                   label Фамилия
-                  br
                   +input('name', 'Ваша фамилия', 'formSurname')
                   label Имя
-                  br
                   +input('name', 'Ваше имя', 'formName')
                   label Отчество
-                  br
                   +input('name', 'Ваше отчество', 'formPatronymic')
                   label Контактный телефон
-                  br
                   +input('name', 'Контактный телефон', 'formNumber')
                   label E-mail адрес
-                  br
                   +input('email', 'E-mail адрес', 'formEmail')
-
           .buyItem_calendarAndEnd
             +calendar
             .buyItem_calendarAndEnd_button#buyItem_calendarAndEnd_button
