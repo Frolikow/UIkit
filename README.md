@@ -126,9 +126,11 @@
   > start  
   >> webpack-dev-server --env development  
   >>> Запуск дев-сервера для разработки  
+
   > build  
   >> ./node_modules/.bin/webpack --env production  
-  >>> Запуск сборки проекта в папку public  
+  >>> Запуск сборки проекта в папку public 
+   
   > deploy  
   >> gh-pages -d public/UIkit  
   >>> Публикация проекта на GitHub Pages(выполнять после скрипта "build")  
