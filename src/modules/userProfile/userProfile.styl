@@ -1,141 +1,162 @@
 .userProfile
-  width 84px
-  height 84px
-  border solid 4px #aaaaaa
+  width 5.25rem
+  height 5.25rem
+  border solid 0.25rem #aaaaaa
   border-radius 50%
   display block
   background-size 105%
   position relative
-  margin 5px
+  margin 0.3125rem
   z-index 10
+  
   &:hover .userProfile_info
     transform scaleX(1) 
-    transition: all 0.5s;
+    transition all 0.5s
+
   &_griffin
-    background: #aaa url(./images/griffin.jpeg) no-repeat 50% 50% / 105%
+    background #aaa url(./images/griffin.jpeg) no-repeat 50% 50% / 105%
+
   &_wolf
-    background: #aaa url(./images/wolf.jpeg) no-repeat 50% 50% / 105%
+    background #aaa url(./images/wolf.jpeg) no-repeat 50% 50% / 105%
+
   &_hidden
-    width 110px
-    height 90px
+    width 6.875rem
+    height 5.625rem
     background-color rgba(0,0,0,0) 
+
   &_info
-    transform: scaleX(0)
-    width 163px
-    height 90px
+    transform scaleX(0)
+    width 10.1875rem
+    height 5.625rem
     background-color #e5e5e5
-    margin-left 100px
+    margin-left 6.25rem
     position relative
-    bottom 3px
-    border-radius 4px
+    bottom 0.1875rem
+    border-radius 0.25rem
 
     &::after 
       content ""
       display block
-      width 10px
-      height: 10px
+      width 0.625rem
+      height 0.625rem
       background-color #e5e5e5
       transform rotate(-45deg)
       position absolute
-      top 40px
-      right 157px
-      border-radius 3px 0 0 0 
-          z-index 1
+      top 2.5rem
+      right 9.8125rem
+      border-radius 0.1875rem 0 0 0 
+      z-index 1
 
     &_name
       color #e75735
-      font-size 18px
+      font-size 1.125rem
       font-weight normal
       font-family Lato-Regular, sans-serif
-      line-height 18px
-      padding-top 13px
+      line-height 1.125rem
+      padding-top 0.8125rem
+
     &_position
       color #4f4f4f
       font-family Lato-Black, sans-serif
-      font-size 11px
+      font-size 0.6875rem
       font-weight 700
-      line-height 11px
+      line-height 0.6875rem
       text-transform uppercase
-      letter-spacing 0.55px
-      margin-top 8px
+      letter-spacing 0.0344rem
+      margin-top 0.5rem
+
     &_socialNetworks 
       width 60%
-      height 21px
-      padding-top 12px
+      height 1.3125rem
+      padding-top 0.75rem
       margin auto
       display flex
       justify-content space-around
       align-items flex-end
+
       &_facebook
-        width: 20px
-        height 20px
+        width 1.25rem
+        height 1.25rem
+
       &_twitter
-        width: 20px
-        height 19px
+        width 1.25rem
+        height 1.1875rem
+
       &_dribbble
-        width: 21px
-        height 20.5px
+        width 1.3125rem
+        height 1.2813rem
+
       svg 
-        transition: all .2s;
-        fill: #757575;
+        transition all .2s
+        fill #757575
+
       svg:hover 
-        fill: #e75735;
+        fill #e75735
 
   .userProfile_info_developer
     color #ffffff
     background-color #28a290
-    transform: scaleX(0)
-    width 163px
-    height 90px
-    margin-left 100px
+    transform scaleX(0)
+    width 10.1875rem
+    height 5.625rem
+    margin-left 6.25rem
     position relative
-    border-radius 4px
+    border-radius 0.25rem
+
     &::after 
       content ""
       display block
-      width 10px
-      height: 10px
+      width 0.625rem
+      height 0.625rem
       background-color #28a290
       transform rotate(-45deg)
       position absolute
-      top 40px
-      right 157px
-      border-radius 3px 0 0 0 
+      top 2.5rem
+      right 9.8125rem
+      border-radius 0.1875rem 0 0 0 
+
     .userProfile_info_name
       color #ffffff
-      font-size 18px
+      font-size 1.125rem
       font-weight normal
       font-family Lato-Regular, sans-serif
-      line-height 18px
-      padding-top 13px
+      line-height 1.125rem
+      padding-top 0.8125rem
+
     .userProfile_info_position
       color #ffffff
       font-family Lato-Black, sans-serif
-      font-size 11px
+      font-size 0.6875rem
       font-weight 700
-      line-height 11px
+      line-height 0.6875rem
       text-transform uppercase
-      letter-spacing 0.55px
-      margin-top 8px
+      letter-spacing 0.0344rem
+      margin-top 0.5rem
+
     .userProfile_info_socialNetworks 
       width 60%
-      height 21px
-      padding-top 12px
+      height 1.3125rem
+      padding-top 0.75rem
       margin auto
       display flex
       justify-content space-around
       align-items flex-end
+
       &_facebook
-        width: 20px
-        height 20px
+        width 1.25rem
+        height 1.25rem
+
       &_twitter
-        width: 20px
-        height 19px
+        width 1.25rem
+        height 1.1875rem
+
       &_dribbble
-        width: 21px
-        height 20.5px
+        width 1.3125rem
+        height 1.2813rem
+
       svg 
-        transition: all .2s;
-        fill: #ffffff;
+        transition all .2s
+        fill #ffffff
+
       svg:hover 
-        fill: #aaa;
+        fill #aaa

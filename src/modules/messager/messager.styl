@@ -1,138 +1,161 @@
 .messager
-  width 290px
-  height 630px
-  background-color  #f2f2f2
-  border-radius 4px
+  width 18.125rem
+  height 39.375rem
+  background-color #f2f2f2
+  border-radius 0.25rem
   position relative
+
   &__header
     width 100%
-    height 81px
+    height 5.0625rem
     background-color #4eb7a8
-    border-radius 4px 4px 0 0
-    box-shadow 0 34px   #46ab9d
+    border-radius 0.25rem 0.25rem 0 0
+    box-shadow 0 2.125rem #46ab9d
+
     &__name
       content '\f075' #8e8d8d
-      height 81px
+      height 5.0625rem
       text-transform capitalize
       color #ffffff
       font-family Lato
-      font-size 34px
+      font-size 2.125rem
       font-weight 100
-      line-height 81px 
-      letter-spacing -1.02px
+      line-height 5.0625rem 
+      letter-spacing -0.0638rem
+
   &__photo
     border-radius 50%
     background-color #fff
     margin 0 auto 0 auto
-    width 84px
-    height 84px
+    width 5.25rem
+    height 5.25rem
     position relative
-    bottom 11px
-    border 5px solid #e5e5e5
+    bottom 0.6875rem
+    border 0.3125rem solid #e5e5e5
+
     .userProfile
       position relative
-      right 5px
-      bottom 5px
+      right 0.3125rem
+      bottom 0.3125rem
       border none
+
   &__icons
     display block
-    width 30px
+    width 1.875rem
     height 0
     position relative
+
     &__message
       position relative
-      bottom 45px
-      left 20px
+      bottom 2.8125rem
+      left 1.25rem
+
       svg
         fill #999
+
         &:hover
           fill black
+
     &__sendPhoto
       position relative
-      bottom 80px
-      left 240px
+      bottom 5rem
+      left 15rem
+
       svg
-        fill  #999
+        fill #999
+
         &:hover
           fill black
+
   &__chat
     margin-left auto
     margin-right auto
     width 90%
-    max-height 270px
+    max-height 16.875rem
     overflow-y auto
-    margin-bottom 30px
+    margin-bottom 1.875rem
 
     &::-webkit-scrollbar
       width 0
+
     &__message
       width 60%
-      border-radius 5px
+      border-radius 0.3125rem
       background-color #ffffff
-      padding 15px 
+      padding 0.9375rem 
       text-align left
       color #868686
       font-family Lato
-      font-size 13px
+      font-size 0.8125rem
       font-weight 700
-      letter-spacing 0.63px
-      margin-bottom 15px
+      letter-spacing 0.0394rem
+      margin-bottom 0.9375rem
+
       &__in
         position relative
         margin-left 3%
+
         &:after
           content ""
           display block
-          width 10px
-          height 10px
+          width 0.625rem
+          height 0.625rem
           background-color #fff
           transform rotate(45deg)
           position absolute
-          left -4px
+          left -0.25rem
           top 45%
-          border-radius 2px
+          border-radius 0.125rem
+
       &__out
         position relative
         margin-left 22% 
+
         &:after
           content ""
           display block
-          width 10px
-          height 10px
+          width 0.625rem
+          height 0.625rem
           background-color #fff
           transform rotate(45deg)
           position absolute
-          right -4px
+          right -0.25rem
           top 45%
-          border-radius 2px
+          border-radius 0.125rem
+
       &:first-child
-        box-shadow  inset 0 15px 10px -10px #f2f2f2
+        box-shadow inset 0 0.9375rem 0.625rem -0.625rem #f2f2f2
+
       &:last-child
-        box-shadow inset 0 -15px 10px -10px #f2f2f2
+        box-shadow inset 0 -0.9375rem 0.625rem -0.625rem #f2f2f2
+
   &__input
     &__newMessage
-      width 207px
-      height 50px
+      width 12.9375rem
+      height 3.125rem
       position absolute 
-      bottom 79px
-      left 22px
-      border 3px solid #ffffff
+      bottom 4.9375rem
+      left 1.375rem
+      border 0.1875rem solid #ffffff
       background-color #e5e5e5
       color #777777
       font-family Lato
-      font-size 13px
+      font-size 0.8125rem
       font-weight 700
-      letter-spacing 0.63px
+      letter-spacing 0.0394rem
       outline none
-      padding 16px
-      border-radius 7px
+      padding 1rem
+      border-radius 0.4375rem
+
   .messager__input__btn
     display block
     position absolute
-    bottom 29px
-    left 22px
+    bottom 1.8125rem
+    left 1.375rem
+
     input.stButton
-      font-size 12px
+      font-size 0.75rem
+
       &_size_big
-        width 243px
-        height 32px 
+        width 15.1875rem
+        height 2rem 

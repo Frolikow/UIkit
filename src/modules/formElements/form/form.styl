@@ -1,81 +1,87 @@
 .form
-  width 288px
-  height 215px
+  width 18rem
+  height 13.4375rem
   text-align left
   position relative
+
   .input_info
     width 0
-    height: 0
+    height 0
+
     &:before
       content ""
-      width 6px
-      height 6px
+      width 0.375rem
+      height 0.375rem
       transform rotate(45deg)
       background-color #e75735
       position relative
-      left 214px
-      bottom 35px
+      left 13.375rem
+      bottom 2.1875rem
       display inline-block
-      border-radius 1px
+      border-radius 0.0625rem
+
     &:after
       content "error"
-      width 72px
-      height 28px
+      width 4.5rem
+      height 1.75rem
       display inline-block
       position relative
-      bottom 55px
-      left 216px
-      border-radius 2px
+      bottom 3.4375rem
+      left 13.5rem
+      border-radius 0.125rem
       color #ffffff
       font-family Lato, sans-serif
-      font-size 10px
+      font-size 0.625rem
       font-weight bold
-      line-height 28px
+      line-height 1.75rem
       text-transform uppercase
-      letter-spacing 0.5px
+      letter-spacing 0.0313rem
       text-align center
       background-color #e75735
+
   &_name:valid + .input_info:after
       content "thanks"
       background-color #4eb7a8
+
   &_email:valid + .input_info:after
       content "thanks"
       background-color #4eb7a8
+
   &_name:valid + .input_info:before
-    // content "thanks"
     background-color #4eb7a8
+
   &_email:valid + .input_info:before
-    // content "thanks"
     background-color #4eb7a8
 
   &_equal-style
     outline none
     color #888888
-    font-size 14px
+    font-size 0.875rem
     font-weight 400
-    line-height 42px
-    letter-spacing 0.14px
+    line-height 2.625rem
+    letter-spacing 0.0088rem
     font-family "Source Sans Pro", sans-serif
     border none
-    border-radius 2px
+    border-radius 0.125rem
     background-color #e5e5e5
-    width 198px
-    height 28px
+    width 12.375rem
+    height 1.75rem
     padding 0
-    margin-bottom 10px
-    padding-left 10px
+    margin-bottom 0.625rem
+    padding-left 0.625rem
+
   &_textarea
-    width 278px
-    height 88px
+    width 17.375rem
+    height 5.5rem
     resize none
 
   .stButton_size_small
-    width 118px
-    height 32px
-    font-size 12px
-    line-height 30px
+    width 7.375rem
+    height 2rem
+    font-size 0.75rem
+    line-height 1.875rem
     text-transform uppercase
-    letter-spacing 0.6px
-    font-weight: bold
+    letter-spacing 0.0375rem
+    font-weight bold
     position absolute
     right 0
