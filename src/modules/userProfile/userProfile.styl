@@ -1,7 +1,7 @@
 .userProfile
   width 5.25rem
   height 5.25rem
-  border solid 0.25rem #aaaaaa
+  border solid 0.25rem mainGray170
   border-radius 50%
   display block
   background-size 105%
@@ -14,21 +14,21 @@
     transition all 0.5s
 
   &_griffin
-    background #aaa url(./images/griffin.jpeg) no-repeat 50% 50% / 105%
+    background mainGray170 url(./images/griffin.jpeg) no-repeat 50% 50% / 105%
 
   &_wolf
-    background #aaa url(./images/wolf.jpeg) no-repeat 50% 50% / 105%
+    background mainGray170 url(./images/wolf.jpeg) no-repeat 50% 50% / 105%
 
   &_hidden
     width 6.875rem
     height 5.625rem
-    background-color rgba(0,0,0,0) 
+    background-color mainBlackTranceparent
 
   &_info
     transform scaleX(0)
     width 10.1875rem
     height 5.625rem
-    background-color #e5e5e5
+    background-color mainGray229
     margin-left 6.25rem
     position relative
     bottom 0.1875rem
@@ -39,7 +39,7 @@
       display block
       width 0.625rem
       height 0.625rem
-      background-color #e5e5e5
+      background-color mainGray229
       transform rotate(-45deg)
       position absolute
       top 2.5rem
@@ -48,7 +48,7 @@
       z-index 1
 
     &_name
-      color #e75735
+      color mainRedLight
       font-size 1.125rem
       font-weight normal
       font-family Lato-Regular, sans-serif
@@ -88,14 +88,14 @@
 
       svg 
         transition all .2s
-        fill #757575
+        fill mainGray116
 
       svg:hover 
-        fill #e75735
+        fill mainRedLight
 
   .userProfile_info_developer
-    color #ffffff
-    background-color #28a290
+    color mainWhite
+    background-color mainBlueDark
     transform scaleX(0)
     width 10.1875rem
     height 5.625rem
@@ -108,7 +108,7 @@
       display block
       width 0.625rem
       height 0.625rem
-      background-color #28a290
+      background-color mainBlueDark
       transform rotate(-45deg)
       position absolute
       top 2.5rem
@@ -116,7 +116,7 @@
       border-radius 0.1875rem 0 0 0 
 
     .userProfile_info_name
-      color #ffffff
+      color mainWhite
       font-size 1.125rem
       font-weight normal
       font-family Lato-Regular, sans-serif
@@ -124,7 +124,7 @@
       padding-top 0.8125rem
 
     .userProfile_info_position
-      color #ffffff
+      color mainWhite
       font-family Lato-Black, sans-serif
       font-size 0.6875rem
       font-weight 700
@@ -156,7 +156,7 @@
 
       svg 
         transition all .2s
-        fill #ffffff
+        fill mainWhite
 
       svg:hover 
-        fill #aaa
+        fill mainGray170

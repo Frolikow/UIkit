@@ -1,22 +1,22 @@
 .messager
   width 18.125rem
   height 39.375rem
-  background-color #f2f2f2
+  background-color mainGray242
   border-radius 0.25rem
   position relative
 
   &__header
     width 100%
     height 5.0625rem
-    background-color #4eb7a8
+    background-color mainBlueLight
     border-radius 0.25rem 0.25rem 0 0
-    box-shadow 0 2.125rem #46ab9d
+    box-shadow 0 2.125rem mainBlue
 
     &__name
-      content '\f075' #8e8d8d
+      content '\f075' mainGray134
       height 5.0625rem
       text-transform capitalize
-      color #ffffff
+      color mainWhite
       font-family Lato
       font-size 2.125rem
       font-weight 100
@@ -25,13 +25,13 @@
 
   &__photo
     border-radius 50%
-    background-color #fff
+    background-color mainWhite
     margin 0 auto 0 auto
     width 5.25rem
     height 5.25rem
     position relative
     bottom 0.6875rem
-    border 0.3125rem solid #e5e5e5
+    border 0.3125rem solid mainGray229
 
     .userProfile
       position relative
@@ -51,10 +51,10 @@
       left 1.25rem
 
       svg
-        fill #999
+        fill mainGray157
 
         &:hover
-          fill black
+          fill mainBlack
 
     &__sendPhoto
       position relative
@@ -62,10 +62,10 @@
       left 15rem
 
       svg
-        fill #999
+        fill mainGray157
 
         &:hover
-          fill black
+          fill mainBlack
 
   &__chat
     margin-left auto
@@ -81,10 +81,10 @@
     &__message
       width 60%
       border-radius 0.3125rem
-      background-color #ffffff
+      background-color mainWhite
       padding 0.9375rem 
       text-align left
-      color #868686
+      color mainGray134
       font-family Lato
       font-size 0.8125rem
       font-weight 700
@@ -100,7 +100,7 @@
           display block
           width 0.625rem
           height 0.625rem
-          background-color #fff
+          background-color mainWhite
           transform rotate(45deg)
           position absolute
           left -0.25rem
@@ -116,7 +116,7 @@
           display block
           width 0.625rem
           height 0.625rem
-          background-color #fff
+          background-color mainWhite
           transform rotate(45deg)
           position absolute
           right -0.25rem
@@ -124,10 +124,10 @@
           border-radius 0.125rem
 
       &:first-child
-        box-shadow inset 0 0.9375rem 0.625rem -0.625rem #f2f2f2
+        box-shadow inset 0 0.9375rem 0.625rem -0.625rem mainGray242
 
       &:last-child
-        box-shadow inset 0 -0.9375rem 0.625rem -0.625rem #f2f2f2
+        box-shadow inset 0 -0.9375rem 0.625rem -0.625rem mainGray242
 
   &__input
     &__newMessage
@@ -136,9 +136,9 @@
       position absolute 
       bottom 4.9375rem
       left 1.375rem
-      border 0.1875rem solid #ffffff
-      background-color #e5e5e5
-      color #777777
+      border 0.1875rem solid mainWhite
+      background-color mainGray229
+      color mainGray116
       font-family Lato
       font-size 0.8125rem
       font-weight 700

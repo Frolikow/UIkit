@@ -13,8 +13,8 @@
     display block
     z-index 1
     border none
-    background-color #e75735
-    color #fff
+    background-color mainRedLight
+    color mainWhite
     font-size 5rem
     font-weight 300
     letter-spacing -0.2rem
@@ -26,12 +26,12 @@
   .ui-datepicker-header //голова календаря
     width 17.4375rem
     height 4.4375rem
-    background-color #e75735
-    color #fff
+    background-color mainRedLight
+    color mainWhite
     position relative
 
     .ui-icon   //стили для иконок
-      border 0.125rem solid #fff
+      border 0.125rem solid mainWhite
       border-width 0.125rem 0.125rem 0 0
       width 0.6875rem
       height 0.6875rem
@@ -56,7 +56,7 @@
     .ui-datepicker-title 
       width 17.4375rem
       height 2.6875rem
-      background-color #d54c2c
+      background-color mainOrange
       position absolute
       bottom 0
 
@@ -75,12 +75,12 @@
   .ui-datepicker-calendar  //таблица календаря
     width 17.4375rem
     height 12.4375rem
-    background-color #fff
+    background-color mainWhite
     border-collapse collapse
 
     thead  //дни недели
-      color #fff
-      background-color #e75735
+      color mainWhite
+      background-color mainRedLight
       height 1.625rem
       font-family Lato
       font-size 0.5625rem
@@ -93,13 +93,13 @@
         width 2.4375rem
         text-align center
         height 2.4375rem
-        background-color #f2f2f2
-        border 0.125rem solid #fff
+        background-color mainGray242
+        border 0.125rem solid mainWhite
 
         .ui-state-default //число
           width 1.1875rem
           height 0.8125rem
-          color #868686
+          color mainGray134
           font-family "Source Sans Pro", sans-serif
           font-size 1.25rem
           font-weight 400
@@ -107,26 +107,26 @@
 
       .ui-datepicker-current-day
         a
-          color #000000
+          color mainBlack
           text-decoration underline
 
       .ui-datepicker-today
-          background-color #e75735
+          background-color mainRedLight
 
           a
-            color #fff
+            color mainWhite
             text-decoration none
 
       .ui-state-disabled
         .ui-state-default
-          color #ffffff 
+          color mainWhitefff 
 
   .ui-datepicker-current  //кнопка "сегодня"
     display block
     width 17.4375rem
     height 3.0625rem
-    background-color #e5e5e5
-    color #868686
+    background-color mainGray229
+    color mainGray134
     font-family Lato
     font-size 0.8125rem
     font-weight bold
@@ -140,7 +140,7 @@
 
     &:hover 
       cursor pointer
-      background-color #d5d5d5
+      background-color mainGray213
 
     &:active
-      background-color #fff
+      background-color mainWhite
