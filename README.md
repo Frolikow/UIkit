@@ -5,7 +5,7 @@
 * `git clone https://github.com/Frolikow/UIkit.git`
 
  Проект на _GitHub_ _Pages_:  
-* [Второй проект](https://frolikow.github.io/UIkit/)  
+* [Второй проект](https://frolikow.github.io/UIkit/pages/demo.html)  
 
 ## Содержание проекта:  
 * [src](#src)   
