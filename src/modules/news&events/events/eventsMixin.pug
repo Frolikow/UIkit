@@ -5,7 +5,7 @@ mixin events(image,day,month,title,text)
       .events_content_date
         .events_content_date_day=day
         .events_content_date_month=month
-      .events_content_title=title
-      .events_content_text=text
+      .events_content_title(title=`${title}`)=title
+      .events_content_text(title=`${text}`)=text
       .events_content_button
         +stButton('big','blue','add to calendar', 'button')  

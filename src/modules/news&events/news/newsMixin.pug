@@ -2,8 +2,6 @@ mixin news(image,header,date,text)
   .news
     .news_image(data-newsImage=image)
     .news_content
-      .news_content_header=header
+      .news_content_header(title=`${header}`)=header
       .news_content_date=date
-      .news_content_text=text
-
-
+      p.news_content_text(title=`${text}`)=text
