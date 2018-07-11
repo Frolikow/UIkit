@@ -1,4 +1,5 @@
-mixin tickBox(name)
+mixin tickBox(name, value)
   label
     input(type="checkbox" class="tickBox" hidden name=name)
     span
+    span.labelTickBox= value

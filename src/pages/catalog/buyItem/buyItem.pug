@@ -31,12 +31,9 @@ html(lang="ru")
               form
                 label Добавить в машину:
                   .block_tickboxes
-                    +tickBox('finalFormChildrenArmchair')
-                    label Детское кресло
-                    +tickBox('finalFormNavigate')
-                    label Навигатор 
-                    +tickBox('finalFormAutoRefrigerator')
-                    label Авто-холодильник
+                    +tickBox('finalFormChildrenArmchair', 'Детское кресло')
+                    +tickBox('finalFormNavigate', 'Навигатор ')
+                    +tickBox('finalFormAutoRefrigerator', 'Авто-холодильник')
               form.form#MyForm
                 label.userContactData Ваши контактные данные:
                   label Фамилия
