@@ -1,6 +1,5 @@
-'use strict';
 
-import 'jquery-ui/ui/widgets/slider.js';
+import './../node_modules/jquery-ui/ui/widgets/slider';
 
 import './modules/sliders/standartSlider/standartSliders';
 import './modules/sliders/stepSlider/stepSlider';
@@ -11,13 +10,11 @@ import './modules/search.dropDown/search/jquery.highlight';
 import './modules/location/location';
 
 import './modules/calendar/calendar';
-import 'jquery-ui/ui/widgets/datepicker.js';
+import './../node_modules/jquery-ui/ui/widgets/datepicker';
 
 import './modules/messager/messager';
 
 import './style/base.styl';
-
-import './modules/location/location';
 
 import './pages/contacts/contacts';
 

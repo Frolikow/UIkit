@@ -1,19 +1,19 @@
-'use strict';
+import $ from 'jquery';
 
-$(function () {
+$(() => {
   $('#datepicker').each(function () {
-    let $day = $('.calendar__day', $(this));
-    let $widget = $('.js-calendar__widget', $(this));
+    const $day = $('.calendar__day', $(this));
+    const $widget = $('.js-calendar__widget', $(this));
     $widget.datepicker({
       showButtonPanel: true,
       showOtherMonths: true,
       changeYear: false,
       altField: $day,
-      altFormat: "dd",
-      firstDay: 1
+      altFormat: 'dd',
+      firstDay: 1,
     });
-    $('.ui-datepicker-current', $(this)).on('click', (event) => {
+    $('.ui-datepicker-current', $(this)).on('click', () => {
       $widget.datepicker('setDate', new Date());
-    })
+    });
   });
 });
