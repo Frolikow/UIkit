@@ -21,33 +21,33 @@ html(lang="ru")
             .buyItem_form_currentCar
             .buyItem_form_settings
               label Коробка передач
-              +dropDown('finalFormAutoBox', "Ручная", "Автоматическая")
+              +dropDown({name: 'finalFormAutoBox', values: ["Ручная", "Автоматическая"]})
               label Территория использования:
-              +dropDown('finalFormUseLocation', "г.Томск", "Томская обл.")
+              +dropDown({name: 'finalFormUseLocation', values: ["г.Томск", "Томская обл."]})
               label Место офромления аренды:
-              +dropDown('finalFormBuyLocation', "В офисе", "Ваш адрес (уточняется по телефону)")
+              +dropDown({name: 'finalFormBuyLocation', values: ["В офисе", "Ваш адрес (уточняется по телефону)"]})
               label Время аренды (количество полных часов):
-              +standartSlider('1','3','12')
+              +standartSlider({minimum: '1', value: '3', maximum: '12'})
               form
                 label Добавить в машину:
                   .block_tickboxes
-                    +tickBox('finalFormChildrenArmchair', 'Детское кресло')
-                    +tickBox('finalFormNavigate', 'Навигатор ')
-                    +tickBox('finalFormAutoRefrigerator', 'Авто-холодильник')
+                    +tickBox({name: 'finalFormChildrenArmchair', value: 'Детское кресло'})
+                    +tickBox({name: 'finalFormNavigate', value: 'Навигатор'})
+                    +tickBox({name: 'finalFormAutoRefrigerator', value: 'Авто-холодильник'})
               form.form#MyForm
                 label.userContactData Ваши контактные данные:
                   label Фамилия
-                  +input('name', 'Ваша фамилия', 'formSurname')
+                  +input({type: 'name', placeholder: 'Ваша фамилия', name: 'formSurname'})
                   label Имя
-                  +input('name', 'Ваше имя', 'formName')
+                  +input({type: 'name', placeholder: 'Ваше имя', name: 'formName'})
                   label Отчество
-                  +input('name', 'Ваше отчество', 'formPatronymic')
+                  +input({type: 'name', placeholder: 'Ваше отчество', name: 'formPatronymic'})
                   label Контактный телефон
-                  +input('name', 'Контактный телефон', 'formNumber')
+                  +input({type: 'name', placeholder: 'Контактный телефон', name: 'formNumber'})
                   label E-mail адрес
-                  +input('email', 'E-mail адрес', 'formEmail')
+                  +input({type: 'email', placeholder: 'E-mail адрес', name: 'formEmail'})
                   .buyItem_calendarAndEnd_button#buyItem_calendarAndEnd_button
-                    +stButton('big','red','Отправить заявку','submit')
+                    +stButton({size: 'big', color: 'red', value: 'Отправить заявку', type: 'submit'})
           .buyItem_calendarAndEnd
             +calendar
       +footer  

@@ -1,6 +1,6 @@
-mixin location(position1, position2)
+mixin location(data)
   .location
-    .location_map#map(lat=position1, lng=position2 )
+    .location_map#map(lat=data.longitude, lng=data.latitude )
     .location_menu
       .location_menu_message Meet us!
       .location_menu_address#map_address 

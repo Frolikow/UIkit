@@ -1,13 +1,13 @@
-mixin percentages(value)
+mixin percentages(data)
   div.percentages
-    if value<0
+    if data.value<0
       div.percentages_Value=('ERR. <0')
-    else if value>100
+    else if data.value>100
       div.percentages_Value=('ERR. >100')
     else
-      div.percentages_Value=(value)
+      div.percentages_Value=(data.value)
       div.percentages_image
         svg.percentages_image_svg
           circle.percentages_image_svg_circle(transform="rotate(-90)",
-            style="stroke-dasharray:" +value*2.83+"px 408px",
+            style="stroke-dasharray:" +data.value*2.83+"px 408px",
             r="45", cx="-50", cy="50")

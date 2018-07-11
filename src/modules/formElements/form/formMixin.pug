@@ -3,10 +3,9 @@ include ./formElements/formTextareaMixin.pug
 
 mixin form
   form.form#MyForm
-    +input('name', 'Your name', 'formName')
+    +input({type: 'name', placeholder: 'Your name', name: 'formName'})
+    +input({type: 'email', placeholder: 'Your email', name: 'formEmail'})
 
-    +input('email', 'Your email', 'formEmail')
+    +inputTextArea({placeholder: 'Your message', name: 'formMessage'})
 
-    +inputTextArea
-
-    +stButton('small', 'blue','Отправить', 'submit')
+    +stButton({size: 'small', color: 'blue', value: 'Отправить', type: 'submit'})

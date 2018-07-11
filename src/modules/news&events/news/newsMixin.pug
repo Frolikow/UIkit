@@ -1,7 +1,7 @@
-mixin news(image,header,date,text)
+mixin news(data)
   .news
-    .news_image(data-newsImage=image)
+    .news_image(data-newsImage=data.pictureName)
     .news_content
-      .news_content_header(title=`${header}`)=header
-      .news_content_date=date
-      p.news_content_text(title=`${text}`)=text
+      .news_content_header(title=`${data.newsTitle}`)=data.newsTitle
+      .news_content_date=data.newsDate
+      p.news_content_text(title=`${data.newsText}`)=data.newsText

@@ -4,7 +4,7 @@ mixin messager()
       .messager__header
         .messager__header__name sarah brown
       .messager__photo
-        +userProfile('wolf', 'Sarah Brown', 'developer')
+        +userProfile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
       .messager__icons
         .messager__icons__message
           a(href='#')
@@ -20,4 +20,4 @@ mixin messager()
 
       input.messager__input__newMessage#messager__input__newMessage(placeholder='Your message' type='text')
       .messager__input__btn#messager__input__btn
-        +stButton('big', 'blue', 'reply', 'submit') 
+        +stButton({size: 'big', color: 'blue', value: 'reply', type: 'submit'}) 

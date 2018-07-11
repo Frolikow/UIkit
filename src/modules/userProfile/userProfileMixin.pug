@@ -1,9 +1,9 @@
-mixin userProfile(image, name, position)
-  .userProfile(class='userProfile_'+image)
+mixin userProfile(data)
+  .userProfile(class='userProfile_'+data.pictureName)
     .userProfile_hidden
-      div(class=`userProfile_info userProfile_info_${position}`)
-        .userProfile_info_name= name
-        .userProfile_info_position= position
+      div(class=`userProfile_info userProfile_info_${data.profession}`)
+        .userProfile_info_name= data.userName
+        .userProfile_info_position= data.profession
         .userProfile_info_socialNetworks
 
           .userProfile_info_socialNetworks_facebook 

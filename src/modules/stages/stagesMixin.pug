@@ -1,10 +1,10 @@
-mixin stages(length, value)
+mixin stages(data)
   .stages
-    - var x = 100/(length-1)*(value-1)+'%'
+    - var x = 100/(data.length-1)*(data.value-1)+'%'
       .stages-select(style={ width: x})
     - var n = 1;
     ul
-      while n<=value
+      while n<=data.value
         li(class=`li-edit`)= n++
-      while n <= length
+      while n <= data.length
         li= n++

@@ -1,5 +1,3 @@
-mixin input(TYPE, PLACEHOLDER, NAME)
-  input(type=TYPE placeholder=PLACEHOLDER 
-  class='form_'+TYPE+' form_equal-style' required name=NAME)
+mixin input(data)
+  input(type = data.type placeholder = data.placeholder class='form_'+data.type+' form_equal-style' required name = data.name)
   .input_info
-

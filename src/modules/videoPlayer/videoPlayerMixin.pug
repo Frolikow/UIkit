@@ -1,5 +1,5 @@
-mixin videoPlayer(address)
+mixin videoPlayer(data)
   .videoPlayer 
     iframe(
-    src=address frameborder="0" 
+    src=data.url frameborder="0" 
       allow="autoplay; encrypted-media" allowfullscreen)
