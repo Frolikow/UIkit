@@ -19,121 +19,125 @@ include ./modules/videoPlayer/videoPlayerMixin
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title "UIKit"
+    head
+        meta(charset="utf-8")
+        title "UIKit"
 
-  body
-    .demoLayout
-      a(href='./../firstPage.html')
-        +stButton({size:'big', color:'red', value:'back', type:'button'})
-      .block
-        .H1 standart buttons
-        //- small/big and blue/red value button/submit
-        each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
-          +stButton(item)
-      .block
-        .H1 arrow buttons
-        //- left/right
-        each item in[{direction: 'left'}, {direction: 'right'}]
-          +arButton(item)
+    body
+        .demo-layout
+            a(href='./../firstPage.html')
+                +stButton({size:'big', color:'red', value:'pages', type:'button'})
 
-      .block  
-        .H1 percentages / pie chart
-        .block
-          .H1 percentages
-          //- 0..100
-          +percentages({value:'75'})
+            .ui-element__container
+                //- small/big and blue/red value button/submit
+                h2.container__title standard buttons
+                .container__elements.container__standard-buttons
+                    each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
+                        +stButton(item)
 
-        .block
-          .H1 pie chart
-          +pieChart({value1: 50, value2: 25, value3: 10})
+            .ui-element__container
+                //- left/right
+                h2.container__title arrow buttons
+                .container__elements.container__arrow-buttons
+                    each item in[{direction: 'left'}, {direction: 'right'}]
+                        +arButton(item)
 
-      .block
-        .H1 sliders
-        .block 
-          .H1 standart slider
+            .ui-element__container
+                h2.container__title percentages / pie chart
+                .container__elements.container__percentages-pie-chart
+                    //- 0..100
+                    +percentages({value:'0'})
+                    +percentages({value:'38'})
+                    +percentages({value:'62'})
+                    +percentages({value:'89'})
+                    +pieChart({value1: 10, value2: 25, value3: 30})
 
-          +standartSlider({minimum: '1', value: '40', maximum: '100'})
-        .block
-          .H1 step slider
-          //- (minimum, default, maximum, step)
-          //- +stepSlider('0', '75', '100', '25')
-          +stepSlider({minimum:'0', value: '75', maximum: '100', step: '25'})
+            .ui-element__container
+                //- small/big and blue/red value button/submit
+                h2.container__title sliders
+                .container__elements.container__sliders
+                    .container__standart-slider
+                        +standartSlider({minimum: '1', value: '40', maximum: '100'})
+                    .container__step-slider
+                        //- (minimum, default, maximum, step)
+                        //- +stepSlider('0', '75', '100', '25')
+                        +stepSlider({minimum:'0', value: '75', maximum: '100', step: '25'})
 
-      .block
-        .H1 stages
-          //- length, value
-          +stages({length: 11, value: 5}) 
+            .ui-element__container
+                h2.container__title stages
+                .container__elements.container__stages
+                    //- length, value
+                    +stages({length: 5, value: 3})
 
-      .block
-        .H1 form elements
-        +form
+            .ui-element__container
+                h2.container__title form elements
+                .container__elements.container__form-elements
+                    .form-elements__form
+                        +form
+                    .form-elements__toggles-and-tick-box
+                        h2.container__title toggles
+                        .form-elements__toggles
+                            +toggles
+                            +toggles
+                        h2.container__title tick boxes
+                        .form-elements__tick-box
+                            +tickBox({name: '', value: ''})
+                            +tickBox({name: '', value: ''})
 
-        .block
-          .H1 toggles
-          form
-            +toggles
-            +toggles
-            +toggles
+            .ui-element__container
+                .container__elements.container__search-drop-down-user-profile
+                    .container__search-drop-down
+                        h2.container__title search / drop down
+                        .elements__search-drop-down
+                            .search
+                                +search
+                            .drop-down
+                                +dropDown({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                    .container__user-profile
+                        h2.container__title user profile
+                        .elements__user-profile
+                            +userProfile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
+                            +userProfile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
 
-        .block
-          .H1 tick boxes
-          form
-            +tickBox({name: '', value: ''})
-            +tickBox({name: '', value: ''})
-            +tickBox({name: '', value: ''})
+            .ui-element__container
+                h2.container__title news & events
+                .container__elements.container__news-events
+                    .container__news
+                        +news({pictureName: 'bike', newsTitle: "It's all going downhill", newsDate:'24 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                    .container__events
+                        +events({pictureName:'city', eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
 
-      .block
-        .H1 search / drop down
-        .block
-          .H1 search
-          +search
+            .ui-element__container
+                h2.container__title location
+                .container__elements.container__location
+                    +location({longitude: 56.4531, latitude: 84.975643})
+                    //-    (56.4531, 84.975643) офис
+                    //-    (55.751244, 37.618423) Москва
+                    //-    (59.934280, 30.335099) Санкт-Петербург
+                    //-    (56.453651, 84.948738) Лагерный сад
 
-        .block
-          .H1 drop down
-          //- (name, options1...options_n)
-          +dropDown({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
-
-      .block
-        .H1 user profile 
-        //- 1)название картинки из папки image модуля 
-        //- 2) имя и фамилия 
-        //- 3) ux designer или developer
-        +userProfile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
-        +userProfile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
-
-      .block
-        .H1 news & events
-        //- дата в формате '24 августа 2013'/ текс новости
-        +news({pictureName: 'bike', newsTitle: "It's all going downhill", newsDate:'24 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-
-        //- дата в формате '24' / месяц события в формате 'авг'/ заголовок события/ текст события
-        +events({pictureName:'city', eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
-
-      .block
-        .H1 location
-        +location({longitude: 56.4531, latitude: 84.975643})
-      //-  (56.4531, 84.975643) офис
-      //-  (55.751244, 37.618423) Москва
-      //-  (59.934280, 30.335099) Санкт-Петербург
-      //-  (56.453651, 84.948738) Лагерный сад
-
-      .block
-        .H1 calendar
-        +calendar
-
-      .block
-        .H1 messaging
-        +messager
-
-      .block
-        .H1 video
-        +videoPlayer({url: "https://player.vimeo.com/video/62980495"})
-        //- https://www.youtube.com/embed/rPmGtZAUxNs
-        //- https://player.vimeo.com/video/62980495
-      a(href='./../firstPage.html') 
-        +stButton({size: 'big', color: 'red', value: 'back', type: 'button'})
+            .ui-element__container
+                .container__elements.container__calendar-messaging
+                    .container__calendar
+                        h2.container__title calendar
+                        .calendar__element
+                            +calendar
+                    .container__messaging
+                        h2.container__title messaging
+                        .messaging__element
+                            +messager
 
 
-script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  
+            .ui-element__container
+                h2.container__title video
+                .container__elements.container__video-player
+                    +videoPlayer({url: "https://player.vimeo.com/video/62980495"})
+                    //- https://www.youtube.com/embed/rPmGtZAUxNs
+                    //- https://player.vimeo.com/video/62980495
+
+
+            a(href='./../firstPage.html') 
+                +stButton({size: 'big', color: 'red', value: 'back', type: 'button'})
+
+
+script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')    
