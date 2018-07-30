@@ -1,0 +1,11 @@
+mixin events(data)
+  .events
+    .events__image(data-eventsImage=data.pictureName)
+    .events-content
+      .events-content__date
+        .events-content__date-day=data.eventDay
+        .events-content__date-month=data.eventMouth
+      .events-content__title(title=`${data.eventTitle}`)=data.eventTitle
+      .events-content__text(title=`${data.eventText}`)=data.eventText
+      .events-content__button
+        +standard-button({size: 'big', color: 'blue', value: 'add to calendar', type: 'button'})  

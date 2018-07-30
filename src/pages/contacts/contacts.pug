@@ -1,7 +1,7 @@
-include ./../pageModules/header/headerMixin
-include ./../pageModules/footer/footerMixin
-include ./../../modules/formElements/form/formMixin.pug
-include ./../../modules/location/locationMixin.pug
+include ./../page-modules/header/header
+include ./../page-modules/footer/footer
+include ./../../modules/form-elements/form/form
+include ./../../modules/location/location
 
 doctype html
 html(lang="ru")
@@ -12,11 +12,11 @@ html(lang="ru")
     .layout
       +header
       .main
-        .contact
-          .contact_feedback
+        .contact-page-content
+          .contact-page-content__feedback
             p По любому вопросу вы можете обратиться через форму ниже
             +form
-          .contact_address
+          .contact-page-content__address
             p Мы находимся здесь:
             +location({longitude: 56.4531, latitude: 84.975643})
       +footer

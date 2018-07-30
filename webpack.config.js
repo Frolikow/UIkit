@@ -59,9 +59,9 @@ const common = {
       filename: 'pages/demo.html'
     }),
     new HtmlWebpackPlugin({
-      title: "firstPage(UIkit)",
-      filename: "firstPage.html",
-      template: "pages/firstPage/firstPage.pug",
+      title: "first-page(UIkit)",
+      filename: "first-page.html",
+      template: "pages/first-page/first-page.pug",
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
@@ -72,8 +72,8 @@ const common = {
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
-      filename: "pages/productInfo.html",
-      template: "pages/catalog/productInfo/productInfo.pug",
+      filename: "pages/product-info.html",
+      template: "pages/catalog/product-info/product-info.pug",
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
@@ -84,8 +84,8 @@ const common = {
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
-      filename: "pages/buyItem.html",
-      template: "pages/catalog/buyItem/buyItem.pug",
+      filename: "pages/buy-item.html",
+      template: "pages/catalog/buy-item/buy-item.pug",
       inject: 'head'
     }),
 

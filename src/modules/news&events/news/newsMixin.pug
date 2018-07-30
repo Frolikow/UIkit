@@ -1,7 +1,0 @@
-mixin news(data)
-  .news
-    .news_image(data-newsImage=data.pictureName)
-    .news_content
-      .news_content_header(title=`${data.newsTitle}`)=data.newsTitle
-      .news_content_date=data.newsDate
-      p.news_content_text(title=`${data.newsText}`)=data.newsText

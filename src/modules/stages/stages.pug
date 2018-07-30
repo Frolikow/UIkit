@@ -1,0 +1,10 @@
+mixin stages(data)
+  .stages
+    - var x = 100/(data.length-1)*(data.value-1)+'%'
+      .stages-scale_selected-item(style={ width: x})
+    - var n = 1;
+    ul.stages__list
+      while n<=data.value
+        li.stages__list-item.stages__list-item_selected-item= n++
+      while n <= data.length
+        li.stages__list-item= n++

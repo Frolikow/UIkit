@@ -1,0 +1,35 @@
+-
+  function sum() {
+    var result = 0;
+    for (var i = 0; i < arguments.length; i++) {
+      result += arguments[i];
+      }
+    return result;
+    }
+
+mixin pie-chart(data)
+
+  - valueSum = sum(data.value1, data.value2, data.value3);
+  if valueSum>100
+    .pie-chart
+      .pie-chart__value=('ERR. >100')
+  else if (valueSum<0)
+    .pie-chart
+      .pie-chart__value=('ERR. <0')
+  else
+    .pie-chart
+      .pie-chart__value=('%')
+      .pie-chart__image
+        svg.pie-chart__image_svg
+          circle.pie-chart__image_svg_fill(transform="rotate(-90)",
+            style="stroke-dasharray: 248px 408px",
+            r="39.5", cx="-50", cy="50")
+          circle.pie-chart__image_svg_circle1(transform="rotate(-90)",
+            style="stroke-dasharray:" +(data.value1 * 2.48 + data.value2 * 2.48 + data.value3 * 2.48) + "px 408px",
+            r="39.5", cx="-50", cy="50")
+          circle.pie-chart__image_svg_circle2(transform="rotate(-90)",
+            style="stroke-dasharray:" +(data.value1 * 2.48 + data.value2 * 2.48) + "px 408px",
+            r="39.5", cx="-50", cy="50")
+          circle.pie-chart__image_svg_circle3(transform="rotate(-90)",
+            style="stroke-dasharray:" +data.value1 * 2.48 + "px 408px",
+            r="39.5", cx="-50", cy="50")

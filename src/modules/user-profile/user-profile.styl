@@ -1,0 +1,143 @@
+.user-profile__avatar
+  width 5.25rem
+  height 5.25rem
+  border solid 0.25rem mainGray170
+  border-radius 50%
+  display block
+  background-size 105%
+  position relative
+  z-index 10
+  &:hover .user-profile__info
+    transform scaleX(1) 
+    transition all 0.5s
+
+.user-profile
+  &__griffin
+    background mainGray170 url(./images/griffin.jpeg) no-repeat 50% 50% / 105%
+  &__wolf
+    background mainGray170 url(./images/wolf.jpeg) no-repeat 50% 50% / 105%
+  &__hidden-block
+    width 6.875rem
+    height 5.625rem
+    background-color mainBlackTranceparent
+  &__info
+    transform scaleX(0)
+    width 10.1875rem
+    height 5.625rem
+    background-color mainGray229
+    margin-left 6.25rem
+    position relative
+    bottom 0.1875rem
+    border-radius 0.25rem
+    &::after 
+      content ""
+      display block
+      width 0.625rem
+      height 0.625rem
+      background-color mainGray229
+      transform rotate(-45deg)
+      position absolute
+      top 2.5rem
+      right 9.8125rem
+      border-radius 0.1875rem 0 0 0 
+      z-index 1
+    &_name
+      color mainRedLight
+      font-size 1.125rem
+      font-weight normal
+      font-family Lato-Regular, sans-serif
+      line-height 1.125rem
+      padding-top 0.8125rem
+    &_position
+      color #4f4f4f
+      font-family Lato-Black, sans-serif
+      font-size 0.6875rem
+      font-weight 700
+      line-height 0.6875rem
+      text-transform uppercase
+      letter-spacing 0.0344rem
+      margin-top 0.5rem
+    &_social-networks 
+      width 60%
+      height 1.3125rem
+      padding-top 0.75rem
+      margin auto
+      display flex
+      justify-content space-around
+      align-items flex-end
+      &_facebook
+        width 1.25rem
+        height 1.25rem
+      &_twitter
+        width 1.25rem
+        height 1.1875rem
+      &_dribbble
+        width 1.3125rem
+        height 1.2813rem
+      .social-networks__icons 
+        transition all .2s
+        fill mainGray116
+      .social-networks__icons:hover 
+          fill mainRedLight
+
+  .user-profile__info-developer
+    color mainWhite
+    background-color mainBlueDark
+    transform scaleX(0)
+    width 10.1875rem
+    height 5.625rem
+    margin-left 6.25rem
+    position relative
+    border-radius 0.25rem
+    &::after 
+      content ""
+      display block
+      width 0.625rem
+      height 0.625rem
+      background-color mainBlueDark
+      transform rotate(-45deg)
+      position absolute
+      top 2.5rem
+      right 9.8125rem
+      border-radius 0.1875rem 0 0 0 
+    .user-profile
+      &__info_name
+        color mainWhite
+        font-size 1.125rem
+        font-weight normal
+        font-family Lato-Regular, sans-serif
+        line-height 1.125rem
+        padding-top 0.8125rem
+
+      &__info_position
+        color mainWhite
+        font-family Lato-Black, sans-serif
+        font-size 0.6875rem
+        font-weight 700
+        line-height 0.6875rem
+        text-transform uppercase
+        letter-spacing 0.0344rem
+        margin-top 0.5rem
+
+      &__info_social-networks
+        width 60%
+        height 1.3125rem
+        padding-top 0.75rem
+        margin auto
+        display flex
+        justify-content space-around
+        align-items flex-end
+        &_facebook
+          width 1.25rem
+          height 1.25rem
+        &_twitter
+          width 1.25rem
+          height 1.1875rem
+        &_dribbble
+          width 1.3125rem
+          height 1.2813rem
+        .social-networks__icons 
+          transition all .2s
+          fill mainWhite
+          &:hover 
+            fill mainGray170

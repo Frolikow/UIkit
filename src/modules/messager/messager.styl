@@ -11,17 +11,14 @@
     background-color mainBlueLight
     border-radius 0.25rem 0.25rem 0 0
     box-shadow 0 2.125rem mainBlue
-
-    &__name
-      content '\f075' mainGray134
-      height 5.0625rem
-      text-transform capitalize
-      color mainWhite
-      font-family Lato
-      font-size 2.125rem
-      font-weight 100
-      line-height 5.0625rem 
-      letter-spacing -0.0638rem
+    content '\f075' mainGray134
+    text-transform capitalize
+    color mainWhite
+    font-family Lato
+    font-size 2.125rem
+    font-weight 100
+    line-height 5.0625rem 
+    letter-spacing -0.0638rem
 
   &__photo
     border-radius 50%
@@ -33,10 +30,8 @@
     bottom 0.6875rem
     border 0.3125rem solid mainGray229
 
-    .userProfile
+    .user-profile__avatar
       position relative
-      right 1.5rem
-      bottom 1.5rem
       border none
 
   &__icons
@@ -44,28 +39,18 @@
     width 1.875rem
     height 0
     position relative
-
-    &__message
+    .messager__icon
+      fill mainGray157
+      &:hover
+        fill mainBlack
+    &-send-message
       position relative
       bottom 2.8125rem
       left 1.25rem
-
-      svg
-        fill mainGray157
-
-        &:hover
-          fill mainBlack
-
-    &__sendPhoto
+    &-send-photo
       position relative
       bottom 5rem
       left 15rem
-
-      svg
-        fill mainGray157
-
-        &:hover
-          fill mainBlack
 
   &__chat
     margin-left auto
@@ -74,11 +59,10 @@
     max-height 8.75rem
     overflow-y auto
     margin-bottom 1.875rem
-
     &::-webkit-scrollbar
       width 0
 
-    &__message
+    &_message
       width 60%
       border-radius 0.3125rem
       background-color mainWhite
@@ -91,10 +75,9 @@
       letter-spacing 0.0394rem
       margin-bottom 0.9375rem
 
-      &__in
+      &_incoming
         position relative
         margin-left 3%
-
         &:after
           content ""
           display block
@@ -107,10 +90,9 @@
           top 45%
           border-radius 0.125rem
 
-      &__out
+      &_outgoing
         position relative
         margin-left 22% 
-
         &:after
           content ""
           display block
@@ -130,7 +112,7 @@
         box-shadow inset 0 -0.9375rem 0.625rem -0.625rem mainGray242
 
   &__input
-    &__newMessage
+    &_message_new
       width 12.9375rem
       height 3.125rem
       position absolute 
@@ -147,15 +129,13 @@
       padding 1rem
       border-radius 0.4375rem
 
-  .messager__input__btn
+  .messager__button-send-message
     display block
     position absolute
     bottom 1.8125rem
     left 1.375rem
-
-    input.stButton
+    .standard-button
       font-size 0.75rem
-
       &_size_big
         width 15.1875rem
         height 2rem 

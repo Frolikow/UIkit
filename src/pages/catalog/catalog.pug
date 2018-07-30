@@ -1,6 +1,6 @@
-include ./../pageModules/header/headerMixin
-include ./../pageModules/footer/footerMixin
-include ./catalogProduct/productMixin.pug
+include ./../page-modules/header/header
+include ./../page-modules/footer/footer
+include ./product/product
 
 doctype html
 html(lang="ru")
@@ -11,7 +11,7 @@ html(lang="ru")
     .layout
       +header
       .main
-        .productsBlock
+        .products-page-content
           +product({pictureName: 'bmw', carName: 'BMW7S', carPrice: '3000'})
           +product({pictureName: 'cadilac', carName: 'Escalade', carPrice: '3000'})
           +product({pictureName: 'camaro', carName: 'Camaro', carPrice: '3500'})

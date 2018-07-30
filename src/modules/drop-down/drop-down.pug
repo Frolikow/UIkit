@@ -1,0 +1,6 @@
+mixin drop-down(data)
+    div.select-button
+      select.select-button__list(name=data.name)
+        option.select-button__list-item(value="0") Choose An Option
+        each item in data.values
+            option.select-button__list-item(value=i++)= item

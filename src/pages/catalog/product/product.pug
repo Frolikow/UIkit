@@ -1,0 +1,10 @@
+mixin product(data)
+  .product
+    .product__image
+      a.product__image-link(href='./product-info.html?pictureName='+data.pictureName+'&carName='+data.carName+'&carPrice='+data.carPrice)
+        img.product__image-link-picture(src=require("./productImages/"+data.pictureName+"1.jpeg"))
+    .product__name= data.carName
+    .product__price= data.carPrice+' руб./час'
+    .product__info
+      a(href='./product-info.html?pictureName='+data.pictureName+'&carName='+data.carName+'&carPrice='+data.carPrice)
+        +standard-button({size: 'big', color: 'red', value: 'Подробнее', type: 'button'}) 

@@ -1,0 +1,38 @@
+.tick-box
+  display none
+  &_view
+    -webkit-appearance none
+    width 1.5rem
+    height 1.5rem
+    border-radius 50%
+    background-color mainGray229
+    display inline-block
+    cursor pointer
+  &_view:before
+    content ""
+    display block
+    width 0.3125rem
+    height 0.625rem
+    border 0 solid mainGray192
+    border-width 0 0.125rem 0.125rem 0
+    transform rotate(45deg)
+    margin 0.25rem 0 0 0.5rem
+    pointer-events none
+  &:checked + .tick-box_view
+    background-color mainBlueLight
+  &:checked + .tick-box_view:before
+    content ""
+    display block
+    width 0.3125rem
+    height 0.625rem
+    border 0 solid mainWhite
+    border-width 0 0.125rem 0.125rem 0
+    transform rotate(45deg)
+    margin 0.25rem 0 0 0.5rem
+    pointer-events none
+  &__text
+    position relative
+    bottom 0.4rem
+    padding-left 0.3rem
+    // line-height 1.5rem
+    

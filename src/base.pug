@@ -1,21 +1,22 @@
-include ./modules/standartButtons/standartButtonsMixin
-include ./modules/arrowButtons/arrowButtonsMixin
-include ./modules/percentagesPieChart/percentagesMixin
-include ./modules/percentagesPieChart/pieChartMixin
-include ./modules/sliders/slidersMixin
-include ./modules/stages/stagesMixin
-include ./modules/formElements/form/formMixin
-include ./modules/formElements/toggles/togglesMixin
-include ./modules/formElements/tickBoxes/tickBoxesMixin
-include ./modules/search.dropDown/dropDown/dropDownMixin
-include ./modules/search.dropDown/search/searchMixin
-include ./modules/userProfile/userProfileMixin
-include ./modules/news&events/news/newsMixin
-include ./modules/news&events/events/eventsMixin
-include ./modules/location/locationMixin
-include ./modules/calendar/calendarMixin
-include ./modules/messager/messagerMixin
-include ./modules/videoPlayer/videoPlayerMixin
+include ./modules/buttons/standard-button/standard-button
+include ./modules/buttons/arrow-button/arrow-button
+include ./modules/percentages/percentages
+include ./modules/pie-chart/pie-chart
+include ./modules/standard-slider/standard-slider
+include ./modules/step-slider/step-slider
+include ./modules/stages/stages
+include ./modules/form-elements/form/form
+include ./modules/form-elements/toggles/toggles
+include ./modules/form-elements/tick-box/tick-box 
+include ./modules/search/search
+include ./modules/drop-down/drop-down
+include ./modules/user-profile/user-profile
+include ./modules/news/news
+include ./modules/events/events
+include ./modules/location/location
+include ./modules/calendar/calendar
+include ./modules/messager/messager
+include ./modules/video-player/video-player
 
 doctype html
 html(lang="ru")
@@ -25,22 +26,22 @@ html(lang="ru")
 
     body
         .demo-layout
-            a(href='./../firstPage.html')
-                +stButton({size:'big', color:'red', value:'pages', type:'button'})
+            a(href='./../first-page.html')
+                +standard-button({size:'big', color:'red', value:'pages', type:'button'})
 
             .ui-element__container
                 //- small/big and blue/red value button/submit
                 h2.container__title standard buttons
                 .container__elements.container__standard-buttons
                     each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
-                        +stButton(item)
+                        +standard-button(item)
 
             .ui-element__container
                 //- left/right
                 h2.container__title arrow buttons
                 .container__elements.container__arrow-buttons
                     each item in[{direction: 'left'}, {direction: 'right'}]
-                        +arButton(item)
+                        +arrow-button(item)
 
             .ui-element__container
                 h2.container__title percentages / pie chart
@@ -50,18 +51,18 @@ html(lang="ru")
                     +percentages({value:'38'})
                     +percentages({value:'62'})
                     +percentages({value:'89'})
-                    +pieChart({value1: 10, value2: 25, value3: 30})
+                    +pie-chart({value1: 10, value2: 25, value3: 30})
 
             .ui-element__container
                 //- small/big and blue/red value button/submit
                 h2.container__title sliders
                 .container__elements.container__sliders
                     .container__standart-slider
-                        +standartSlider({minimum: '1', value: '40', maximum: '100'})
+                        +standard-slider({minimum: '1', value: '40', maximum: '100'})
                     .container__step-slider
                         //- (minimum, default, maximum, step)
                         //- +stepSlider('0', '75', '100', '25')
-                        +stepSlider({minimum:'0', value: '75', maximum: '100', step: '25'})
+                        +step-slider({minimum:'0', value: '75', maximum: '100', step: '25'})
 
             .ui-element__container
                 h2.container__title stages
@@ -81,8 +82,8 @@ html(lang="ru")
                             +toggles
                         h2.container__title tick boxes
                         .form-elements__tick-box
-                            +tickBox({name: '', value: ''})
-                            +tickBox({name: '', value: ''})
+                            +tick-box({name: '', value: ''})
+                            +tick-box({name: '', value: ''})
 
             .ui-element__container
                 .container__elements.container__search-drop-down-user-profile
@@ -92,12 +93,12 @@ html(lang="ru")
                             .search
                                 +search
                             .drop-down
-                                +dropDown({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                                +drop-down({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
                     .container__user-profile
                         h2.container__title user profile
                         .elements__user-profile
-                            +userProfile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
-                            +userProfile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
+                            +user-profile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
+                            +user-profile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
 
             .ui-element__container
                 h2.container__title news & events
@@ -131,13 +132,13 @@ html(lang="ru")
             .ui-element__container
                 h2.container__title video
                 .container__elements.container__video-player
-                    +videoPlayer({url: "https://player.vimeo.com/video/62980495"})
+                    +video-player({url: "https://player.vimeo.com/video/62980495"})
                     //- https://www.youtube.com/embed/rPmGtZAUxNs
                     //- https://player.vimeo.com/video/62980495
 
 
-            a(href='./../firstPage.html') 
-                +stButton({size: 'big', color: 'red', value: 'back', type: 'button'})
+            a(href='./../first-page.html') 
+                +standard-button({size: 'big', color: 'red', value: 'pages', type: 'button'})
 
 
 script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')    

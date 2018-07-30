@@ -2,38 +2,38 @@ import $ from 'jquery';
 
 $(() => {
   const messageBase = [{
-    type: 'in', text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    type: 'incoming', text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
   }, {
-    type: 'out', text: 'A, maxime. Tenetur beatae delectus molestias.',
+    type: 'outgoing', text: 'A, maxime. Tenetur beatae delectus molestias.',
   }, {
-    type: 'in', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
+    type: 'incoming', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
   }];
 
-  function addMessage(message) {
+  function addNewMessage(message) {
     const date = new Date();
     const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    const messager = document.getElementsByClassName('messager__chat')[0];
+    const messager = document.getElementsByClassName('js-messager__chat')[0];
     const newMessage = document.createElement('div');
     message.time = date.toLocaleString('ru', options);
-    newMessage.className = `messager__chat__message__${message.type} messager__chat__message`;
+    newMessage.className = `messager__chat_message_${message.type} messager__chat_message`;
     newMessage.innerHTML = message.text;
     messager.appendChild(newMessage);
   }
 
   function loadMessageFromBase() {
-    messageBase.forEach(addMessage);
+    messageBase.forEach(addNewMessage);
   }
 
-  function createOutMessage() {
+  function createOutgoingMessage() {
     const message = {};
-    message.type = 'out';
-    message.text = document.getElementById('messager__input__newMessage').value;
+    message.type = 'outgoing';
+    message.text = $('.js-messager__input_message_new:eq(0)').val();
     if (message.text !== '') {
-      addMessage(message);
-      document.getElementById('messager__input__newMessage').value = '';
+      addNewMessage(message);
+      $('.js-messager__input_message_new:eq(0)').val('');
     }
   }
-  document.getElementById('messager__input__btn').addEventListener('click', createOutMessage);
+  $('.js-messager__button-send-message').on('click', createOutgoingMessage);
 
   loadMessageFromBase(messageBase);
 });

@@ -1,6 +1,0 @@
-mixin dropDown(data)
-    div.pointerDropDown
-      select.dropDown(name=data.name)
-        option(value="0") Choose An Option
-        each item in data.values
-            option(value=i++)= item

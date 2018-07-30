@@ -1,0 +1,24 @@
+include ./../../page-modules/header/header
+include ./../../page-modules/footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Информация(UIkit)
+
+  body
+    .layout
+      +header
+      .main
+        .product-page-content 
+          .product-page-content__media.js-product-page-content__media
+          .product-page-content__info 
+            .product-page-content__info-title.js-product-page-content__info-title
+            .product-page-content__info-description Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam inventore nihil animi magni neque eligendi. Fugiat suscipit modi eveniet quos, aut minima minus! In repudiandae soluta sequi natus quia labore?
+            .product-page-content__info-buy
+              .product-page-content__info-buy-price.js-product-page-content__info-buy-price
+              .product-page-content__info-buy-button
+                a(class='js-product-page-content__buy-item' href='#') 
+                  +standard-button({size: 'big', color: 'red', value: 'Заказать', type: 'button'})
+      +footer 

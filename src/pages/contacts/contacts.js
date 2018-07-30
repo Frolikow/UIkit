@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(() => {
-  document.getElementById('MyForm').addEventListener('submit', (e) => {
+  document.getElementsByClassName('js-form-feedback')[0].addEventListener('submit', (e) => {
     e.preventDefault();
 
     const name = document.getElementsByName('formName')[0];

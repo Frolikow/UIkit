@@ -1,11 +1,11 @@
 
 import './../node_modules/jquery-ui/ui/widgets/slider';
 
-import './modules/sliders/standartSlider/standartSliders';
-import './modules/sliders/stepSlider/stepSlider';
+import './modules/standard-slider/standard-slider';
+import './modules/step-slider/step-slider';
 
-import './modules/search.dropDown/search/search';
-import './modules/search.dropDown/search/jquery.highlight';
+import './modules/search/search';
+import './modules/search/jquery.highlight';
 
 import './modules/location/location';
 
@@ -18,6 +18,6 @@ import './style/base.styl';
 
 import './pages/contacts/contacts';
 
-import './pages/catalog/productInfo/productInfo';
+import './pages/catalog/product-info/product-info';
 
-import './pages/catalog/buyItem/buyItem';
+import './pages/catalog/buy-item/buy-item';

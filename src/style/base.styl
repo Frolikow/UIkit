@@ -22,9 +22,10 @@ html
 
   body
     margin 0
-    padding 2.9375rem
-
+    padding 0
+    
     .demo-layout
+      padding 2.9375rem
       display flex
       flex-direction column
       align-items center
@@ -89,8 +90,17 @@ html
                 position relative
                 bottom 1.625rem
                 padding-top 3rem
+                right 0.625rem
+                display flex
+                justify-content space-around
+                width 110%
+                margin 0 auto
               .form-elements__tick-box
                 padding-top 1.25rem
+                display flex
+                justify-content space-around
+                width 70%
+                margin 0 auto
           &__search-drop-down-user-profile
             display flex
             align-items flex-start
@@ -112,11 +122,14 @@ html
               min-width 20rem
               position relative
               right 1.875rem
-              padding-bottom 5.9375rem
+              padding-bottom 6.875rem
               .elements__user-profile
-                padding-top 0.5rem
-                position relative
-                bottom 0.625rem
+                display flex
+                flex-direction column
+                justify-content flex-end
+                .user-profile
+                  margin 1rem
+                  margin-left 1.5625rem
           &__news-events
             display flex
             justify-content center
@@ -139,6 +152,7 @@ html
               padding-top 0.75rem
           &__video-player
             padding-top 0.625rem
+            padding-bottom 1.875rem
 
     .layout
       width 100%
