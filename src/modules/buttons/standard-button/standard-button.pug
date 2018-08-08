@@ -1,3 +1,2 @@
 mixin standard-button(data)
-    .standard-button-element.js-standard-button-element
-        input(class=`standard-button standard-button_size_${data.size} standard-button_color_${data.color}` type=data.type value=data.value)
+    button(class=`standard-button js-standard-button standard-button_size_${data.size} standard-button_color_${data.color}` type=data.type )= data.value

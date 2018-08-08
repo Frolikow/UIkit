@@ -1,12 +1,24 @@
 import $ from 'jquery';
 
-$(() => {
-  const stepSliderData = document.getElementsByClassName('js-step-slider-element')[0];
-  $('.js-step-slider').slider({
-    value: +stepSliderData.getAttribute('data-default'),
-    min: +stepSliderData.getAttribute('data-minimum'),
-    max: +stepSliderData.getAttribute('data-maximum'),
-    step: +stepSliderData.getAttribute('data-step'),
-    range: 'min',
+class StepSlider {
+  constructor(element) {
+    this.$slider = $(element);
+    this.initEvent();
+  }
+
+  initEvent() {
+    $(this.$slider).slider({
+      value: +($(this.$slider).data('default')),
+      min: +($(this.$slider).data('minimum')),
+      max: +($(this.$slider).data('maximum')),
+      step: +($(this.$slider).data('step')),
+      range: 'min',
+    });
+  }
+}
+
+$(document).ready(() => {
+  $('.js-step-slider').each(function () {
+    new StepSlider(this);
   });
 });

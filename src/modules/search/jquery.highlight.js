@@ -1,6 +1,6 @@
-import jQuery from 'jquery';
+import $ from 'jquery';
 
-jQuery.fn.highlight = function (pat) {
+$.fn.highlight = function (pat) {
   function innerHighlight(node, pat) {
     let skip = 0;
     if (node.nodeType === 3) {
@@ -27,7 +27,7 @@ jQuery.fn.highlight = function (pat) {
   });
 };
 
-jQuery.fn.removeHighlight = function () {
+$.fn.removeHighlight = function () {
   return this.find('span.highlight').each(function () {
     const b = this.parentNode;
     b.replaceChild(this.firstChild, this);
@@ -35,6 +35,6 @@ jQuery.fn.removeHighlight = function () {
   }).end();
 };
 
-jQuery.fn.selectHighlight = function (number) {
+$.fn.selectHighlight = function (number) {
   return this.find(`span.highlight:eq ${number})`).addClass('selectHighlight').end();
 };

@@ -1,22 +1,11 @@
-.standard-button-element
-  &__ripple-effect
-    position absolute
-    width 0.0625rem
-    height 0.0625rem
-    border-radius 50%
-    background #111
-    animation ripple-animation 1s
-    overflow hidden
-    z-index 1
-
 .standard-button
   font-family Lato, sans-serif
   text-transform uppercase
   font-weight bold
   color mainWhite
-  border none 
-  border-radius 0.1875rem
   position relative
+  border-radius 0.1875rem
+  border none 
   outline none
   cursor pointer
   overflow hidden
@@ -51,7 +40,15 @@
       border solid 0.0625rem mainRedDark
       box-shadow 0 0.1875rem 0 0 mainRedDark
 
-
+  &__ripple-effect
+    position absolute
+    width 0.0625rem
+    height 0.0625rem
+    border-radius 50%
+    background mainWhite
+    animation ripple-animation 1s
+    z-index 1
+    pointer-events none
 
 
 @keyframes ripple-animation
@@ -60,5 +57,5 @@
     opacity 1
 
   to
-    transform scale(70)
+    transform scale(200)
     opacity 0

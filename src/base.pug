@@ -54,14 +54,12 @@ html(lang="ru")
                     +pie-chart({value1: 10, value2: 25, value3: 30})
 
             .ui-element__container
-                //- small/big and blue/red value button/submit
                 h2.container__title sliders
                 .container__elements.container__sliders
                     .container__standart-slider
-                        +standard-slider({minimum: '1', value: '40', maximum: '100'})
+                        +standard-slider({minimum: '10', value: '50', maximum: '200'})
+
                     .container__step-slider
-                        //- (minimum, default, maximum, step)
-                        //- +stepSlider('0', '75', '100', '25')
                         +step-slider({minimum:'0', value: '75', maximum: '100', step: '25'})
 
             .ui-element__container
@@ -90,9 +88,9 @@ html(lang="ru")
                     .container__search-drop-down
                         h2.container__title search / drop down
                         .elements__search-drop-down
-                            .search
+                            .search__block
                                 +search
-                            .drop-down
+                            .drop-down__block
                                 +drop-down({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
                     .container__user-profile
                         h2.container__title user profile
@@ -141,4 +139,4 @@ html(lang="ru")
                 +standard-button({size: 'big', color: 'red', value: 'pages', type: 'button'})
 
 
-script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')    
+script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')

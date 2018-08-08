@@ -1,39 +1,54 @@
 import $ from 'jquery';
 
-$(() => {
-  const messageBase = [{
-    type: 'incoming', text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-  }, {
-    type: 'outgoing', text: 'A, maxime. Tenetur beatae delectus molestias.',
-  }, {
-    type: 'incoming', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
-  }];
-
-  function addNewMessage(message) {
-    const date = new Date();
-    const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    const messager = document.getElementsByClassName('js-messager__chat')[0];
+class Messaging {
+  constructor(element) {
+    this.$messagerBlock = $(element);
+    this.$messaging = $(this.$messagerBlock).find('.js-messager__chat');
+    this.$buttonSendMessage = $(this.$messagerBlock).find('.js-messager__button-send-message');
+    this.$inputNewMessage = $(this.$messagerBlock).find('.js-messager__input_message_new');
+    this.createOutgoingMessage();
+    this.loadMessageFromBase();
+    this.addNewMessage();
+  }
+  createOutgoingMessage() {
+    $(this.$buttonSendMessage).on('click', () => {
+      const date = new Date();
+      const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      const message = {
+        type: 'outgoing',
+        text: this.$inputNewMessage.val(),
+        time: date.toLocaleString('ru', options),
+      };
+      if (message.text !== '') {
+        this.addNewMessage(message);
+        this.$inputNewMessage.val('');
+      }
+    });
+  }
+  addNewMessage(messageObj) {
     const newMessage = document.createElement('div');
-    message.time = date.toLocaleString('ru', options);
-    newMessage.className = `messager__chat_message_${message.type} messager__chat_message`;
-    newMessage.innerHTML = message.text;
-    messager.appendChild(newMessage);
+    newMessage.className = `messager__chat_message_${messageObj.type} messager__chat_message`;
+    newMessage.innerHTML = messageObj.text;
+    this.$messaging.append(newMessage);
   }
-
-  function loadMessageFromBase() {
-    messageBase.forEach(addNewMessage);
+  loadMessageFromBase() {
+    const messageBase = [{
+      type: 'incoming', text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    }, {
+      type: 'outgoing', text: 'A, maxime. Tenetur beatae delectus molestias.',
+    }, {
+      type: 'incoming', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
+    }];
+    let i = 0;
+    messageBase.forEach(() => {
+      this.addNewMessage(messageBase[i]);
+      i += 1;
+    });
   }
+}
 
-  function createOutgoingMessage() {
-    const message = {};
-    message.type = 'outgoing';
-    message.text = $('.js-messager__input_message_new:eq(0)').val();
-    if (message.text !== '') {
-      addNewMessage(message);
-      $('.js-messager__input_message_new:eq(0)').val('');
-    }
-  }
-  $('.js-messager__button-send-message').on('click', createOutgoingMessage);
-
-  loadMessageFromBase(messageBase);
+$(document).ready(() => {
+  $('.messager').each(function () {
+    new Messaging(this);
+  });
 });

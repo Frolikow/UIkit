@@ -1,51 +1,52 @@
 /* global google */
+import $ from 'jquery';
 
-function initMap() {
-  const element = document.getElementById('map'); // получение дива под карту
-  const posLat = element.getAttribute('lat'); // получение координат
-  const posLng = element.getAttribute('lng'); // получение координат
-
-  const geocoder = new google.maps.Geocoder(); // //////////
-
-  const options = { // установка настроек карты( зум и координаты центра карты)
-    zoom: 12,
-    center: { lat: +posLat, lng: +posLng },
-  };
-  const myMap = new google.maps.Map(element, options); // создание карты в диве element и настройками options
-
-  const markers = [ // массив с координатами всех точек на карте
-    {
-      coordinates: { lat: +posLat, lng: +posLng },
+class Location {
+  constructor(element) {
+    this.$locationBlock = $(element);
+    this.$map = $(this.$locationBlock).find('.location__map');
+    this.$positionLat = $(this.$map).attr('lat');
+    this.$positionLng = $(this.$map).attr('lng');
+    this.$address = $(element).find('.location-menu__address');
+    this.initMap();
+    this.initData();
+  }
+  initMap() {
+    const options = {
+      zoom: 15,
+      center: { lat: +this.$positionLat, lng: +this.$positionLng },
+    };
+    const myMap = new google.maps.Map(this.$map[0], options);
+    const markers = [{
+      coordinates: { lat: +this.$positionLat, lng: +this.$positionLng },
       image: require('style/images/map-placeholder.svg'),
-    },
-  ];
-
-  function addMarker(properties) { // функция установки маркера на карту
-    const marker = new google.maps.Marker({
-      position: properties.coordinates,
-      map: myMap,
-    });
-    if (properties.image) { // установка своего маркера только при его наличии
-      marker.setIcon(properties.image);
+    }];
+    for (let i = 0; i < markers.length; i += 1) {
+      const marker = new google.maps.Marker({
+        position: markers[i].coordinates,
+        map: myMap,
+      });
+      if (markers[i].image) {
+        marker.setIcon(markers[i].image);
+      }
     }
   }
 
-  function geocodeLatLng(geocoder) {
-    const latlng = { lat: +posLat, lng: +posLng };
-    geocoder.geocode({ location: latlng }, (results, status) => {
+  initData() {
+    const geocoder = new google.maps.Geocoder();
+    const positionLatLng = { lat: +this.$positionLat, lng: +this.$positionLng };
+    geocoder.geocode({ location: positionLatLng }, (results, status) => {
       if (status === 'OK') {
         if (results[1]) {
-          document.getElementById('map_address').innerHTML = results[0].formatted_address;
+          $(this.$address).text(results[0].formatted_address);
         }
       }
     });
   }
-
-  for (let i = 0; i < markers.length; i += 1) { // перебор массива с координатами и вызов функции на каждую метку
-    addMarker(markers[i]);
-  }
-
-  geocodeLatLng(geocoder);
 }
-window.initMap = initMap;
 
+window.initMap = function () {
+  $('.location').each(function () {
+    new Location(this);
+  });
+};

@@ -3,32 +3,33 @@ import $ from 'jquery';
 class Button {
   constructor(element) {
     this.$element = element;
-    this.eventInit();
-    console.log('constructor');
+    this.initEvent();
   }
 
-  eventInit() {
+  initEvent() {
     $(this.$element)
       .on('click', function (event) {
-        console.log('click');
         const $div = $('<div>');
+        const btnOffset = $(this).offset();
+        const xPos = event.pageX - btnOffset.left;
+        const yPos = event.pageY - btnOffset.top;
 
-        $div.addClass('standard-button-element__ripple-effect');
+        $div.addClass('standard-button__ripple-effect');
         $div.css({
-          top: event.pageY,
-          left: event.pageX,
+          top: yPos,
+          left: xPos,
         });
         $div.appendTo(this);
 
         window.setTimeout(() => {
           $div.remove();
-        }, 1000);
+        }, 500);
       });
   }
 }
 
 $(document).ready(() => {
-  $('.standard-button-element').each(function () {
+  $('.js-standard-button').each(function () {
     new Button(this);
   });
 });
