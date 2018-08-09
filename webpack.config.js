@@ -12,9 +12,9 @@ const common = {
   context: __dirname + '/src',
   entry: "./home",
   output: {
-    path: path.resolve(__dirname, 'public/UIkit'),
+    path: path.resolve(__dirname, 'public'),
     filename: "bundle/[name].js",
-    publicPath: '/UIkit/'
+    publicPath: '/'
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"]
@@ -56,11 +56,11 @@ const common = {
     new HtmlWebpackPlugin({
       template: "./base.pug",
       inject: 'head',
-      filename: 'pages/demo.html'
+      filename: 'demo.html'
     }),
     new HtmlWebpackPlugin({
       title: "first-page(UIkit)",
-      filename: "first-page.html",
+      filename: "pages/first-page.html",
       template: "pages/first-page/first-page.pug",
       inject: 'head'
     }),
