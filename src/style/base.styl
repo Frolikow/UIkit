@@ -26,16 +26,20 @@ html
     
     .demo-layout
       padding 2.9375rem
-      display flex
-      flex-direction column
-      align-items center
       margin 0 auto
       max-width 60rem
+      display flex
+      flex-direction column
+      .link-to-pages
+        text-align center
 
-      .ui-element__container
+      .ui-elements__item
+        display flex
+        flex-direction column
+        align-items center
         width 100%
         text-align center
-        .container__title
+        .ui-elements__title
           height 1.125rem
           color mainGray79
           font-family Lato, sans-serif
@@ -45,7 +49,7 @@ html
           letter-spacing 0.075rem
           word-spacing 0.25rem
           text-align center
-        .container
+        .item
           &__elements
             margin 0 auto
             display flex
@@ -108,22 +112,22 @@ html
             width 80%
             position relative
             top 3rem
-            .container__search-drop-down
+            .item__search-drop-down
               position relative
               left 2.3125rem
-              .elements__search-drop-down
+              .search-drop-down__element
                 padding-top 1.25rem
                 min-width 20rem
                 position relative
                 bottom 0.625rem
                 .search__block
                   margin-bottom 0.9375rem
-            .container__user-profile
+            .item__user-profile
               min-width 20rem
               position relative
               right 1.875rem
               padding-bottom 6.875rem
-              .elements__user-profile
+              .user-profile__element
                 display flex
                 flex-direction column
                 justify-content flex-end
@@ -135,9 +139,9 @@ html
             justify-content center
             padding-top 0.9375rem
             padding-bottom 1.5625rem
-            .container__news
+            .item__news
               padding 0.4375rem
-            .container__events
+            .item__events
               padding 0.4375rem
           &__location
             padding-top 1.25rem

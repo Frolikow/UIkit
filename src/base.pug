@@ -26,116 +26,116 @@ html(lang="ru")
 
     body
         .demo-layout
-            a(href='./../first-page.html')
+            a.link-to-pages(href='./../first-page.html')
                 +standard-button({size:'big', color:'red', value:'pages', type:'button'})
 
-            .ui-element__container
-                //- small/big and blue/red value button/submit
-                h2.container__title standard buttons
-                .container__elements.container__standard-buttons
-                    each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
-                        +standard-button(item)
+            .ui-elements
+                .ui-elements__item
+                    //- small/big and blue/red value button/submit
+                    h2.ui-elements__title standard buttons
+                    .item__elements.item__standard-buttons
+                        each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
+                            +standard-button(item)
 
-            .ui-element__container
-                //- left/right
-                h2.container__title arrow buttons
-                .container__elements.container__arrow-buttons
-                    each item in[{direction: 'left'}, {direction: 'right'}]
-                        +arrow-button(item)
+                .ui-elements__item
+                    //- left/right
+                    h2.ui-elements__title arrow buttons
+                    .item__elements.item__arrow-buttons
+                        each item in[{direction: 'left'}, {direction: 'right'}]
+                            +arrow-button(item)
 
-            .ui-element__container
-                h2.container__title percentages / pie chart
-                .container__elements.container__percentages-pie-chart
-                    //- 0..100
-                    +percentages({value:'0'})
-                    +percentages({value:'38'})
-                    +percentages({value:'62'})
-                    +percentages({value:'89'})
-                    +pie-chart({value1: 10, value2: 25, value3: 30})
+                .ui-elements__item
+                    h2.ui-elements__title percentages / pie chart
+                    .item__elements.item__percentages-pie-chart
+                        //- 0..100
+                        +percentages({value:'0'})
+                        +percentages({value:'38'})
+                        +percentages({value:'62'})
+                        +percentages({value:'89'})
+                        +pie-chart({value1: 10, value2: 25, value3: 30})
 
-            .ui-element__container
-                h2.container__title sliders
-                .container__elements.container__sliders
-                    .container__standart-slider
-                        +standard-slider({minimum: '10', value: '50', maximum: '200'})
+                .ui-elements__item
+                    h2.ui-elements__title sliders
+                    .item__elements.item__sliders
+                        .item__standart-slider
+                            +standard-slider({minimum: '10', value: '50', maximum: '200'})
 
-                    .container__step-slider
-                        +step-slider({minimum:'0', value: '75', maximum: '100', step: '25'})
+                        .item__step-slider
+                            +step-slider({minimum:'0', value: '75', maximum: '100', step: '25'})
 
-            .ui-element__container
-                h2.container__title stages
-                .container__elements.container__stages
-                    //- length, value
-                    +stages({length: 5, value: 3})
+                .ui-elements__item
+                    h2.ui-elements__title stages
+                    .item__elements.item__stages
+                        +stages({length: 5, value: 3})
 
-            .ui-element__container
-                h2.container__title form elements
-                .container__elements.container__form-elements
-                    .form-elements__form
-                        +form
-                    .form-elements__toggles-and-tick-box
-                        h2.container__title toggles
-                        .form-elements__toggles
-                            +toggles
-                            +toggles
-                        h2.container__title tick boxes
-                        .form-elements__tick-box
-                            +tick-box({name: '', value: ''})
-                            +tick-box({name: '', value: ''})
+                .ui-elements__item
+                    h2.ui-elements__title form elements
+                    .item__elements.item__form-elements
+                        .form-elements__form
+                            +form
+                        .form-elements__toggles-and-tick-box
+                            h2.ui-elements__title toggles
+                            .form-elements__toggles
+                                +toggles
+                                +toggles
+                            h2.ui-elements__title tick boxes
+                            .form-elements__tick-box
+                                +tick-box({name: '', value: ''})
+                                +tick-box({name: '', value: ''})
 
-            .ui-element__container
-                .container__elements.container__search-drop-down-user-profile
-                    .container__search-drop-down
-                        h2.container__title search / drop down
-                        .elements__search-drop-down
-                            .search__block
-                                +search
-                            .drop-down__block
-                                +drop-down({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
-                    .container__user-profile
-                        h2.container__title user profile
-                        .elements__user-profile
-                            +user-profile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
-                            +user-profile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
+                .ui-elements__item
+                    .item__elements.item__search-drop-down-user-profile
+                        .item__search-drop-down
+                            h2.ui-elements__title search / drop down
+                            .search-drop-down__element
+                                .search__block
+                                    +search
+                                .drop-down__block
+                                    +drop-down({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                        .item__user-profile
+                            h2.ui-elements__title user profile
+                            .user-profile__element
+                                +user-profile({pictureName: 'griffin', userName:'John Smith', profession: 'ux designer'})
+                                +user-profile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
 
-            .ui-element__container
-                h2.container__title news & events
-                .container__elements.container__news-events
-                    .container__news
-                        +news({pictureName: 'bike', newsTitle: "It's all going downhill", newsDate:'24 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-                    .container__events
-                        +events({pictureName:'city', eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
+                .ui-elements__item
+                    h2.ui-elements__title news & events
+                    .item__elements.item__news-events
+                        .item__news
+                            +news({pictureName: 'bike', newsTitle: "It's all going downhill", newsDate:'24 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                        .item__events
+                            +events({pictureName:'city', eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
 
-            .ui-element__container
-                h2.container__title location
-                .container__elements.container__location
-                    +location({longitude: 56.4531, latitude: 84.975643})
-                    //-    (56.4531, 84.975643) офис
-                    //-    (55.751244, 37.618423) Москва
-                    //-    (59.934280, 30.335099) Санкт-Петербург
-                    //-    (56.453651, 84.948738) Лагерный сад
+                .ui-elements__item
+                    h2.ui-elements__title location
+                    .item__elements.item__location
+                        +location({longitude: 56.4531, latitude: 84.975643})
+                        //-    (56.4531, 84.975643) офис
+                        //-    (55.751244, 37.618423) Москва
+                        //-    (59.934280, 30.335099) Санкт-Петербург
+                        //-    (56.453651, 84.948738) Лагерный сад
 
-            .ui-element__container
-                .container__elements.container__calendar-messaging
-                    .container__calendar
-                        h2.container__title calendar
-                        .calendar__element
-                            +calendar
-                    .container__messaging
-                        h2.container__title messaging
-                        .messaging__element
-                            +messager
-
-
-            .ui-element__container
-                h2.container__title video
-                .container__elements.container__video-player
-                    +video-player({url: "https://player.vimeo.com/video/62980495"})
-                    //- https://www.youtube.com/embed/rPmGtZAUxNs
-                    //- https://player.vimeo.com/video/62980495
+                .ui-elements__item
+                    .item__elements.item__calendar-messaging
+                        .item__calendar
+                            h2.ui-elements__title calendar
+                            .__element__calendar
+                                +calendar
+                        .item__messaging
+                            h2.ui-elements__title messaging
+                            .messaging__element
+                                +messager
 
 
-            a(href='./../first-page.html') 
+                .ui-elements__item
+                    h2.ui-elements__title video
+                    .item__elements.item__video-player
+                        +video-player({url: "https://player.vimeo.com/video/62980495"})
+                        //- https://www.youtube.com/embed/rPmGtZAUxNs
+                        //- https://player.vimeo.com/video/62980495
+
+
+            a.link-to-pages(href='./../first-page.html') 
                 +standard-button({size: 'big', color: 'red', value: 'pages', type: 'button'})
 
 
