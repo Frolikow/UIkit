@@ -7,5 +7,5 @@ mixin form
         +input-form({type: 'email', placeholder: 'Your email', name: 'formEmail'})
 
         +textarea({placeholder: 'Your message', name: 'formMessage'})
-
-        +standard-button({size: 'small', color: 'blue', value: 'Submit', type: 'submit'})
+        .form-feedback__button
+            +standard-button({size: 'custom', color: 'blue', value: 'Submit', type: 'submit'})
