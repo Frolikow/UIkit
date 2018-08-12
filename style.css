@@ -439,19 +439,19 @@
   background-color: #4eb7a8;
 }
 .events__image[data-eventsImage=city] {
-  background: url(/style/images/city.jpeg) no-repeat 67% 60%/180%;
+  background: url(/public/style/images/city.jpeg) no-repeat 67% 60%/180%;
 }
 .events__image[data-eventsImage=sale] {
-  background: url(/style/images/sale.jpg) no-repeat 67% 50%/300%;
+  background: url(/public/style/images/sale.jpg) no-repeat 67% 50%/300%;
 }
 .events__image[data-eventsImage=square2] {
-  background: url(/style/images/square2.jpg) no-repeat 75% 60%/400%;
+  background: url(/public/style/images/square2.jpg) no-repeat 75% 60%/400%;
 }
 .events__image[data-eventsImage=summer] {
-  background: url(/style/images/summer.jpg) no-repeat 50% 60%/400%;
+  background: url(/public/style/images/summer.jpg) no-repeat 50% 60%/400%;
 }
 .events__image[data-eventsImage=square] {
-  background: url(/style/images/square.jpg) no-repeat 67% 50%/400%;
+  background: url(/public/style/images/square.jpg) no-repeat 67% 50%/400%;
 }
 .events__image {
   width: 5.9375rem;
@@ -942,19 +942,19 @@
   background-color: #e75735;
 }
 .news__image[data-newsImage=bike] {
-  background: url(/style/images/bike.jpeg) no-repeat 70% 50%/400%;
+  background: url(/public/style/images/bike.jpeg) no-repeat 70% 50%/400%;
 }
 .news__image[data-newsImage=comaro] {
-  background: url(/pages/catalog/productImages/camaro1.jpeg) no-repeat 87% 50%/337%;
+  background: url(/public/pages/catalog/productImages/camaro1.jpeg) no-repeat 87% 50%/337%;
 }
 .news__image[data-newsImage=porshe] {
-  background: url(/pages/catalog/productImages/porshe1.jpeg) no-repeat 95% 50%/337%;
+  background: url(/public/pages/catalog/productImages/porshe1.jpeg) no-repeat 95% 50%/337%;
 }
 .news__image[data-newsImage=mustang] {
-  background: url(/pages/catalog/productImages/ford1.jpeg) no-repeat 87% 50%/337%;
+  background: url(/public/pages/catalog/productImages/ford1.jpeg) no-repeat 87% 50%/337%;
 }
 .news__image[data-newsImage=cadilac] {
-  background: url(/pages/catalog/productImages/cadilac4.jpeg) no-repeat 86% 50%/337%;
+  background: url(/public/pages/catalog/productImages/cadilac4.jpeg) no-repeat 86% 50%/337%;
 }
 .news__image {
   width: 5.9375rem;
@@ -1276,10 +1276,10 @@
   transition: all 0.5s;
 }
 .user-profile__griffin {
-  background: #aaa url(/style/images/griffin.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/public/style/images/griffin.jpeg) no-repeat 50% 50%/105%;
 }
 .user-profile__wolf {
-  background: #aaa url(/style/images/wolf.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/public/style/images/wolf.jpeg) no-repeat 50% 50%/105%;
 }
 .user-profile__hidden-block {
   width: 6.875rem;
@@ -1753,16 +1753,16 @@
 }
 @font-face {
   font-family: Lato-Regular;
-  src: url(/style/fonts/Lato/Lato-Regular.ttf);
+  src: url(/public/style/fonts/Lato/Lato-Regular.ttf);
   font-family: Lato-Black;
-  src: url(/style/fonts/Lato/Lato-Black.ttf);
+  src: url(/public/style/fonts/Lato/Lato-Black.ttf);
   font-family: Lato-Light;
-  src: url(/style/fonts/Lato/Lato-Light.ttf);
+  src: url(/public/style/fonts/Lato/Lato-Light.ttf);
 }
 @font-face {
   font-family: SourceSansPro-Black;
   font-style: normal;
-  src: url(/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
+  src: url(/public/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
 }
 html {
   font-size: 16px;
