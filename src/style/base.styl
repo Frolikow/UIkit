@@ -50,19 +50,26 @@ html
           word-spacing 0.25rem
           text-align center
         .item
-          &__elements
-            margin 0 auto
-            display flex
-            justify-content space-around
-            align-items center
-            flex-wrap wrap
+          margin 0 auto
+          display flex
+          justify-content space-around
+          align-items center
+          flex-wrap wrap
           &__standard-buttons
-            width 51%
-            padding-top 3.75rem
-            align-items flex-end
-            padding-bottom 9.0625rem
+            &_row_first, &_row_second, &_row_third
+              display flex
+              justify-content space-around
+              align-items center
+              width 52%
+              padding-top 1.3125rem
+              align-items flex-end
+              flex-wrap wrap
+            &_row_first
+              padding-top 3.75rem
+            &_row_third
+              padding-bottom 2.5rem
           &__arrow-buttons
-            width 16%
+            width 47%
             padding-top 1.5625rem
             padding-bottom 1.875rem
           &__percentages-pie-chart
@@ -72,7 +79,6 @@ html
           &__sliders
             width 70%
             margin-top 2.1875rem
-            padding-top 0.875rem
             padding-bottom 0.8125rem
           &__stages
             padding-top 1.0625rem
@@ -89,7 +95,7 @@ html
             .form-elements__toggles-and-tick-box
               position relative
               left 0.9375rem
-              bottom 0.625rem
+              bottom 0.75rem
               .form-elements__toggles
                 position relative
                 bottom 1.625rem

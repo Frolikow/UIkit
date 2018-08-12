@@ -31,22 +31,33 @@ html(lang="ru")
 
             .ui-elements
                 .ui-elements__item
-                    //- small/big and blue/red value button/submit
+                    //- доступные размеры small/big 
+                    //- доступные цвета blue/red/blue-reverse/red-reverse
+                    //- текст кнопки value 
+                    //- type кнопки button/submit
                     h2.ui-elements__title standard buttons
-                    .item__elements.item__standard-buttons
-                        each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'blue', value: 'button', type: 'button'},{size: 'big', color: 'red', value: 'button', type: 'button'},{size: 'small', color: 'red', value: 'button', type: 'button'}]
-                            +standard-button(item)
+                    .item.item__standard-buttons
+                        .item__standard-buttons_row_first
+                            each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
+                                +standard-button(item)
+                        .item__standard-buttons_row_second
+                            each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
+                                +standard-button(item)
+                        .item__standard-buttons_row_third
+                            each item in [{size: 'small', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'red-reverse', value: 'button', type: 'button'}, {size: 'small', color: 'red-reverse', value: 'button', type: 'button'}]
+                                +standard-button(item)
 
                 .ui-elements__item
-                    //- left/right
+                    //- доступные направления left/right
+                    //- доступные цвета white/green/gray
                     h2.ui-elements__title arrow buttons
-                    .item__elements.item__arrow-buttons
-                        each item in[{direction: 'left'}, {direction: 'right'}]
+                    .item.item__arrow-buttons
+                        each item in[{direction: 'left', color: 'white'}, {direction: 'right', color: 'white'}, {direction: 'left', color: 'gray'}, {direction: 'right', color: 'gray'}, {direction: 'left', color: 'green'}, {direction: 'right', color: 'green'}]
                             +arrow-button(item)
 
                 .ui-elements__item
                     h2.ui-elements__title percentages / pie chart
-                    .item__elements.item__percentages-pie-chart
+                    .item.item__percentages-pie-chart
                         //- 0..100
                         +percentages({value:'0'})
                         +percentages({value:'38'})
@@ -56,7 +67,7 @@ html(lang="ru")
 
                 .ui-elements__item
                     h2.ui-elements__title sliders
-                    .item__elements.item__sliders
+                    .item.item__sliders
                         .item__standart-slider
                             +standard-slider({minimum: '10', value: '50', maximum: '200'})
 
@@ -65,12 +76,12 @@ html(lang="ru")
 
                 .ui-elements__item
                     h2.ui-elements__title stages
-                    .item__elements.item__stages
+                    .item.item__stages
                         +stages({length: 5, value: 3})
 
                 .ui-elements__item
                     h2.ui-elements__title form elements
-                    .item__elements.item__form-elements
+                    .item.item__form-elements
                         .form-elements__form
                             +form
                         .form-elements__toggles-and-tick-box
@@ -84,7 +95,7 @@ html(lang="ru")
                                 +tick-box({name: '', value: ''})
 
                 .ui-elements__item
-                    .item__elements.item__search-drop-down-user-profile
+                    .item.item__search-drop-down-user-profile
                         .item__search-drop-down
                             h2.ui-elements__title search / drop down
                             .search-drop-down__element
@@ -100,7 +111,7 @@ html(lang="ru")
 
                 .ui-elements__item
                     h2.ui-elements__title news & events
-                    .item__elements.item__news-events
+                    .item.item__news-events
                         .item__news
                             +news({pictureName: 'bike', newsTitle: "It's all going downhill", newsDate:'24 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
                         .item__events
@@ -108,7 +119,7 @@ html(lang="ru")
 
                 .ui-elements__item
                     h2.ui-elements__title location
-                    .item__elements.item__location
+                    .item.item__location
                         +location({longitude: 56.4531, latitude: 84.975643})
                         //-    (56.4531, 84.975643) офис
                         //-    (55.751244, 37.618423) Москва
@@ -116,7 +127,7 @@ html(lang="ru")
                         //-    (56.453651, 84.948738) Лагерный сад
 
                 .ui-elements__item
-                    .item__elements.item__calendar-messaging
+                    .item.item__calendar-messaging
                         .item__calendar
                             h2.ui-elements__title calendar
                             .__element__calendar
@@ -129,7 +140,7 @@ html(lang="ru")
 
                 .ui-elements__item
                     h2.ui-elements__title video
-                    .item__elements.item__video-player
+                    .item.item__video-player
                         +video-player({url: "https://player.vimeo.com/video/62980495"})
                         //- https://www.youtube.com/embed/rPmGtZAUxNs
                         //- https://player.vimeo.com/video/62980495
