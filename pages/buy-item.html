@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Заказ(UIkit)</title>
+  <link href="/style.css" rel="stylesheet"><script type="text/javascript" src="/bundle/main.js"></script></head>
+  <body>
+    <div class="layout">
+      <div class="header"> 
+        <div class="header__image"> 
+          <div class="header__image-logo">logotip</div>
+          <div class="header__menu">
+            <div class="header__button-block"><a href="/pages/first-page.html"> 
+                <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue" type="button">Главная</button></a><a href="/pages/catalog.html">
+                <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue" type="button">Каталог</button></a><a href="/pages/contacts.html">
+                <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue" type="button">Контакты</button></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="order-page-content">
+          <div class="order-settings_column order-settings_column_left">
+            <div class="order-settings__current-car"></div>
+            <div class="order-settings__setting-options">
+              <div class="setting-options__transmission">
+                <label class="setting-options__label">Коробка передач:</label>
+                <div class="select-button">
+                  <select class="select-button__list" name="transmission">
+                    <option class="select-button__list-item" value="0">Choose An Option</option>
+                    <option class="select-button__list-item" value="null">Ручная</option>
+                    <option class="select-button__list-item" value="null">Автоматическая</option>
+                  </select>
+                </div>
+              </div>
+              <div class="setting-options__territory-of-use">
+                <label class="setting-options__label">Территория использования:</label>
+                <div class="select-button">
+                  <select class="select-button__list" name="territory-of-use">
+                    <option class="select-button__list-item" value="0">Choose An Option</option>
+                    <option class="select-button__list-item" value="null">г.Томск</option>
+                    <option class="select-button__list-item" value="null">Томская обл.</option>
+                  </select>
+                </div>
+              </div>
+              <div class="setting-options__place-of-renting">
+                <label class="setting-options__label">Место офромления аренды:</label>
+                <div class="select-button">
+                  <select class="select-button__list" name="place-of-renting">
+                    <option class="select-button__list-item" value="0">Choose An Option</option>
+                    <option class="select-button__list-item" value="null">В офисе</option>
+                    <option class="select-button__list-item" value="null">Ваш адрес (уточняется по телефону)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="setting-options__lease-time">
+                <label class="setting-options__label">Время аренды (количество полных часов):</label>
+                <div class="standard-slider js-standard-slider" data-minimum="1" data-default="3" data-maximum="12">
+                  <div class="standard-slider_custom-handle js-standard-slider_custom-handle ui-slider-handle">555</div>
+                </div>
+              </div>
+              <div class="setting-options__additions">
+                <label>Добавить в машину:</label>
+                <div class="additions__options">
+                  <div class="tick-box-element">
+                    <label>
+                      <input class="tick-box" type="checkbox" hidden name="children-armchair"><span class="tick-box_view"></span><span class="tick-box__text">Детское кресло</span>
+                    </label>
+                  </div>
+                  <div class="tick-box-element">
+                    <label>
+                      <input class="tick-box" type="checkbox" hidden name="navigate"><span class="tick-box_view"></span><span class="tick-box__text">Навигатор</span>
+                    </label>
+                  </div>
+                  <div class="tick-box-element">
+                    <label>
+                      <input class="tick-box" type="checkbox" hidden name="auto-refrigerator"><span class="tick-box_view"></span><span class="tick-box__text">Авто-холодильник</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <form class="setting-options__user-contact-data">
+                <div class="user-contact-data">Ваши контактные данные:</div>
+                <div class="input-element">
+                  <input class="input-form__type_name input-form_decor" type="name" placeholder="Ваша фамилия" required name="form-surname">
+                  <div class="input__info"></div>
+                </div>
+                <div class="input-element">
+                  <input class="input-form__type_name input-form_decor" type="name" placeholder="Ваше имя" required name="form-name">
+                  <div class="input__info"></div>
+                </div>
+                <div class="input-element">
+                  <input class="input-form__type_name input-form_decor" type="name" placeholder="Ваше отчество" required name="form-patronymic">
+                  <div class="input__info"></div>
+                </div>
+                <div class="input-element">
+                  <input class="input-form__type_name input-form_decor" type="name" placeholder="Контактный телефон" required name="form-number">
+                  <div class="input__info"></div>
+                </div>
+                <div class="input-element">
+                  <input class="input-form__type_email input-form_decor" type="email" placeholder="E-mail адрес" required name="form-email">
+                  <div class="input__info"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="order-settings_column order-settings_column_right">
+            <div class="order-settings__date-seleciton">
+              <div class="calendar js-calendar">
+                <input class="calendar__day js-calendar__day" readonly>
+                <div class="calendar__widget js-calendar__widget"></div>
+              </div>
+            </div>
+            <div class="order-settings__button-send-request">
+              <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_red" type="submit">Отправить заявку</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"> 
+        <div class="footer__image"> 
+          <div class="footer__image-logo">logotip</div>
+        </div>
+        <div class="footer__menu">
+          <ul class="footer__list">
+            <li class="footer__list-item"><a class="footer__list-item-link" href="/pages/first-page.html">главная</a></li>
+            <li class="footer__list-item"><a class="footer__list-item-link" href="/pages/catalog.html">каталог</a></li>
+            <li class="footer__list-item"><a class="footer__list-item-link" href="/pages/contacts.html">контакты</a></li>
+            <li class="footer__list-item"><a class="footer__list-item-link" href="/demo.html">demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
