@@ -39,8 +39,8 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --env development",
-    "build": "./node_modules/.bin/webpack --env production",
-    "deploy": "gh-pages -d public/UIkit"
+    "build": "PUBLIC_PATH=UIkit ./node_modules/.bin/webpack --env production",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",

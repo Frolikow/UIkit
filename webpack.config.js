@@ -7,14 +7,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let pathToClean = 'public';
 
 const path = require('path');
+const { PUBLIC_PATH } = process.env;
 
 const common = {
   context: __dirname + '/src',
   entry: "./home",
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: "bundle/[name].js",
-    publicPath: '/'
+    filename: "bundle/[name]-[hash].js",
+    publicPath: '/' + (PUBLIC_PATH ? (PUBLIC_PATH + '/') : '')
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"]
@@ -45,8 +46,8 @@ const common = {
             }
           ]
         }, {
-          test: /\.js$/, 
-          exclude: /node_modules/, 
+          test: /\.js$/,
+          exclude: /node_modules/,
           loader: "babel-loader"
         }
       ]
@@ -60,37 +61,37 @@ const common = {
     }),
     new HtmlWebpackPlugin({
       title: "first-page(UIkit)",
+      inject: 'head',
       filename: "pages/first-page.html",
       template: "pages/first-page/first-page.pug",
-      inject: 'head'
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
+      inject: 'head',
       filename: "pages/catalog.html",
       template: "pages/catalog/catalog.pug",
-      inject: 'head'
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
+      inject: 'head',
       filename: "pages/product-info.html",
       template: "pages/catalog/product-info/product-info.pug",
-      inject: 'head'
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
+      inject: 'head',
       filename: "pages/contacts.html",
       template: "pages/contacts/contacts.pug",
-      inject: 'head'
     }),
     new HtmlWebpackPlugin({
       title: "blog(UIkit)",
+      inject: 'head',
       filename: "pages/buy-item.html",
       template: "pages/catalog/buy-item/buy-item.pug",
-      inject: 'head'
     }),
 
     new CleanWebpackPlugin(pathToClean),
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('style-[hash].css'),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',
@@ -101,7 +102,8 @@ const common = {
 const developmentConfig = {
   devServer: {
     stats: 'minimal',
-    port: 9000
+    port: 9000,
+    contentBase: path.resolve(__dirname, 'public')
   }
 };
 
