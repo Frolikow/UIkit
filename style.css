@@ -439,19 +439,19 @@
   background-color: #4eb7a8;
 }
 .events__image[data-eventsImage=city] {
-  background: url(/UIkit/style/images/city.jpeg) no-repeat 67% 60%/180%;
+  background: url(/UIkitstyle/images/city.jpeg) no-repeat 67% 60%/180%;
 }
 .events__image[data-eventsImage=sale] {
-  background: url(/UIkit/style/images/sale.jpg) no-repeat 67% 50%/300%;
+  background: url(/UIkitstyle/images/sale.jpg) no-repeat 67% 50%/300%;
 }
 .events__image[data-eventsImage=square2] {
-  background: url(/UIkit/style/images/square2.jpg) no-repeat 75% 60%/400%;
+  background: url(/UIkitstyle/images/square2.jpg) no-repeat 75% 60%/400%;
 }
 .events__image[data-eventsImage=summer] {
-  background: url(/UIkit/style/images/summer.jpg) no-repeat 50% 60%/400%;
+  background: url(/UIkitstyle/images/summer.jpg) no-repeat 50% 60%/400%;
 }
 .events__image[data-eventsImage=square] {
-  background: url(/UIkit/style/images/square.jpg) no-repeat 67% 50%/400%;
+  background: url(/UIkitstyle/images/square.jpg) no-repeat 67% 50%/400%;
 }
 .events__image {
   width: 5.9375rem;
@@ -771,12 +771,12 @@
   align-content: flex-end;
 }
 .location-menu__buttons-my-location {
-  background-image: url("/src/style/images/my-location.svg");
+  background-image: url(/UIkitstyle/images/my-location.svg);
   width: 1.6875rem;
   height: 1.625rem;
 }
 .location-menu__buttons-pin {
-  background-image: url("/src/style/images/pin.svg");
+  background-image: url(/UIkitstyle/images/pin.svg);
   width: 1.125rem;
   height: 1.5rem;
 }
@@ -831,7 +831,7 @@
 .messager__icons-send-message {
   width: 2.1875rem;
   height: 2.1875rem;
-  background: no-repeat url("/src/style/images/messager-message.svg");
+  background: no-repeat url(/UIkitstyle/images/messager-message.svg);
   position: relative;
   bottom: 2.8125rem;
   left: 1.25rem;
@@ -839,7 +839,7 @@
 .messager__icons-send-photo {
   width: 2.1875rem;
   height: 2.1875rem;
-  background-image: url("/src/style/images/messager-photo.svg");
+  background-image: url(/UIkitstyle/images/messager-photo.svg);
   position: relative;
   bottom: 5rem;
   left: 15rem;
@@ -942,19 +942,19 @@
   background-color: #e75735;
 }
 .news__image[data-newsImage=bike] {
-  background: url(/UIkit/style/images/bike.jpeg) no-repeat 70% 50%/400%;
+  background: url(/UIkitstyle/images/bike.jpeg) no-repeat 70% 50%/400%;
 }
 .news__image[data-newsImage=comaro] {
-  background: url(/UIkit/pages/catalog/productImages/camaro1.jpeg) no-repeat 87% 50%/337%;
+  background: url(/UIkitpages/catalog/productImages/camaro1.jpeg) no-repeat 87% 50%/337%;
 }
 .news__image[data-newsImage=porshe] {
-  background: url(/UIkit/pages/catalog/productImages/porshe1.jpeg) no-repeat 95% 50%/337%;
+  background: url(/UIkitpages/catalog/productImages/porshe1.jpeg) no-repeat 95% 50%/337%;
 }
 .news__image[data-newsImage=mustang] {
-  background: url(/UIkit/pages/catalog/productImages/ford1.jpeg) no-repeat 87% 50%/337%;
+  background: url(/UIkitpages/catalog/productImages/ford1.jpeg) no-repeat 87% 50%/337%;
 }
 .news__image[data-newsImage=cadilac] {
-  background: url(/UIkit/pages/catalog/productImages/cadilac4.jpeg) no-repeat 86% 50%/337%;
+  background: url(/UIkitpages/catalog/productImages/cadilac4.jpeg) no-repeat 86% 50%/337%;
 }
 .news__image {
   width: 5.9375rem;
@@ -1276,10 +1276,10 @@
   transition: all 0.5s;
 }
 .user-profile__griffin {
-  background: #aaa url(/UIkit/style/images/griffin.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/UIkitstyle/images/griffin.jpeg) no-repeat 50% 50%/105%;
 }
 .user-profile__wolf {
-  background: #aaa url(/UIkit/style/images/wolf.jpeg) no-repeat 50% 50%/105%;
+  background: #aaa url(/UIkitstyle/images/wolf.jpeg) no-repeat 50% 50%/105%;
 }
 .user-profile__hidden-block {
   width: 6.875rem;
@@ -1337,17 +1337,17 @@
   align-items: flex-end;
 }
 .user-profile__info_social-networks_facebook {
-  background-image: url("/src/style/images/sn-facebook-dark.svg");
+  background-image: url(/UIkitstyle/images/sn-facebook-dark.svg);
   width: 1.25rem;
   height: 1.25rem;
 }
 .user-profile__info_social-networks_twitter {
-  background-image: url("/src/style/images/sn-twitter-dark.svg");
+  background-image: url(/UIkitstyle/images/sn-twitter-dark.svg);
   width: 1.25rem;
   height: 1.1875rem;
 }
 .user-profile__info_social-networks_dribbble {
-  background-image: url("/src/style/images/sn-dribbble-dark.svg");
+  background-image: url(/UIkitstyle/images/sn-dribbble-dark.svg);
   width: 1.3125rem;
   height: 1.2813rem;
 }
@@ -1401,17 +1401,17 @@
   align-items: flex-end;
 }
 .user-profile__info-developer .user-profile__info_social-networks_facebook {
-  background-image: url("/src/style/images/sn-facebook-light.svg");
+  background-image: url(/UIkitstyle/images/sn-facebook-light.svg);
   width: 1.25rem;
   height: 1.25rem;
 }
 .user-profile__info-developer .user-profile__info_social-networks_twitter {
-  background-image: url("/src/style/images/sn-twitter-light.svg");
+  background-image: url(/UIkitstyle/images/sn-twitter-light.svg);
   width: 1.25rem;
   height: 1.1875rem;
 }
 .user-profile__info-developer .user-profile__info_social-networks_dribbble {
-  background-image: url("/src/style/images/sn-dribbble-light.svg");
+  background-image: url(/UIkitstyle/images/sn-dribbble-light.svg);
   width: 1.3125rem;
   height: 1.2813rem;
 }
@@ -1753,16 +1753,16 @@
 }
 @font-face {
   font-family: Lato-Regular;
-  src: url(/UIkit/style/fonts/Lato/Lato-Regular.ttf);
+  src: url(/UIkitstyle/fonts/Lato/Lato-Regular.ttf);
   font-family: Lato-Black;
-  src: url(/UIkit/style/fonts/Lato/Lato-Black.ttf);
+  src: url(/UIkitstyle/fonts/Lato/Lato-Black.ttf);
   font-family: Lato-Light;
-  src: url(/UIkit/style/fonts/Lato/Lato-Light.ttf);
+  src: url(/UIkitstyle/fonts/Lato/Lato-Light.ttf);
 }
 @font-face {
   font-family: SourceSansPro-Black;
   font-style: normal;
-  src: url(/UIkit/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
+  src: url(/UIkitstyle/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
 }
 html {
   font-size: 16px;
