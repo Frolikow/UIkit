@@ -26,8 +26,6 @@ html(lang="ru")
 
     body
         .demo-layout
-            a.link-to-pages(href='./pages/first-page.html')
-                +standard-button({size:'big', color:'red', value:'pages', type:'button'})
 
             .ui-elements
                 .ui-elements__item
@@ -144,10 +142,5 @@ html(lang="ru")
                         +video-player({url: "https://player.vimeo.com/video/62980495"})
                         //- https://www.youtube.com/embed/rPmGtZAUxNs
                         //- https://player.vimeo.com/video/62980495
-
-
-            a.link-to-pages(href='./pages/first-page.html') 
-                +standard-button({size: 'big', color: 'red', value: 'pages', type: 'button'})
-
 
 script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')
