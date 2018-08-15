@@ -4,6 +4,7 @@
   background-color mainGray242
   border-radius 0.25rem
   position relative
+
   &__header
     width 100%
     height 5.0625rem
@@ -27,21 +28,14 @@
     height 5.25rem
     position relative
     bottom 0.6875rem
-    border 0.3125rem solid mainGray229
-
-    .user-profile__avatar
-      position relative
-      border none
+    box-shadow inset 0 0 0 0.25rem mainGray170
 
   &__icons
     display block
     width 1.875rem
     height 0
     position relative
-    .messager__icon
-      fill mainGray157
-      &:hover
-        fill mainBlack
+
     &-send-message
       width 2.1875rem
       height 2.1875rem
@@ -49,6 +43,7 @@
       position relative
       bottom 2.8125rem
       left 1.25rem
+
     &-send-photo
       width 2.1875rem
       height 2.1875rem
@@ -64,6 +59,7 @@
     max-height 8.75rem
     overflow-y auto
     margin-bottom 1.875rem
+
     &::-webkit-scrollbar
       width 0
 
@@ -79,9 +75,11 @@
       font-weight 700
       letter-spacing 0.0394rem
       margin-bottom 0.9375rem
+
       &_incoming
         position relative
         margin-left 3%
+
         &:after
           content ""
           display block
@@ -96,6 +94,7 @@
       &_outgoing
         position relative
         margin-left 22% 
+
         &:after
           content ""
           display block
@@ -110,6 +109,7 @@
 
       &:first-child
         box-shadow inset 0 0.9375rem 0.625rem -0.625rem mainGray242
+
       &:last-child
         box-shadow inset 0 -0.9375rem 0.625rem -0.625rem mainGray242
 
@@ -138,5 +138,6 @@
     left 1.375rem
     width 15.1875rem
     height 2rem 
+
   &__button-send-message > .standard-button
     font-size 12px

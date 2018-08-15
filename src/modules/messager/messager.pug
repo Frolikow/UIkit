@@ -1,18 +1,18 @@
 mixin messager() 
     .messager 
-      .messager__header sarah brown
-      .messager__photo
-        +user-profile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
-      .messager__icons
-        .messager__icons-send-message
-          a(href='#')
-            .messager__icon
-        .messager__icons-send-photo
-          a(href='#')
-            .messager__icon
-      form
-        .messager__chat.js-messager__chat
+        .messager__header sarah brown
+        .messager__photo
+            +user-profile({pictureName: 'wolf', userName: 'Sarah Brown', profession: 'developer'})
+        .messager__icons
+            a(href='#')
+                .messager__icons-send-message
+                    .messager__icon
+            a(href='#')
+                .messager__icons-send-photo
+                    .messager__icon
+        form
+            .messager__chat.js-messager__chat
 
-        input.messager__input_message_new.js-messager__input_message_new(placeholder='Your message' type='text')
-        .messager__button-send-message.js-messager__button-send-message
-          +standard-button({size: 'custom', color: 'blue', value: 'reply', type: 'submit'}) 
+            input.messager__input_message_new.js-messager__input_message_new(placeholder='Your message' type='text')
+            .messager__button-send-message.js-messager__button-send-message
+                +standard-button({size: 'custom', color: 'blue', value: 'reply', type: 'submit'}) 

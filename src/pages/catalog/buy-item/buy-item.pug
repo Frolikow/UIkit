@@ -17,40 +17,40 @@ html(lang="ru")
             +header
             .main
                 .order-page-content
-                        .order-settings_column.order-settings_column_left
-                            .order-settings__current-car
-                            .order-settings__setting-options
-                                .setting-options__transmission
-                                    label.setting-options__label Коробка передач:
-                                    +drop-down({name: 'transmission', values: ["Ручная", "Автоматическая"]})
-                                .setting-options__territory-of-use
-                                    label.setting-options__label Территория использования:
-                                    +drop-down({name: 'territory-of-use', values: ["г.Томск", "Томская обл."]})
-                                .setting-options__place-of-renting
-                                    label.setting-options__label Место офромления аренды:
-                                    +drop-down({name: 'place-of-renting', values: ["В офисе", "Ваш адрес (уточняется по телефону)"]})
-                                .setting-options__lease-time
-                                    label.setting-options__label Время аренды (количество полных часов):
-                                    +standard-slider({minimum: '1', value: '3', maximum: '12'})
+                    .order-settings_column.order-settings_column_left
+                        .order-settings__current-car
+                        .order-settings__setting-options
+                            .setting-options__transmission
+                                label.setting-options__label Коробка передач:
+                                +drop-down({name: 'transmission', values: ["Ручная", "Автоматическая"]})
+                            .setting-options__territory-of-use
+                                label.setting-options__label Территория использования:
+                                +drop-down({name: 'territory-of-use', values: ["г.Томск", "Томская обл."]})
+                            .setting-options__place-of-renting
+                                label.setting-options__label Место офромления аренды:
+                                +drop-down({name: 'place-of-renting', values: ["В офисе", "Ваш адрес (уточняется по телефону)"]})
+                            .setting-options__lease-time
+                                label.setting-options__label Время аренды (количество полных часов):
+                                +standard-slider({minimum: '1', value: '3', maximum: '12'})
 
-                                .setting-options__additions
-                                    label Добавить в машину:
-                                    .additions__options
-                                        +tick-box({name: 'children-armchair', value: 'Детское кресло'})
-                                        +tick-box({name: 'navigate', value: 'Навигатор'})
-                                        +tick-box({name: 'auto-refrigerator', value: 'Авто-холодильник'})
+                            .setting-options__additions
+                                label Добавить в машину:
+                                .additions__options
+                                    +tick-box({name: 'children-armchair', value: 'Детское кресло'})
+                                    +tick-box({name: 'navigate', value: 'Навигатор'})
+                                    +tick-box({name: 'auto-refrigerator', value: 'Авто-холодильник'})
 
-                                form.setting-options__user-contact-data
-                                    .user-contact-data Ваши контактные данные:
-                                    +input-form({type: 'name', placeholder: 'Ваша фамилия', name: 'form-surname'})
-                                    +input-form({type: 'name', placeholder: 'Ваше имя', name: 'form-name'})
-                                    +input-form({type: 'name', placeholder: 'Ваше отчество', name: 'form-patronymic'})
-                                    +input-form({type: 'name', placeholder: 'Контактный телефон', name: 'form-number'})
-                                    +input-form({type: 'email', placeholder: 'E-mail адрес', name: 'form-email'})
+                            form.setting-options__user-contact-data
+                                label.user-contact-data__title Ваши контактные данные:
+                                +input-form({type: 'name', placeholder: 'Ваша фамилия', name: 'form-surname'})
+                                +input-form({type: 'name', placeholder: 'Ваше имя', name: 'form-name'})
+                                +input-form({type: 'name', placeholder: 'Ваше отчество', name: 'form-patronymic'})
+                                +input-form({type: 'name', placeholder: 'Контактный телефон', name: 'form-number'})
+                                +input-form({type: 'email', placeholder: 'E-mail адрес', name: 'form-email'})
 
-                        .order-settings_column.order-settings_column_right
-                            .order-settings__date-seleciton
-                                +calendar
-                            .order-settings__button-send-request
-                                +standard-button({size: 'custom', color: 'red', value: 'Отправить заявку', type: 'submit'})
+                    .order-settings_column.order-settings_column_right
+                        .order-settings__date-seleciton
+                            +calendar
+                        .order-settings__button-send-request
+                            +standard-button({size: 'custom', color: 'red', value: 'Отправить заявку', type: 'submit'})
             +footer

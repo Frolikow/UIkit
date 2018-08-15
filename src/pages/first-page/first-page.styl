@@ -9,6 +9,7 @@
     font-size 1.375rem
     text-align center
     font-family Lato, sans-serif
+
   &__news-and-events
     display flex
     justify-content center
@@ -18,17 +19,27 @@
     font-size 1.875rem
     color mainGray102
     font-family Lato, sans-serif
+
+  &__title
+    text-align center
+    font-size 1.875rem
+
   &__news-block
     min-height 3.125rem
     display flex
     flex-direction column
     padding 1.875rem
-    .news
+
+    & > :nth-child(n)
       margin 0.3125rem
+
+
   &__events-block
     min-height 3.125rem
     display flex
     flex-direction column
     padding 1.875rem
-    .events
+    font-size 1rem
+
+    & > :nth-child(n)
       margin 0.3125rem
