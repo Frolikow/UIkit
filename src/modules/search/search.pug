@@ -1,8 +1,7 @@
 mixin search
-    .search-element
-        form.search(action='' method='post')
-            input.search__input(type='search' name='' placeholder='Search')
-            input.search__submit(type='submit' name='' value='')
-            svg.search__image
-                circle(r='4' cx='10' cy='10' stroke='white' fill='transparent' stroke-width='2')
-                line(x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2")
+    form.search.js-search(action='' method='post')
+        input.search__input.js-search__input(type='search' name='' placeholder='Search')
+        input.search__submit(type='submit' name='' value='')
+        svg.search__image
+            circle(r='4' cx='10' cy='10' stroke='white' fill='transparent' stroke-width='2')
+            line(x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2")

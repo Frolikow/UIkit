@@ -5,13 +5,14 @@ class Messaging {
     this.$messagerBlock = $(element);
     this.$messaging = $(this.$messagerBlock).find('.js-messager__chat');
     this.$buttonSendMessage = $(this.$messagerBlock).find('.js-messager__button-send-message');
-    this.$inputNewMessage = $(this.$messagerBlock).find('.js-messager__input_message_new');
+    this.$inputNewMessage = $(this.$messagerBlock).find('.js-messager__input-new-message');
     this.createOutgoingMessage();
     this.loadMessageFromBase();
     this.addNewMessage();
   }
   createOutgoingMessage() {
-    $(this.$buttonSendMessage).on('click', () => {
+    $(this.$buttonSendMessage).on('click', (e) => {
+      e.preventDefault();
       const date = new Date();
       const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
       const message = {

@@ -1,6 +1,6 @@
 mixin tick-box(data)
-    .tick-box-element
+    .tick-box
         label
-            input(type="checkbox" class="tick-box" hidden name=data.name)
-            span.tick-box_view
+            input(type="checkbox" class="tick-box__element" hidden name=data.name)
+            span.tick-box__visible-part
             span.tick-box__text= data.value

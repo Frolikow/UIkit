@@ -7,48 +7,47 @@
   padding-bottom 3.125rem
   flex-wrap wrap
 
-  .order-settings_column_left
-    width 31.25rem
-    height 100%
-    display flex
-    flex-direction column
-    align-items center
-
-    .order-settings__current-car
-      display block
-      width 100%
-      text-align center
-      padding 0.625rem
-      line-height: 1.5625rem
-
-    .order-settings__setting-options
+  .order-settings
+    &_column_left
+      width 31.25rem
+      height 100%
       display flex
       flex-direction column
+      align-items center
 
-      .setting-options
-        &__transmission, &__territory-of-use, &__place-of-renting, &__lease-time
+    &__current-car
+        display block
+        width 100%
+        text-align center
+        padding 0.625rem
+        line-height: 1.5625rem
+
+    &__options
+        display flex
+        flex-direction column
+
+        &-transmission, &-territory-of-use, &-place-of-renting, &-lease-time
           margin 0
           margin-bottom 0.925rem
 
-          .setting-options__label
+        &-label
             text-align left
             line-height 1.25rem
 
-        &__lease-time
+        &-lease-time
           display flex
           flex-direction column
           height 5.3125rem
           justify-content space-between
 
-        &__additions
-          padding-top 0.625rem
+        &-additions
           width 100%
           display flex
           flex-direction column
           justify-content flex-start
           align-items left
 
-          .additions__options
+          &-item
             margin-top 0.3125rem
             margin-bottom 0.375rem
             display flex
@@ -58,23 +57,23 @@
               display block
               content ""
 
-        &__user-contact-data
+        &-contact-form
           padding-top 0.625rem
           padding-bottom 0.625rem
           
-          .user-contact-data__title
+          &-title
             line-height 1.875rem
 
-  .order-settings_column_right
-    margin-top 5.375rem
-    width 18.75rem
-    height 100%
-    display flex
-    flex-direction column
-    align-items center
-    justify-content space-between
+    &_column_right
+      margin-top 5.375rem
+      width 18.75rem
+      height 100%
+      display flex
+      flex-direction column
+      align-items center
+      justify-content space-between
 
-    .order-settings__button-send-request
+    &__button-send-request
       margin-top 3.0625rem
       width 12.5rem 
       height 3.125rem 

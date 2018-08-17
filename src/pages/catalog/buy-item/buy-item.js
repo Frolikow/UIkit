@@ -31,7 +31,7 @@ $(() => {
     const placeOfRenting = document.getElementsByName('place-of-renting')[0];
     testDropDown(placeOfRenting, 'Место офромления аренды');
 
-    const rentAutoHours = document.getElementsByClassName('standard-slider_custom-handle')[0];
+    const rentAutoHours = document.getElementsByClassName('js-standard-slider__custom-handle')[0];
     console.log(`Количество часов аренды: ${rentAutoHours.textContent}`);
 
     const checkBoxArray = [];

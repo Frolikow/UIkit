@@ -100,7 +100,7 @@ html(lang="ru")
                                 .search__block
                                     +search
                                 .drop-down__block
-                                    +drop-down({name: 'defaultSelect', values: ['some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                                    +drop-down({name: 'defaultSelect', values: [ 'Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
                         .item__user-profile
                             h2.ui-elements__title user profile
                             .user-profile__element
@@ -129,11 +129,11 @@ html(lang="ru")
                     .item.item__calendar-messaging
                         .item__calendar
                             h2.ui-elements__title calendar
-                            .calendar__element
+                            .item__calendar-element
                                 +calendar
                         .item__messaging
                             h2.ui-elements__title messaging
-                            .messaging__element
+                            .item__messaging-element
                                 +messager
 
 

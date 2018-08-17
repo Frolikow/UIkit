@@ -3,7 +3,7 @@ import $ from 'jquery';
 class Search {
   constructor(element) {
     this.$search = $(element);
-    this.$searchInput = $(this.$search).find('.search__input');
+    this.$searchInput = $(this.$search).find('.js-search__input');
     this.eventSearch();
   }
   eventSearch() {
@@ -21,8 +21,10 @@ class Search {
         this.$searchInput.addClass('search__input_result_none');
         this.$searchInput.val('I’ve not found what I’m looking for...');
         this.$searchInput.on('click', () => {
-          this.$searchInput.val('');
-          this.$searchInput.removeClass('search__input_result_none');
+          if (this.$searchInput.val() === ('I’ve not found what I’m looking for...')) {
+            this.$searchInput.val('');
+            this.$searchInput.removeClass('search__input_result_none');
+          }
         });
       }
       return false;
@@ -31,7 +33,7 @@ class Search {
 }
 
 $(document).ready(() => {
-  $('.search').each(function () {
+  $('.js-search').each(function () {
     new Search(this);
   });
 });

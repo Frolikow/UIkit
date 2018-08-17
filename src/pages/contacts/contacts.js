@@ -20,6 +20,8 @@ class FeedbackForm {
   }
 }
 
-$(document).ready(function () {
-  new FeedbackForm(this);
+$(document).ready(() => {
+  $('.js-form-feedback').each(function () {
+    new FeedbackForm(this);
+  });
 });

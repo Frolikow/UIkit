@@ -1,7 +1,7 @@
 mixin stages(data)
   .stages
     - var x = 100/(data.length-1)*(data.value-1)+'%'
-      .stages-scale_selected-item(style={ width: x})
+      .stages__scale(style={ width: x})
     - var n = 1;
     ul.stages__list
       while n<=data.value

@@ -3,7 +3,7 @@ import $ from 'jquery';
 class StandardSlider {
   constructor(element) {
     this.$slider = $(element);
-    this.$handle = $(this.$slider).find('.js-standard-slider_custom-handle');
+    this.$handle = $(this.$slider).find('.js-standard-slider__custom-handle');
     this.initEvent();
   }
 

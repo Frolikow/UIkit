@@ -1,11 +1,11 @@
 mixin events(data)
   .events
     .events__image(data-eventsImage=data.pictureName)
-    .events-content
-      .events-content__date
-        .events-content__date-day=data.eventDay
-        .events-content__date-month=data.eventMouth
-      .events-content__title(title=`${data.eventTitle}`)=data.eventTitle
-      .events-content__text(title=`${data.eventText}`)=data.eventText
-      .events-content__button
+    .events__content
+      .events__content-date
+        .events__content-date-day=data.eventDay
+        .events__content-date-month=data.eventMouth
+      .events__content-title(title=`${data.eventTitle}`)=data.eventTitle
+      .events__content-text(title=`${data.eventText}`)=data.eventText
+      .events__content-button
         +standard-button({size: 'custom', color: 'blue-reverse', value: 'add to calendar', type: 'button'})  
