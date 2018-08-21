@@ -25,16 +25,21 @@ const common = {
     loaders:
       [
         {
-          test: /\.styl$/,
-          use: ExtractTextPlugin.extract({
-            use: ['css-loader', 'stylus-loader?resolve url']
-          })
-        }, {
           test: /\.pug$/,
           loader: 'pug-loader',
           options: {
             pretty: true
           }
+        },
+        {
+          test: /\.styl$/,
+          use: ExtractTextPlugin.extract({
+            use: ['css-loader', 'stylus-loader?resolve url']
+          })
+        }, {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: "babel-loader"
         }, {
           test: /\.(ttf|eot|woff|woff2|png|jpg|jpeg|svg|gif)$/,
           use: [
@@ -45,10 +50,6 @@ const common = {
               }
             }
           ]
-        }, {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          loader: "babel-loader"
         }
       ]
   },

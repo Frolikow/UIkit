@@ -5,29 +5,74 @@ include ./../../modules/news/news
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title Главная(UIkit)
-  body
-    .layout
-      +header
-      .main
-        .first-page-content
-          .first-page-content__about-us 
-            p Мы - компания занимающаяся сдачей в аренду элитных машин по-часово.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur exercitationem suscipit blanditiis ullam impedit ea obcaecati architecto veniam sit ratione, est amet error ipsam molestiae aut. Delectus, architecto numquam!
-          .first-page-content__news-and-events
-            .first-page-content__news-block 
-              .first-page-content__title Новости
-              +news({pictureName: 'comaro', newsTitle: "Новая машина", newsDate: '12 august 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-              +news({pictureName: 'porshe', newsTitle: "Новая машина", newsDate:'25 may 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-              +news({pictureName: 'mustang', newsTitle: "Новая машина", newsDate: '31 september 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-              +news({pictureName: 'cadilac', newsTitle: "Новая машина", newsDate: '2 december 2013', newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
-            .first-page-content__events-block 
-              .first-page-content__title Мероприятия
-              +events({pictureName: 'city', eventDay: '24', eventMouth: 'sept', eventTitle: 'Выставка', eventText: 'Выставка новых авто в нашем салоне'})
-              +events({pictureName: 'sale', eventDay: '01', eventMouth: 'aug', eventTitle: 'скидки', eventText: 'Весь август скидки на аренду авто 10%, при бронировании до 1-го августа'})
-              +events({pictureName: 'square2', eventDay: '15', eventMouth: 'jule', eventTitle: 'Выставка-показ', eventText: 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.'})
-              +events({pictureName: 'summer', eventDay: '31', eventMouth: 'june', eventTitle: 'Выставка', eventText: 'Выставка и консультация в нашем салоне.'})
-              +events({pictureName: 'square', eventDay: '12', eventMouth: 'may', eventTitle: 'Выставка-показ', eventText: 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.'})
-      +footer
+    head
+        meta(charset="utf-8")
+        title Главная(UIkit)
+    body
+        .layout
+            +header
+            .main
+                .first-page-content
+                    .first-page-content__about-us 
+                        p Мы - компания занимающаяся сдачей в аренду элитных машин по-часово.
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tenetur exercitationem suscipit blanditiis ullam impedit ea obcaecati architecto veniam sit ratione, est amet error ipsam molestiae aut. Delectus, architecto numquam!
+                    .first-page-content__news-and-events
+                        .first-page-content__news-block 
+                            .first-page-content__title Новости
+                            +news({imageName: 'productImages/camaro1.jpeg', 
+                                    image_positionX: 87, 
+                                    image_positionY: 50, 
+                                    image_size: 350,
+                                    newsTitle: "Новая машина", newsDate: '12 august 2013',
+                                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                            +news({imageName: 'productImages/porshe1.jpeg', 
+                                    image_positionX: 95, 
+                                    image_positionY: 50,  
+                                    image_size: 360,
+                                    newsTitle: "Новая машина", newsDate:'25 may 2013', 
+                                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                            +news({imageName: 'productImages/ford1.jpeg', 
+                                    image_positionX: 87, 
+                                    image_positionY: 50, 
+                                    image_size: 380,
+                                    newsTitle: "Новая машина", newsDate: '31 september 2013', 
+                                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                            +news({imageName: 'productImages/cadilac1.jpeg', 
+                                    image_positionX: 15, 
+                                    image_positionY: 50, 
+                                    image_size: 400,
+                                    newsTitle: "Новая машина", newsDate: '2 december 2013',
+                                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                        .first-page-content__events-block 
+                            .first-page-content__title Мероприятия
+                            +events({imageName: 'city.jpeg',
+                                    image_positionX: 67, 
+                                    image_positionY: 60, 
+                                    image_size: 180,
+                                    eventDay: '24', eventMouth: 'sept', eventTitle: 'Выставка',
+                                    eventText: 'Выставка новых авто в нашем салоне'})
+                            +events({imageName: 'sale.jpg',
+                                    image_positionX: 67, 
+                                    image_positionY: 50, 
+                                    image_size: 470,
+                                    eventDay: '01', eventMouth: 'aug', eventTitle: 'скидки', 
+                                    eventText: 'Весь август скидки на аренду авто 10%, при бронировании до 1-го августа'})
+                            +events({imageName: 'square2.jpg',
+                                    image_positionX: 75, 
+                                    image_positionY: 60, 
+                                    image_size: 400,
+                                    eventDay: '15', eventMouth: 'jule', eventTitle: 'Выставка-показ',
+                                    eventText: 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.'})
+                            +events({imageName: 'summer.jpg',
+                                    image_positionX: 50, 
+                                    image_positionY: 60, 
+                                    image_size: 400,
+                                    eventDay: '31', eventMouth: 'june', eventTitle: 'Выставка',
+                                    eventText: 'Выставка и консультация в нашем салоне.'})
+                            +events({imageName: 'square.jpg',
+                                    image_positionX: 67, 
+                                    image_positionY: 60, 
+                                    image_size: 430,
+                                    eventDay: '12', eventMouth: 'may', eventTitle: 'Выставка-показ',
+                                    eventText: 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.'})
+            +footer

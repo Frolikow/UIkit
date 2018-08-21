@@ -5,35 +5,17 @@
   display flex
   background-color mainRedLight
 
-  &__image[data-newsImage=bike]
-    background url("./images/bike.jpeg") no-repeat 70% 50% / 400%
-
-
-  &__image[data-newsImage=comaro]
-    background url('./../pages/catalog/productImages/camaro1.jpeg') no-repeat 87% 50% / 337%
-
-  &__image[data-newsImage=porshe]
-    background url('./../pages/catalog/productImages/porshe1.jpeg') no-repeat 95% 50% / 337%
-
-  &__image[data-newsImage=mustang]
-    background url('./../pages/catalog/productImages/ford1.jpeg') no-repeat 87% 50% / 337%
-
-  &__image[data-newsImage=cadilac]
-    background url('./../pages/catalog/productImages/cadilac4.jpeg') no-repeat 86% 50% / 337%
-    
   &__image
-    width 5.9375rem
+    width 90%
     height 13.25rem
-    border-radius 0.25rem 0 0 0.25rem
     transition all 0.5s ease
+    border-radius 0.25rem 0 0 0.25rem
 
     &:hover
-      width 12.5rem
-      background-size 150%
-      background-position 85% 50%
+      width 140%
 
   &-content
-    width 12.0625rem 
+    min-width 40%
     height 13.25rem
     padding-right 0.625rem
     color mainWhite
@@ -44,7 +26,7 @@
     text-align left
     text-overflow hidden
 
-    &__header
+    &__title
       margin-top 1.5rem
       font-family Lato, sans-serif
       font-size 1.75rem

@@ -14,7 +14,7 @@ $(() => {
     count += 1;
     const fullProductMedia = document.getElementsByClassName('js-product-page-content__media')[0];
     const img = document.createElement('IMG');
-    img.src = require(`./../productImages/${params.pictureName}${count}.jpeg`);
+    img.src = require(`../../../style/images/productImages/${params.imageName}${count}.jpeg`);
     img.className = 'product-page-content__media-picture';
     fullProductMedia.appendChild(img);
   }
@@ -25,5 +25,5 @@ $(() => {
   productPrice.innerHTML = `${params.carPrice} руб./час`;
 
   const buyItem = document.getElementsByClassName('js-product-page-content__buy-item')[0];
-  buyItem.href = `./buy-item.html?pictureName=${params.pictureName}&carName=${params.carName}&carPrice=${params.carPrice}`;
+  buyItem.href = `./buy-item.html?imageName=${params.imageName}&carName=${params.carName}&carPrice=${params.carPrice}`;
 });

@@ -1,7 +1,10 @@
-mixin news(data)
-  .news
-    .news__image(data-newsImage=data.pictureName)
-    .news-content
-      .news-content__header(title=`${data.newsTitle}`)=data.newsTitle
-      .news-content__date=data.newsDate
-      p.news-content__text(title=`${data.newsText}`)=data.newsText
+mixin news({imageName, image_positionX, image_positionY, image_size, newsTitle, newsDate, newsText})
+    -
+        let image = require(`style/images/${imageName}`);
+
+    .news
+        .news__image(style=`background:url(${image}) no-repeat ${image_positionX}% ${image_positionY}% / ${image_size}%`)
+        .news-content
+            .news-content__title(title=`${newsTitle}`)=newsTitle
+            .news-content__date=newsDate
+            p.news-content__text(title=`${newsText}`)=newsText 
