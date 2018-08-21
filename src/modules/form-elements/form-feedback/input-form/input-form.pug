@@ -1,4 +1,4 @@
-mixin input-form(data)
+mixin input-form({type, placeholder, name})
     .input-form
-        input(type = data.type placeholder = data.placeholder class='input-form__element_type_'+data.type+' input-form__element_decor' required name = data.name)
+        input(type =`${type}` placeholder =placeholder class='input-form__element_type_'+type+' input-form__element_decor' required name =name)
         .input-form__info

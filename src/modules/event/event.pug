@@ -1,15 +1,15 @@
-mixin event(data)
+mixin event({imageName, eventDay, eventMouth, eventTitle, eventText})
     -
-        let image = require(`style/images/${data.imageName}`);
+        let image = require(`style/images/${imageName}`);
 
     .event
         .event__image(style=`background:url(${image}) no-repeat center / cover`)
 
         .event__content
             .event__date
-                .event__day=data.eventDay
-                .event__month=data.eventMouth
-            .event__title(title=`${data.eventTitle}`)=data.eventTitle
-            .event__text(title=`${data.eventText}`)=data.eventText
+                .event__day=eventDay
+                .event__month=eventMouth
+            .event__title(title=`${eventTitle}`)=eventTitle
+            .event__text(title=`${eventText}`)=eventText
             .event__button
                 +standard-button({size: 'custom', color: 'blue-reverse', value: 'add to calendar', type: 'button'})

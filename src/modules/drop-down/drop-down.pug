@@ -1,5 +1,5 @@
-mixin drop-down(data)
+mixin drop-down({name, values})
     div.drop-down
-      select.drop-down__list(name=data.name)
-        each item in data.values
+      select.drop-down__list(name=name)
+        each item in values
             option.drop-down__list-item(value=i++)= item

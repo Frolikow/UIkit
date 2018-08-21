@@ -1,6 +1,6 @@
-mixin location(data)
+mixin location({longitude, latitude})
     .location
-        .location__map(lat=data.longitude, lng=data.latitude )
+        .location__map(lat=longitude, lng=latitude )
         .location__menu
             .location__message Meet us!
             .location__address 

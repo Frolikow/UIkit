@@ -1,13 +1,13 @@
-mixin user-profile(data)
+mixin user-profile({imageName, userName, profession})
     -
-        let image = require(`style/images/${data.imageName}`);
+        let image = require(`style/images/${imageName}`);
 
     .user-profile
         .user-profile__avatar(style=`background:url(${image}) no-repeat center / cover`)
             .user-profile__hidden-block
-                div(class=`user-profile__info user-profile__info-${data.profession}`)
-                    .user-profile__name= data.userName
-                    .user-profile__position= data.profession
+                div(class=`user-profile__info user-profile__info-${profession}`)
+                    .user-profile__name= userName
+                    .user-profile__position= profession
                     .user-profile__social-networks
 
                         a(href='#')

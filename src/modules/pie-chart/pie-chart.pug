@@ -7,9 +7,9 @@
     return result;
     }
 
-mixin pie-chart(data)
+mixin pie-chart({value1, value2, value3})
 
-  - valueSum = sum(data.value1, data.value2, data.value3);
+  - valueSum = sum(value1, value2, value3);
   if valueSum>100
     .pie-chart
       .pie-chart__value=('ERR. >100')
@@ -24,11 +24,11 @@ mixin pie-chart(data)
           style="stroke-dasharray: 15.5rem 25.5rem",
           r="39.5", cx="-50", cy="50")
         circle.pie-chart__image_circle1(transform="rotate(-90)",
-          style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155 + data.value3 * 0.155) + "rem 25.5rem",
+          style="stroke-dasharray:" +(value1 * 0.155 + value2 * 0.155 + value3 * 0.155) + "rem 25.5rem",
           r="39.5", cx="-50", cy="50")
         circle.pie-chart__image_circle2(transform="rotate(-90)",
-          style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155) + "rem 25.5rem",
+          style="stroke-dasharray:" +(value1 * 0.155 + value2 * 0.155) + "rem 25.5rem",
           r="39.5", cx="-50", cy="50")
         circle.pie-chart__image_circle3(transform="rotate(-90)",
-          style="stroke-dasharray:" +data.value1 * 0.155 + "rem 25.5rem",
+          style="stroke-dasharray:" +value1 * 0.155 + "rem 25.5rem",
           r="39.5", cx="-50", cy="50")
