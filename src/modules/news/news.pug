@@ -1,9 +1,9 @@
-mixin news({imageName, image_positionX, image_positionY, image_size, newsTitle, newsDate, newsText})
+mixin news({imageName, newsTitle, newsDate, newsText})
     -
         let image = require(`style/images/${imageName}`);
 
     .news
-        .news__image(style=`background:url(${image}) no-repeat ${image_positionX}% ${image_positionY}% / ${image_size}%`)
+        .news__image(style=`background:url(${image}) no-repeat center / cover`)
         .news__content
             .news__title(title=`${newsTitle}`)=newsTitle
             .news__date=newsDate

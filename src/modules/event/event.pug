@@ -3,7 +3,7 @@ mixin event(data)
         let image = require(`style/images/${data.imageName}`);
 
     .event
-        .event__image(style=`background:url(${image}) no-repeat ${data.image_positionX}% ${data.image_positionY}% / ${data.image_size}%`)
+        .event__image(style=`background:url(${image}) no-repeat center / cover`)
 
         .event__content
             .event__date

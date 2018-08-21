@@ -3,7 +3,7 @@ mixin user-profile(data)
         let image = require(`style/images/${data.imageName}`);
 
     .user-profile
-        .user-profile__avatar(style=`background:url(${image}) no-repeat ${data.image_positionX}% ${data.image_positionY}% / ${data.image_size}%`)
+        .user-profile__avatar(style=`background:url(${image}) no-repeat center / cover`)
             .user-profile__hidden-block
                 div(class=`user-profile__info user-profile__info-${data.profession}`)
                     .user-profile__name= data.userName

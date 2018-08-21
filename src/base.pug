@@ -106,16 +106,10 @@ html(lang="ru")
                             h2.ui-elements__title user profile
                             .user-profile__element
                                 +user-profile({imageName: 'griffin.jpeg',
-                                                image_positionX: 50, 
-                                                image_positionY: 10, 
-                                                image_size: 150, 
                                                 userName:'John Smith', 
                                                 profession: 'ux designer'})
                             .user-profile__element
                                 +user-profile({imageName: 'wolf.jpeg',
-                                                image_positionX: 50, 
-                                                image_positionY: 50, 
-                                                image_size: 125, 
                                                 userName: 'Sarah Brown', 
                                                 profession: 'developer'})
 
@@ -124,16 +118,10 @@ html(lang="ru")
                     .item.item__news-events
                         .item__news
                             +news({imageName: 'bike.jpeg',
-                                    image_positionX: 71, 
-                                    image_positionY: 50, 
-                                    image_size: 380, 
                                     newsTitle: "It's all going downhill", newsDate:'24 august 2013', 
                                     newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
                         .item__events
                             +event({imageName: 'city.jpeg',
-                                    image_positionX: 67, 
-                                    image_positionY: 60, 
-                                    image_size: 180,
                                     eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', 
                                     eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
 
