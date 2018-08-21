@@ -1,10 +1,10 @@
 mixin stages(data)
-  .stages
-    - var x = 100/(data.length-1)*(data.value-1)+'%'
-      .stages__scale(style={ width: x})
-    - var n = 1;
-    ul.stages__list
-      while n<=data.value
-        li.stages__list-item.stages__list-item_selected-item= n++
-      while n <= data.length
-        li.stages__list-item= n++
+    .stages
+        - var x = 100/(data.length-1)*(data.value-1)+'%'
+            .stages__scale(style={ width: x})
+        - var n = 1;
+        ul.stages__list
+            while n<=data.value
+                li.stages__item.stages__item_selected-item= n++
+            while n <= data.length
+                li.stages__item= n++

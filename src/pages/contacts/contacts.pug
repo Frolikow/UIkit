@@ -1,6 +1,6 @@
 include ./../page-modules/header/header
 include ./../page-modules/footer/footer
-include ./../../modules/form-elements/form/form
+include ./../../modules/form-elements/form-feedback/form-feedback
 include ./../../modules/location/location
 
 doctype html
@@ -15,7 +15,7 @@ html(lang="ru")
         .contact-page-content
           .contact-page-content__feedback
             p По любому вопросу вы можете обратиться через форму ниже
-            +form
+            +form-feedback
           .contact-page-content__address
             p Мы находимся здесь:
             +location({longitude: 56.4531, latitude: 84.975643})

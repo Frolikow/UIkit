@@ -19,17 +19,16 @@ mixin pie-chart(data)
   else
     .pie-chart
       .pie-chart__value=('%')
-      .pie-chart__image
-        svg.pie-chart__image_svg
-          circle.pie-chart__image_svg_fill(transform="rotate(-90)",
-            style="stroke-dasharray: 15.5rem 25.5rem",
-            r="39.5", cx="-50", cy="50")
-          circle.pie-chart__image_svg_circle1(transform="rotate(-90)",
-            style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155 + data.value3 * 0.155) + "rem 25.5rem",
-            r="39.5", cx="-50", cy="50")
-          circle.pie-chart__image_svg_circle2(transform="rotate(-90)",
-            style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155) + "rem 25.5rem",
-            r="39.5", cx="-50", cy="50")
-          circle.pie-chart__image_svg_circle3(transform="rotate(-90)",
-            style="stroke-dasharray:" +data.value1 * 0.155 + "rem 25.5rem",
-            r="39.5", cx="-50", cy="50")
+      svg.pie-chart__image
+        circle.pie-chart__image_fill(transform="rotate(-90)",
+          style="stroke-dasharray: 15.5rem 25.5rem",
+          r="39.5", cx="-50", cy="50")
+        circle.pie-chart__image_circle1(transform="rotate(-90)",
+          style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155 + data.value3 * 0.155) + "rem 25.5rem",
+          r="39.5", cx="-50", cy="50")
+        circle.pie-chart__image_circle2(transform="rotate(-90)",
+          style="stroke-dasharray:" +(data.value1 * 0.155 + data.value2 * 0.155) + "rem 25.5rem",
+          r="39.5", cx="-50", cy="50")
+        circle.pie-chart__image_circle3(transform="rotate(-90)",
+          style="stroke-dasharray:" +data.value1 * 0.155 + "rem 25.5rem",
+          r="39.5", cx="-50", cy="50")

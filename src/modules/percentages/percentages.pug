@@ -6,8 +6,7 @@ mixin percentages(data)
             .percentages__value= ('ERR. >100')
         else
             .percentages__value= (data.value)
-            .percentages__image
-                svg.percentages__image_svg
-                    circle.percentages__image_svg_circle(transform="rotate(-90)",
-                        style="stroke-dasharray:" +data.value*0.177+"rem 25.5rem",
-                        r="45", cx="-50", cy="50")
+            svg.percentages__image
+                circle.percentages__image_circle(transform="rotate(-90)",
+                    style="stroke-dasharray:" +data.value*0.177+"rem 25.5rem",
+                    r="45", cx="-50", cy="50")

@@ -4,7 +4,7 @@ mixin news({imageName, image_positionX, image_positionY, image_size, newsTitle, 
 
     .news
         .news__image(style=`background:url(${image}) no-repeat ${image_positionX}% ${image_positionY}% / ${image_size}%`)
-        .news-content
-            .news-content__title(title=`${newsTitle}`)=newsTitle
-            .news-content__date=newsDate
-            p.news-content__text(title=`${newsText}`)=newsText 
+        .news__content
+            .news__title(title=`${newsTitle}`)=newsTitle
+            .news__date=newsDate
+            p.news__text(title=`${newsText}`)=newsText 

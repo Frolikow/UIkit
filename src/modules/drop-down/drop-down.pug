@@ -1,5 +1,5 @@
 mixin drop-down(data)
-    div.select-button
-      select.select-button__list(name=data.name)
+    div.drop-down
+      select.drop-down__list(name=data.name)
         each item in data.values
-            option.select-button__list-item(value=i++)= item
+            option.drop-down__list-item(value=i++)= item

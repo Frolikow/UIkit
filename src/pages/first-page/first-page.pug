@@ -1,6 +1,6 @@
 include ./../page-modules/header/header
 include ./../page-modules/footer/footer
-include ./../../modules/events/events
+include ./../../modules/event/event
 include ./../../modules/news/news
 
 doctype html
@@ -45,31 +45,31 @@ html(lang="ru")
                                     newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
                         .first-page-content__events-block 
                             .first-page-content__title Мероприятия
-                            +events({imageName: 'city.jpeg',
+                            +event({imageName: 'city.jpeg',
                                     image_positionX: 67, 
                                     image_positionY: 60, 
                                     image_size: 180,
                                     eventDay: '24', eventMouth: 'sept', eventTitle: 'Выставка',
                                     eventText: 'Выставка новых авто в нашем салоне'})
-                            +events({imageName: 'sale.jpg',
+                            +event({imageName: 'sale.jpg',
                                     image_positionX: 67, 
                                     image_positionY: 50, 
                                     image_size: 470,
                                     eventDay: '01', eventMouth: 'aug', eventTitle: 'скидки', 
                                     eventText: 'Весь август скидки на аренду авто 10%, при бронировании до 1-го августа'})
-                            +events({imageName: 'square2.jpg',
+                            +event({imageName: 'square2.jpg',
                                     image_positionX: 75, 
                                     image_positionY: 60, 
                                     image_size: 400,
                                     eventDay: '15', eventMouth: 'jule', eventTitle: 'Выставка-показ',
                                     eventText: 'Выставка-показ наших авто на центральной площади города. С 12 до 15 часов.'})
-                            +events({imageName: 'summer.jpg',
+                            +event({imageName: 'summer.jpg',
                                     image_positionX: 50, 
                                     image_positionY: 60, 
                                     image_size: 400,
                                     eventDay: '31', eventMouth: 'june', eventTitle: 'Выставка',
                                     eventText: 'Выставка и консультация в нашем салоне.'})
-                            +events({imageName: 'square.jpg',
+                            +event({imageName: 'square.jpg',
                                     image_positionX: 67, 
                                     image_positionY: 60, 
                                     image_size: 430,

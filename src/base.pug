@@ -5,14 +5,14 @@ include ./modules/pie-chart/pie-chart
 include ./modules/standard-slider/standard-slider
 include ./modules/step-slider/step-slider
 include ./modules/stages/stages
-include ./modules/form-elements/form/form
+include ./modules/form-elements/form-feedback/form-feedback
 include ./modules/form-elements/toggles/toggles
 include ./modules/form-elements/tick-box/tick-box 
 include ./modules/search/search
 include ./modules/drop-down/drop-down
 include ./modules/user-profile/user-profile
 include ./modules/news/news
-include ./modules/events/events
+include ./modules/event/event
 include ./modules/location/location
 include ./modules/calendar/calendar
 include ./modules/messager/messager
@@ -82,7 +82,7 @@ html(lang="ru")
                     h2.ui-elements__title form elements
                     .item.item__form-elements
                         .form-elements__form
-                            +form
+                            +form-feedback
                         .form-elements__toggles-and-tick-box
                             h2.ui-elements__title toggles
                             .form-elements__toggles
@@ -127,10 +127,10 @@ html(lang="ru")
                                     image_positionX: 71, 
                                     image_positionY: 50, 
                                     image_size: 380, 
-                                    newsTitle: "It's all going downhill blaaaaaaaaaaa", newsDate:'24 august 2013', 
+                                    newsTitle: "It's all going downhill", newsDate:'24 august 2013', 
                                     newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
                         .item__events
-                            +events({imageName: 'city.jpeg',
+                            +event({imageName: 'city.jpeg',
                                     image_positionX: 67, 
                                     image_positionY: 60, 
                                     image_size: 180,

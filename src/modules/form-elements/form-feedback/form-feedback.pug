@@ -1,7 +1,7 @@
 include ./input-form/input-form
 include ./textarea/textarea
 
-mixin form
+mixin form-feedback
     form.form-feedback.js-form-feedback
         +input-form({type: 'name', placeholder: 'Your name', name: 'formName'})
         +input-form({type: 'email', placeholder: 'Your email', name: 'formEmail'})

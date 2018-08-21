@@ -1,5 +1,5 @@
 
-.checkbox  
+.toggles  
   &__element
     vertical-align top
     width 3.75rem
@@ -9,7 +9,7 @@
       position absolute
       opacity 0
     
-    &:not(checked) + .checkbox__visible-part  
+    &:not(checked) + .toggles__visible-part  
       position relative
       padding 0 0 0 3.75rem
       color mainWhite
@@ -19,7 +19,7 @@
       text-transform uppercase
       letter-spacing 0.0375rem
     
-    &:not(checked) + .checkbox__visible-part:before  
+    &:not(checked) + .toggles__visible-part:before  
       content 'off'
       text-align center
       text-indent 1.25rem
@@ -32,7 +32,7 @@
       border-radius 0.75rem
       background mainGray229
       
-    &:not(checked) + .checkbox__visible-part:after  
+    &:not(checked) + .toggles__visible-part:after  
       content ''
       position absolute
       top -0.125rem
@@ -43,14 +43,14 @@
       background mainWhite
       transition all .2s
     
-    &:checked + .checkbox__visible-part:before  
+    &:checked + .toggles__visible-part:before  
       background mainBlueLight
       content 'on'
       text-align left
       text-indent 0.6875rem
       line-height 1.4375rem
     
-    &:checked + .checkbox__visible-part:after  
+    &:checked + .toggles__visible-part:after  
       left 2.3125rem
 
   &__visible-part 

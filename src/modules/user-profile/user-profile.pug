@@ -6,16 +6,13 @@ mixin user-profile(data)
         .user-profile__avatar(style=`background:url(${image}) no-repeat ${data.image_positionX}% ${data.image_positionY}% / ${data.image_size}%`)
             .user-profile__hidden-block
                 div(class=`user-profile__info user-profile__info-${data.profession}`)
-                    .user-profile__info_name= data.userName
-                    .user-profile__info_position= data.profession
-                    .user-profile__info_social-networks
+                    .user-profile__name= data.userName
+                    .user-profile__position= data.profession
+                    .user-profile__social-networks
 
-                        .user-profile__info_social-networks_facebook 
-                            a(href='#')
-                                .social-networks__icons
-                        .user-profile__info_social-networks_twitter 
-                            a(href='#')
-                                .social-networks__icons
-                        .user-profile__info_social-networks_dribbble 
-                            a(href='#')
-                                .social-networks__icons
+                        a(href='#')
+                            .user-profile__social-networks_facebook 
+                        a(href='#')
+                            .user-profile__social-networks_twitter 
+                        a(href='#')
+                            .user-profile__social-networks_dribbble 

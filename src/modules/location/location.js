@@ -7,7 +7,7 @@ class Location {
     this.$map = $(this.$locationBlock).find('.location__map');
     this.$positionLat = $(this.$map).attr('lat');
     this.$positionLng = $(this.$map).attr('lng');
-    this.$address = $(element).find('.location-menu__address');
+    this.$address = $(element).find('.location__address');
     this.initMap();
     this.initData();
   }
