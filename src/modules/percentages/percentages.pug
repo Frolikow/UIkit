@@ -1,12 +1,10 @@
 mixin percentages({value})
     .percentages
-        if value<0
+        if (value < 0)
             .percentages__value= ('ERR. <0')
-        else if value>100
+        else if (value > 100)
             .percentages__value= ('ERR. >100')
         else
             .percentages__value= (value)
             svg.percentages__image
-                circle.percentages__image_circle(transform="rotate(-90)",
-                    style="stroke-dasharray:" +value*0.177+"rem 25.5rem",
-                    r="45", cx="-50", cy="50")
+                circle.percentages__image_circle(transform = "rotate(-90)", style = "stroke-dasharray:" + value * 0.177 + "rem 25.5rem", r = "45", cx = "-50", cy = "50")

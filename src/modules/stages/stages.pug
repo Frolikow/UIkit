@@ -1,10 +1,10 @@
 mixin stages({length, value})
     .stages
-        - var x = 100/(length-1)*(value-1)+'%'
-            .stages__scale(style={ width: x})
+        - var x = 100 / (length - 1) * (value - 1) + '%'
+            .stages__scale(style = ('width:' + x + ';'))
         - var n = 1;
         ul.stages__list
-            while n<=value
+            while (n <= value)
                 li.stages__item.stages__item_selected-item= n++
-            while n <= length
+            while (n <= length)
                 li.stages__item= n++

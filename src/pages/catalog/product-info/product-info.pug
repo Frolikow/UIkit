@@ -2,9 +2,9 @@ include ./../../page-modules/header/header
 include ./../../page-modules/footer/footer
 
 doctype html
-html(lang="ru")
+html(lang = "ru")
   head
-    meta(charset="utf-8")
+    meta(charset = "utf-8")
     title Информация(UIkit)
 
   body
@@ -19,6 +19,6 @@ html(lang="ru")
             .product-page-content__info-buy
               .product-page-content__info-buy-price.js-product-page-content__info-buy-price
               .product-page-content__info-buy-button
-                a(class='js-product-page-content__buy-item' href='#') 
+                a(class = 'js-product-page-content__buy-item' href = '#') 
                   +standard-button({size: 'big', color: 'red', value: 'Заказать', type: 'button'})
       +footer 

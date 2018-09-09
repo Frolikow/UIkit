@@ -3,8 +3,8 @@ mixin news({imageName, newsTitle, newsDate, newsText})
         let image = require(`style/images/${imageName}`);
 
     .news
-        .news__image(style=`background:url(${image}) no-repeat center / cover`)
+        .news__image(style = `background:url(${image}) no-repeat center / cover`)
         .news__content
-            .news__title(title=`${newsTitle}`)=newsTitle
-            .news__date=newsDate
-            p.news__text(title=`${newsText}`)=newsText 
+            .news__title(title = `${newsTitle}`)= newsTitle
+            .news__date= newsDate
+            p.news__text(title = `${newsText}`)= newsText 

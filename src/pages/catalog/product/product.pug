@@ -4,10 +4,10 @@ mixin product(data)
 
   .product
     .product__image
-      a.product__image-link(href='./product-info.html?imageName='+data.imageName+'&carName='+data.carName+'&carPrice='+data.carPrice)
-        img.product__image-link-picture(src=(image))
+      a.product__image-link(href = './product-info.html?imageName=' + data.imageName + '&carName=' + data.carName + '&carPrice=' + data.carPrice)
+        img.product__image-link-picture(src = (image))
     .product__name= data.carName
-    .product__price= data.carPrice+' руб./час'
+    .product__price= data.carPrice + ' руб./час'
     .product__info
-      a(href='./product-info.html?imageName='+data.imageName+'&carName='+data.carName+'&carPrice='+data.carPrice)
+      a(href = './product-info.html?imageName=' + data.imageName + '&carName=' + data.carName + '&carPrice=' + data.carPrice)
         +standard-button({size: 'big', color: 'red', value: 'Подробнее', type: 'button'}) 

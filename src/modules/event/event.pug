@@ -7,9 +7,9 @@ mixin event({imageName, eventDay, eventMouth, eventTitle, eventText})
 
         .event__content
             .event__date
-                .event__day=eventDay
-                .event__month=eventMouth
-            .event__title(title=`${eventTitle}`)=eventTitle
-            .event__text(title=`${eventText}`)=eventText
+                .event__day= eventDay
+                .event__month= eventMouth
+            .event__title(title = `${eventTitle}`)= eventTitle
+            .event__text(title = `${eventText}`)= eventText
             .event__button
                 +standard-button({size: 'custom', color: 'blue-reverse', value: 'add to calendar', type: 'button'})

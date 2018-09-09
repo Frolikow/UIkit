@@ -19,10 +19,10 @@ include ./modules/messager/messager
 include ./modules/video-player/video-player
 
 doctype html
-html(lang="ru")
+html(lang = "ru")
     head
-        meta(charset="utf-8")
-        meta(http-equiv="Cache-Control" content="no-cache")
+        meta(charset = "utf-8")
+        meta(http-equiv = "Cache-Control" content = "no-cache")
         title "UIKit"
 
     body
@@ -58,10 +58,10 @@ html(lang="ru")
                     h2.ui-elements__title percentages / pie chart
                     .item.item__percentages-pie-chart
                         //- 0..100
-                        +percentages({value:'0'})
-                        +percentages({value:'38'})
-                        +percentages({value:'62'})
-                        +percentages({value:'89'})
+                        +percentages({value: '0'})
+                        +percentages({value: '38'})
+                        +percentages({value: '62'})
+                        +percentages({value: '89'})
                         +pie-chart({value1: 10, value2: 25, value3: 30})
 
                 .ui-elements__item
@@ -101,7 +101,7 @@ html(lang="ru")
                                 .search__block
                                     +search
                                 .drop-down__block
-                                    +drop-down({name: 'defaultSelect', values: [ 'Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                                    +drop-down({name: 'defaultSelect', values: ['Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
                         .item__user-profile
                             h2.ui-elements__title user profile
                             .user-profile__element
@@ -118,7 +118,7 @@ html(lang="ru")
                     .item.item__news-events
                         .item__news
                             +news({imageName: 'bike.jpeg',
-                                    newsTitle: "It's all going downhill", newsDate:'24 august 2013', 
+                                    newsTitle: "It's all going downhill", newsDate: '24 august 2013', 
                                     newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
                         .item__events
                             +event({imageName: 'city.jpeg',
@@ -153,4 +153,4 @@ html(lang="ru")
                         //- https://www.youtube.com/embed/rPmGtZAUxNs
                         //- https://player.vimeo.com/video/62980495
 
-script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')
+script(async defer src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')
