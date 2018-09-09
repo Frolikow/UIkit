@@ -5,20 +5,23 @@ include ./../../modules/location/location
 
 doctype html
 html(lang = "ru")
-  head
-    meta(charset = "utf-8")
-    title Контакты(UIkit)
-  body
-    .layout
-      +header
-      .main
-        .contact-page-content
-          .contact-page-content__feedback
-            p По любому вопросу вы можете обратиться через форму ниже
-            +form-feedback
-          .contact-page-content__address
-            p Мы находимся здесь:
-            +location({longitude: 56.4531, latitude: 84.975643})
-      +footer
+    head
+        meta(charset = "utf-8")
+        title Контакты(UIkit)
+    body
+        .layout
+            +header
+            .main
+                .contact-page-content
+                    .contact-page-content__feedback
+                        p По любому вопросу вы можете обратиться через форму ниже
+                        +form-feedback
+                    .contact-page-content__address
+                        p Мы находимся здесь:
+                        +location({
+                            longitude: 56.4531, 
+                            latitude: 84.975643
+                        })
+            +footer
 
 script(async defer src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCKcdCMMpMMqw5VEtVFyB5BLh467I3xY&callback=initMap')  

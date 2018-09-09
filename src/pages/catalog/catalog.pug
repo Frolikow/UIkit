@@ -4,19 +4,47 @@ include ./product/product
 
 doctype html
 html(lang = "ru")
-  head
-    meta(charset = "utf-8")
-    title  Каталог(UIkit)
-  body 
-    .layout
-      +header
-      .main
-        .products-page-content
-          +product({imageName: 'bmw', carName: 'BMW7S', carPrice: '3000'})
-          +product({imageName: 'cadilac', carName: 'Escalade', carPrice: '3000'})
-          +product({imageName: 'camaro', carName: 'Camaro', carPrice: '3500'})
-          +product({imageName: 'ford', carName: 'Mustang', carPrice: '3500'})
-          +product({imageName: 'hummer', carName: 'Hummer3', carPrice: '3800'})
-          +product({imageName: 'porshe', carName: 'Porshe911', carPrice: '4000'})
-          +product({imageName: 'RR', carName: 'Rolls-Royse', carPrice: '7000'})
-      +footer  
+    head
+        meta(charset = "utf-8")
+        title  Каталог(UIkit)
+    body 
+        .layout
+            +header
+            .main
+                .products-page-content
+                    +product({
+                        imageName: 'bmw',
+                        carName: 'BMW7S',
+                        carPrice: '3000'
+                    })
+                    +product({
+                        imageName: 'cadilac',
+                        carName: 'Escalade',
+                        carPrice: '3000'
+                    })
+                    +product({
+                        imageName: 'camaro',
+                        carName: 'Camaro',
+                        carPrice: '3500'
+                    })
+                    +product({
+                        imageName: 'ford',
+                        carName: 'Mustang',
+                        carPrice: '3500'
+                    })
+                    +product({
+                        imageName: 'hummer',
+                        carName: 'Hummer3',
+                        carPrice: '3800'
+                    })
+                    +product({
+                        imageName: 'porshe',
+                        carName: 'Porshe911',
+                        carPrice: '4000'
+                    })
+                    +product({
+                        imageName: 'RR',
+                        carName: 'Rolls-Royse', 
+                        carPrice: '7000'
+                    })
+            +footer  

@@ -3,7 +3,7 @@ mixin event({imageName, eventDay, eventMouth, eventTitle, eventText})
         let image = require(`style/images/${imageName}`);
 
     .event
-        .event__image(style=`background:url(${image}) no-repeat center / cover`)
+        .event__image(style = `background:url(${image}) no-repeat center / cover`)
 
         .event__content
             .event__date
@@ -12,4 +12,9 @@ mixin event({imageName, eventDay, eventMouth, eventTitle, eventText})
             .event__title(title = `${eventTitle}`)= eventTitle
             .event__text(title = `${eventText}`)= eventText
             .event__button
-                +standard-button({size: 'custom', color: 'blue-reverse', value: 'add to calendar', type: 'button'})
+                +standard-button({
+                    size: 'custom', 
+                    color: 'blue-reverse', 
+                    value: 'add to calendar', 
+                    type: 'button'
+                })

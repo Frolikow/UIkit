@@ -1,15 +1,30 @@
 include ./../../../modules/buttons/standard-button/standard-button
 
 mixin header()
-  .header 
-    .header__image 
-      .header__image-logo logotip
-      .header__menu
-        .header__button-block
-          a(href = './first-page.html') 
-            +standard-button({size: 'big', color: 'blue', value: 'Главная', type: 'button'})
-          a(href = './catalog.html')
-            +standard-button({size: 'big', color: 'blue', value: 'Каталог', type: 'button'})
-          a(href = './contacts.html')
-            +standard-button({size: 'big', color: 'blue', value: 'Контакты', type: 'button'})
+    .header 
+        .header__image 
+            .header__image-logo logotip
+            .header__menu
+                .header__button-block
+                    a(href = './first-page.html') 
+                        +standard-button({
+                            size: 'big',
+                            color: 'blue',
+                            value: 'Главная',
+                            type: 'button'
+                        })
+                    a(href = './catalog.html')
+                        +standard-button({
+                            size: 'big',
+                            color: 'blue',
+                            value: 'Каталог',
+                            type: 'button'
+                        })
+                    a(href = './contacts.html')
+                        +standard-button({
+                            size: 'big',
+                            color: 'blue',
+                            value: 'Контакты',
+                            type: 'button'
+                        })
 

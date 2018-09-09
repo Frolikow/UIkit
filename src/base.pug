@@ -58,25 +58,49 @@ html(lang = "ru")
                     h2.ui-elements__title percentages / pie chart
                     .item.item__percentages-pie-chart
                         //- 0..100
-                        +percentages({value: '0'})
-                        +percentages({value: '38'})
-                        +percentages({value: '62'})
-                        +percentages({value: '89'})
-                        +pie-chart({value1: 10, value2: 25, value3: 30})
+                        +percentages({
+                            value: '0'
+                        })
+                        +percentages({
+                            value: '38'
+                        })
+                        +percentages({
+                            value: '62'
+                        })
+                        +percentages({
+                            value: '89'
+                        })
+                        +pie-chart({
+                            value1: 10,
+                            value2: 25, 
+                            value3: 30
+                        })
 
                 .ui-elements__item
                     h2.ui-elements__title sliders
                     .item.item__sliders
                         .item__standart-slider
-                            +standard-slider({minimum: '10', value: '50', maximum: '200'})
+                            +standard-slider({
+                                minimum: '10', 
+                                value: '50', 
+                                maximum: '200'
+                            })
 
                         .item__step-slider
-                            +step-slider({minimum:'0', value: '75', maximum: '100', step: '25'})
+                            +step-slider({
+                                minimum:'0', 
+                                value: '75', 
+                                maximum: '100',
+                                step: '25'
+                            })
 
                 .ui-elements__item
                     h2.ui-elements__title stages
                     .item.item__stages
-                        +stages({length: 5, value: 3})
+                        +stages({
+                            length: 5, 
+                            value: 3
+                        })
 
                 .ui-elements__item
                     h2.ui-elements__title form elements
@@ -90,8 +114,14 @@ html(lang = "ru")
                                 +toggles
                             h2.ui-elements__title tick boxes
                             .form-elements__tick-box
-                                +tick-box({name: '', value: ''})
-                                +tick-box({name: '', value: ''})
+                                +tick-box({
+                                    name: '', 
+                                    value: ''
+                                })
+                                +tick-box({
+                                    name: '', 
+                                    value: ''
+                                })
 
                 .ui-elements__item
                     .item.item__search-drop-down-user-profile
@@ -101,34 +131,51 @@ html(lang = "ru")
                                 .search__block
                                     +search
                                 .drop-down__block
-                                    +drop-down({name: 'defaultSelect', values: ['Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']})
+                                    +drop-down({
+                                        name: 'defaultSelect', 
+                                        values: ['Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']
+                                    })
                         .item__user-profile
                             h2.ui-elements__title user profile
                             .user-profile__element
-                                +user-profile({imageName: 'griffin.jpeg',
-                                                userName:'John Smith', 
-                                                profession: 'ux designer'})
+                                +user-profile({
+                                    imageName: 'griffin.jpeg',
+                                    userName:'John Smith', 
+                                    profession: 'ux designer'
+                                })
                             .user-profile__element
-                                +user-profile({imageName: 'wolf.jpeg',
-                                                userName: 'Sarah Brown', 
-                                                profession: 'developer'})
+                                +user-profile({
+                                    imageName: 'wolf.jpeg',
+                                    userName: 'Sarah Brown', 
+                                    profession: 'developer'
+                                })
 
                 .ui-elements__item
                     h2.ui-elements__title news & events
                     .item.item__news-events
                         .item__news
-                            +news({imageName: 'bike.jpeg',
-                                    newsTitle: "It's all going downhill", newsDate: '24 august 2013', 
-                                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'})
+                            +news({
+                                imageName: 'bike.jpeg',
+                                newsTitle: "It's all going downhill", 
+                                newsDate: '24 august 2013', 
+                                newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'
+                            })
                         .item__events
-                            +event({imageName: 'city.jpeg',
-                                    eventDay: '24', eventMouth: 'aug', eventTitle: 'This is the title', 
-                                    eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'})
+                            +event({
+                                imageName: 'city.jpeg',
+                                eventDay: '24', 
+                                eventMouth: 'aug', 
+                                eventTitle: 'This is the title', 
+                                eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+                            })
 
                 .ui-elements__item
                     h2.ui-elements__title location
                     .item.item__location
-                        +location({longitude: 56.4531, latitude: 84.975643})
+                        +location({
+                            longitude: 56.4531, 
+                            latitude: 84.975643
+                        })
                         //-    (56.4531, 84.975643) офис
                         //-    (55.751244, 37.618423) Москва
                         //-    (59.934280, 30.335099) Санкт-Петербург
@@ -149,7 +196,9 @@ html(lang = "ru")
                 .ui-elements__item
                     h2.ui-elements__title video
                     .item.item__video-player
-                        +video-player({url: "https://player.vimeo.com/video/62980495"})
+                        +video-player({
+                            url: "https://player.vimeo.com/video/62980495"
+                        })
                         //- https://www.youtube.com/embed/rPmGtZAUxNs
                         //- https://player.vimeo.com/video/62980495
 

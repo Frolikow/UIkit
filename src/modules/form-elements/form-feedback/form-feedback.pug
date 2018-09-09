@@ -3,9 +3,26 @@ include ./textarea/textarea
 
 mixin form-feedback
     form.form-feedback.js-form-feedback
-        +input-form({type: 'name', placeholder: 'Your name', name: 'formName'})
-        +input-form({type: 'email', placeholder: 'Your email', name: 'formEmail'})
+        +input-form({
+            type: 'name', 
+            placeholder: 'Your name', 
+            name: 'formName'
+        })
+        +input-form({
+            type: 'email', 
+            placeholder: 'Your email', 
+            name: 'formEmail'
+        })
 
-        +textarea({placeholder: 'Your message', name: 'formMessage'})
+        +textarea({
+            placeholder: 'Your message', 
+            name: 'formMessage'
+        })
+        
         .form-feedback__button
-            +standard-button({size: 'custom', color: 'blue', value: 'Submit', type: 'submit'})
+            +standard-button({
+                size: 'custom', 
+                color: 'blue',
+                value: 'Submit',
+                type: 'submit'
+            })

@@ -19,4 +19,9 @@ mixin messager()
 
             input.messager__input-new-message.js-messager__input-new-message(placeholder = 'Your message' type = 'text')
             .messager__button-send-message.js-messager__button-send-message
-                +standard-button({size: 'custom', color: 'blue', value: 'reply', type: 'submit'}) 
+                +standard-button({
+                    size: 'custom',
+                    color: 'blue', 
+                    value: 'reply', 
+                    type: 'submit'
+                }) 
