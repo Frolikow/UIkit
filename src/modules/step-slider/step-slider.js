@@ -7,11 +7,11 @@ class StepSlider {
   }
 
   initEvent() {
-    $(this.$slider).slider({
-      value: +($(this.$slider).data('default')),
-      min: +($(this.$slider).data('minimum')),
-      max: +($(this.$slider).data('maximum')),
-      step: +($(this.$slider).data('step')),
+    this.$slider.slider({
+      value: +(this.$slider.data('default')),
+      min: +(this.$slider.data('minimum')),
+      max: +(this.$slider.data('maximum')),
+      step: +(this.$slider.data('step')),
       range: 'min',
     });
   }

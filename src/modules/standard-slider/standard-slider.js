@@ -3,21 +3,21 @@ import $ from 'jquery';
 class StandardSlider {
   constructor(element) {
     this.$slider = $(element);
-    this.$handle = $(this.$slider).find('.js-standard-slider__custom-handle');
+    this.$handle = this.$slider.find('.js-standard-slider__custom-handle');
     this.initEvent();
   }
 
   initEvent() {
-    $(this.$slider).slider({
+    this.$slider.slider({
       animate: true,
-      min: +($(this.$slider).data('minimum')),
-      value: +($(this.$slider).data('default')),
-      max: +($(this.$slider).data('maximum')),
+      min: +(this.$slider.data('minimum')),
+      value: +(this.$slider.data('default')),
+      max: +(this.$slider.data('maximum')),
       create: () => {
-        $(this.$handle).text($(this.$slider).slider('value'));
+        this.$handle.text($(this.$slider).slider('value'));
       },
       slide: (_event, ui) => {
-        $(this.$handle).text(ui.value);
+        this.$handle.text(ui.value);
       },
     });
   }

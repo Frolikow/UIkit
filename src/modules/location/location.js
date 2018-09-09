@@ -4,10 +4,10 @@ import $ from 'jquery';
 class Location {
   constructor(element) {
     this.$locationBlock = $(element);
-    this.$map = $(this.$locationBlock).find('.location__map');
-    this.$positionLat = $(this.$map).attr('lat');
-    this.$positionLng = $(this.$map).attr('lng');
-    this.$address = $(element).find('.location__address');
+    this.$map = this.$locationBlock.find('.js-location__map');
+    this.$positionLat = this.$map.attr('lat');
+    this.$positionLng = this.$map.attr('lng');
+    this.$address = $(element).find('.js-location__address');
     this.initMap();
     this.initData();
   }
@@ -38,7 +38,7 @@ class Location {
     geocoder.geocode({ location: positionLatLng }, (results, status) => {
       if (status === 'OK') {
         if (results[1]) {
-          $(this.$address).text(results[0].formatted_address);
+          this.$address.text(results[0].formatted_address);
         }
       }
     });
@@ -46,7 +46,7 @@ class Location {
 }
 
 window.initMap = function () {
-  $('.location').each(function () {
+  $('.js-location').each(function () {
     new Location(this);
   });
 };

@@ -1,9 +1,9 @@
 mixin location({longitude, latitude})
-    .location
-        .location__map(lat=longitude, lng=latitude )
+    .location.js-location
+        .location__map.js-location__map(lat=longitude, lng=latitude )
         .location__menu
             .location__message Meet us!
-            .location__address 
+            .location__address.js-location__address
             .location__buttons
                 a(href='#')
                     .location__buttons-my-location

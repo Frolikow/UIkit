@@ -7,7 +7,7 @@ class Button {
   }
 
   initEvent() {
-    $(this.$element).on('click', function (event) {
+    this.$element.on('click', function (event) {
       const $div = $('<div>');
       const btnOffset = $(this).offset();
       const xPos = event.pageX - btnOffset.left;

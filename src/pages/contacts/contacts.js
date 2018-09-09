@@ -3,9 +3,9 @@ import $ from 'jquery';
 class FeedbackForm {
   constructor(element) {
     this.$form = $(element);
-    this.$formName = $(this.$form).find('*[name=formName]');
-    this.$formEmail = $(this.$form).find('*[name=formEmail]');
-    this.$formMessage = $(this.$form).find('*[name=formMessage]');
+    this.$formName = this.$form.find('*[name=formName]');
+    this.$formEmail = this.$form.find('*[name=formEmail]');
+    this.$formMessage = this.$form.find('*[name=formMessage]');
     this.initEvent();
   }
   initEvent() {

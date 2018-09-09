@@ -3,15 +3,15 @@ import $ from 'jquery';
 class Messaging {
   constructor(element) {
     this.$messagerBlock = $(element);
-    this.$messaging = $(this.$messagerBlock).find('.js-messager__chat');
-    this.$buttonSendMessage = $(this.$messagerBlock).find('.js-messager__button-send-message');
-    this.$inputNewMessage = $(this.$messagerBlock).find('.js-messager__input-new-message');
+    this.$messaging = this.$messagerBlock.find('.js-messager__chat');
+    this.$buttonSendMessage = this.$messagerBlock.find('.js-messager__button-send-message');
+    this.$inputNewMessage = this.$messagerBlock.find('.js-messager__input-new-message');
     this.createOutgoingMessage();
     this.loadMessageFromBase();
     this.addNewMessage();
   }
   createOutgoingMessage() {
-    $(this.$buttonSendMessage).on('click', (e) => {
+    this.$buttonSendMessage.on('click', (e) => {
       e.preventDefault();
       const date = new Date();
       const options = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
@@ -49,7 +49,7 @@ class Messaging {
 }
 
 $(document).ready(() => {
-  $('.messager').each(function () {
+  $('.js-messager').each(function () {
     new Messaging(this);
   });
 });
