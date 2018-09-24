@@ -10,7 +10,7 @@
       position absolute
       opacity 0
     
-    &:not(checked) + .toggles__visible-part  
+    &:not(checked) + ^[0]__visible-part  
       position relative
       padding 0 0 0 3.75rem
       color mainWhite
@@ -20,7 +20,7 @@
       text-transform uppercase
       letter-spacing 0.0375rem
     
-    &:not(checked) + .toggles__visible-part:before  
+    &:not(checked) + ^[0]__visible-part:before  
       content 'off'
       text-align center
       text-indent 1.25rem
@@ -33,7 +33,7 @@
       border-radius 0.75rem
       background mainGray229
       
-    &:not(checked) + .toggles__visible-part:after  
+    &:not(checked) + ^[0]__visible-part:after  
       content ''
       position absolute
       top -0.125rem
@@ -44,14 +44,14 @@
       background mainWhite
       transition all .2s
     
-    &:checked + .toggles__visible-part:before  
+    &:checked + ^[0]__visible-part:before  
       background mainBlueLight
       content 'on'
       text-align left
       text-indent 0.6875rem
       line-height 1.4375rem
     
-    &:checked + .toggles__visible-part:after  
+    &:checked + ^[0]__visible-part:after  
       left 2.3125rem
 
   &__visible-part 

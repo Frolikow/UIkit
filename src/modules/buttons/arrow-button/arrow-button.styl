@@ -8,75 +8,62 @@
   outline none
   cursor pointer
 
-  &_trend_left
-    .arrow-button__arrow
-      transform translateX(0.5625rem) translateY(-0.0625rem) rotate(225deg)
+  &__arrow
+    content ""
+    width 0.875rem
+    height 0.875rem
+    border solid 0.25rem red
+    border-bottom none
+    border-left none
+
+    &_trend
+      &_left
+        transform translateX(0.5625rem) translateY(-0.0625rem) rotate(225deg)
+        
+      &_right
+        transform translateX(0.3125rem) translateY(-0.0625rem) rotate(45deg)
+
+  &_color
+    &_white
+      background-color mainWhite
+      border solid 0.1875rem mainBlueLight
       
-  &_trend_right
-    .arrow-button__arrow
-      transform translateX(0.3125rem) translateY(-0.0625rem) rotate(45deg)
-
-
-  &_color_white
-    background-color mainWhite
-    border solid 0.1875rem mainBlueLight
-    
-    .arrow-button__arrow
-      content ""
-      width 0.875rem
-      height 0.875rem
-      border solid 0.25rem mainBlueLight
-      border-bottom none
-      border-left none
-
-    &:hover
-      border solid 0.1875rem mainBlueLight
-      background-color mainBlueLight
-
-      .arrow-button__arrow
-        border-color mainWhite
-        border-bottom none
-        border-left none
-
-  &_color_gray
-    background-color mainGray229
-    border solid 0.1875rem mainGray229
-
-    .arrow-button__arrow
-      content ""
-      width 0.875rem
-      height 0.875rem
-      border solid 0.25rem mainWhite
-      border-bottom none
-      border-left none
-
-    &:hover
-      border solid 0.1875rem mainGray229
-      background-color mainWhite
-
-      .arrow-button__arrow
-        border-color mainGray229
-        border-bottom none
-        border-left none
-
-  &_color_green
-    background-color mainBlueLight
-    border solid 0.1875rem mainBlueLight
-
-    .arrow-button__arrow
-      content ""
-      width 0.875rem
-      height 0.875rem
-      border solid 0.25rem mainWhite
-      border-bottom none
-      border-left none
-
-    &:hover
-      border solid 0.1875rem mainBlueLight
-      background-color mainWhite
-
-      .arrow-button__arrow
+      & > ^[0]__arrow
         border-color mainBlueLight
-        border-bottom none
-        border-left none
- 
+
+
+      &:hover
+        border-color mainBlueLight
+        background-color mainBlueLight
+
+        & > ^[0]__arrow
+          border-color mainWhite
+
+    &_gray
+      background-color mainGray229
+      border solid 0.1875rem mainGray229
+
+      & > ^[0]__arrow
+        border-color mainWhite
+
+      &:hover
+        border-color mainGray229
+        background-color mainWhite
+
+        & > ^[0]__arrow
+          border-color mainGray229
+
+    &_green
+      background-color mainBlueLight
+      border solid 0.1875rem mainBlueLight
+
+      & > ^[0]__arrow
+        border-color mainWhite
+
+      &:hover
+        border-color mainBlueLight
+        background-color mainWhite
+
+        & > ^[0]__arrow
+          border-color mainBlueLight
+  
