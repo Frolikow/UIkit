@@ -102,7 +102,7 @@ const common = {
 
 const developmentConfig = {
   devServer: {
-    stats: 'errors-only',
+    stats: 'minimal',
     port: 9000,
     contentBase: path.resolve(__dirname, 'public')
   }

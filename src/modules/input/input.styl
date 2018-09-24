@@ -1,6 +1,6 @@
 @import '~style/colors.styl'
 
-.input-form
+.input
   &__element
     &_decor
       outline none
@@ -19,18 +19,18 @@
       margin-bottom 0.75rem
       padding-left 0.625rem
 
-    &_type_name:valid + .input-form__info:after
+    &_type_name:valid + .input__info:after
         content "thanks"
         background-color mainBlueLight
 
-    &_type_email:valid + .input-form__info:after
+    &_type_email:valid + .input__info:after
         content "thanks"
         background-color mainBlueLight
 
-    &_type_name:valid + .input-form__info:before
+    &_type_name:valid + .input__info:before
       background-color mainBlueLight
 
-    &_type_email:valid + .input-form__info:before
+    &_type_email:valid + .input__info:before
       background-color mainBlueLight
   
   &__info

@@ -1,14 +1,14 @@
-include ./input-form/input-form
-include ./textarea/textarea
+include ./../input/input
+include ./../textarea/textarea
 
 mixin form-feedback
     form.form-feedback.js-form-feedback
-        +input-form({
+        +input({
             type: 'name', 
             placeholder: 'Your name', 
             name: 'formName'
         })
-        +input-form({
+        +input({
             type: 'email', 
             placeholder: 'Your email', 
             name: 'formEmail'

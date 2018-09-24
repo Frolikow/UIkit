@@ -1,11 +1,11 @@
 include ./../../page-modules/header/header
 include ./../../page-modules/footer/footer
-include ./../../../modules/buttons/standard-button/standard-button
+include ./../../../modules/standard-button/standard-button
 include ./../../../modules/calendar/calendar
 include ./../../../modules/standard-slider/standard-slider
 include ./../../../modules/drop-down/drop-down
-include ./../../../modules/form-elements/tick-box/tick-box
-include ./../../../modules/form-elements/form-feedback/form-feedback
+include ./../../../modules/tick-box/tick-box
+include ./../../../modules/input/input
 
 doctype html
 html(lang = "ru")
@@ -64,27 +64,27 @@ html(lang = "ru")
 
                             form.order-settings__options-contact-form
                                 label.order-settings__options-contact-form-title Ваши контактные данные:
-                                +input-form({
+                                +input({
                                     type: 'name',
                                     placeholder: 'Ваша фамилия', 
                                     name: 'form-surname'
                                 })
-                                +input-form({
+                                +input({
                                     type: 'name',
                                     placeholder: 'Ваше имя', 
                                     name: 'form-name'
                                 })
-                                +input-form({
+                                +input({
                                     type: 'name',
                                     placeholder: 'Ваше отчество',
                                     name: 'form-patronymic'
                                 })
-                                +input-form({
+                                +input({
                                     type: 'name',
                                     placeholder: 'Контактный телефон', 
                                     name: 'form-number'
                                 })
-                                +input-form({
+                                +input({
                                     type: 'email',
                                     placeholder: 'E-mail адрес',
                                     name: 'form-email'
