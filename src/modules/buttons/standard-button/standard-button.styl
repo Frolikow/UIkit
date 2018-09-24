@@ -42,16 +42,16 @@
         box-shadow none
 
       &:active
-        background-color mainWhite
         color mainBlueLight
+        background-color mainWhite
         border solid 0.0625rem mainBlueDark
         box-shadow 0 0.1875rem 0 0 mainBlueDark
 
       &-reverse
-        border solid 0.0625rem mainBlueLight
-        background-color mainWhite
-        box-shadow 0 0.1875rem 0 0 mainBlueDark 
         color mainBlueLight
+        background-color mainWhite
+        border solid 0.0625rem mainBlueLight
+        box-shadow 0 0.1875rem 0 0 mainBlueDark 
 
         &:hover
           transform translateY(0.1875rem)
@@ -71,16 +71,16 @@
         box-shadow none
 
       &:active
-        background-color mainWhite
         color mainRedLight
+        background-color mainWhite
         border solid 0.0625rem mainRedDark
         box-shadow 0 0.1875rem 0 0 mainRedDark
 
       &-reverse
-        border solid 0.0625rem mainRedDark
-        background-color mainWhite
-        box-shadow 0 0.1875rem 0 0 mainRedDark 
         color mainRedLight
+        background-color mainWhite
+        border solid 0.0625rem mainRedDark
+        box-shadow 0 0.1875rem 0 0 mainRedDark 
 
         &:hover
           transform translateY(0.1875rem)
@@ -91,7 +91,7 @@
           background-color mainRedLight
           box-shadow 0 0.1875rem 0 0 mainRedDark
 
-  &__ripple-effect
+  &__ripple-effect, &__ripple-effect_reverse_blue, &__ripple-effect_reverse_red
     position absolute
     width 0.0625rem
     height 0.0625rem
@@ -103,24 +103,10 @@
 
     &_reverse
       &_blue
-        position absolute
-        width 0.0625rem
-        height 0.0625rem
-        border-radius 50%
         background mainBlueLight
-        animation ripple-animation 1s
-        z-index 1
-        pointer-events none
-        
+
       &_red
-        position absolute
-        width 0.0625rem
-        height 0.0625rem
-        border-radius 50%
         background mainRedLight
-        animation ripple-animation 1s
-        z-index 1
-        pointer-events none
 
 @keyframes ripple-animation
   from

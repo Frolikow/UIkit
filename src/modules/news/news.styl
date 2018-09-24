@@ -27,10 +27,10 @@
     margin 0 0 0 1.375rem
     text-align left
     text-overflow hidden
+    font-family Lato, sans-serif
 
   &__title
     margin-top 1.5rem
-    font-family Lato, sans-serif
     font-size 1.75rem
     font-weight 100 
     line-height 1.75rem
@@ -41,22 +41,19 @@
     -webkit-line-clamp 2
     -webkit-box-orient vertical
 
-  &__date
-    font-family Lato, sans-serif
+  &__date, &__text
     font-size 0.6875rem
-    font-weight bold
     line-height 0.6875rem
-    text-transform uppercase
+    font-weight bold
     letter-spacing 0.0344rem
+
+  &__date
+    text-transform uppercase
     max-height 2rem
 
   &__text
     display inline-block
     font-family Lato-Regular, sans-serif
-    font-size 0.6875rem
-    line-height 0.6875rem 
-    font-weight bold
-    letter-spacing 0.0344rem
     margin-bottom 1.875rem
     overflow hidden
     text-overflow ellipsis

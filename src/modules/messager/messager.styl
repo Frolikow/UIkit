@@ -13,7 +13,6 @@
     background-color mainBlueLight
     border-radius 0.25rem 0.25rem 0 0
     box-shadow 0 2.125rem mainBlue
-    content '\f075' mainGray134
     text-transform capitalize
     color mainWhite
     font-family Lato
@@ -38,19 +37,18 @@
     height 0
     position relative
 
-    &-send-message
+    &-send-message, &-send-photo
       width 2.1875rem
       height 2.1875rem
-      background no-repeat url('~style/images/messager-message.svg') 
       position relative
+
+    &-send-message
       bottom 2.8125rem
       left 1.25rem
+      background no-repeat url('~style/images/messager-message.svg') 
 
     &-send-photo
-      width 2.1875rem
-      height 2.1875rem
       background-image url('~style/images/messager-photo.svg')
-      position relative
       bottom 5rem
       left 15rem
 
@@ -78,9 +76,8 @@
       letter-spacing 0.0394rem
       margin-bottom 0.9375rem
 
-      &_incoming
+      &_incoming, &_outgoing
         position relative
-        margin-left 3%
 
         &:after
           content ""
@@ -90,24 +87,19 @@
           background-color mainWhite
           transform rotate(45deg)
           position absolute
-          left -0.25rem
           top 45%
           border-radius 0.125rem
+
+      &_incoming
+        margin-left 3%
+        &:after
+          left -0.25rem
+
       &_outgoing
-        position relative
         margin-left 22% 
 
         &:after
-          content ""
-          display block
-          width 0.625rem
-          height 0.625rem
-          background-color mainWhite
-          transform rotate(45deg)
-          position absolute
           right -0.25rem
-          top 45%
-          border-radius 0.125rem
 
       &:first-child
         box-shadow inset 0 0.9375rem 0.625rem -0.625rem mainGray242
