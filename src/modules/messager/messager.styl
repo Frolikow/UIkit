@@ -2,7 +2,7 @@
 
 .messager
   width 18.125rem
-  height 30.625rem
+  height 26.875rem
   background-color mainGray242
   border-radius 0.25rem
   position relative
@@ -16,10 +16,10 @@
     text-transform capitalize
     color mainWhite
     font-family Lato
-    font-size 2.125rem
+    font-size 2rem
     font-weight 100
-    line-height 5.0625rem 
-    letter-spacing -0.0638rem
+    line-height 4.625rem 
+    letter-spacing -0.0563rem
 
   &__photo
     border-radius 50%
@@ -28,7 +28,8 @@
     width 5.25rem
     height 5.25rem
     position relative
-    bottom 0.6875rem
+    right 0.5rem
+    bottom 0.625rem
     box-shadow inset 0 0 0 0.25rem mainGray170
     
   &__icons
@@ -38,33 +39,34 @@
     position relative
 
     &-send-message, &-send-photo
-      width 2.1875rem
-      height 2.1875rem
+      width 1.6875rem
+      height 1.6875rem
       position relative
 
     &-send-message
-      bottom 2.8125rem
-      left 1.25rem
+      bottom 1.875rem
+      left 1.6875rem
       background no-repeat url('~style/images/messager-message.svg') 
 
     &-send-photo
       background-image url('~style/images/messager-photo.svg')
-      bottom 5rem
-      left 15rem
+      bottom 3.5625rem
+      left 14.8125rem
 
   &__chat
     margin-left auto
     margin-right auto
     width 90%
-    max-height 8.75rem
+    max-height 5rem
     overflow-y auto
     margin-bottom 1.875rem
+    padding-top 0.6875rem
 
     &::-webkit-scrollbar
       width 0
 
     &_message
-      width 60%
+      width 80%
       border-radius 0.3125rem
       background-color mainWhite
       padding 0.9375rem 
@@ -72,12 +74,15 @@
       color mainGray134
       font-family Lato
       font-size 0.8125rem
+      line-height 1.125rem
       font-weight 700
       letter-spacing 0.0394rem
       margin-bottom 0.9375rem
 
       &_incoming, &_outgoing
         position relative
+        margin auto
+        margin-bottom 0.625rem
 
         &:after
           content ""
@@ -87,25 +92,17 @@
           background-color mainWhite
           transform rotate(45deg)
           position absolute
-          top 45%
           border-radius 0.125rem
 
       &_incoming
-        margin-left 3%
         &:after
-          left -0.25rem
+          left 6.875rem
+          bottom 3.5625rem
 
       &_outgoing
-        margin-left 22% 
-
         &:after
+          top 45%
           right -0.25rem
-
-      &:first-child
-        box-shadow inset 0 0.9375rem 0.625rem -0.625rem mainGray242
-
-      &:last-child
-        box-shadow inset 0 -0.9375rem 0.625rem -0.625rem mainGray242
 
   &__input
     &-new-message
@@ -119,17 +116,19 @@
       color mainGray116
       font-family Lato
       font-size 0.8125rem
+      line-height 0.9375rem
       font-weight 700
       letter-spacing 0.0394rem
       outline none
       padding 1rem
       border-radius 0.4375rem
+      resize none
 
   &__button-send-message
     display block
     position absolute
-    bottom 1.8125rem
-    left 1.375rem
+    bottom 1.9375rem
+    left 1.5rem
     width 15.1875rem
     height 2rem 
     font-size 1.25rem

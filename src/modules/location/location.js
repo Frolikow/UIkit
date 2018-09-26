@@ -12,9 +12,10 @@ class Location {
     this.initData();
   }
   initMap() {
+    const latCoords = ((+this.$positionLat) * 1.000015);
     const options = {
       zoom: 15,
-      center: { lat: +this.$positionLat, lng: +this.$positionLng },
+      center: { lat: latCoords, lng: +this.$positionLng },
     };
     const myMap = new google.maps.Map(this.$map[0], options);
     const markers = [{
@@ -39,6 +40,7 @@ class Location {
       if (status === 'OK') {
         if (results[1]) {
           this.$address.text(results[0].formatted_address);
+          this.$address.attr('title', results[0].formatted_address);
         }
       }
     });

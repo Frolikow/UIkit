@@ -10,7 +10,7 @@
     font-style normal
 
   &__day
-    height 3.875rem
+    height 5rem
     position relative
     display block
     z-index 1
@@ -23,11 +23,12 @@
     font-family Lato, sans-serif
     width 100%
     text-align center
-    padding-top 1.25rem
+    padding-top 0.9375rem
+    padding-bottom 0.9375rem
 
   .ui-datepicker-header //голова календаря
     width 17.4375rem
-    height 4.4375rem
+    height 2.5625rem
     background-color mainRedLight
     color mainWhite
     position relative
@@ -43,7 +44,7 @@
       font-size 0
       position absolute 
       bottom 0.9375rem
-      left 1rem
+      left 1.1875rem
       z-index 1
       transform rotate(225deg)
 
@@ -75,7 +76,7 @@
         display none
 
   .ui-datepicker-calendar  //таблица календаря
-    width 17.4375rem
+    width 101%
     height 12.4375rem
     background-color mainWhite
     border-collapse collapse
@@ -93,12 +94,13 @@
       td //ячейки чисел
         width 2.4375rem
         text-align center
-        height 2.4375rem
+        height 2.3125rem
         background-color mainGray242
         border 0.125rem solid mainWhite
 
         .ui-state-default //число
           width 1.1875rem
+          line-height 1.5625rem
           height 0.8125rem
           color mainGray134
           font-family "Source Sans Pro", sans-serif
@@ -133,7 +135,7 @@
     text-transform uppercase
     letter-spacing 0.0406rem
     text-align left
-    padding-left 1.125rem
+    padding-left 1.1875rem
     outline none
     border none
     border-radius 0 0 0.25rem 0.25rem

@@ -17,7 +17,7 @@ mixin messager()
         form
             .messager__chat.js-messager__chat
 
-            input.messager__input-new-message.js-messager__input-new-message(placeholder = 'Your message' type = 'text')
+            textarea.messager__input-new-message.js-messager__input-new-message(placeholder = 'Your message' type = 'text')
             .messager__button-send-message.js-messager__button-send-message
                 +standard-button({
                     size: 'custom',
