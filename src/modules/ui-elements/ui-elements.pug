@@ -61,11 +61,7 @@ mixin ui-elements()
                 +percentages({
                     value: '89'
                 })
-                +pie-chart({
-                    value1: 10,
-                    value2: 25, 
-                    value3: 30
-                })
+                +pie-chart({values: [10, 25, 30]})
 
         .ui-elements__item
             h2.ui-elements__title sliders
