@@ -13,11 +13,11 @@ class Button {
       const xPos = event.pageX - btnOffset.left;
       const yPos = event.pageY - btnOffset.top;
       if ($(this).hasClass('standard-button_color_blue-reverse')) {
-        $div.addClass('standard-button__ripple-effect_reverse_blue');
+        $div.addClass('standard-button__ripple-effect standard-button__ripple-effect_color_blue');
       } else if ($(this).hasClass('standard-button_color_red-reverse')) {
-        $div.addClass('standard-button__ripple-effect_reverse_red');
+        $div.addClass('standard-button__ripple-effect standard-button__ripple-effect_color_red');
       } else {
-        $div.addClass('standard-button__ripple-effect');
+        $div.addClass('standard-button__ripple-effect standard-button__ripple-effect_color_white');
       }
       $div.css({
         top: yPos,
