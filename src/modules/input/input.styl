@@ -19,20 +19,25 @@
       margin-bottom 0.75rem
       padding-left 0.625rem
 
-    &_type_name:valid + ^[0]__info:after
-        content "thanks"
-        background-color mainBlueLight
+    &_type
+      &_name:valid
+      &_email:valid 
+        & + ^[0]__info:after
+          content "thanks"
+          background-color mainBlueLight
 
-    &_type_email:valid + ^[0]__info:after
-        content "thanks"
-        background-color mainBlueLight
+        & + ^[0]__info:before
+          background-color mainBlueLight
 
-    &_type_name:valid + ^[0]__info:before
-      background-color mainBlueLight
+      &_name:invalid
+      &_email:invalid 
+        & + ^[0]__info:after
+          content "error"
+          background-color mainRedLight
 
-    &_type_email:valid + ^[0]__info:before
-      background-color mainBlueLight
-  
+        & + ^[0]__info:before
+          background-color mainRedLight
+
   &__info
     width 0
     height 0
@@ -42,7 +47,6 @@
       width 0.375rem
       height 0.375rem
       transform rotate(45deg)
-      background-color mainRedLight
       position relative
       left 13.375rem
       bottom 2.375rem
@@ -50,7 +54,7 @@
       border-radius 0.0625rem
       
     &:after
-      content "error"
+      content ""
       width 4.5rem
       height 1.75rem
       display inline-block
@@ -66,5 +70,3 @@
       text-transform uppercase
       letter-spacing 0.0313rem
       text-align center
-      background-color mainRedLight
-
