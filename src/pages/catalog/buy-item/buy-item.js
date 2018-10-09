@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $(() => {
   const params = window.location.search.replace('?', '').split('&').reduce(
     (p, e) => {
@@ -68,6 +66,6 @@ $(() => {
     console.log('--/--/--/--/--/--/--/--/--/--/--/--/--/--');
   }
 
-  $('.standard-button').on('click', alertFinalDoc);
+  $('.order-settings__button-send-request').on('click', alertFinalDoc);
 });
 

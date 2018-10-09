@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 $.fn.highlight = function (pat) {
   function innerHighlight(node, pat) {
     let skip = 0;

@@ -1,6 +1,7 @@
+import 'jquery';
+
 import './../node_modules/jquery-ui/ui/widgets/slider';
 import './../node_modules/jquery-ui/ui/widgets/datepicker';
-
 import './style/base.styl';
 
 function importAll(r) {

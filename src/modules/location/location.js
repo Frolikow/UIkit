@@ -1,5 +1,4 @@
 /* global google */
-import $ from 'jquery';
 
 class Location {
   constructor(element) {

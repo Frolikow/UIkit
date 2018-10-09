@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class FeedbackForm {
   constructor(element) {
     this.$form = $(element);

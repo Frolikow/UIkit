@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class StepSlider {
   constructor(element) {
     this.$slider = $(element);

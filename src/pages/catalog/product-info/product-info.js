@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class ProductPage {
   constructor(element) {
     this.fullProductMedia = $(element);

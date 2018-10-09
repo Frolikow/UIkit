@@ -1,4 +1,3 @@
-import $ from 'jquery';
 
 class Datepicker {
   constructor(element) {

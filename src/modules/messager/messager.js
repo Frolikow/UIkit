@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Messaging {
   constructor(element) {
     this.$messagerBlock = $(element);
