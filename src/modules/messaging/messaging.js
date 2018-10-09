@@ -1,9 +1,9 @@
 class Messaging {
   constructor(element) {
-    this.$messagerBlock = $(element);
-    this.$messaging = this.$messagerBlock.find('.js-messager__chat');
-    this.$buttonSendMessage = this.$messagerBlock.find('.js-messager__button-send-message');
-    this.$inputNewMessage = this.$messagerBlock.find('.js-messager__input-new-message');
+    this.$messagingBlock = $(element);
+    this.$messaging = this.$messagingBlock.find('.js-messaging__chat');
+    this.$buttonSendMessage = this.$messagingBlock.find('.js-messaging__button-send-message');
+    this.$inputNewMessage = this.$messagingBlock.find('.js-messaging__input-new-message');
     this.createOutgoingMessage();
     this.loadMessageFromBase();
   }
@@ -25,7 +25,7 @@ class Messaging {
   }
   addNewMessage(messageObj) {
     const newMessage = document.createElement('div');
-    newMessage.className = `messager__chat_message_${messageObj.type} messager__chat_message`;
+    newMessage.className = `messaging__chat_message_${messageObj.type} messaging__chat_message`;
     newMessage.innerHTML = messageObj.text;
     this.$messaging.append(newMessage);
   }
@@ -44,7 +44,7 @@ class Messaging {
 }
 
 $(document).ready(() => {
-  $('.js-messager').each(function () {
+  $('.js-messaging').each(function () {
     new Messaging(this);
   });
 });

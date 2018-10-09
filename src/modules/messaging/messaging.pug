@@ -1,0 +1,27 @@
+mixin messaging() 
+    .messaging.js-messaging
+        .messaging__header sarah brown
+        .messaging__photo
+            +user-profile({
+                imageName: 'wolf.jpeg',
+                userName: 'Sarah Brown', 
+                profession: 'developer'
+            })
+        .messaging__icons
+            a.messaging__icons-link(href="/mock-address/change-me")
+                .messaging__icons-send-message
+                    .messaging__icon
+            a.messaging__icons-link(href="/mock-address/change-me")
+                .messaging__icons-send-photo
+                    .messaging__icon
+        form.messaging__form
+            .messaging__chat.js-messaging__chat
+
+            textarea.messaging__input-new-message.js-messaging__input-new-message(placeholder = 'Your message' type = 'text')
+            .messaging__button-send-message.js-messaging__button-send-message
+                +standard-button({
+                    size: 'custom',
+                    color: 'blue', 
+                    value: 'reply', 
+                    type: 'submit'
+                }) 

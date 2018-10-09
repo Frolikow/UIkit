@@ -1,0 +1,25 @@
+include ./../../../modules/standard-button/standard-button
+
+mixin button-block
+    .button-block
+        a.button-block__link(href = './first-page.html') 
+            +standard-button({
+                size: 'big',
+                color: 'blue',
+                value: 'Главная',
+                type: 'button'
+            })
+        a.button-block__link(href = './catalog.html')
+            +standard-button({
+                size: 'big',
+                color: 'blue',
+                value: 'Каталог',
+                type: 'button'
+            })
+        a.button-block__link(href = './contacts.html')
+            +standard-button({
+                size: 'big',
+                color: 'blue',
+                value: 'Контакты',
+                type: 'button'
+            })

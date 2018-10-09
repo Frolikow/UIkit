@@ -1,6 +1,5 @@
 mixin news({imageName, newsTitle, newsDate, newsText})
-    -
-        let image = require(`style/images/${imageName}`);
+    - let image = require(`style/images/${imageName}`);
 
     .news
         .news__image(style = `background:url(${image}) no-repeat center / cover`)
