@@ -1,29 +1,44 @@
 import $ from 'jquery';
 
-$(() => {
-  const params = window.location.search.replace('?', '').split('&').reduce(
-    (p, e) => {
-      const a = e.split('=');
-      p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
-      return p;
-    },
-    {},
-  );
-
-  for (let count = 0; count < 4;) {
-    count += 1;
-    const fullProductMedia = document.getElementsByClassName('js-product-page-content__media')[0];
-    const img = document.createElement('IMG');
-    img.src = require(`../../../style/images/productImages/${params.imageName}${count}.jpeg`);
-    img.className = 'product-page-content__media-picture';
-    fullProductMedia.appendChild(img);
+class ProductPage {
+  constructor(element) {
+    this.fullProductMedia = $(element);
+    this.productTitle = $('.js-product-page-content__info-title');
+    this.productPrice = $('.js-product-page-content__info-buy-price');
+    this.productBuy = $('.js-product-page-content__buy-item');
+    this.params = [];
+    this.initData();
   }
-  const productTitle = document.getElementsByClassName('js-product-page-content__info-title')[0];
-  productTitle.innerHTML = params.carName;
+  initData() {
+    this.params = window.location.search.replace('?', '').split('&').reduce(
+      (p, e) => {
+        const a = e.split('=');
+        p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+        return p;
+      },
+      {},
+    );
+    if (this.params.imageName !== undefined) {
+      this.render();
+    }
+  }
+  render() {
+    let count = 0;
+    while (count < 4) {
+      count += 1;
+      const img = document.createElement('IMG');
+      img.src = require(`../../../style/images/productImages/${this.params.imageName}${count}.jpeg`);
+      img.className = 'product-page-content__media-picture';
+      this.fullProductMedia.append(img);
+    }
+    this.productTitle.html(this.params.carName);
+    this.productPrice.html(`${this.params.carPrice} руб./час`);
+    this.productBuy.attr('href', `./buy-item.html?imageName=${this.params.imageName}&carName=${this.params.carName}&carPrice=${this.params.carPrice}`);
+  }
+}
 
-  const productPrice = document.getElementsByClassName('js-product-page-content__info-buy-price')[0];
-  productPrice.innerHTML = `${params.carPrice} руб./час`;
-
-  const buyItem = document.getElementsByClassName('js-product-page-content__buy-item')[0];
-  buyItem.href = `./buy-item.html?imageName=${params.imageName}&carName=${params.carName}&carPrice=${params.carPrice}`;
+$(document).ready(() => {
+  $('.js-product-page-content__media').each(function () {
+    new ProductPage(this);
+  });
 });

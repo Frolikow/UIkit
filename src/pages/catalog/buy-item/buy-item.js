@@ -10,7 +10,7 @@ $(() => {
     {},
   );
 
-  const buyItem_currentCar = document.getElementsByClassName('order-settings__current-car')[0];
+  const buyItem_currentCar = document.getElementsByClassName('order-settings__current-car');
   buyItem_currentCar.innerHTML = `<p>Выбранный авто: <b>${params.carName}</b>;</p><p>Цена аренды: <b>${params.carPrice}</b> руб./час.</p>`;
   const selectedAuto = `Выбранный авто: ${params.carName};\nЦена аренды: ${params.carPrice} руб./час.`;
 

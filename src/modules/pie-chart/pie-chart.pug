@@ -1,25 +1,25 @@
 -
-  function sum() {
-    var result = 0;
-    for (var i = 0; i < arguments.length; i++) {
-      result += arguments[i];
-      }
-    return result;
-    }
+    function sum(values) {
+        var result = 0;
+        values.forEach((el,index)=> {
+            result += parseInt(values[index]);
+            });
+        return result;
+        };
 
 mixin pie-chart(values)
 
-  - valueSum = sum(values);
-  if (valueSum > 100)
-    .pie-chart
-      .pie-chart__value= ('ERR. >100')
-  else if (valueSum < 0)
-    .pie-chart
-      .pie-chart__value= ('ERR. <0')
-  else
-    .pie-chart
-      svg.pie-chart__chart
-        circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_light-gray(transform = "rotate(-90)", style = "stroke-dasharray: 15.5rem 25.5rem", r = "39.5", cx = "-50", cy = "50")
-        circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_blue(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155 + values[1] * 0.155 + values[2] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")
-        circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_red(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155 + values[1] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")
-        circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_dark-gray(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")
+    - valueSum = sum(values);
+    if (valueSum > 100)
+        .pie-chart
+            .pie-chart__value= ('ERR. >100')
+    else if (valueSum < 0)
+        .pie-chart
+            .pie-chart__value= ('ERR. <0')
+    else
+        .pie-chart
+            svg.pie-chart__chart
+                circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_light-gray(transform = "rotate(-90)", style = "stroke-dasharray: 15.5rem 25.5rem", r = "39.5", cx = "-50", cy = "50")
+                circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_blue(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155 + values[1] * 0.155 + values[2] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")
+                circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_red(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155 + values[1] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")
+                circle.pie-chart__chart-part.pie-chart__chart-part_fill.pie-chart__chart-part_fill_dark-gray(transform = "rotate(-90)", style = `stroke-dasharray: ${values[0] * 0.155}rem 25.5rem`, r = "39.5", cx = "-50", cy = "50")

@@ -18,19 +18,23 @@ class Location {
       center: { lat: latCoords, lng: +this.$positionLng },
     };
     const myMap = new google.maps.Map(this.$map[0], options);
-    const markers = [{
+
+    function addMarkers(markerData) {
+      const marker = new google.maps.Marker({
+        position: markerData.coordinates,
+        map: myMap,
+      });
+      if (markerData.image) {
+        marker.setIcon(markerData.image);
+      }
+    }
+    const markersList = [{
       coordinates: { lat: +this.$positionLat, lng: +this.$positionLng },
       image: require('style/images/map-placeholder.svg'),
     }];
-    for (let i = 0; i < markers.length; i += 1) {
-      const marker = new google.maps.Marker({
-        position: markers[i].coordinates,
-        map: myMap,
-      });
-      if (markers[i].image) {
-        marker.setIcon(markers[i].image);
-      }
-    }
+    markersList.forEach((el, index) => {
+      addMarkers(markersList[index]);
+    });
   }
 
   initData() {

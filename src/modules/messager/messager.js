@@ -8,7 +8,6 @@ class Messaging {
     this.$inputNewMessage = this.$messagerBlock.find('.js-messager__input-new-message');
     this.createOutgoingMessage();
     this.loadMessageFromBase();
-    this.addNewMessage();
   }
   createOutgoingMessage() {
     this.$buttonSendMessage.on('click', (e) => {
@@ -40,10 +39,8 @@ class Messaging {
     }, {
       type: 'incoming', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
     }];
-    let i = 0;
-    messageBase.forEach(() => {
-      this.addNewMessage(messageBase[i]);
-      i += 1;
+    messageBase.forEach((el, index) => {
+      this.addNewMessage(messageBase[index]);
     });
   }
 }

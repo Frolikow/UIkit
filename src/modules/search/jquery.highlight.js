@@ -16,9 +16,9 @@ $.fn.highlight = function (pat) {
         skip = 1;
       }
     } else if (node.nodeType === 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
-      for (let i = 0; i < node.childNodes.length; i += 1) {
-        i += innerHighlight(node.childNodes[i], pat);
-      }
+      node.childNodes.forEach((el, index) => {
+        index += innerHighlight(node.childNodes[index], pat);
+      });
     }
     return skip;
   }
