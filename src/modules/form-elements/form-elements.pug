@@ -1,0 +1,23 @@
+include ../form-feedback/form-feedback
+include ../toggles/toggles
+include ../tick-box/tick-box 
+
+mixin form-elements
+    .form-elements
+        .form-elements__form
+            +form-feedback
+        .form-elements__toggles-and-tick-box
+            h2.form-elements__title toggles
+            .form-elements__toggles
+                +toggles
+                +toggles
+            h2.form-elements__title tick boxes
+            .form-elements__tick-box
+                +tick-box({
+                    name: '', 
+                    value: ''
+                })
+                +tick-box({
+                    name: '', 
+                    value: ''
+                })

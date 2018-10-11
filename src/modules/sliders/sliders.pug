@@ -1,0 +1,18 @@
+include ../standard-slider/standard-slider
+include ../step-slider/step-slider
+
+mixin sliders
+  .sliders
+    .sliders__standard-slider
+      +standard-slider({
+        minimum: '0', 
+        value: '40', 
+        maximum: '100'
+      })
+    .sliders__step-slider
+      +step-slider({
+        minimum:'0', 
+        value: '75', 
+        maximum: '100',
+        step: '25'
+      })

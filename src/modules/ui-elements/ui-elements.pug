@@ -1,189 +1,62 @@
-include ../standard-button/standard-button
-include ../arrow-button/arrow-button
-include ../percentages/percentages
-include ../pie-chart/pie-chart
-include ../standard-slider/standard-slider
-include ../step-slider/step-slider
-include ../stages/stages
-include ../form-feedback/form-feedback
-include ../toggles/toggles
-include ../tick-box/tick-box 
-include ../search/search
-include ../drop-down/drop-down
-include ../user-profile/user-profile
-include ../news/news
-include ../event/event
-include ../location/location
-include ../calendar/calendar
-include ../messaging/messaging
-include ../video-player/video-player
-
+include ../standard-buttons/standard-buttons
+include ../arrow-buttons/arrow-buttons
+include ../percentages-pie-chart/percentages-pie-chart
+include ../sliders/sliders
+include ../stages-block/stages-block
+include ../form-elements/form-elements
+include ../search-drop-down/search-drop-down
+include ../user-profiles/user-profiles
+include ../news-events/news-events
+include ../location-block/location-block
+include ../calendar-block/calendar-block
+include ../messaging-block/messaging-block
+include ../video-player-block/video-player-block
 mixin ui-elements()
     .ui-elements
         .ui-elements__item
-            //- доступные размеры small/big / custom
-            //- доступные цвета blue/red/blue-reverse/red-reverse
-            //- текст кнопки value 
-            //- type кнопки button/submit
             h2.ui-elements__title standard buttons
-            .ui-elements__element.ui-elements__standart-buttons
-                .ui-elements__standart-buttons_row_first
-                    each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
-                        +standard-button(item)
-                .ui-elements__standart-buttons_row_second
-                    each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
-                        +standard-button(item)
-                .ui-elements__standart-buttons_row_third
-                    each item in [{size: 'small', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'red-reverse', value: 'button', type: 'button'}, {size: 'small', color: 'red-reverse', value: 'button', type: 'button'}]
-                        +standard-button(item)
+            +standard-buttons
 
         .ui-elements__item
             //- доступные направления left/right
             //- доступные цвета white/green/gray
             h2.ui-elements__title arrow buttons
-            .ui-elements__element.ui-elements__arrow-buttons
-                each item in[{direction: 'left', color: 'white'}, {direction: 'right', color: 'white'}, {direction: 'left', color: 'gray'}, {direction: 'right', color: 'gray'}, {direction: 'left', color: 'green'}, {direction: 'right', color: 'green'}]
-                    +arrow-button(item)
+            +arrow-buttons
 
         .ui-elements__item
             h2.ui-elements__title percentages / pie chart
-            .ui-elements__element.ui-elements__percentages-pie-chart
-                //- 0..100
-                +percentages({
-                    value: '0'
-                })
-                +percentages({
-                    value: '38'
-                })
-                +percentages({
-                    value: '62'
-                })
-                +percentages({
-                    value: '89'
-                })
-                +pie-chart([10, 25, 30])
+            +percentages-pie-chart
 
         .ui-elements__item
             h2.ui-elements__title sliders
-            .ui-elements__element.ui-elements__sliders
-                .ui-elements__standart-slider
-                    +standard-slider({
-                        minimum: '0', 
-                        value: '40', 
-                        maximum: '100'
-                    })
-                .ui-elements__step-slider
-                    +step-slider({
-                        minimum:'0', 
-                        value: '75', 
-                        maximum: '100',
-                        step: '25'
-                    })
+            +sliders
 
         .ui-elements__item
             h2.ui-elements__title stages
-            .ui-elements__element.ui-elements__stages
-                +stages({
-                    length: 5, 
-                    value: 3
-                })
+            +stages-block
 
         .ui-elements__item
             h2.ui-elements__title form elements
-            .ui-elements__element.ui-elements__form-elements
-                .ui-elements__form
-                    +form-feedback
-                .ui-elements__toggles-and-tick-box
-                    h2.ui-elements__title toggles
-                    .ui-elements__toggles
-                        +toggles
-                        +toggles
-                    h2.ui-elements__title tick boxes
-                    .ui-elements__tick-box
-                        +tick-box({
-                            name: '', 
-                            value: ''
-                        })
-                        +tick-box({
-                            name: '', 
-                            value: ''
-                        })
-
+            +form-elements
+                
         .ui-elements__item
             .ui-elements__element.ui-elements__search-drop-down-user-profile
-                .ui-elements__search-drop-down
-                    h2.ui-elements__title search / drop down
-                    .ui-elements__search
-                        +search
-                        +search
-                    .ui-elements__drop-down
-                        +drop-down({
-                            name: 'defaultSelect', 
-                            values: ['Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']
-                        })
-                .ui-elements__user-profiles
-                    h2.ui-elements__title user profile
-                    .ui-elements__user-profile
-                        +user-profile({
-                            imageName: 'griffin.jpeg',
-                            userName:'John Smith', 
-                            profession: 'ux designer'
-                        })
-                    .ui-elements__user-profile
-                        +user-profile({
-                            imageName: 'wolf.jpeg',
-                            userName: 'Sarah Brown', 
-                            profession: 'developer'
-                        })
-
+                +search-drop-down
+                +user-profiles
+                
         .ui-elements__item
             h2.ui-elements__title news & events
-            .ui-elements__element.ui-elements__news-events
-                .ui-elements__news
-                    +news({
-                        imageName: 'bike.jpeg',
-                        newsTitle: "It's all going downhill", 
-                        newsDate: '24 august 2013', 
-                        newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'
-                    })
-                .ui-elements__events
-                    +event({
-                        imageName: 'city.jpeg',
-                        eventDay: '24', 
-                        eventMouth: 'aug', 
-                        eventTitle: 'This is the title', 
-                        eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-                    })
-
+            +news-events
+                
         .ui-elements__item
             h2.ui-elements__title location
-            .ui-elements__element.ui-elements__location
-                +location({
-                    longitude: 56.4531, 
-                    latitude: 84.975643
-                })
-                //-    (56.4531, 84.975643) офис
-                //-    (55.751244, 37.618423) Москва
-                //-    (59.934280, 30.335099) Санкт-Петербург
-                //-    (56.453651, 84.948738) Лагерный сад
+            +location-block
 
         .ui-elements__item
             .ui-elements__element.ui-elements__calendar-messaging
-                .ui-elements__calendar
-                    h2.ui-elements__title calendar
-                    .ui-elements__calendar-element
-                        +calendar
-                .ui-elements__messaging
-                    h2.ui-elements__title messaging
-                    .ui-elements__messaging-element
-                        +messaging
-
+                +calendar-block
+                +messaging-block
 
         .ui-elements__item
             h2.ui-elements__title video
-            .ui-elements__element.ui-elements__video-player
-                +video-player({
-                    url: "https://player.vimeo.com/video/62980495"
-                })
-                //- https://www.youtube.com/embed/rPmGtZAUxNs
-                //- https://player.vimeo.com/video/62980495
+            +video-player-block
