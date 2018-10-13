@@ -11,6 +11,6 @@ function importAll(r) {
 importAll(require.context('./modules/', true, /^\.\/.*\.styl$/));
 importAll(require.context('./pages/', true, /^\.\/.*\.styl$/));
 
+importAll(require.context('./favicons/', true, /^\.\/.*\.js$/));
 importAll(require.context('./modules/', true, /^\.\/.*\.js$/));
 importAll(require.context('./pages/', true, /^\.\/.*\.js$/));
-
