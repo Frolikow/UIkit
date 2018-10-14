@@ -2,7 +2,7 @@ include ../user-profile/user-profile
 
 mixin user-profiles
     .user-profiles
-        h2.user-profiles__title user profile
+        +title('user profile')
         .user-profiles__user-profile
             +user-profile({
                 imageName: 'griffin.jpeg',

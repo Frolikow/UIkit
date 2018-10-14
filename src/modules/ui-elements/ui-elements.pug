@@ -1,42 +1,36 @@
+include ../title/title
 include ../standard-buttons/standard-buttons
 include ../arrow-buttons/arrow-buttons
 include ../percentages-pie-chart/percentages-pie-chart
 include ../sliders/sliders
-include ../stages-block/stages-block
+include ../stages-container/stages-container
 include ../form-elements/form-elements
 include ../search-drop-down/search-drop-down
 include ../user-profiles/user-profiles
 include ../news-events/news-events
-include ../location-block/location-block
-include ../calendar-block/calendar-block
-include ../messaging-block/messaging-block
-include ../video-player-block/video-player-block
+include ../location-container/location-container
+include ../calendar-container/calendar-container
+include ../messaging-container/messaging-container
+include ../video-player-container/video-player-container
+
 mixin ui-elements()
     .ui-elements
         .ui-elements__item
-            h2.ui-elements__title standard buttons
             +standard-buttons
 
         .ui-elements__item
-            //- доступные направления left/right
-            //- доступные цвета white/green/gray
-            h2.ui-elements__title arrow buttons
             +arrow-buttons
 
         .ui-elements__item
-            h2.ui-elements__title percentages / pie chart
             +percentages-pie-chart
 
         .ui-elements__item
-            h2.ui-elements__title sliders
             +sliders
 
         .ui-elements__item
-            h2.ui-elements__title stages
-            +stages-block
+            +stages-container
 
         .ui-elements__item
-            h2.ui-elements__title form elements
             +form-elements
                 
         .ui-elements__item
@@ -45,18 +39,15 @@ mixin ui-elements()
                 +user-profiles
                 
         .ui-elements__item
-            h2.ui-elements__title news & events
             +news-events
                 
         .ui-elements__item
-            h2.ui-elements__title location
-            +location-block
+            +location-container
 
         .ui-elements__item
             .ui-elements__element.ui-elements__calendar-messaging
-                +calendar-block
-                +messaging-block
+                +calendar-container
+                +messaging-container
 
         .ui-elements__item
-            h2.ui-elements__title video
-            +video-player-block
+            +video-player-container

@@ -1,7 +1,8 @@
 include ../location/location
 
-mixin location-block
-    .location-block 
+mixin location-container
+    +title('location')
+    .location-container 
         +location({
             longitude: 56.4531, 
             latitude: 84.975643
