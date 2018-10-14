@@ -1,13 +1,13 @@
 include ../title/title
-include ../standard-buttons/standard-buttons
-include ../arrow-buttons/arrow-buttons
-include ../percentages-pie-chart/percentages-pie-chart
-include ../sliders/sliders
+include ../standard-buttons-container/standard-buttons-container
+include ../arrow-buttons-container/arrow-buttons-container
+include ../percentages-pie-chart-container/percentages-pie-chart-container
+include ../sliders-container/sliders-container
 include ../stages-container/stages-container
-include ../form-elements/form-elements
-include ../search-drop-down/search-drop-down
-include ../user-profiles/user-profiles
-include ../news-events/news-events
+include ../form-elements-container/form-elements-container
+include ../search-drop-down-container/search-drop-down-container
+include ../user-profiles-container/user-profiles-container
+include ../news-events-container/news-events-container
 include ../location-container/location-container
 include ../calendar-container/calendar-container
 include ../messaging-container/messaging-container
@@ -16,30 +16,30 @@ include ../video-player-container/video-player-container
 mixin ui-elements()
     .ui-elements
         .ui-elements__item
-            +standard-buttons
+            +standard-buttons-container
 
         .ui-elements__item
-            +arrow-buttons
+            +arrow-buttons-container
 
         .ui-elements__item
-            +percentages-pie-chart
+            +percentages-pie-chart-container
 
         .ui-elements__item
-            +sliders
+            +sliders-container
 
         .ui-elements__item
             +stages-container
 
         .ui-elements__item
-            +form-elements
+            +form-elements-container
                 
         .ui-elements__item
             .ui-elements__element.ui-elements__search-drop-down-user-profile
-                +search-drop-down
-                +user-profiles
+                +search-drop-down-container
+                +user-profiles-container
                 
         .ui-elements__item
-            +news-events
+            +news-events-container
                 
         .ui-elements__item
             +location-container

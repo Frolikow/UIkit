@@ -1,16 +1,16 @@
 include ../standard-slider/standard-slider
 include ../step-slider/step-slider
 
-mixin sliders
-  +title('sliders')
-  .sliders
-    .sliders__standard-slider
+mixin sliders-container
+  +title('sliders-container')
+  .sliders-container
+    .sliders-container__standard-slider
       +standard-slider({
         minimum: '0', 
         value: '40', 
         maximum: '100'
       })
-    .sliders__step-slider
+    .sliders-container__step-slider
       +step-slider({
         minimum:'0', 
         value: '75', 

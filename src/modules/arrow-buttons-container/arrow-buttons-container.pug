@@ -1,9 +1,9 @@
 include ../arrow-button/arrow-button
 
-mixin arrow-buttons
+mixin arrow-buttons-container
     //- доступные направления left/right
     //- доступные цвета white/green/gray
     +title('arrow buttons')
-    .arrow-buttons
+    .arrow-buttons-container
         each item in[{direction: 'left', color: 'white'}, {direction: 'right', color: 'white'}, {direction: 'left', color: 'gray'}, {direction: 'right', color: 'gray'}, {direction: 'left', color: 'green'}, {direction: 'right', color: 'green'}]
             +arrow-button(item)

@@ -1,15 +1,15 @@
 include ../user-profile/user-profile
 
-mixin user-profiles
-    .user-profiles
+mixin user-profiles-container
+    .user-profiles-container
         +title('user profile')
-        .user-profiles__user-profile
+        .user-profiles-container__user-profile
             +user-profile({
                 imageName: 'griffin.jpeg',
                 userName:'John Smith', 
                 profession: 'ux designer'
             })
-        .user-profiles__user-profile
+        .user-profiles-container__user-profile
             +user-profile({
                 imageName: 'wolf.jpeg',
                 userName: 'Sarah Brown', 

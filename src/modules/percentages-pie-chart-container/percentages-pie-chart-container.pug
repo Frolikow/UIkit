@@ -1,9 +1,9 @@
 include ../percentages/percentages
 include ../pie-chart/pie-chart
 
-mixin percentages-pie-chart
+mixin percentages-pie-chart-container
   +title('percentages / pie chart')
-  .percentages-pie-chart
+  .percentages-pie-chart-container
     //- 0..100
     +percentages({
       value: '0'

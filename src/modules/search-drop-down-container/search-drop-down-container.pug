@@ -1,13 +1,13 @@
 include ../search/search
 include ../drop-down/drop-down
 
-mixin search-drop-down
-    .search-drop-down
+mixin search-drop-down-container
+    .search-drop-down-container
         +title('search / drop down')
-        .search-drop-down__search
+        .search-drop-down-container__search
             +search
             +search
-        .search-drop-down__drop-down
+        .search-drop-down-container__drop-down
             +drop-down({
                 name: 'defaultSelect', 
                 values: ['Choose An Option', 'some text 1', 'some text 2', 'some text 3', 'some text 4', 'some text 5']

@@ -1,18 +1,19 @@
+include ../title/title
 include ../standard-button/standard-button
 
-mixin standard-buttons
+mixin standard-buttons-container
     //- доступные размеры small/big / custom
     //- доступные цвета blue/red/blue-reverse/red-reverse
     //- текст кнопки value 
     //- type кнопки button/submit 
     +title('standard buttons')
-    .standard-buttons
-        .standard-buttons__row_first
+    .standard-buttons-container
+        .standard-buttons-container__row_first
             each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
                 +standard-button(item)
-        .standard-buttons__row_second
+        .standard-buttons-container__row_second
             each item in [{size: 'small', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'blue', value: 'button', type: 'button'}, {size: 'big', color: 'red', value: 'button', type: 'button'}, {size: 'small', color: 'red', value: 'button', type: 'button'}]
                 +standard-button(item)
-        .standard-buttons__row_third
+        .standard-buttons-container__row_third
             each item in [{size: 'small', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'blue-reverse', value: 'button', type: 'button'}, {size: 'big', color: 'red-reverse', value: 'button', type: 'button'}, {size: 'small', color: 'red-reverse', value: 'button', type: 'button'}]
                 +standard-button(item)

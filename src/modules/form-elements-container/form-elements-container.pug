@@ -2,18 +2,18 @@ include ../form-feedback/form-feedback
 include ../toggles/toggles
 include ../tick-box/tick-box 
 
-mixin form-elements
+mixin form-elements-container
     +title('form elements')
-    .form-elements
-        .form-elements__form
+    .form-elements-container
+        .form-elements-container__form
             +form-feedback
-        .form-elements__toggles-and-tick-box
+        .form-elements-container__toggles-and-tick-box
             +title('toggles')
-            .form-elements__toggles
+            .form-elements-container__toggles
                 +toggles
                 +toggles
             +title('tick boxes')
-            .form-elements__tick-box
+            .form-elements-container__tick-box
                 +tick-box({
                     name: '', 
                     value: ''
