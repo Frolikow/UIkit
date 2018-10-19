@@ -2,19 +2,20 @@ include ../percentages/percentages
 include ../pie-chart/pie-chart
 
 mixin percentages-pie-chart-container
-  +title('percentages / pie chart')
-  .percentages-pie-chart-container
-    //- 0..100
-    +percentages({
-      value: '0'
-    })
-    +percentages({
-      value: '38'
-    })
-    +percentages({
-      value: '62'
-    })
-    +percentages({
-      value: '89'
-    })
-    +pie-chart([10, 25, 30])
+    .percentages-pie-chart-container
+        +title('percentages / pie chart')
+        .percentages-pie-chart-container__items
+            //- 0..100
+            +percentages({
+                value: '0'
+            })
+            +percentages({
+                value: '38'
+            })
+            +percentages({
+                value: '62'
+            })
+            +percentages({
+                value: '89'
+            })
+            +pie-chart([10, 25, 30])

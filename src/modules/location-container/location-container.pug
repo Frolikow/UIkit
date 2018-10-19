@@ -1,13 +1,14 @@
 include ../location/location
 
 mixin location-container
-    +title('location')
     .location-container 
-        +location({
-            longitude: 56.4531, 
-            latitude: 84.975643
-        })
-            //-    (56.4531, 84.975643) офис
-            //-    (55.751244, 37.618423) Москва
-            //-    (59.934280, 30.335099) Санкт-Петербург
-            //-    (56.453651, 84.948738) Лагерный сад
+        +title('location')
+        .location-container__location
+            +location({
+                longitude: 56.4531, 
+                latitude: 84.975643
+            })
+                //-    (56.4531, 84.975643) офис
+                //-    (55.751244, 37.618423) Москва
+                //-    (59.934280, 30.335099) Санкт-Петербург
+                //-    (56.453651, 84.948738) Лагерный сад

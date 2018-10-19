@@ -15,39 +15,37 @@ include ../video-player-container/video-player-container
 
 mixin ui-elements()
     .ui-elements
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_standard-buttons
             +standard-buttons-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_arrow-buttons
             +arrow-buttons-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_percentages-pie-chart
             +percentages-pie-chart-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_sliders
             +sliders-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_stages
             +stages-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_form-elements
             +form-elements-container
                 
-        .ui-elements__item
-            .ui-elements__element.ui-elements__search-drop-down-user-profile
-                +search-drop-down-container
-                +user-profiles-container
+        .ui-elements__item.ui-elements__item_search-drop-down-user-profile
+            +search-drop-down-container
+            +user-profiles-container
                 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_news-events
             +news-events-container
                 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_location
             +location-container
 
-        .ui-elements__item
-            .ui-elements__element.ui-elements__calendar-messaging
-                +calendar-container
-                +messaging-container
+        .ui-elements__item.ui-elements__item_calendar-messaging
+            +calendar-container
+            +messaging-container
 
-        .ui-elements__item
+        .ui-elements__item.ui-elements__item_video-player
             +video-player-container

@@ -1,9 +1,10 @@
 include ../stages/stages
 
 mixin stages-container
-  +title('stages')
-  .stages-container
-    +stages({
-      length: 5, 
-      value: 3
-})
+    .stages-container
+        +title('stages')
+        .stages-container__stages
+            +stages({
+                length: 5, 
+                value: 3
+            })

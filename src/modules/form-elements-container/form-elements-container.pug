@@ -3,22 +3,23 @@ include ../toggles/toggles
 include ../tick-box/tick-box 
 
 mixin form-elements-container
-    +title('form elements')
     .form-elements-container
-        .form-elements-container__form
-            +form-feedback
-        .form-elements-container__toggles-and-tick-box
-            +title('toggles')
-            .form-elements-container__toggles
-                +toggles
-                +toggles
-            +title('tick boxes')
-            .form-elements-container__tick-box
-                +tick-box({
-                    name: '', 
-                    value: ''
-                })
-                +tick-box({
-                    name: '', 
-                    value: ''
-                })
+        +title('form elements')
+        .form-elements-container__form-elements
+            .form-elements-container__form
+                +form-feedback
+            .form-elements-container__toggles-and-tick-box
+                +title('toggles')
+                .form-elements-container__toggles
+                    +toggles
+                    +toggles
+                +title('tick boxes')
+                .form-elements-container__tick-box
+                    +tick-box({
+                        name: '', 
+                        value: ''
+                    })
+                    +tick-box({
+                        name: '', 
+                        value: ''
+                    })

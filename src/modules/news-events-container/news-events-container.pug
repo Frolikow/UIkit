@@ -2,20 +2,21 @@ include ../news/news
 include ../event/event
 
 mixin news-events-container
-    +title('news & events')
     .news-events-container
-        .news-events-container__news
-            +news({
-                imageName: 'bike.jpeg',
-                newsTitle: "It's all going downhill", 
-                newsDate: '24 august 2013', 
-                newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'
-            })
-        .news-events-container__events
-            +event({
-                imageName: 'city.jpeg',
-                eventDay: '24', 
-                eventMouth: 'aug', 
-                eventTitle: 'This is the title', 
-                eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
-            })
+        +title('news & events')
+        .news-events-container__news-events
+            .news-events-container__news
+                +news({
+                    imageName: 'bike.jpeg',
+                    newsTitle: "It's all going downhill", 
+                    newsDate: '24 august 2013', 
+                    newsText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nam distinctio provident facere.'
+                })
+            .news-events-container__events
+                +event({
+                    imageName: 'city.jpeg',
+                    eventDay: '24', 
+                    eventMouth: 'aug', 
+                    eventTitle: 'This is the title', 
+                    eventText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.'
+                })

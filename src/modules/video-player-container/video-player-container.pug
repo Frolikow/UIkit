@@ -1,10 +1,11 @@
 include ../video-player/video-player
 
 mixin video-player-container
-    +title('video')
     .video-player-container
-        +video-player({
-            url: "https://player.vimeo.com/video/62980495"
-        })
-        //- https://www.youtube.com/embed/rPmGtZAUxNs
-        //- https://player.vimeo.com/video/62980495
+        +title('video')
+        .video-player-container__video-player
+            +video-player({
+                url: "https://player.vimeo.com/video/62980495"
+            })
+            //- https://www.youtube.com/embed/rPmGtZAUxNs
+            //- https://player.vimeo.com/video/62980495

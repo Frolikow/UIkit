@@ -2,18 +2,19 @@ include ../standard-slider/standard-slider
 include ../step-slider/step-slider
 
 mixin sliders-container
-  +title('sliders-container')
-  .sliders-container
-    .sliders-container__standard-slider
-      +standard-slider({
-        minimum: '0', 
-        value: '40', 
-        maximum: '100'
-      })
-    .sliders-container__step-slider
-      +step-slider({
-        minimum:'0', 
-        value: '75', 
-        maximum: '100',
-        step: '25'
-      })
+    .sliders-container
+        +title('sliders')
+        .sliders-container__sliders
+            .sliders-container__standard-slider
+                +standard-slider({
+                    minimum: '0', 
+                    value: '40', 
+                    maximum: '100'
+                })
+            .sliders-container__step-slider
+                +step-slider({
+                    minimum:'0', 
+                    value: '75', 
+                    maximum: '100',
+                    step: '25'
+                })
