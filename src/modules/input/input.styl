@@ -2,26 +2,24 @@
 
 .input
   &__element
-    &_decor
-      outline none
-      color mainGray136
-      font-size 0.875rem
-      font-weight 400
-      line-height 2.625rem
-      letter-spacing 0.0088rem
-      font-family "Source Sans Pro", sans-serif
-      border none
-      border-radius 0.125rem
-      background-color mainGray229
-      width 12.375rem
-      height 1.75rem
-      padding 0
-      margin-bottom 0.75rem
-      padding-left 0.625rem
+    outline none
+    color mainGray136
+    font-size 0.875rem
+    font-weight 400
+    line-height 2.625rem
+    letter-spacing 0.0088rem
+    font-family "Source Sans Pro", sans-serif
+    border none
+    border-radius 0.125rem
+    background-color mainGray229
+    width 12.375rem
+    height 1.75rem
+    padding 0
+    margin-bottom 0.75rem
+    padding-left 0.625rem
 
-    &_type
-      &_name:valid
-      &_email:valid 
+    &_validation
+      &:valid
         & + ^[0]__info:after
           content "thanks"
           background-color mainBlueLight
@@ -29,8 +27,7 @@
         & + ^[0]__info:before
           background-color mainBlueLight
 
-      &_name:invalid
-      &_email:invalid 
+      &:invalid
         & + ^[0]__info:after
           content "error"
           background-color mainRedLight
