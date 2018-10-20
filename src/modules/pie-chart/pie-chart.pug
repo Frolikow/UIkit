@@ -1,19 +1,10 @@
--
-    function sum(values) {
-        var result = 0;
-        values.forEach((el,index)=> {
-            result += parseInt(values[index]);
-            });
-        return result;
-        };
-
 mixin pie-chart(values)
 
-    - valueSum = sum(values);
-    if (valueSum > 100)
+    - const valueSum = values.reduce( function( accumulator, currentValue ) { return accumulator + currentValue; });
+    if ( valueSum > 100 )
         .pie-chart
             .pie-chart__value= ('ERR. >100')
-    else if (valueSum < 0)
+    else if ( valueSum < 0 )
         .pie-chart
             .pie-chart__value= ('ERR. <0')
     else
