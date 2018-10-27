@@ -85,67 +85,68 @@
       width 1.3125rem
       height 1.2813rem
 
-  &__info-developer
-    background-color mainBlueDark
-    transform scaleX(0)
-    width 10.1875rem
-    height 5.625rem
-    margin-left 6.25rem
-    position relative
-    border-radius 0.25rem
-
-    &::after 
-      content ""
-      display block
-      width 0.625rem
-      height 0.625rem
+  &__info
+    &_developer
       background-color mainBlueDark
-      transform rotate(-45deg)
-      position absolute
-      top 2.5rem
-      right 9.8125rem
-      border-radius 0.1875rem 0 0 0 
+      transform scaleX(0)
+      width 10.1875rem
+      height 5.625rem
+      margin-left 6.25rem
+      position relative
+      border-radius 0.25rem
 
-    & ^[0]
-      &__name
-        color mainWhite
-        font-size 1.125rem
-        font-weight normal
-        font-family Lato-Regular, sans-serif
-        line-height 1.125rem
-        padding-top 0.8125rem
+      &::after 
+        content ""
+        display block
+        width 0.625rem
+        height 0.625rem
+        background-color mainBlueDark
+        transform rotate(-45deg)
+        position absolute
+        top 2.5rem
+        right 9.8125rem
+        border-radius 0.1875rem 0 0 0 
 
-      &__position
-        color mainWhite
-        font-family Lato-Black, sans-serif
-        font-size 0.6875rem
-        font-weight 700
-        line-height 0.6875rem
-        text-transform uppercase
-        letter-spacing 0.0344rem
-        margin-top 0.5rem
+      & ^[0]
+        &__name
+          color mainWhite
+          font-size 1.125rem
+          font-weight normal
+          font-family Lato-Regular, sans-serif
+          line-height 1.125rem
+          padding-top 0.8125rem
 
-      &__social-networks
-        width 60%
-        height 1.3125rem
-        padding-top 0.75rem
-        margin auto
-        display flex
-        justify-content space-around
-        align-items flex-end
+        &__position
+          color mainWhite
+          font-family Lato-Black, sans-serif
+          font-size 0.6875rem
+          font-weight 700
+          line-height 0.6875rem
+          text-transform uppercase
+          letter-spacing 0.0344rem
+          margin-top 0.5rem
 
-      &__sn-icons
-        &_facebook
-          background-image url('~style/images/sn-facebook-light.svg')
-          width 1.25rem
-          height 1.25rem
+        &__social-networks
+          width 60%
+          height 1.3125rem
+          padding-top 0.75rem
+          margin auto
+          display flex
+          justify-content space-around
+          align-items flex-end
 
-        &_twitter
-          background-image url('~style/images/sn-twitter-light.svg')
-          width 1.25rem
-          height 1.1875rem
-          
-        &_dribbble
-          background-image url('~style/images/sn-dribbble-light.svg')
-          width 1.3125rem
-          height 1.2813rem
+        &__sn-icons
+          &_facebook
+            background-image url('~style/images/sn-facebook-light.svg')
+            width 1.25rem
+            height 1.25rem
+
+          &_twitter
+            background-image url('~style/images/sn-twitter-light.svg')
+            width 1.25rem
+            height 1.1875rem
+            
+          &_dribbble
+            background-image url('~style/images/sn-dribbble-light.svg')
+            width 1.3125rem
+            height 1.2813rem

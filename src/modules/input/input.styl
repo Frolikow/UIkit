@@ -18,22 +18,21 @@
     margin-bottom 0.75rem
     padding-left 0.625rem
 
-    &_validation
-      &:valid
-        & + ^[0]__info:after
-          content "thanks"
-          background-color mainBlueLight
+    &:valid
+      & + ^[0]__info:after
+        content "thanks"
+        background-color mainBlueLight
 
-        & + ^[0]__info:before
-          background-color mainBlueLight
+      & + ^[0]__info:before
+        background-color mainBlueLight
 
-      &:invalid
-        & + ^[0]__info:after
-          content "error"
-          background-color mainRedLight
+    &:invalid
+      & + ^[0]__info:after
+        content "error"
+        background-color mainRedLight
 
-        & + ^[0]__info:before
-          background-color mainRedLight
+      & + ^[0]__info:before
+        background-color mainRedLight
 
   &__info
     width 0
