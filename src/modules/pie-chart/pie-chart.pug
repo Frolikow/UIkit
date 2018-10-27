@@ -1,10 +1,10 @@
 mixin pie-chart(values)
 
-    - const valueSum = values.reduce( function( accumulator, currentValue ) { return accumulator + currentValue; });
-    if ( valueSum > 100 )
+    - const valueSum = values.reduce(( accumulator, currentValue ) => accumulator + currentValue);
+    if (valueSum > 100)
         .pie-chart
             .pie-chart__value= ('ERR. >100')
-    else if ( valueSum < 0 )
+    else if (valueSum < 0)
         .pie-chart
             .pie-chart__value= ('ERR. <0')
     else
