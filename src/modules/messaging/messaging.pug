@@ -1,4 +1,4 @@
-mixin messaging() 
+mixin messaging(messages)
     .messaging.js-messaging
         .messaging__header sarah brown
         .messaging__photo
@@ -16,6 +16,8 @@ mixin messaging()
                     .messaging__icon
         form.messaging__form
             .messaging__chat.js-messaging__chat
+                each item in messages
+                    div(class = `messaging__chat_message_${item.type} messaging__chat_message`)= item.message
 
             textarea.messaging__input-new-message.js-messaging__input-new-message(placeholder = 'Your message' type = 'text')
             .messaging__button-send-message.js-messaging__button-send-message

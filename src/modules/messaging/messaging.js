@@ -5,7 +5,6 @@ class Messaging {
     this.$buttonSendMessage = this.$messagingBlock.find('.js-messaging__button-send-message');
     this.$inputNewMessage = this.$messagingBlock.find('.js-messaging__input-new-message');
     this.createOutgoingMessage();
-    this.loadMessageFromBase();
   }
   createOutgoingMessage() {
     this.$buttonSendMessage.on('click', (e) => {
@@ -28,18 +27,6 @@ class Messaging {
     newMessage.className = `messaging__chat_message_${messageObj.type} messaging__chat_message`;
     newMessage.innerHTML = messageObj.text;
     this.$messaging.append(newMessage);
-  }
-  loadMessageFromBase() {
-    const messageBase = [{
-      type: 'incoming', text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-    }, {
-      type: 'outgoing', text: 'A, maxime. Tenetur beatae delectus molestias.',
-    }, {
-      type: 'incoming', text: 'Quisquam quis,  pariatur, quam consequatur quos!',
-    }];
-    messageBase.forEach((el, index) => {
-      this.addNewMessage(messageBase[index]);
-    });
   }
 }
 

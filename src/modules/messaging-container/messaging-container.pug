@@ -4,4 +4,15 @@ mixin messaging-container
     .messaging-container
         +title('messaging')
         .messaging-container__messaging
-            +messaging
+            +messaging([
+                {
+                type: 'incoming', 
+                message: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+                },{
+                type: 'outgoing',
+                message: 'A, maxime. Tenetur beatae delectus molestias.',
+                },{
+                type: 'incoming', 
+                message: 'Quisquam quis,  pariatur, quam consequatur quos!',
+                }
+            ])
