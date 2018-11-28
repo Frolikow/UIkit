@@ -24,7 +24,7 @@ class Messaging {
   }
   addNewMessage(messageObj) {
     const newMessage = document.createElement('div');
-    newMessage.className = `messaging__chat_message_${messageObj.type} messaging__chat_message`;
+    newMessage.className = `messaging__message messaging__message_type_${messageObj.type}`;
     newMessage.innerHTML = messageObj.text;
     this.$messaging.append(newMessage);
   }
