@@ -1,3 +1,3 @@
-mixin arrow-button({direction, color})
-    button(class = `arrow-button arrow-button_color_${color}`)
+mixin arrow-button({direction, color, disableButton})
+    button(class = `arrow-button arrow-button_color_${color}` disabled = `${disableButton}`)
         div(class = `arrow-button__arrow arrow-button__arrow_trend_${direction}`)

@@ -6,5 +6,5 @@ mixin arrow-buttons-container
     .arrow-buttons-container
         +title('arrow buttons')
         .arrow-buttons-container__buttons
-            each item in[{direction: 'left', color: 'white'}, {direction: 'right', color: 'white'}, {direction: 'left', color: 'gray'}, {direction: 'right', color: 'gray'}, {direction: 'left', color: 'green'}, {direction: 'right', color: 'green'}]
+            each item in[{direction: 'left', color: 'white'}, {direction: 'right', color: 'white'}, {direction: 'left', color: 'gray', disableButton: true}, {direction: 'right', color: 'gray', disableButton: true}, {direction: 'left', color: 'green'}, {direction: 'right', color: 'green'}]
                 +arrow-button(item)

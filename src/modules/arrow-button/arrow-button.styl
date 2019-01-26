@@ -38,20 +38,6 @@
         & > ^[0]__arrow
           border-color mainWhite
 
-    &_gray
-      background-color mainGray229
-      border solid 0.1875rem mainGray229
-
-      & > ^[0]__arrow
-        border-color mainWhite
-
-      &:hover
-        border-color mainGray229
-        background-color mainWhite
-
-        & > ^[0]__arrow
-          border-color mainGray229
-
     &_green
       background-color mainBlueLight
       border solid 0.1875rem mainBlueLight
@@ -65,3 +51,10 @@
 
         & > ^[0]__arrow
           border-color mainBlueLight
+
+  &[disabled = 'true']
+    background-color mainGray229
+    border solid 0.1875rem mainGray229
+
+    & > ^[0]__arrow
+      border-color mainWhite
