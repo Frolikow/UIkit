@@ -4,7 +4,6 @@ mixin stages({length, value})
             .stages__scale(style = (`width: ${x};`))
         - var n = 1;
         ul.stages__list
-            while (n <= value)
-                li.stages__item.stages__item_selected-item= n++
-            while (n <= length)
-                li.stages__item= n++
+            - for(; n <=length; n++ ){
+                li.stages__item(class=(n <= value) ? 'stages__item_selected-item' : '')= n
+            - }
