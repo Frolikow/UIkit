@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 
 class Datepicker {
   constructor(element) {
@@ -23,10 +24,12 @@ class Datepicker {
 
     this.$day.text($.datepicker.formatDate('dd', this.selectDay));
 
-    $(this.$currentDay).on('click', () => {
-      this.$widget.datepicker('setDate', new Date());
-      this.$day.text($.datepicker.formatDate('dd', new Date()));
-    });
+    $(this.$currentDay).on('click', this._handleCurrentDayClick.bind(this));
+  }
+
+  _handleCurrentDayClick() {
+    this.$widget.datepicker('setDate', new Date());
+    this.$day.text($.datepicker.formatDate('dd', new Date()));
   }
 }
 
