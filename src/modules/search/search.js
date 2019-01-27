@@ -3,27 +3,29 @@ class Search {
   constructor(element) {
     this.$search = $(element);
     this.$searchInput = $(this.$search).find('.js-search__input');
-    this.eventSearch();
+    this._initEventListeners();
   }
 
-  eventSearch() {
-    this.$search.submit(() => {
-      let n = '0';
-      const txt = this.$searchInput.val();
-      $('body').removeHighlight();
-      if (txt === '') {
-        return false;
-      }
+  _initEventListeners() {
+    this.$searchInput.on('click', this._handleSearchInputClick.bind(this));
+    this.$search.submit(this._handleSearchSubmit.bind(this));
+  }
 
-      $('body').highlight(txt);
-      n = $('span.highlight').length;
-      if (n === 0) {
-        this.$searchInput.addClass('search__input_result_none');
-        this.$searchInput.val('I’ve not found what I’m looking for...');
-        this.$searchInput.on('click', this._handleSearchInputClick.bind(this));
-      }
+  _handleSearchSubmit() {
+    let n = '0';
+    const txt = this.$searchInput.val();
+    $('body').removeHighlight();
+    if (txt === '') {
       return false;
-    });
+    }
+
+    $('body').highlight(txt);
+    n = $('span.highlight').length;
+    if (n === 0) {
+      this.$searchInput.addClass('search__input_result_none');
+      this.$searchInput.val('I’ve not found what I’m looking for...');
+    }
+    return false;
   }
 
   _handleSearchInputClick() {
