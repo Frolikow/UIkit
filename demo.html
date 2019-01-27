@@ -2,28 +2,38 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-cache">
     <title>"UIKit"</title>
-  <link href="/UIkit/style-54a0403a5b2972463ba3.css" rel="stylesheet"><script type="text/javascript" src="/UIkit/bundle/main-54a0403a5b2972463ba3.js"></script></head>
+    <meta NAME="keywords" CONTENT="standard buttons, arrow buttons,percentages / pie chart,sliders,stages,form elements,toggles, tick boxes,search / drop down,user profile,news &amp; events,location,calendar,messaging,video">
+    <meta NAME="description" CONTENT="Сборник подключаемых элементов (UIKit)">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="/UIkit/style-9e120c9260f61bc38228.css" rel="stylesheet"><script type="text/javascript" src="/UIkit/bundle/main-9e120c9260f61bc38228.js"></script></head>
   <body>
-    <div class="demo-layout">
-      <div class="ui-elements">
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">standard buttons</h2>
-          <div class="ui-elements__element ui-elements__standart-buttons">
-            <div class="ui-elements__standart-buttons_row_first">
+    <div class="ui-elements">
+      <div class="ui-elements__item ui-elements__item_standard-buttons">
+        <div class="standard-buttons-container">
+          <h2 class="title">standard buttons</h2>
+          <div class="standard-buttons-container__buttons">
+            <div class="standard-buttons-container__row">
               <button class="standard-button js-standard-button standard-button_size_small standard-button_color_blue" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_red" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_small standard-button_color_red" type="button">button</button>
             </div>
-            <div class="ui-elements__standart-buttons_row_second">
+            <div class="standard-buttons-container__row">
               <button class="standard-button js-standard-button standard-button_size_small standard-button_color_blue" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_red" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_small standard-button_color_red" type="button">button</button>
             </div>
-            <div class="ui-elements__standart-buttons_row_third">
+            <div class="standard-buttons-container__row">
               <button class="standard-button js-standard-button standard-button_size_small standard-button_color_blue-reverse" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_blue-reverse" type="button">button</button>
               <button class="standard-button js-standard-button standard-button_size_big standard-button_color_red-reverse" type="button">button</button>
@@ -31,89 +41,91 @@
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">arrow buttons</h2>
-          <div class="ui-elements__element ui-elements__arrow-buttons">
-            <button class="arrow-button arrow-button_color_white">
+      </div>
+      <div class="ui-elements__item ui-elements__item_arrow-buttons">
+        <div class="arrow-buttons-container">
+          <h2 class="title">arrow buttons</h2>
+          <div class="arrow-buttons-container__buttons">
+            <button class="arrow-button arrow-button_color_white" disabled="undefined">
               <div class="arrow-button__arrow arrow-button__arrow_trend_left"></div>
             </button>
-            <button class="arrow-button arrow-button_color_white">
+            <button class="arrow-button arrow-button_color_white" disabled="undefined">
               <div class="arrow-button__arrow arrow-button__arrow_trend_right"></div>
             </button>
-            <button class="arrow-button arrow-button_color_gray">
+            <button class="arrow-button arrow-button_color_gray" disabled="true">
               <div class="arrow-button__arrow arrow-button__arrow_trend_left"></div>
             </button>
-            <button class="arrow-button arrow-button_color_gray">
+            <button class="arrow-button arrow-button_color_gray" disabled="true">
               <div class="arrow-button__arrow arrow-button__arrow_trend_right"></div>
             </button>
-            <button class="arrow-button arrow-button_color_green">
+            <button class="arrow-button arrow-button_color_green" disabled="undefined">
               <div class="arrow-button__arrow arrow-button__arrow_trend_left"></div>
             </button>
-            <button class="arrow-button arrow-button_color_green">
+            <button class="arrow-button arrow-button_color_green" disabled="undefined">
               <div class="arrow-button__arrow arrow-button__arrow_trend_right"></div>
             </button>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">percentages / pie chart</h2>
-          <div class="ui-elements__element ui-elements__percentages-pie-chart">
+      </div>
+      <div class="ui-elements__item ui-elements__item_percentages-pie-chart">
+        <div class="percentages-pie-chart-container">
+          <h2 class="title">percentages / pie chart</h2>
+          <div class="percentages-pie-chart-container__items">
             <div class="percentages">
               <div class="percentages__value">0</div>
               <svg class="percentages__image">
-                <circle class="percentages__image_circle" transform="rotate(-90)" style="stroke-dasharray: 0rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
+                <circle class="percentages__circle" transform="rotate(-90)" style="stroke-dasharray: 0rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
               </svg>
             </div>
             <div class="percentages">
               <div class="percentages__value">38</div>
               <svg class="percentages__image">
-                <circle class="percentages__image_circle" transform="rotate(-90)" style="stroke-dasharray: 6.726rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
+                <circle class="percentages__circle" transform="rotate(-90)" style="stroke-dasharray: 6.726rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
               </svg>
             </div>
             <div class="percentages">
               <div class="percentages__value">62</div>
               <svg class="percentages__image">
-                <circle class="percentages__image_circle" transform="rotate(-90)" style="stroke-dasharray: 10.974rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
+                <circle class="percentages__circle" transform="rotate(-90)" style="stroke-dasharray: 10.974rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
               </svg>
             </div>
             <div class="percentages">
               <div class="percentages__value">89</div>
               <svg class="percentages__image">
-                <circle class="percentages__image_circle" transform="rotate(-90)" style="stroke-dasharray: 15.752999999999998rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
+                <circle class="percentages__circle" transform="rotate(-90)" style="stroke-dasharray: 15.752999999999998rem 25.5rem;" r="45" cx="-50" cy="50"></circle>
               </svg>
             </div>
             <div class="pie-chart">
-              <svg class="pie-chart__image">
-                <circle class="pie-chart__image_fill pie-chart__image_fill_light-gray" transform="rotate(-90)" style="stroke-dasharray: 15.5rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
-                <circle class="pie-chart__image_fill pie-chart__image_fill_blue" transform="rotate(-90)" style="stroke-dasharray: 10.075rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
-                <circle class="pie-chart__image_fill pie-chart__image_fill_red" transform="rotate(-90)" style="stroke-dasharray: 5.425rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
-                <circle class="pie-chart__image_fill pie-chart__image_fill_dark-gray" transform="rotate(-90)" style="stroke-dasharray: 1.55rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
+              <svg class="pie-chart__chart">
+                <circle class="pie-chart__chart-part pie-chart__chart-part_fill pie-chart__chart-part_fill_light-gray" transform="rotate(-90)" style="stroke-dasharray: 15.5rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
+                <circle class="pie-chart__chart-part pie-chart__chart-part_fill pie-chart__chart-part_fill_blue" transform="rotate(-90)" style="stroke-dasharray: 10.075rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
+                <circle class="pie-chart__chart-part pie-chart__chart-part_fill pie-chart__chart-part_fill_red" transform="rotate(-90)" style="stroke-dasharray: 5.425rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
+                <circle class="pie-chart__chart-part pie-chart__chart-part_fill pie-chart__chart-part_fill_dark-gray" transform="rotate(-90)" style="stroke-dasharray: 1.55rem 25.5rem;" r="39.5" cx="-50" cy="50"></circle>
               </svg>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">sliders</h2>
-          <div class="ui-elements__element ui-elements__sliders">
-            <div class="ui-elements__standart-slider">
+      </div>
+      <div class="ui-elements__item ui-elements__item_sliders">
+        <div class="sliders-container">
+          <h2 class="title">sliders</h2>
+          <div class="sliders-container__sliders">
+            <div class="sliders-container__standard-slider">
               <div class="standard-slider js-standard-slider" data-minimum="0" data-default="40" data-maximum="100">
                 <div class="standard-slider__custom-handle js-standard-slider__custom-handle ui-slider-handle"></div>
               </div>
             </div>
-            <div class="ui-elements__step-slider">
+            <div class="sliders-container__step-slider">
               <div class="step-slider js-step-slider ui-slider ui-slider-handle ui-slider-range" data-minimum="0" data-default="75" data-maximum="100" data-step="25"></div>
-              <div class="step-slider__scale">
-                <div class="step-slider__value">0</div>
-                <div class="step-slider__value">25</div>
-                <div class="step-slider__value">50</div>
-                <div class="step-slider__value">75</div>
-                <div class="step-slider__value">100</div>
-              </div>
+              <div class="step-slider__scale"></div>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">stages</h2>
-          <div class="ui-elements__element ui-elements__stages">
+      </div>
+      <div class="ui-elements__item ui-elements__item_stages">
+        <div class="stages-container">
+          <h2 class="title">stages</h2>
+          <div class="stages-container__stages">
             <div class="stages">
               <div class="stages__scale" style="width: 50%;"></div>
               <ul class="stages__list">
@@ -126,50 +138,52 @@
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">form elements</h2>
-          <div class="ui-elements__element ui-elements__form-elements">
-            <div class="ui-elements__form">
+      </div>
+      <div class="ui-elements__item ui-elements__item_form-elements">
+        <div class="form-elements-container">
+          <h2 class="title">form elements</h2>
+          <div class="form-elements-container__form-elements">
+            <div class="form-elements-container__form">
               <form class="form-feedback js-form-feedback">
                 <div class="input">
-                  <input class="input__element_type_name input__element_decor" type="name" placeholder="Your name" required name="formName">
+                  <input class="input__element" type="name" placeholder="Your name" required name="formName">
                   <div class="input__info"></div>
                 </div>
                 <div class="input">
-                  <input class="input__element_type_email input__element_decor" type="email" placeholder="Your email" required name="formEmail">
+                  <input class="input__element" type="email" placeholder="Your email" required name="formEmail">
                   <div class="input__info"></div>
                 </div>
                 <div class="textarea">
-                  <textarea class="textarea__element textarea__element_decor" placeholder="Your message" name="formMessage"></textarea>
+                  <textarea class="textarea__element" placeholder="Your message" name="formMessage"></textarea>
                 </div>
                 <div class="form-feedback__button">
                   <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_blue" type="submit">Submit</button>
                 </div>
               </form>
             </div>
-            <div class="ui-elements__toggles-and-tick-box">
-              <h2 class="ui-elements__title">toggles</h2>
-              <div class="ui-elements__toggles">
+            <div class="form-elements-container__toggles-and-tick-box">
+              <h2 class="title">toggles</h2>
+              <div class="form-elements-container__toggles">
                 <div class="toggles">
-                  <label>
+                  <label class="toggles__label">
                     <input class="toggles__element" type="checkbox"><span class="toggles__visible-part"></span>
                   </label>
                 </div>
                 <div class="toggles">
-                  <label>
+                  <label class="toggles__label">
                     <input class="toggles__element" type="checkbox"><span class="toggles__visible-part"></span>
                   </label>
                 </div>
               </div>
-              <h2 class="ui-elements__title">tick boxes</h2>
-              <div class="ui-elements__tick-box">
+              <h2 class="title">tick boxes</h2>
+              <div class="form-elements-container__tick-box">
                 <div class="tick-box">
-                  <label>
+                  <label class="tick-box__label">
                     <input class="tick-box__element" type="checkbox" hidden name=""><span class="tick-box__visible-part"></span><span class="tick-box__text"></span>
                   </label>
                 </div>
                 <div class="tick-box">
-                  <label>
+                  <label class="tick-box__label">
                     <input class="tick-box__element" type="checkbox" hidden name=""><span class="tick-box__visible-part"></span><span class="tick-box__text"></span>
                   </label>
                 </div>
@@ -177,82 +191,82 @@
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <div class="ui-elements__element ui-elements__search-drop-down-user-profile">
-            <div class="ui-elements__search-drop-down">
-              <h2 class="ui-elements__title">search / drop down</h2>
-              <div class="ui-elements__search">
-                <form class="search js-search" action="" method="post">
-                  <input class="search__input js-search__input" type="search" name="" placeholder="Search">
-                  <input class="search__submit" type="submit" name="" value="">
-                  <svg class="search__image">
-                    <circle r="4" cx="10" cy="10" stroke="white" fill="transparent" stroke-width="2"></circle>
-                    <line x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2"></line>
-                  </svg>
-                </form>
-                <form class="search js-search" action="" method="post">
-                  <input class="search__input js-search__input" type="search" name="" placeholder="Search">
-                  <input class="search__submit" type="submit" name="" value="">
-                  <svg class="search__image">
-                    <circle r="4" cx="10" cy="10" stroke="white" fill="transparent" stroke-width="2"></circle>
-                    <line x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2"></line>
-                  </svg>
-                </form>
-              </div>
-              <div class="ui-elements__drop-down">
-                <div class="drop-down">
-                  <select class="drop-down__list" name="defaultSelect">
-                    <option class="drop-down__list-item" value="null">Choose An Option</option>
-                    <option class="drop-down__list-item" value="null">some text 1</option>
-                    <option class="drop-down__list-item" value="null">some text 2</option>
-                    <option class="drop-down__list-item" value="null">some text 3</option>
-                    <option class="drop-down__list-item" value="null">some text 4</option>
-                    <option class="drop-down__list-item" value="null">some text 5</option>
-                  </select>
-                </div>
-              </div>
+      </div>
+      <div class="ui-elements__item ui-elements__item_search-drop-down-user-profile">
+        <div class="search-drop-down-container">
+          <h2 class="title">search / drop down</h2>
+          <div class="search-drop-down-container__search">
+            <form class="search js-search" action="" method="post">
+              <input class="search__input js-search__input" type="search" name="" placeholder="Search">
+              <input class="search__submit" type="submit" name="" value="">
+              <svg class="search__image">
+                <circle class="search__image-circle" r="4" cx="10" cy="10" stroke="white" fill="transparent" stroke-width="2"></circle>
+                <line class="search__image-line" x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2"></line>
+              </svg>
+            </form>
+            <form class="search js-search" action="" method="post">
+              <input class="search__input js-search__input" type="search" name="" placeholder="Search">
+              <input class="search__submit" type="submit" name="" value="">
+              <svg class="search__image">
+                <circle class="search__image-circle" r="4" cx="10" cy="10" stroke="white" fill="transparent" stroke-width="2"></circle>
+                <line class="search__image-line" x1="13" y1="13" x2="18" y2="18" stroke="white" stroke-width="2"></line>
+              </svg>
+            </form>
+          </div>
+          <div class="search-drop-down-container__drop-down">
+            <div class="drop-down">
+              <select class="drop-down__items" name="defaultSelect">
+                <option class="drop-down__item">Choose An Option</option>
+                <option class="drop-down__item">some text 1</option>
+                <option class="drop-down__item">some text 2</option>
+                <option class="drop-down__item">some text 3</option>
+                <option class="drop-down__item">some text 4</option>
+                <option class="drop-down__item">some text 5</option>
+              </select>
             </div>
-            <div class="ui-elements__user-profiles">
-              <h2 class="ui-elements__title">user profile</h2>
-              <div class="ui-elements__user-profile">
-                <div class="user-profile">
-                  <div class="user-profile__avatar" style="background:url(/UIkit/style/images/griffin.jpeg) no-repeat center / cover;">
-                    <div class="user-profile__hidden-block">
-                      <div class="user-profile__info user-profile__info-ux designer">
-                        <div class="user-profile__name">John Smith</div>
-                        <div class="user-profile__position">ux designer</div>
-                        <div class="user-profile__social-networks"><a href="#">
-                            <div class="user-profile__social-networks_facebook"> </div></a><a href="#">
-                            <div class="user-profile__social-networks_twitter"> </div></a><a href="#">
-                            <div class="user-profile__social-networks_dribbble"> </div></a></div>
-                      </div>
-                    </div>
+          </div>
+        </div>
+        <div class="user-profiles-container">
+          <h2 class="title">user profile</h2>
+          <div class="user-profiles-container__user-profile">
+            <div class="user-profile">
+              <div class="user-profile__avatar" style="background:url(/UIkit/style/images/griffin.jpeg) no-repeat center / cover;">
+                <div class="user-profile__hidden-block">
+                  <div class="user-profile__info user-profile__info_ux designer">
+                    <div class="user-profile__name">John Smith</div>
+                    <div class="user-profile__position">ux designer</div>
+                    <div class="user-profile__social-networks"><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_facebook"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_twitter"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_dribbble"> </div></a></div>
                   </div>
                 </div>
               </div>
-              <div class="ui-elements__user-profile">
-                <div class="user-profile">
-                  <div class="user-profile__avatar" style="background:url(/UIkit/style/images/wolf.jpeg) no-repeat center / cover;">
-                    <div class="user-profile__hidden-block">
-                      <div class="user-profile__info user-profile__info-developer">
-                        <div class="user-profile__name">Sarah Brown</div>
-                        <div class="user-profile__position">developer</div>
-                        <div class="user-profile__social-networks"><a href="#">
-                            <div class="user-profile__social-networks_facebook"> </div></a><a href="#">
-                            <div class="user-profile__social-networks_twitter"> </div></a><a href="#">
-                            <div class="user-profile__social-networks_dribbble"> </div></a></div>
-                      </div>
-                    </div>
+            </div>
+          </div>
+          <div class="user-profiles-container__user-profile">
+            <div class="user-profile">
+              <div class="user-profile__avatar" style="background:url(/UIkit/style/images/wolf.jpeg) no-repeat center / cover;">
+                <div class="user-profile__hidden-block">
+                  <div class="user-profile__info user-profile__info_developer">
+                    <div class="user-profile__name">Sarah Brown</div>
+                    <div class="user-profile__position">developer</div>
+                    <div class="user-profile__social-networks"><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_facebook"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_twitter"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                        <div class="user-profile__sn-icons user-profile__sn-icons_dribbble"> </div></a></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">news & events</h2>
-          <div class="ui-elements__element ui-elements__news-events">
-            <div class="ui-elements__news">
+      </div>
+      <div class="ui-elements__item ui-elements__item_news-events">
+        <div class="news-events-container">
+          <h2 class="title">news &amp; events</h2>
+          <div class="news-events-container__news-events">
+            <div class="news-events-container__news">
               <div class="news">
                 <div class="news__image" style="background:url(/UIkit/style/images/bike.jpeg) no-repeat center / cover;"></div>
                 <div class="news__content">
@@ -262,7 +276,7 @@
                 </div>
               </div>
             </div>
-            <div class="ui-elements__events">
+            <div class="news-events-container__events">
               <div class="event">
                 <div class="event__image" style="background:url(/UIkit/style/images/city.jpeg) no-repeat center / cover;"></div>
                 <div class="event__content">
@@ -272,83 +286,89 @@
                   </div>
                   <div class="event__title" title="This is the title">This is the title</div>
                   <div class="event__text" title="Lorem ipsum dolor, sit amet consectetur adipisicing elit.">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-                  <div class="event__button">
-                    <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_blue-reverse" type="button">add to calendar</button>
-                  </div>
+                  <div class="event__button"><a class="event__button-link" href="/mock-address/change-me">
+                      <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_blue-reverse" type="button">add to calendar</button></a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">location</h2>
-          <div class="ui-elements__element ui-elements__location">
+      </div>
+      <div class="ui-elements__item ui-elements__item_location">
+        <div class="location-container"> 
+          <h2 class="title">location</h2>
+          <div class="location-container__location">
             <div class="location js-location">
               <div class="location__map js-location__map" lat="56.4531" lng="84.975643"></div>
               <div class="location__menu">
                 <div class="location__message">Meet us!</div>
                 <div class="location__address js-location__address"></div>
-                <div class="location__buttons"><a href="#">
-                    <div class="location__buttons-my-location"></div></a><a href="#">
+                <div class="location__buttons"><a class="location__buttons-link" href="/mock-address/change-me">
+                    <div class="location__buttons-my-location"></div></a><a class="location__buttons-link" href="/mock-address/change-me">
                     <div class="location__buttons-pin"></div></a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <div class="ui-elements__element ui-elements__calendar-messaging">
-            <div class="ui-elements__calendar">
-              <h2 class="ui-elements__title">calendar</h2>
-              <div class="ui-elements__calendar-element">
-                <div class="calendar js-calendar">
-                  <input class="calendar__day js-calendar__day" readonly>
-                  <div class="calendar__widget js-calendar__widget"></div>
-                </div>
-              </div>
-            </div>
-            <div class="ui-elements__messaging">
-              <h2 class="ui-elements__title">messaging</h2>
-              <div class="ui-elements__messaging-element">
-                <div class="messager js-messager">
-                  <div class="messager__header">sarah brown</div>
-                  <div class="messager__photo">
-                    <div class="user-profile">
-                      <div class="user-profile__avatar" style="background:url(/UIkit/style/images/wolf.jpeg) no-repeat center / cover;">
-                        <div class="user-profile__hidden-block">
-                          <div class="user-profile__info user-profile__info-developer">
-                            <div class="user-profile__name">Sarah Brown</div>
-                            <div class="user-profile__position">developer</div>
-                            <div class="user-profile__social-networks"><a href="#">
-                                <div class="user-profile__social-networks_facebook"> </div></a><a href="#">
-                                <div class="user-profile__social-networks_twitter"> </div></a><a href="#">
-                                <div class="user-profile__social-networks_dribbble"> </div></a></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="messager__icons"><a href="#">
-                      <div class="messager__icons-send-message">
-                        <div class="messager__icon"></div>
-                      </div></a><a href="#">
-                      <div class="messager__icons-send-photo">
-                        <div class="messager__icon"></div>
-                      </div></a></div>
-                  <form>
-                    <div class="messager__chat js-messager__chat"></div>
-                    <textarea class="messager__input-new-message js-messager__input-new-message" placeholder="Your message" type="text"></textarea>
-                    <div class="messager__button-send-message js-messager__button-send-message">
-                      <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_blue" type="submit">reply</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+      </div>
+      <div class="ui-elements__item ui-elements__item_calendar-messaging">
+        <div class="calendar-container">
+          <h2 class="title">calendar</h2>
+          <div class="calendar-container__calendar">
+            <div class="calendar js-calendar">
+              <div class="calendar__day js-calendar__day"></div>
+              <div class="calendar__widget js-calendar__widget"></div>
+              <button class="calendar__today js-calendar__today">today</button>
             </div>
           </div>
         </div>
-        <div class="ui-elements__item">
-          <h2 class="ui-elements__title">video</h2>
-          <div class="ui-elements__element ui-elements__video-player">
+        <div class="messaging-container">
+          <h2 class="title">messaging</h2>
+          <div class="messaging-container__messaging">
+            <div class="messaging js-messaging">
+              <div class="messaging__header">sarah brown</div>
+              <div class="messaging__photo">
+                <div class="user-profile">
+                  <div class="user-profile__avatar" style="background:url(/UIkit/style/images/wolf.jpeg) no-repeat center / cover;">
+                    <div class="user-profile__hidden-block">
+                      <div class="user-profile__info user-profile__info_developer">
+                        <div class="user-profile__name">Sarah Brown</div>
+                        <div class="user-profile__position">developer</div>
+                        <div class="user-profile__social-networks"><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                            <div class="user-profile__sn-icons user-profile__sn-icons_facebook"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                            <div class="user-profile__sn-icons user-profile__sn-icons_twitter"> </div></a><a class="user-profile__social-networks-link" href="/mock-address/change-me">
+                            <div class="user-profile__sn-icons user-profile__sn-icons_dribbble"> </div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="messaging__icons"><a class="messaging__icons-link" href="/mock-address/change-me">
+                  <div class="messaging__icons-send-message">
+                    <div class="messaging__icon"></div>
+                  </div></a><a class="messaging__icons-link" href="/mock-address/change-me">
+                  <div class="messaging__icons-send-photo">
+                    <div class="messaging__icon"></div>
+                  </div></a></div>
+              <form class="messaging__form">
+                <div class="messaging__chat js-messaging__chat">
+                  <div class="messaging__message messaging__message_type_incoming">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                  <div class="messaging__message messaging__message_type_outgoing">A, maxime. Tenetur beatae delectus molestias.</div>
+                  <div class="messaging__message messaging__message_type_incoming">Quisquam quis,  pariatur, quam consequatur quos!</div>
+                </div>
+                <textarea class="messaging__input-new-message js-messaging__input-new-message" placeholder="Your message" type="text"></textarea>
+                <div class="messaging__button-send-message js-messaging__button-send-message">
+                  <button class="standard-button js-standard-button standard-button_size_custom standard-button_color_blue" type="submit">reply</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui-elements__item ui-elements__item_video-player">
+        <div class="video-player-container">
+          <h2 class="title">video</h2>
+          <div class="video-player-container__video-player">
             <div class="video-player"> 
               <iframe class="video-player__frame" src="https://player.vimeo.com/video/62980495" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
