@@ -1,5 +1,6 @@
 mixin drop-down({name, values})
-    .drop-down
-        select.drop-down__items(name = name)
+    div(class='drop-down')
+        p(class = 'drop-down__default-string', name = name)= values[0]
+        ul(class = 'drop-down__items')
             each item in values
-                option.drop-down__item= item
+                li.drop-down__item= item

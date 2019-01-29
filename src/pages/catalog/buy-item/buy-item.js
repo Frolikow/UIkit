@@ -16,11 +16,7 @@ $(() => {
     console.log(selectedAuto);
 
     function testDropDown(type, text) {
-      if (type.options[type.selectedIndex].value === '0') {
-        console.log(`${text}: Не выбрано`);
-      } else {
-        console.log(`${text}: ${type.options[type.selectedIndex].text}`);
-      }
+      console.log(`${text}: ${$(type).text()}`);
     }
     const autoTransmission = document.getElementsByName('transmission')[0];
     testDropDown(autoTransmission, 'Коробка передач');
