@@ -237,14 +237,14 @@ html body {
 }
 .drop-down {
   font-family: SourceSansPro-Regular, sans-serif;
-  font-size: 14px;
-  line-height: 28px;
-  letter-spacing: 0.14px;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.0088rem;
   text-align: left;
-  width: 287px;
+  width: 17.9375rem;
   position: relative;
-  height: 28px;
-  border-radius: 3px;
+  height: 1.75rem;
+  border-radius: 0.1875rem;
   background-color: #e5e5e5;
   cursor: pointer;
   overflow: hidden;
@@ -255,52 +255,53 @@ html body {
   position: absolute;
   right: 0;
   z-index: 1;
-  width: 33px;
-  height: 28px;
+  width: 2.0625rem;
+  height: 1.75rem;
   background-color: #4eb7a8;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 0.1875rem 0.1875rem 0;
   pointer-events: none;
 }
 .drop-down:after {
   content: "";
   display: block;
   position: absolute;
-  right: 10px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
+  right: 0.625rem;
+  top: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
   z-index: 2;
   border: solid 0 #fff;
-  border-width: 0 2px 2px 0;
+  border-width: 0 0.125rem 0.125rem 0;
   transform: rotate(45deg);
   pointer-events: none;
 }
 .drop-down__default-string {
-  padding-left: 13px;
+  padding-left: 0.8125rem;
   margin: 0;
   cursor: pointer;
-  height: 28px;
+  height: 1.75rem;
   color: #555;
 }
 .drop-down__items {
   display: block;
   background: #fff;
-  width: 287px;
+  width: 17.9375rem;
   overflow-y: auto;
   overflow-x: hidden !important;
   position: absolute;
+  z-index: 99;
   margin-top: 0;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 .drop-down__item {
   display: block;
-  height: 28px;
+  height: 1.75rem;
   background: #4eb7a8;
   cursor: pointer;
   color: #fff;
-  line-height: 28px;
-  padding-left: 13px;
+  line-height: 1.75rem;
+  padding-left: 0.8125rem;
 }
 .drop-down__item:hover {
   color: #4eb7a8;
@@ -391,31 +392,26 @@ html body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
   width: 80%;
+  min-width: 30.75rem;
 }
 .form-elements-container__form-elements {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  width: 90%;
   margin-top: 1.3125rem;
 }
 .form-elements-container__form {
-  width: 38%;
+  min-width: 18.1875rem;
   margin-top: 1.125rem;
-  position: relative;
-  right: 4.6875rem;
 }
 .form-elements-container__toggles-and-tick-box {
-  width: 20%;
+  min-width: 9.5625rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  left: 0.6875rem;
 }
 .form-elements-container__toggles {
   height: 2.8125rem;
@@ -858,11 +854,11 @@ html body {
 }
 .search-drop-down-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
   flex-wrap: wrap;
   max-width: 18.75rem;
-  position: relative;
-  bottom: 3.75rem;
 }
 .search-drop-down-container__search {
   display: flex;
@@ -923,6 +919,7 @@ html body {
 }
 .sliders-container {
   width: 70%;
+  min-width: 37.5rem;
 }
 .sliders-container__sliders {
   display: flex;
@@ -1129,6 +1126,7 @@ html body {
   justify-content: space-around;
   align-items: center;
   width: 52%;
+  min-width: 26.875rem;
   margin-top: 1.3125rem;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -1382,7 +1380,7 @@ html body {
   margin-top: 3.1875rem;
 }
 .ui-elements__item_search-drop-down-user-profile {
-  margin: auto;
+  margin: 0 auto;
   margin-top: 3.125rem;
   display: flex;
   flex-direction: row;
@@ -1400,6 +1398,7 @@ html body {
 }
 .ui-elements__item_calendar-messaging {
   width: 65%;
+  min-width: 37.5rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;

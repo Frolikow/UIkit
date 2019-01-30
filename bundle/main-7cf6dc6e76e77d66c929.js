@@ -14540,19 +14540,19 @@ class DropDown {
   _handleDefaultStringClick() {
     const isHiddenDropDownItems = this.$dropDown.css('overflow') === 'hidden';
     if (isHiddenDropDownItems) {
-      this.$dropDownItems.css('top', '24px');
+      this.$dropDownItems.css('top', '1.5rem');
       this.$dropDown.css('overflow', 'visible');
     }
 
     if (!isHiddenDropDownItems) {
-      this.$dropDownItems.css('top', '28px');
+      this.$dropDownItems.css('top', '1.75rem');
       this.$dropDown.css('overflow', 'hidden');
     }
   }
 
   _handleDropDownItemClick(e) {
     this.$dropDown.css('overflow', 'hidden');
-    this.$dropDownItems.css('top', '28px');
+    this.$dropDownItems.css('top', '1.75rem');
     this.$defaultString.text($(e.currentTarget).text());
   }
 }
