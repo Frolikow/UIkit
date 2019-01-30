@@ -109,7 +109,7 @@ html body {
   font-size: 5rem;
   font-weight: 300;
   letter-spacing: -0.2rem;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Light, sans-serif;
   width: 100%;
   text-align: center;
   padding-top: 0.3125rem;
@@ -154,7 +154,7 @@ html body {
 }
 .calendar .ui-datepicker-header .ui-datepicker-title .ui-datepicker-month {
   display: block;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 2.5rem;
@@ -174,7 +174,7 @@ html body {
   color: #fff;
   background-color: #e75735;
   height: 1.625rem;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.5625rem;
   font-weight: 400;
   line-height: 1.625rem;
@@ -199,7 +199,6 @@ html body {
 }
 .calendar .ui-datepicker-calendar tbody .ui-datepicker-current-day a {
   color: #000;
-  text-decoration: underline;
 }
 .calendar .ui-datepicker-calendar tbody .ui-datepicker-today {
   background-color: #e75735;
@@ -217,7 +216,7 @@ html body {
   height: 3.0625rem;
   background-color: #e5e5e5;
   color: #868686;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.8125rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -337,7 +336,7 @@ html body {
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Light, sans-serif;
 }
 .event__date {
   margin-top: 0.25rem;
@@ -453,7 +452,7 @@ html body {
   font-weight: 400;
   line-height: 2.625rem;
   letter-spacing: 0.0088rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: SourceSansPro-Regular, sans-serif;
   border: none;
   border-radius: 0.125rem;
   background-color: #e5e5e5;
@@ -482,6 +481,7 @@ html body {
   height: 0;
 }
 .input__info:before {
+  font-family: Lato, sans-serif;
   content: "";
   width: 0.375rem;
   height: 0.375rem;
@@ -502,9 +502,9 @@ html body {
   left: 13.5rem;
   border-radius: 0.125rem;
   color: #fff;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.625rem;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 0.0313rem;
@@ -519,7 +519,7 @@ html body {
   margin-top: 2.1875rem;
 }
 .location {
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   color: #fff;
   display: block;
   width: 37.0625rem;
@@ -595,7 +595,7 @@ html body {
   box-shadow: 0 2.125rem #46ab9d;
   text-transform: capitalize;
   color: #fff;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 2rem;
   font-weight: 100;
   line-height: 4.625rem;
@@ -653,7 +653,7 @@ html body {
   padding: 0.9375rem;
   text-align: left;
   color: #868686;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 700;
@@ -695,7 +695,7 @@ html body {
   border: 0.1875rem solid #fff;
   background-color: #e5e5e5;
   color: #747474;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.8125rem;
   line-height: 0.9375rem;
   font-weight: 700;
@@ -752,13 +752,13 @@ html body {
   margin: 0 0 0 1.375rem;
   text-align: left;
   text-overflow: hidden;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
 }
 .news__title {
   margin-top: 1.5rem;
   font-size: 1.75rem;
   font-weight: 100;
-  line-height: 1.6rem;
+  line-height: 1.875rem;
   max-height: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -781,7 +781,7 @@ html body {
 }
 .news__text {
   margin-top: 0.875rem;
-  line-height: 0.8125rem;
+  line-height: 13px;
   display: inline-block;
   font-family: Lato-Regular, sans-serif;
   overflow: hidden;
@@ -810,7 +810,7 @@ html body {
   position: relative;
   top: 1.5625rem;
   color: #9d9d9d;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: -0.125rem;
@@ -881,7 +881,7 @@ html body {
   box-sizing: border-box;
   border-radius: 0.1875rem;
   background: #e5e5e5;
-  font: 0.875rem "Source Sans Pro", sans-serif;
+  font: 0.875rem SourceSansPro-Regular, sans-serif;
   font-weight: 400;
   line-height: 2.625rem;
   letter-spacing: 0.0088rem;
@@ -952,7 +952,7 @@ html body {
 }
 .stages__item {
   color: #888;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -969,7 +969,7 @@ html body {
   color: #fff;
 }
 .standard-button {
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
@@ -1154,7 +1154,7 @@ html body {
   top: -2.5rem;
   margin-left: -1.0625rem;
   text-align: center;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: 0.0406rem;
@@ -1216,7 +1216,7 @@ html body {
   flex-direction: row;
   justify-content: space-between;
   color: #d1d1d1;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.6875rem;
   font-weight: 400;
   line-height: 2rem;
@@ -1233,7 +1233,7 @@ html body {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0.0088rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: SourceSansPro-Regular, sans-serif;
   border: none;
   border-radius: 0.125rem;
   background-color: #e5e5e5;
@@ -1286,7 +1286,7 @@ html body {
 .title {
   height: 1.125rem;
   color: #4f4f4f;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 1.125rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -1307,7 +1307,7 @@ html body {
   position: relative;
   padding: 0 0 0 3.75rem;
   color: #fff;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -1801,7 +1801,7 @@ html body {
   padding: 0.9375rem;
   font-size: 1.375rem;
   text-align: center;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
 }
 .first-page-content__news-and-events {
   display: flex;
@@ -1811,7 +1811,7 @@ html body {
   text-align: center;
   font-size: 1.875rem;
   color: #666;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
 }
 .first-page-content__title {
   text-align: center;
@@ -1847,7 +1847,7 @@ html body {
   display: flex;
   width: 100%;
   height: 8.125rem;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
   margin-top: 1.25rem;
 }
 .footer__image {
@@ -1883,7 +1883,7 @@ html body {
 .header {
   width: 100%;
   height: 12.5rem;
-  font-family: Lato, sans-serif;
+  font-family: Lato-Regular, sans-serif;
 }
 .header__image {
   width: 100%;
