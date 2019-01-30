@@ -8,8 +8,9 @@
 }
 @font-face {
   font-family: SourceSansPro-Black;
-  font-style: normal;
   src: url(/UIkit/style/fonts/Source_Sans_Pro/SourceSansPro-Black.ttf);
+  font-family: SourceSansPro-Regular;
+  src: url(/UIkit/style/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
 }
 html {
   font-size: 16px;
@@ -235,11 +236,18 @@ html body {
   background-color: #fff;
 }
 .drop-down {
-  margin: auto;
+  font-family: SourceSansPro-Regular, sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.14px;
+  text-align: left;
+  width: 287px;
   position: relative;
-  width: 17.9375rem;
-  height: 1.75rem;
-  background-color: transparent;
+  height: 28px;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  overflow: hidden;
 }
 .drop-down:before {
   content: "";
@@ -247,46 +255,60 @@ html body {
   position: absolute;
   right: 0;
   z-index: 1;
-  width: 2.0625rem;
-  height: 1.75rem;
+  width: 33px;
+  height: 28px;
   background-color: #4eb7a8;
-  border-radius: 0 0.1875rem 0.1875rem 0;
+  border-radius: 0 3px 3px 0;
   pointer-events: none;
 }
 .drop-down:after {
   content: "";
   display: block;
   position: absolute;
-  right: 0.625rem;
-  top: 0.3125rem;
-  width: 0.625rem;
-  height: 0.625rem;
+  right: 10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
   z-index: 2;
   border: solid 0 #fff;
-  border-width: 0 0.125rem 0.125rem 0;
+  border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   pointer-events: none;
 }
-.drop-down__items {
-  font-family: "Source Sans Pro", sans-serif;
-  width: 17.9375rem;
-  height: 1.75rem;
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 0.1875rem;
-  color: #555;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 2.625rem;
-  letter-spacing: 0.0088rem;
-  position: relative;
-  padding-left: 0.625rem;
-  outline: none;
+.drop-down__default-string {
+  padding-left: 13px;
+  margin: 0;
   cursor: pointer;
+  height: 28px;
+  color: #555;
+}
+.drop-down__items {
+  display: block;
+  background: #fff;
+  width: 287px;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  position: absolute;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 5px;
 }
 .drop-down__item {
+  display: block;
+  height: 28px;
+  background: #4eb7a8;
+  cursor: pointer;
   color: #fff;
-  background-color: #4eb7a8;
+  line-height: 28px;
+  padding-left: 13px;
+}
+.drop-down__item:hover {
+  color: #4eb7a8;
+  background: #e5e5e5;
+  transition: 0.5s;
+}
+.drop-down__item:first-child {
+  display: none;
 }
 .event {
   width: 18rem;
