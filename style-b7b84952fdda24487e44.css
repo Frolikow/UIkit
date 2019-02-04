@@ -13,7 +13,9 @@
   src: url(/UIkit/style/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
 }
 html {
+  overflow-x: hidden;
   font-size: 16px;
+  min-width: 30rem;
 }
 html body {
   margin: 0;
@@ -197,8 +199,11 @@ html body {
   font-weight: 400;
   text-decoration: none;
 }
+.calendar .ui-datepicker-calendar tbody .ui-datepicker-current-day {
+  background-color: #e75735;
+}
 .calendar .ui-datepicker-calendar tbody .ui-datepicker-current-day a {
-  color: #000;
+  color: #fff;
 }
 .calendar .ui-datepicker-calendar tbody .ui-datepicker-today {
   background-color: #e75735;
@@ -510,6 +515,10 @@ html body {
   letter-spacing: 0.0313rem;
   text-align: center;
 }
+.location-container {
+  width: 100%;
+  max-width: 37.5rem;
+}
 .location-container__location {
   margin: auto;
   display: flex;
@@ -522,7 +531,8 @@ html body {
   font-family: Lato-Regular, sans-serif;
   color: #fff;
   display: block;
-  width: 37.0625rem;
+  min-width: 30rem;
+  width: 100%;
   height: 17rem;
   background-color: #e75735;
 }
@@ -541,10 +551,9 @@ html body {
   font-size: 1.875rem;
   font-weight: 300;
   margin-left: 1.67rem;
-  margin-bottom: 0.875rem;
 }
 .location__address {
-  width: 11.125rem;
+  max-width: 18.75rem;
   height: 2.0625rem;
   display: flex;
   align-items: center;
@@ -717,6 +726,7 @@ html body {
 .news-events-container__news-events {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 1.6875rem;
 }
 .news-events-container__news {
@@ -781,7 +791,7 @@ html body {
 }
 .news__text {
   margin-top: 0.875rem;
-  line-height: 13px;
+  line-height: 0.8125rem;
   display: inline-block;
   font-family: Lato-Regular, sans-serif;
   overflow: hidden;
@@ -919,14 +929,19 @@ html body {
 }
 .sliders-container {
   width: 70%;
-  min-width: 37.5rem;
+  min-width: 30rem;
 }
 .sliders-container__sliders {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 3.125rem;
+  margin-top: 3.75rem;
+  align-content: space-between;
+}
+.stages-container {
+  width: 95%;
+  max-width: 37.5rem;
 }
 .stages-container__stages {
   display: flex;
@@ -936,7 +951,8 @@ html body {
   margin-top: 2.625rem;
 }
 .stages {
-  width: 37.5rem;
+  width: 100%;
+  min-width: 28.75rem;
   height: 0.3125rem;
   background-color: #e5e5e5;
 }
@@ -1183,7 +1199,6 @@ html body {
 }
 .step-slider {
   position: relative;
-  right: 0.4375rem;
   text-align: left;
   width: 16.25rem;
   height: 0.3125rem;
@@ -1211,7 +1226,7 @@ html body {
 .step-slider__scale {
   width: 110%;
   position: relative;
-  right: 1.25rem;
+  right: 0.9375rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1352,6 +1367,7 @@ html body {
 }
 .ui-elements {
   max-width: 60rem;
+  min-width: 30rem;
   flex-direction: column;
 }
 .ui-elements__item {
@@ -1398,8 +1414,9 @@ html body {
 }
 .ui-elements__item_calendar-messaging {
   width: 65%;
-  min-width: 37.5rem;
+  min-width: 30rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
@@ -1567,6 +1584,10 @@ html body {
   margin: 0 1rem 0.8125rem 1.5625rem;
   margin-top: 1.125rem;
 }
+.video-player-container {
+  width: 100%;
+  max-width: 37.5rem;
+}
 .video-player-container__video-player {
   margin: auto;
   max-width: 60rem;
@@ -1575,7 +1596,8 @@ html body {
   margin-top: 1.875rem;
 }
 .video-player {
-  width: 37.5rem;
+  width: 100%;
+  min-width: 28.75rem;
   height: 20.9375rem;
 }
 .video-player__frame {
