@@ -205,13 +205,6 @@ html body {
 .calendar .ui-datepicker-calendar tbody .ui-datepicker-current-day a {
   color: #fff;
 }
-.calendar .ui-datepicker-calendar tbody .ui-datepicker-today {
-  background-color: #e75735;
-}
-.calendar .ui-datepicker-calendar tbody .ui-datepicker-today a {
-  color: #fff;
-  text-decoration: none;
-}
 .calendar .ui-datepicker-calendar tbody .ui-state-disabled .ui-state-default {
   color: #fff;
 }
